@@ -10,15 +10,9 @@
                             <h1>Steg 2</h1>
                     </div>
                     <div class="step-container" v-else-if="count === 2">
-
                         <h1>Steg 3</h1>
-
                     </div>
                 </div>
-  
-
-
-  
                 <v-btn @click.prevent="add">ÖKAA</v-btn>
 
                 <v-btn :disabled="submitted" @click.prevent="submitted=true">Sänk</v-btn>
