@@ -15,7 +15,10 @@
 
                     </div>
                 </div>
+  
 
+
+  
                 <v-btn @click.prevent="add">ÖKAA</v-btn>
 
                 <v-btn :disabled="submitted" @click.prevent="submitted=true">Sänk</v-btn>
