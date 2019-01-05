@@ -3,8 +3,10 @@
         <div class="action v-container xs10 offset-xs1">
             <div class=" modal-container" v-if="showModal">
                 <div class="modal-jumbotron">
-                    <div v-if="count === 0">
-                        <!-- <stepOne> </stepOne>/> -->
+                    <div><p>{{count}}</p></div>
+                    <div class="step-container" v-if="count === 0">
+                        <p>hy</p>
+                        <!-- <stepOne/> -->
                     </div>
                     <div class=" step-container" v-else-if="count === 1">
                             <h1>Steg 2</h1>
@@ -13,10 +15,10 @@
                         <h1>Steg 3</h1>
                     </div>
                 </div>
-                <v-btn @click.prevent="add">ÖKAA</v-btn>
 
+                <v-btn @click.prevent="add">ÖKAA</v-btn>
                 <v-btn :disabled="submitted" @click.prevent="submitted=true">Sänk</v-btn>
-                <button :disabled="submitted" @click.prevent="submitted=true">SÄNK DÅÅÅÅ</button>
+              
             </div>
             <v-btn class="blue lighten-2 mt-5" dark large v-on:click="showModal =!showModal">Get started</v-btn>
         </div>
@@ -25,28 +27,21 @@
 </template>
 
 <script>
-
     import img from '@/assets/pen.png';
     // import stepOne from '@/services/stepone';
 
     export default {
-        // components: {
-        //     stepOne,
-        // },
-        data() {
+        components: {
+            // stepOne,
+        },
 
+
+        
+        data() {
             return {
                 showModal: false,
                 img: img,
-                //    btnState: 'disabled',
-                submitted: false,
                 count: 0,
-            }
-        },
-        computed: {
-            clickable() {
-                // if something
-                return true;
             }
         },
         methods: {
@@ -56,13 +51,6 @@
             minus: function () {
                 return this.count--;
             },
-            // handleState: function () {
-
-            //     btnState = 'disabled';
-
-            //     return btnState;
-            // },
-
         }
     }
 </script>
