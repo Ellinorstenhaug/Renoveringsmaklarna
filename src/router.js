@@ -1,22 +1,32 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import About from './components/about.vue';
-import App from './App.vue' //todo denna ska inte vara start, skapa en start-komponent
+import About from './components/views/About.vue';
+import StartPage from './components/views/StartPage.vue';
+import Services from './components/views/Services.vue';
+import ServicePage from './components/views/ServicePage.vue';
 
 Vue.use(Router);
 
 export default new Router({
-  mode:'history',
-  routes: [
+  mode: 'history',
+  routes: [{
+      path: '/',
+      name: 'startsida',
+      component: StartPage
+    },
     {
-      path: '/about',
+      path: '/om-oss',
       name: 'About',
       component: About
     },
     {
-      path: '/start',
-      name: 'Start',
-      component: App
+      path: '/tjänster/:id',     
+      component: ServicePage,
+
+      children: [{
+        path: '',
+        component: ServicePage
+      }]
     }
   ]
 });
