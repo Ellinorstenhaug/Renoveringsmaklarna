@@ -1,6 +1,17 @@
 <template>
-<div>
-     <h1>Steg 1</h1>
-
-</div>
+     <div>
+          
+     </div>
 </template>
+
+<script>
+export default {
+    props: ['count'],
+    methods : {
+         updateValue: function (count) {
+              console.log("HEEEEJ");
+               this.$emit('a', count);
+         }
+    }
+}
+</script>
