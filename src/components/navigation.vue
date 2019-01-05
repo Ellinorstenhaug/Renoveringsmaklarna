@@ -59,8 +59,10 @@
 
 <script>
     export default {
-        data: () => ({
-            items: [{
+
+        data() {
+            return {
+              items: [{
                     titles: 'Badrum Badrum '
                 },
                 {
@@ -74,7 +76,11 @@
                 }
             ],
             title: 'Renoveringsmäklarna'
-        })
+            }
+        },
+
+
+      
     }
 </script>
 

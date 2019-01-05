@@ -180,13 +180,18 @@ import Navigation from './components/navigation'
 import Modal from './components/modal';
 
 export default {
+
+      data: function () {
+  return {
+    count: 0
+  }
+},
+
+  
   name: 'App',
   components: {
     Navigation,
     Modal
-  },
-   data() {
-     return 5;
-   }
+  }
 }
 </script>
