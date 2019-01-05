@@ -25,6 +25,7 @@
                             <v-menu offset-y>
                                 <v-btn slot="activator" flat>Tjänster</v-btn>
                                 <v-list>
+                                      <router-link to="/start">Start</router-link>
                                     <v-list-tile v-for="(item, index) in items" :key="index" >
                                         <v-list-tile-title>{{ item.titles }}</v-list-tile-title>
                                     </v-list-tile>
