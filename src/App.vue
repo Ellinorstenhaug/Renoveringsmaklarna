@@ -98,7 +98,7 @@
               large
               href="/pre-made-themes"
             >
-              Get Started
+              Kom igång
             </v-btn>
           </v-layout>
         </v-parallax>
