@@ -1,15 +1,11 @@
 <template>
-   <v-app light>
-           <navigation/>
+  <v-app light>
+    <Navigation />
     <v-content>
       <section>
-        <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg" height="600">
-          <v-layout
-             column
-            align-center
-            justify-center
-            class="white--text"
-          >
+        <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
+          height="600">
+          <v-layout column align-center justify-center class="white--text">
             <img src="@/assets/logo.png" alt="go" height="200">
             <h1 class="white--text mb-2 display-1 text-xs-center">Parallax Template</h1>
             <div class="subheading mb-3 text-xs-center">Powered by Vuetify</div>
@@ -19,17 +15,12 @@
       </section>
 
       <section>
-        <v-layout
-          column
-          wrap
-          class="my-5"
-          align-center
-        >
+        <v-layout column wrap class="my-5" align-center>
           <v-flex xs12 sm4 class="my-3">
             <div class="text-xs-center">
               <h2 class="headline">The best way to start developing</h2>
               <span class="subheading">
-                Cras facilisis mi vitae nunc 
+                Cras facilisis mi vitae nunc
               </span>
             </div>
           </v-flex>
@@ -45,9 +36,9 @@
                       <div class="headline text-xs-center">Material Design</div>
                     </v-card-title>
                     <v-card-text>
-                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
-                      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                      Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
+                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
+                      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                      Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
                     </v-card-text>
                   </v-card>
                 </v-flex>
@@ -60,9 +51,9 @@
                       <div class="headline">Fast development</div>
                     </v-card-title>
                     <v-card-text>
-                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
-                      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                      Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
+                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
+                      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                      Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
                     </v-card-text>
                   </v-card>
                 </v-flex>
@@ -75,9 +66,9 @@
                       <div class="headline text-xs-center">Completely Open Sourced</div>
                     </v-card-title>
                     <v-card-text>
-                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
-                      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                      Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
+                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
+                      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                      Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
                     </v-card-text>
                   </v-card>
                 </v-flex>
@@ -92,17 +83,13 @@
           <v-layout column align-center justify-center>
             <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
             <em>Kick-start your application today</em>
-            <v-btn
-              class="blue lighten-2 mt-5"
-              dark
-              large
-              href="/pre-made-themes"
-            >
+            <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">
               Kom igång
             </v-btn>
           </v-layout>
         </v-parallax>
       </section>
+
 
       <section>
         <v-container grid-list-xl>
@@ -113,9 +100,9 @@
                   <div class="headline">Company info</div>
                 </v-card-title>
                 <v-card-text>
-                  Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
-                  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                  Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
+                  Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
+                  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                  Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
                 </v-card-text>
               </v-card>
             </v-flex>
@@ -176,17 +163,17 @@
 </template>
 
 <script>
-import Navigation from './components/navigation'
-import Modal from './components/modal';
+  import Navigation from './components/navigation'
+  import Modal from './components/modal';
 
-export default {
-  name: 'App',
-  components: {
-    Navigation,
-    Modal
-  },
-   data() {
-     return 5;
-   }
-}
+  export default {
+    name: 'App',
+    components: {
+      Navigation,
+      Modal
+    },
+    data() {
+      return 5;
+    }
+  }
 </script>
