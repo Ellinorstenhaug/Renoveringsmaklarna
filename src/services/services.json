@@ -1,31 +1,37 @@
 [{
         "id": "1",
         "heading": "renovering",
-        "icon": "renovering.png",
-        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam."
+        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam.",
+        "imgUrl": "renovering.jpg",
+        "url": "/tjänster/renovering"
     },
     {
         "id": "2",
-        "heading": "badrum",
-        "icon": "badrum.jpg",
-        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam."
+        "heading": "badrum",      
+        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam.",
+        "imgUrl": "badrum.jpg",
+        "url": "/tjänster/badrum"
+        
     },
     {
         "id": "3",
-        "heading": "kakel",
-        "icon": "kakel.png",
-        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam."
+        "heading": "målning",        
+        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam.",
+        "imgUrl": "målning.jpg",
+        "url": "/tjänster/målning"
     },
     {
         "id": "4",
-        "heading": "verksamhet",
-        "icon": "verksamhet.png",
-        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam."
+        "heading": "bygg",
+        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam.",
+        "url": "/tjänster/bygghjälp",
+        "imgUrl": "bygg.jpg"
     },
     {
         "id": "5",
-        "heading": "utfall",
-        "icon": "utfall.png",
-        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam."
+        "heading": "flytthjälp",        
+        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam.",
+        "imgUrl": "flytthjälp.jpg",
+        "url": "/tjänster/flytthjälp"
     }
 ]

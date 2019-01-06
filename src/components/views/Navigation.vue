@@ -14,10 +14,18 @@
                             <v-menu offset-y open-on-hover>
                                 <v-btn slot="activator" flat class="menu-item" >Tjänster</v-btn>
                                 <v-list>
-                                      <router-link to="/start">Start</router-link>
-                                    <v-list-tile v-for="(item, index) in tjanster" :key="index" >
-                                        <v-list-tile-title>{{ item.titles }}</v-list-tile-title>
+
+                                             <v-list-tile v-for="(item, index) in services" :key="index" >
+                                                 <router-link :to="`${item.url}`" class="v-list__tile__title">{{item.heading}}</router-link>
+                                        <!-- <v-list-tile-title>{{ item.heading }}</v-list-tile-title> -->
+                                                     
+                                                     
                                     </v-list-tile>
+
+
+                                    <!-- <v-list-tile v-for="(item, index) in tjanster" :key="index" >
+                                        <v-list-tile-title>{{ item.titles }}</v-list-tile-title>
+                                    </v-list-tile> -->
                                 </v-list>
                             </v-menu>
                         </div>
@@ -46,10 +54,15 @@
 </template>
 
 <script>
+   import serviceJson from '../../services/services.json';
+
     export default {
 
         data() {
             return {
+
+                services: serviceJson,
+
               tjanster: [{
                     titles: 'Badrum Badrum '
                 },
