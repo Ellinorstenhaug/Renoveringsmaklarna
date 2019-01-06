@@ -10,24 +10,59 @@
             </v-parallax>
         </section>
 
+        <section>
+            <v-layout column wrap class="my-5" align-center>
+                <v-flex xs12 sm4 class="my-3">
+                    <div class="text-xs-center">
+                        <h2 class="headline">Våra tjänster</h2>
+                        <span class="subheading">
+                          alltid inom 24 timmar
+                        </span>
+                    </div>
+                </v-flex>
+                <v-flex xs12>                    
+                    <v-container grid-list-xl>
+                        <v-layout row wrap align-center>
+                             <!-- <v-parallax :src="this.service.imgUrl" height="600"> -->
+                             <v-flex xs12 md3   v-for="(item, index) in services" :key="index" >
+                                  <v-parallax :src=" getImgUrl(item.imgUrl)" height="400">
+
+                                <v-card class="elevation-0 transparent"> 
+                                  <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline">{{item.heading}}</div>
+                                    </v-card-title>
+                                   
+                                    <v-card-text>
+                                       {{item.ingress}}
+                                    </v-card-text>
+                                </v-card>
+                                    </v-parallax>
+                            </v-flex>
+                        </v-layout>
+                    </v-container>
+                </v-flex>
+            </v-layout>
+        </section>
+
     </v-content>
 </template>
 
 <script>
     import serviceJson from '../../services/services.json';
     export default {
-        components: {
-            // stepOne,
-        },
 
         mounted() {
             this.initService();
         },
 
+        watch: {
+            '$route': 'initService'
+        },
 
         data() {
             return {
                 service: {},
+                services: serviceJson
             }
         },
         methods: {
@@ -42,20 +77,22 @@
             },
 
             findService: function (serviceName) {
-
                 let isFound = false;
                 let serviceObject = {};
 
                 for (var i = 0; i < serviceJson.length; i++) {
-                    if (serviceJson[i].heading == serviceName) {
 
-                        isFound = true;
+                    if (serviceJson[i].heading == serviceName) {
 
                         serviceObject = {
                             heading: serviceJson[i].heading,
                             imgUrl: this.getImgUrl(serviceJson[i].imgUrl),
                             ingress: serviceJson[i].ingress
                         }
+
+                        isFound = true;
+                        break;
+
                     }
                 }
 
