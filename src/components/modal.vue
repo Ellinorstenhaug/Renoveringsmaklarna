@@ -1,5 +1,6 @@
-<template>
-    <div>
+ 
+ <template> 
+ <div>
         <!-- <div class="action v-container xs10 offset-xs1"> -->
         <!-- <div class=" modal-container" v-if="showModal"> -->
         <div class="modal-jumbotron">
@@ -94,7 +95,7 @@
         <v-container grid-list-xl>
             <v-layout row wrap align-center>
                 <v-flex xs12 md3>
-                    <v-btn block @click.prevent="minus" v-if="count >= 1">Sänk</v-btn>
+                    <v-btn block @click.prevent="minus" v-if="count >= 1">Tillbaka</v-btn>
                 </v-flex>
                 <v-flex xs12 md9>
                     <v-btn block class="purple lighten-2" @click.prevent="add" v-if="count==1">Gå vidadre</v-btn>
@@ -112,7 +113,7 @@
         <!-- </div> -->
         <!--Todo: Success-->
     </div>
-</template>
+    </template>
 
 <script>
     import img from '@/assets/pen.png';
@@ -139,7 +140,8 @@
                 headingLabel: "Välj tjänst",
                 name: '',
                 email: '',
-                checkbox: false
+                checkbox: false,
+                dialog: false,
             }
         },
 
@@ -178,8 +180,9 @@
         .modal-container {
             width: 100%;
         }
-        .textcolor{
-        padding:0;
+
+        .textcolor {
+            padding: 0;
 
         }
     }
@@ -276,8 +279,8 @@
     }
 
     .textcolor {
-        color:black !important;
-                padding:30px;
+        color: black !important;
+        padding: 30px;
 
     }
 

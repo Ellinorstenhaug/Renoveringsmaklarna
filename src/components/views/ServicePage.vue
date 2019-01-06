@@ -1,8 +1,7 @@
 <template>
     <v-content>
         <section>
-            <v-parallax src="../../../assets/badrum.jpg" 
-                height="600">
+            <v-parallax :src="this.service.imgUrl" height="600">
                 <v-layout column align-center justify-center class="white--text">
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
                     <h1 class="white--text mb-2 display-1 text-xs-center">{{ this.service.heading }}</h1>
@@ -32,6 +31,11 @@
             }
         },
         methods: {
+            getImgUrl(img) {
+                return require('../../assets/' + img)
+            },
+
+
             initService: function () {
                 this.service = this.findService(this.$route.params.id);
                 return this.service;
@@ -49,7 +53,7 @@
 
                         serviceObject = {
                             heading: serviceJson[i].heading,
-                            icon: serviceJson[i].icon,
+                            imgUrl: this.getImgUrl(serviceJson[i].imgUrl),
                             ingress: serviceJson[i].ingress
                         }
                     }
