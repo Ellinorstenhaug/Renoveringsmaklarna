@@ -1,0 +1,31 @@
+[{
+        "id": "1",
+        "heading": "renovering",
+        "icon": "renovering.png",
+        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam."
+    },
+    {
+        "id": "2",
+        "heading": "badrum",
+        "icon": "badrum.jpg",
+        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam."
+    },
+    {
+        "id": "3",
+        "heading": "kakel",
+        "icon": "kakel.png",
+        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam."
+    },
+    {
+        "id": "4",
+        "heading": "verksamhet",
+        "icon": "verksamhet.png",
+        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam."
+    },
+    {
+        "id": "5",
+        "heading": "utfall",
+        "icon": "utfall.png",
+        "ingress": "mel cu enim dictas. Et salutandi evertitur voluptatum usu, unum nostro utamur vim at. Ad quidam numquam maluisset nam."
+    }
+]
