@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import About from './components/views/About.vue';
 import StartPage from './components/views/StartPage.vue';
-import Services from './components/views/Services.vue';
+// import Services from './components/views/Services.vue';
 import ServicePage from './components/views/ServicePage.vue';
 
 Vue.use(Router);
