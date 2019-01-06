@@ -11,7 +11,7 @@
                 <div>
                     <v-toolbar-items class="hidden-sm-and-down">
                         <div class="text-xs-center">
-                            <v-menu offset-y open-on-hover>
+                            <v-menu offset-y  open-on-hover>
                                 <v-btn slot="activator" flat class="menu-item" >Tjänster</v-btn>
                                 <v-list>
                                       <router-link to="/start">Start</router-link>
@@ -22,9 +22,10 @@
                             </v-menu>
                         </div>
                     </v-toolbar-items>
+                    <v-spacer></v-spacer>
                     <v-toolbar-items class="hidden-sm-and-down">
                         <div class="text-xs-center">
-                            <v-menu offset-y open-on-hover>
+                            <v-menu offset-y  open-on-hover>
                                 <v-btn slot="activator" flat class="menu-item" >Om Oss</v-btn>
                                 <v-list>
                                       <router-link to="/start">Start</router-link>
