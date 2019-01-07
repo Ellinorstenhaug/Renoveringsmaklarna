@@ -7,9 +7,7 @@
                     <h1 class="white--text mb-2 display-1 text-xs-center">{{ this.service.heading }}</h1>
                     <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
                    
-                      
-                        <Modal/>
-                    
+                   <Modal :service="service.heading"/>   
                 </v-layout>
             </v-parallax>
         </section>
@@ -68,10 +66,15 @@
             '$route': 'initService'
         },
 
+        components:{
+            Modal
+        },
+
         data() {
             return {
                 service: {},
-                services: serviceJson
+                services: serviceJson,
+                
             }
         },
         methods: {
