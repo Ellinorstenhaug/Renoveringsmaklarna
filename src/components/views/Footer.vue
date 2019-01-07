@@ -1,14 +1,32 @@
 <template>
-     <v-footer class="blue darken-2">
-                <v-layout row wrap align-center>
-                    <v-flex xs12>
-                        <div class="white--text ml-3">
-                            Made with
-                            <v-icon class="red--text">favorite</v-icon>
-                            by <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a>
-                            and <a class="white--text" href="https://github.com/vwxyzjn">Costa Huang</a>
-                        </div>
-                    </v-flex>
-                </v-layout>
-            </v-footer>
+        <v-footer height="auto" color="rgb(60, 51, 66)">
+            <v-layout justify-center row wrap>
+                <v-btn v-for="link in links" :key="link" color="white" flat >
+                    {{ link }}
+                </v-btn>
+                <v-flex indigo lighten-2 py-3 text-xs-center white--text xs12>
+                    &copy;2018 — <strong>Vuetify</strong>
+                </v-flex>
+            </v-layout>
+        </v-footer>
 </template>
+<script>
+  export default {
+    data: () => ({
+      links: [
+        'Home',
+        'About Us',
+        'Team',
+        'Services',
+        'Blog',
+        'Contact Us'
+      ]
+    })
+  }
+</script>
+<style>
+    .foot {
+        height: 200px;
+        color:rgb(60, 51, 66);
+    }
+</style>

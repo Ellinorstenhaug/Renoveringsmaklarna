@@ -1,118 +1,189 @@
  
  <template> 
- <div>
-        <!-- <div class="action v-container xs10 offset-xs1"> -->
-        <!-- <div class=" modal-container" v-if="showModal"> -->
-        <div class="modal-jumbotron">
-            <HeadingModal :title="headingLabel"></HeadingModal>
-            <v-container grid-list-xl>
-                <v-layout row wrap align-center>
-                    <v-flex xs4 md4>
-                        <v-card class="elevation-0 transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                                <div class="modal-link title text-xs-center">Välj tjänst</div>
-                            </v-card-title>
-                            <v-card-text class="text-xs-center">
-                                <v-icon x-large class="blue--text text--lighten-2">color_lens</v-icon>
-                            </v-card-text>
-                        </v-card>
-                    </v-flex>
+   <div class="action v-container xs10 offset-xs1">
+                            <!-- Modal Template -->
+                            <v-layout row justify-center>
+                                <v-dialog v-model="dialog"  block max-width="600px">
 
-                    <v-flex xs4 md4>
-                        <v-card class="elevation-0 transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                                <div class="modal-link title">Beskriv ditt ärende</div>
-                            </v-card-title>
-                            <v-card-text class="text-xs-center">
-                                <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
-                            </v-card-text>
-                        </v-card>
-                    </v-flex>
-                    <v-flex xs4 md4>
-                        <v-card class="elevation-0 transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                                <div class="modal-link title text-xs-center">Detaljer om
-                                    dig</div>
-                            </v-card-title>
-                            <v-card-text class="text-xs-center">
-                                <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
-                            </v-card-text>
-                        </v-card>
-                    </v-flex>
-                </v-layout>
-            </v-container>
-
-            <div class="step-container" v-if="count === 0">
-                <div class="wrapper">
-                    <ul>
-                        <li @click.prevent="add" class="presentation"><a class="modal-link title" href="#">Badrumsrenovering</a></li>
-                        <li @click.prevent="add" class="presentation"><a class="modal-link title" href="#">Köksrenovering</a></li>
-                        <li @click.prevent="add" class="presentation"><a class="modal-link title" href="#">Renovering</a></li>
-                        <li @click.prevent="add" class="presentation"><a class="modal-link title" href="#">Målning
-                                och
-                                tapeter</a></li>
-                        <li v-on:click="add" class="presentation"><a class="modal-link title" href="#">Takläggning</a></li>
-                        <li @click.prevent="add" class="presentation"><a class="modal-link title" href="#">Jag
-                                är osäker på
-                                vem</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class=" step-container" v-else-if="count === 1">
-                <div class="modal-jumbotron">
-                    <div class="v-container">
-                        <v-flex xs12>
-                            <textarea class="form-control" id="input-description" placeholder="Beskriv ditt ärende kortfattat"></textarea>
-                        </v-flex>
-                        <v-flex xs12>
-                            <p class="textcolor" >Du behöver inte ge oss en detaljerad beskrivning, en kort beskrivning räcker. Våra
-                                experter kommer att granska ditt ärende innan vi matchar dig med rådgivare.</p>
-                        </v-flex>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Steg 3  -->
-            <div class=" step-container" v-else-if="count === 2">
-                <div class="modal-jumbotron">
-                    <form>
-                        <v-text-field v-validate="{required:true}" v-model="name" label="Namn" required @input="$v.name.$touch()"
-                            @blur="$v.name.$touch()"></v-text-field>
-                        <v-text-field v-validate="{required:true, email:true}" type="email" v-model="email" label="E-mail"
-                            required @input="$v.email.$touch()" @blur="$v.email.$touch()"></v-text-field>
-                        <v-text-field v-validate="{required:true}" type="number" v-model="number" label="Telefonnummer"
-                            required @input="$v.email.$touch()" @blur="$v.email.$touch()"></v-text-field>
-                        <v-text-field v-validate="{required:true}" type="location" v-model="location" label="Stad"
-                            required @input="$v.email.$touch()" @blur="$v.email.$touch()"></v-text-field>
-                    </form>
-                </div>
-            </div>
-        </div>
+                                    <v-btn slot="activator" block light class="knapp1">Vad behöver du hjälp med?</v-btn>
+                                    <v-btn slot="activator" color="purple" block dark>Kom igång!</v-btn>
 
 
-
-        <v-container grid-list-xl>
-            <v-layout row wrap align-center>
-                <v-flex xs12 md3>
-                    <v-btn block @click.prevent="minus" v-if="count >= 1">Tillbaka</v-btn>
-                </v-flex>
-                <v-flex xs12 md9>
-                    <v-btn block class="purple lighten-2" @click.prevent="add" v-if="count==1">Gå vidadre</v-btn>
-                    <v-btn block class="purple lighten-2" @click.prevent="success" v-if="count==2">Få 3 gratis
-                        offerter!</v-btn>
-                </v-flex>
-
-            </v-layout>
-        </v-container>
+                                    <v-btn v-if="count===10" block light>
+                                        <Modal />
+                                        <!--Ta bort-->
+                                    </v-btn>
 
 
-        <!-- </div> -->
-        <div class="step-container" v-if="count === 2">
-        </div>
-        <!-- </div> -->
-        <!--Todo: Success-->
-    </div>
+                                    <v-card>
+                                        <v-card-title>
+                                            <HeadingModal :title="headingLabel"></HeadingModal>
+                                        </v-card-title>
+                                        <v-card-text>
+
+                                            <v-container grid-list-xl class="static-container">
+                                                <v-layout row wrap align-center>
+                                                    <v-flex xs4 md4>
+                                                        <v-card class="elevation-0 transparent">
+                                                            <v-card-title primary-title class="layout justify-center">
+                                                                <div class="modal-link title text-xs-center">Välj
+                                                                    tjänst</div>
+                                                            </v-card-title>
+                                                            <v-card-text class="text-xs-center">
+                                                                <v-icon x-large class="blue--text text--lighten-2">color_lens</v-icon>
+                                                            </v-card-text>
+                                                        </v-card>
+                                                    </v-flex>
+
+                                                    <v-flex xs4 md4>
+                                                        <v-card class="elevation-0 transparent">
+                                                            <v-card-title primary-title class="layout justify-center">
+                                                                <div class="modal-link title">Beskriv ditt ärende</div>
+                                                            </v-card-title>
+                                                            <v-card-text class="text-xs-center">
+                                                                <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
+                                                            </v-card-text>
+                                                        </v-card>
+                                                    </v-flex>
+                                                    <v-flex xs4 md4>
+                                                        <v-card class="elevation-0 transparent">
+                                                            <v-card-title primary-title class="layout justify-center">
+                                                                <div class="modal-link title text-xs-center">Detaljer
+                                                                    om
+                                                                    dig</div>
+                                                            </v-card-title>
+                                                            <v-card-text class="text-xs-center">
+                                                                <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
+                                                            </v-card-text>
+                                                        </v-card>
+                                                    </v-flex>
+                                                </v-layout>
+                                            </v-container>
+
+                                            <div class="step-container" v-if="count === 0">
+                                                <div class="wrapper">
+                                                    <ul>
+                                                        <li @click.prevent="add" class="presentation"><a class="modal-link title"
+                                                                href="#">Badrumsrenovering</a></li>
+                                                        <li @click.prevent="add" class="presentation"><a class="modal-link title"
+                                                                href="#">Köksrenovering</a></li>
+                                                        <li @click.prevent="add" class="presentation"><a class="modal-link title"
+                                                                href="#">Renovering</a></li>
+                                                        <li @click.prevent="add" class="presentation"><a class="modal-link title"
+                                                                href="#">Målning
+                                                                och
+                                                                tapeter</a></li>
+                                                        <li v-on:click="add" class="presentation"><a class="modal-link title"
+                                                                href="#">Takläggning</a></li>
+                                                        <li @click.prevent="add" class="presentation"><a class="modal-link title"
+                                                                href="#">Jag
+                                                                är osäker på
+                                                                vem</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class=" step-container" v-else-if="count === 1">
+                                                <div class="modal-jumbotron">
+                                                    <div class="v-container">
+                                                        <v-flex xs12>
+                                                            <textarea class="form-control" id="input-description"
+                                                                placeholder="Beskriv ditt ärende kortfattat"></textarea>
+                                                        </v-flex>
+                                                        <v-flex xs12>
+                                                            <p class="textcolor">Du behöver inte ge oss en detaljerad
+                                                                beskrivning, en kort beskrivning räcker. Våra
+                                                                experter kommer att granska ditt ärende innan vi
+                                                                matchar
+                                                                dig med rådgivare.</p>
+                                                        </v-flex>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                            <div class="step-container" v-else-if="count===2">
+
+                                                <v-container grid-list-md>
+                                                    <v-layout wrap>
+                                                        <v-flex xs12 sm6 md6>
+                                                            <v-text-field label="Legal first name*" required></v-text-field>
+                                                        </v-flex>
+
+                                                        <v-flex xs12 sm6 md6>
+                                                            <v-text-field label="Legal last name*" hint="example of persistent helper text"
+                                                                persistent-hint required></v-text-field>
+                                                        </v-flex>
+                                                        <v-flex xs12>
+                                                            <v-text-field label="Email*" required></v-text-field>
+                                                        </v-flex>
+                                                        <v-flex xs12>
+                                                            <v-text-field label="City*" required></v-text-field>
+                                                        </v-flex>
+                                                        <!-- <v-flex xs12 sm6>
+                                                        <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*"
+                                                            required></v-select>
+                                                    </v-flex>
+                                                    <v-flex xs12 sm6>
+                                                        <v-autocomplete :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                                                            label="Interests" multiple></v-autocomplete>
+                                                    </v-flex> -->
+                                                        <small>*indicates required field</small>
+                                                    </v-layout>
+                                                </v-container>
+                                            </div>
+                                        </v-card-text>
+                                        <v-card-actions>
+                                            <v-spacer></v-spacer>
+                                            <v-container grid-list-xl>
+                                                <v-layout row wrap align-center>
+                                                    <!-- <v-flex xs12 md3>
+                                                    <v-btn block @click.prevent="minus" v-if="count >= 1">Tillbaka</v-btn> 
+                                                </v-flex> -->
+                                                    <v-container grid-list-xl>
+                                                        <v-layout row wrap align-center>
+                                                            <v-flex xs12 md3>
+                                                                <v-btn block @click.prevent="minus" v-if="count >= 1">Tillbaka</v-btn>
+                                                                <!-- <v-btn block @click.prevent="handleExit">{{knappText}}</v-btn> -->
+                                                                <v-btn block @click.prevent="close" v-if="count===0">STÄNG</v-btn>
+
+                                                            </v-flex>
+                                                            <v-flex xs12 md9>
+                                                                <v-btn block class="purple lighten-2" @click.prevent="add"
+                                                                    v-if="count==1">Gå
+                                                                    vidadre</v-btn>
+                                                                <v-btn block class="purple lighten-2" @click.prevent="success"
+                                                                    v-if="count==2">Få 3 gratis
+                                                                    offerter!</v-btn>
+                                                            </v-flex>
+
+                                                        </v-layout>
+                                                    </v-container>
+
+
+
+                                                    <!-- <v-flex xs12 md9>
+                                                    <v-btn block class="purple lighten-2" @click.prevent="add" v-if="count==1">Gå
+                                                        vidadre</v-btn>
+                                                    <v-btn block class="purple lighten-2" @click.prevent="success" v-if="count==2">Få
+                                                        3 gratis
+                                                        offerter!</v-btn>
+                                                </v-flex> -->
+
+                                                </v-layout>
+                                            </v-container>
+
+                                            <!-- <v-btn color="blue darken-1" flat @click="minus">Close</v-btn>
+                                        <v-btn color="blue darken-1" flat @click="add">Save</v-btn>
+                                        <v-btn color="blue darken-1" flat v-if="count==2" @click="success">Få 3 gratis offerter!</v-btn> -->
+                                        </v-card-actions>
+                                    </v-card>
+                                </v-dialog>
+                            </v-layout>
+                        </div>
     </template>
 
 <script>
@@ -142,6 +213,7 @@
                 email: '',
                 checkbox: false,
                 dialog: false,
+                knappText:""
             }
         },
 
@@ -155,13 +227,25 @@
             minus: function () {
                 this.count--;
                 this.handleState();
+                this.knappText="Tillbaka";
                 // return this.count--;
+            },
+            close: function () {
+                this.dialog=!this.dialog;
+                // this.knappText="Stäng";
             },
             success: function () {
 
             },
+            handleExit: function () {
+                if (this.count===0) {
+                    this.close();
+                }
+                else if (this.count>=1) {
+                    this.minus();
+                }
+            },
             handleState: function () {
-
                 if (this.count === 0) {
                     this.headingLabel = "Välj tjänst";
                 } else if (this.count === 1) {
@@ -175,7 +259,7 @@
     // Vue.use(VeeValidate);
 </script>
 
-<style>
+<style >
     @media (max-width: 960px) {
         .modal-container {
             width: 100%;

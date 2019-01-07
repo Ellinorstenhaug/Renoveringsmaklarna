@@ -16,27 +16,28 @@
                     <div class="text-xs-center">
                         <h2 class="headline">Våra tjänster</h2>
                         <span class="subheading">
-                          alltid inom 24 timmar
+                            alltid inom 24 timmar
                         </span>
                     </div>
                 </v-flex>
-                <v-flex xs12>                    
+                <v-flex xs12>
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
-                             <!-- <v-parallax :src="this.service.imgUrl" height="600"> -->
-                             <v-flex xs12 md3   v-for="(item, index) in services" :key="index" >
-                                  <v-parallax :src=" getImgUrl(item.imgUrl)" height="400">
-
-                                <v-card class="elevation-0 transparent"> 
-                                  <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline">{{item.heading}}</div>
-                                    </v-card-title>
-                                   
-                                    <v-card-text>
-                                       {{item.ingress}}
-                                    </v-card-text>
-                                </v-card>
+                            <!-- <v-parallax :src="this.service.imgUrl" height="600"> -->
+                            <v-flex xs12 md3 v-for="(item, index) in services" :key="index">
+                                <div class="wrapper">
+                                    <v-parallax :src=" getImgUrl(item.imgUrl)" height="400" class="img-wrapper">
+                                        <v-card class="elevation-20 text-wrapper" color="rgba(0,0,0,0.5)" dark>
+                                            <v-card-title primary-title class="layout justify-center">
+                                                <div class="headline2">{{item.heading}}</div>
+                                                <!-- TODO:fixa hover  -->
+                                            </v-card-title>
+                                            <v-card-text>
+                                                {{item.ingress}}
+                                            </v-card-text>
+                                        </v-card>
                                     </v-parallax>
+                                </div>
                             </v-flex>
                         </v-layout>
                     </v-container>
@@ -109,5 +110,24 @@
 </script>
 
 <style>
+    .img-wrapper {
+        /* filter: brightness(0.4); */
+        background-color: rgb(19, 19, 19);
+        position: relative;
+        z-index: 10;
+    }
 
+    .wrapper:hover {
+        filter: brightness(0.8);
+    }
+
+    .headline2 {
+        color:white;
+        font-size:1.6em;
+        text-transform:capitalize;
+    }
+
+    .text-wrapper:hover {
+       color: rgb(148, 189, 189) !important;
+    }
 </style>
