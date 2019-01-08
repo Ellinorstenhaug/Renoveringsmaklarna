@@ -76,7 +76,6 @@
         
         methods: {
             getImgUrl(img) {
-                console.log("HEJ")
                 return require('../../assets/' + img)
             },
         }

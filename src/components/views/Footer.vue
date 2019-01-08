@@ -73,14 +73,10 @@
                         </v-list-tile>
                     </v-card>
                 </v-flex>
-<<<<<<< HEAD
-=======
-                  
->>>>>>> da394eae106c1fe3516eb7ff1738727c13c4c140
             </v-layout>
             <v-layout row>
                 <v-flex lighten-2 py-3 text-xs-center white--text class="color">
-                    &copy;2019 — RenoveringsMäklarna
+                    &copy;{{new Date().getFullYear()}} — RenoveringsMäklarna
                 </v-flex>
 
             </v-layout>

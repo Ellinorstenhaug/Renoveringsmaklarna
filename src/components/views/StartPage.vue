@@ -7,13 +7,12 @@
                 <v-layout column align-center justify-center class="white--text">
                     <div class="jumbotron">
                         <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
-                       <div class="jumbo-container">
                         <h1 class="white--text mb-2 display-1 text-xs-center jumbo-heading">Jämför de bästa xxxxxxxxxx
                             - <br> Helt kostnadsfritt! </h1>
                         <div class="subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor och xxxxkonsulter!</div>
-                        <Modal />
-                        </div>
+                        <Modal/>
                     </div>
+                    <!-- Slut  -->
                 </v-layout>
             </v-parallax>
         </section>
@@ -23,9 +22,7 @@
                 <v-flex xs12 sm4 class="my-3">
                     <div class="text-xs-center">
                         <h2 class="headline">The best way to start developing</h2>
-                        
                         <span class="subheading">
-                            
                             Cras facilisis mi vitae nunc
                         </span>
                     </div>
@@ -168,20 +165,66 @@
 
 <script>
     import Modal from '../modal.vue';
+    import HeadingModal from '../../components/HeadingModal.vue';
 
 
     export default {
         components: {
             Modal,
+            HeadingModal
         },
 
         data: function () {
             return {
                 count: 0,
+                // img: img,
+                headingLabel: "Välj tjänst",
+                name: '',
+                email: '',
+                checkbox: false,
+                dialog: false,
+                knappText: "",
             }
         },
-       
-      
+     
+        methods: {
+            add: function () {
+                this.count++;
+                this.handleState();
+                // return this.count++;
+            },
+            minus: function () {
+                this.count--;
+                this.handleState();
+                // return this.count--;
+            },
+            close: function () {
+                this.dialog = !this.dialog;
+                // this.knappText="Stäng";
+            },
+            success: function () {
+
+            },
+            handleExit: function () {
+                if (this.count === 0) {
+                    this.close();
+                }
+                if (this.count >= 1) {
+                    this.minus();
+                    this.knappText = "Tillbaka";
+                }
+            },
+            handleState: function () {
+
+                if (this.count === 0) {
+                    this.headingLabel = "Välj tjänst";
+                } else if (this.count === 1) {
+                    this.headingLabel = "Beskriv ditt ärende";
+                } else if (this.count === 2) {
+                    this.headingLabel = "Detaljer om dig";
+                }
+            }
+        }
     }
 </script>
 
@@ -193,13 +236,9 @@
 
     .jumbotron {
         background-color: #1b0f187d;
-        /* height: 70vh; */
-        /* padding: 7% 0 5% 0; */
+        height: 70vh;
+        padding: 7% 0 5% 0;
     }
-
-.jumbo-container {
-    padding: 90px 0;
-}
 
     .jumbo-heading {
         font-weight: 400 !important;
@@ -216,13 +255,148 @@
 
     }
 
-    .section2 {
-        background-color: rgb(36, 27, 35) !important;
-    }
-
     @media (min-width:690px) {
         .jumbotron {
             width: 650px;
+        }
+    }
+
+    /* modal */
+    @media (max-width: 960px) {
+        .modal-container {
+            width: 100%;
+        }
+
+        .textcolor {
+            padding: 0;
+
+        }
+    }
+
+
+    @media (min-width: 960px) {
+        .modal-container {
+            width: 600px;
+        }
+
+        .presentation:hover {
+            border-left: 2px solid rgb(39, 39, 39);
+            cursor: pointer;
+        }
+    }
+
+    .action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* height: 100vh; */
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .headline {
+        color: black;
+        font-size: 0.8em !important;
+    }
+
+    .modal-container {
+        position: fixed;
+        z-index: 99;
+        width: 670px;
+        height: 95%;
+        top: 20px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(153, 153, 153, 1);
+        /* overflow: hidden; */
+        animation: fadein 0.3s ease-in alternate;
+        outline: 1000px solid rgba(0, 0, 0, 0.5);
+
+    }
+
+    .modal-link {
+        color: black;
+        font-weight: 300 !important;
+        text-decoration: none;
+        display: block;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .presentation-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+
+
+    ul li {
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        list-style-type: none;
+    }
+
+    h1 {
+        color: black;
+        font-weight: 300 !important;
+    }
+
+    ol,
+    ul {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    textarea {
+        border: 1px solid rgb(141, 141, 141) !important;
+        height: 100px;
+        width: 100%;
+        color: black !important;
+        font-family: 'avenir' !important;
+        padding: 10px;
+    }
+
+    .step-container {
+        color: red !important;
+        /* animation: fadein2 0.2s ease-in alternate; */
+        /*TODO Klass funkar ej?*/
+    }
+
+    .textcolor {
+        color: black !important;
+        padding: 30px;
+
+    }
+
+    .knapp1 {
+        width: 100%;
+    }
+
+    .section2 {
+        background-color: rgb(34, 31, 31);
+        /* color:rgb(43, 40, 40) !important; */
+
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein2 {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
         }
     }
 </style>
