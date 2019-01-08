@@ -4,15 +4,6 @@
             <v-layout justify-center row wrap>
                 <v-flex xs12 md2>
                     <v-card dark flat>
-                        <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">{{headings[0]}}</v-card-text>
-                        <v-list-tile v-for="(item, index) in links" :key="index">
-                            <router-link :to="`${item.url}`" class="v-list__tile__title list-item">{{item.heading}}</router-link>
-                        </v-list-tile>
-                    </v-card>
-                </v-flex>
-
-                <v-flex xs12 md2>
-                    <v-card dark flat>
                         <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">{{headings[1]}}</v-card-text>
                         <v-list-tile>
                             <router-link :to="`/om-oss`" class="v-list__tile__title list-item px-0">Om oss</router-link>
@@ -70,6 +61,14 @@
                         </v-list-tile>
                         <v-list-tile>
                             <router-link :to="`/kontakt`" class="v-list__tile__title list-item">FestMäklarna</router-link>
+                        </v-list-tile>
+                    </v-card>
+                </v-flex>
+                <v-flex xs12 md2>
+                    <v-card dark flat>
+                        <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">{{headings[0]}}</v-card-text>
+                        <v-list-tile v-for="(item, index) in links" :key="index">
+                            <router-link :to="`${item.url}`" class="v-list__tile__title list-item">{{item.heading}}</router-link>
                         </v-list-tile>
                     </v-card>
                 </v-flex>

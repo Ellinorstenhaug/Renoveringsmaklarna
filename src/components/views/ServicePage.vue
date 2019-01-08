@@ -4,23 +4,26 @@
             <v-parallax :src="this.service.imgUrl">
                 <v-layout column align-center justify-center class="white--text">
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
-                    <h1 class="white--text mb-2 display-2 text-xs-center">{{ this.service.heading.toUpperCase() }}</h1>
+                    <h1 class="white--text mb-2 display-2 text-xs-center">{{ this.service.heading }}</h1>
                     <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
                    
-                   <Modal :service="service.heading"/>   
+                   <Modal :service="findService(this.$route.params.id).heading"/>   
                 </v-layout>
             </v-parallax>
         </section>
     <section>
-            <v-layout column wrap class="my-5" align-center>
+            <v-layout column wrap align-center>
                 <v-flex xs12>
+                      <v-card-title primary-title class="layout justify-center">
+                                        <div class="display-1 my-5 text-xs-center">{{this.service.subheading}} {{this.service.heading}}</div>
+                                    </v-card-title>
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
                             <v-flex xs12 md6>
                                 <v-card class="elevation-0 transparent">
                                   
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">{{this.service.subheading}} {{this.service.heading}}</div>
+                                        <div class="headline text-xs-center">asdsaasadsadas</div>
                                     </v-card-title>
                                     <v-card-text>
                                   {{this.service.caption}}
@@ -53,7 +56,7 @@
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
                             <!-- <v-parallax :src="this.service.imgUrl" height="600"> -->
-                            <v-flex xs12 md4 v-for="(item, index) in services" :key="index">
+                            <v-flex xs12 sm6 md6 lg4 v-for="(item, index) in services" :key="index">
                                 <div class="wrapper">
                                      <router-link :to="`${item.url}`">  
                                     <v-parallax :src=" getImgUrl(item.imgUrl)" class="img-wrapper grey lighten-2 service-img"   aspect-ratio="1">
@@ -104,6 +107,14 @@
             }
         },
         methods: {
+
+            returnServiceHeading(){
+
+                var value = this.service.heading;
+
+                return value;
+            },
+
             getImgUrl(img) {
                 return require('../../assets/' + img)
             },
@@ -156,6 +167,7 @@
         background-color: rgb(19, 19, 19);
         position: relative;
         z-index: 10;
+        height:400px !important;
     }
 
     .wrapper:hover {
@@ -179,6 +191,9 @@
         text-decoration: none;
         color:white;
     }
+
+
+
   @media (min-width: 1500px)
   {
       .service-img{

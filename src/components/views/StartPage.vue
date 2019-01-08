@@ -165,13 +165,11 @@
 
 <script>
     import Modal from '../modal.vue';
-    import HeadingModal from '../../components/HeadingModal.vue';
 
 
     export default {
         components: {
             Modal,
-            HeadingModal
         },
 
         data: function () {
