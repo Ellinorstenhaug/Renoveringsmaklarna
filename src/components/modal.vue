@@ -371,7 +371,6 @@
     }
 
     .knapp1 {
-<<<<<<< HEAD
         background-color:white;
         border:2px solid black;
         width:200px; 
@@ -381,9 +380,7 @@
         padding:20px;
         float:right !important;
         width:500px;
-=======
         background-color: white;
         border: 2px solid black;
->>>>>>> da394eae106c1fe3516eb7ff1738727c13c4c140
     }
 </style>
