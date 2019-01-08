@@ -1,15 +1,42 @@
 <template>
     <v-content>
         <section>
-            <v-parallax :src="this.service.imgUrl" height="600">
+            <v-parallax :src="this.service.imgUrl">
                 <v-layout column align-center justify-center class="white--text">
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
-                    <h1 class="white--text mb-2 display-1 text-xs-center">{{ this.service.heading }}</h1>
+                    <h1 class="white--text mb-2 display-2 text-xs-center">{{ this.service.heading.toUpperCase() }}</h1>
                     <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
                    
                    <Modal :service="service.heading"/>   
                 </v-layout>
             </v-parallax>
+        </section>
+    <section>
+            <v-layout column wrap class="my-5" align-center>
+                <v-flex xs12>
+                    <v-container grid-list-xl>
+                        <v-layout row wrap align-center>
+                            <v-flex xs12 md6>
+                                <v-card class="elevation-0 transparent">
+                                  
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline text-xs-center">{{this.service.subheading}} {{this.service.heading}}</div>
+                                    </v-card-title>
+                                    <v-card-text>
+                                  {{this.service.caption}}
+                                    </v-card-text>
+                                </v-card>
+                            </v-flex>
+                            <v-flex xs12 md6>
+                                <v-card class="elevation-0 transparent">
+                                  <v-parallax :src=" (this.service.subImgUrl)" class="img-wrapper grey lighten-2 service-img"   aspect-ratio="1"></v-parallax>
+                                </v-card>
+                            </v-flex>
+                          
+                        </v-layout>
+                    </v-container>
+                </v-flex>
+            </v-layout>
         </section>
 
         <section>
@@ -18,8 +45,7 @@
                 <v-flex xs12 sm4 class="my-3">
                       <v-card-title primary-title>
           <div>
-            <h3 class="headline mb-0">Våra tjänster</h3>
-            <div>Vi svarar alltid inom <br> 24 timmar, ...</div>
+            <h3 class="headline mb-0">Fler tjänster</h3>
           </div>
         </v-card-title>
                 </v-flex>
@@ -27,10 +53,10 @@
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
                             <!-- <v-parallax :src="this.service.imgUrl" height="600"> -->
-                            <v-flex xs12 md3 v-for="(item, index) in services" :key="index">
+                            <v-flex xs12 md4 v-for="(item, index) in services" :key="index">
                                 <div class="wrapper">
                                      <router-link :to="`${item.url}`">  
-                                    <v-parallax :src=" getImgUrl(item.imgUrl)"  class="img-wrapper grey lighten-2"   aspect-ratio="1">
+                                    <v-parallax :src=" getImgUrl(item.imgUrl)" class="img-wrapper grey lighten-2 service-img"   aspect-ratio="1">
                                         <v-card class="elevation-20 text-wrapper" color="rgba(0,0,0,0.5)" dark>
                                             <v-card-title primary-title class="layout justify-center">
                                                 <div class="headline2 fontweight-600-text">{{item.heading}}</div>
@@ -95,13 +121,17 @@
                 for (var i = 0; i < serviceJson.length; i++) {
 
                     if (serviceJson[i].heading == serviceName) {
+               
 
                         serviceObject = {
-                            heading: serviceJson[i].heading.toUpperCase(),
+                            heading: serviceJson[i].heading,
                             imgUrl: this.getImgUrl(serviceJson[i].imgUrl),
-                            ingress: serviceJson[i].ingress
+                            ingress: serviceJson[i].ingress,
+                            subImgUrl: this.getImgUrl(serviceJson[i].subImgUrl),
+                            subheading: serviceJson[i].subheading,
+                            caption: serviceJson[i].caption
                         }
-
+                      
                         isFound = true;
                         break;
 
@@ -149,4 +179,17 @@
         text-decoration: none;
         color:white;
     }
+  @media (min-width: 1500px)
+  {
+      .service-img{
+          height:600px;
+      }
+      .v-parallax__content{
+          padding:80px 0 !important;
+      }
+  }
+
+.finance {
+    padding: 80px 0;
+}
 </style>
