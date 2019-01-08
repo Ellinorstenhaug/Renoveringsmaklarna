@@ -4,7 +4,7 @@
         <v-layout row justify-center>
             <v-dialog v-model="dialog" block max-width="600px">
                 <v-btn slot="activator" block class="knapp1">Vad behöver du hjälp med?</v-btn>
-                <v-btn slot="activator" color="purple" block dark>Kom igång!</v-btn>
+                <v-btn slot="activator" color="purple" class="knapp2" block dark>Kom igång!</v-btn>
                 <v-card>
                     <v-card-title>
                         <HeadingModal :title="headingLabel"></HeadingModal>
@@ -51,7 +51,7 @@
                         <div class="step-container" v-if="count === 0">
                             <div class="wrapper">
                                 <ul>
-                                    <li @click.prevent="add" class="presentation"><a class="modal-link  title2" href="#">Badrumsrenovering</a></li>
+                                    <li @click.prevent="add" class="presentation"><a class="modal-link title2" href="#">Badrumsrenovering</a></li>
                                     <li @click.prevent="add" class="presentation"><a class="modal-link title2" href="#">Köksrenovering</a></li>
                                     <li @click.prevent="add" class="presentation"><a class="modal-link title2" href="#">Renovering</a></li>
                                     <li @click.prevent="add" class="presentation"><a class="modal-link title2" href="#">Målning
@@ -85,7 +85,7 @@
 
 
                             <form>
-                                <v-text-field v-validate="'required|max:10'" v-model="name" :counter="10"
+                                <v-text-field v-validate="'required|max:10'" v-model="name" 
                                     :error-messages="errors.collect('name')" label="Namn" data-vv-name="name" required></v-text-field>
                                 <v-text-field v-validate="'required|email'" v-model="email" :error-messages="errors.collect('email')"
                                     label="E-mail" data-vv-name="email" required></v-text-field>
@@ -374,5 +374,12 @@
     .knapp1 {
         background-color:white;
         border:2px solid black;
+        width:200px; 
+        float:left !important;
+    }
+    .knapp2 {
+        padding:20px;
+        float:right !important;
+        width:500px;
     }
 </style>

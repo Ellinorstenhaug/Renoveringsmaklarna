@@ -18,8 +18,7 @@
                                 <v-list-tile v-for="(item, index) in services" :key="index" >
                                 <router-link :to="`${item.url}`" class="v-list__tile__title">{{item.heading}}</router-link>
                                 <!-- <v-list-tile-title>{{ item.heading }}</v-list-tile-title> -->
-                                                     
-                                                     
+                                           
                                     </v-list-tile>
 
 

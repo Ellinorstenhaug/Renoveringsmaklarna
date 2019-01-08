@@ -2,7 +2,7 @@
 
     <v-content>
         <section>
-            <v-parallax class="bajs" height="600">
+            <v-parallax class="bajs" :src="getImgUrl('omoss.jpg')">
                 <v-layout column align-center justify-center class="white--text">
                     <!-- <div class="jumbotron"> -->
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
@@ -41,9 +41,17 @@
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
-                        <div class="about-pic">
+                            <v-flex xs12 md6>
+                                <v-parallax class="about-pic" src="https://secure.i.telegraph.co.uk/multimedia/archive/03597/POTD_chick_3597497k.jpg">
 
-                        </div>
+                                </v-parallax>
+                            </v-flex>
+
+
+
+                            <div class="about-pic">
+
+                            </div>
                         </v-layout>
                     </v-container>
                 </v-flex>
@@ -57,13 +65,22 @@
                 </v-layout>
             </v-parallax>
         </section>
-        
+
     </v-content>
 
 </template>
 
 
 <script>
+    export default {
+        
+        methods: {
+            getImgUrl(img) {
+                console.log("HEJ")
+                return require('../../assets/' + img)
+            },
+        }
+    }
 </script>
 
 
@@ -75,13 +92,14 @@
     .bajs {
         background: url("/Users/ellinorstenhaug/Desktop/vue2/Renoveringsmaklarna/src/assets/om.jpg") no-repeat cover;
         height: auto;
-        width:auto;
-        background-color: rgb(41, 31, 31);
-    } .about-pic {
-position: relative;
-right:-100px;
+        width: auto;
+        /* background-color: rgb(41, 31, 31); */
+    }
+
+    .about-pic {
+        position: relative;
         background-color: rgb(209, 209, 209);
-        width:50%;
-        height:400px;
+        height: 400px;
+
     }
 </style>

@@ -7,10 +7,12 @@
                 <v-layout column align-center justify-center class="white--text">
                     <div class="jumbotron">
                         <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
+                       <div class="jumbo-container">
                         <h1 class="white--text mb-2 display-1 text-xs-center jumbo-heading">Jämför de bästa xxxxxxxxxx
                             - <br> Helt kostnadsfritt! </h1>
                         <div class="subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor och xxxxkonsulter!</div>
                         <Modal />
+                        </div>
                     </div>
                 </v-layout>
             </v-parallax>
@@ -176,21 +178,9 @@
         data: function () {
             return {
                 count: 0,
-                showModal: false,
-                // img: img,
-                headingLabel: "Välj tjänst",
-                name: '',
-                email: '',
-                checkbox: false,
-                dialog: false,
             }
         },
-        watch: {
-            dialog(val) {
-                !val
-
-            }
-        },
+       
       
     }
 </script>
@@ -203,9 +193,13 @@
 
     .jumbotron {
         background-color: #1b0f187d;
-        height: 70vh;
-        padding: 7% 0 5% 0;
+        /* height: 70vh; */
+        /* padding: 7% 0 5% 0; */
     }
+
+.jumbo-container {
+    padding: 90px 0;
+}
 
     .jumbo-heading {
         font-weight: 400 !important;
@@ -220,6 +214,10 @@
             width: 95%;
         }
 
+    }
+
+    .section2 {
+        background-color: rgb(36, 27, 35) !important;
     }
 
     @media (min-width:690px) {

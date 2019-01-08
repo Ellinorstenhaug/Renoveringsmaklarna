@@ -1,19 +1,27 @@
 <template>
     <v-app light>
-        <Navigation />
+        <Navigation :serviceLinks="services" />
        <router-view/>
-        <Footer />
+        <Footer :serviceLinks="services"/>
     </v-app>
 </template>
 
 <script>
-    import Navigation from './components/views/Navigation'
-    import Footer from './components/views/Footer'
+    import Navigation from './components/views/Navigation';
+    import Footer from './components/views/Footer';
+    import serviceJson from './services/services.json';
+
+
     export default{
         name: 'App',
         components:{
             Navigation,
-            Footer
-        }
+            Footer,
+        
+        },
+        data: () => ({
+            services: serviceJson,
+
+        })
     }
 </script>
