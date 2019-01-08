@@ -9,7 +9,7 @@
                     <v-card-title>
                         <HeadingModal :title="headingLabel"></HeadingModal>
                     </v-card-title>
-                    <v-card-text> 
+                    <v-card-text>
                         <v-container grid-list-xl class="static-container">
                             <v-layout row wrap align-center>
                                 <v-flex xs4 md4>
@@ -91,25 +91,7 @@
                                     label="E-mail" data-vv-name="email" required></v-text-field>
                                 <v-text-field v-validate="'required|city'" v-model="city" :error-messages="errors.collect('city')"
                                     label="Stad" data-vv-name="city" required></v-text-field>
-                                <!-- <v-container grid-list-md>
-                                <v-layout wrap>
-                                    <v-flex xs12 sm6 md6>
-                                        <v-text-field label="Förnamn*" required></v-text-field>
-                                    </v-flex>
-
-                                    <v-flex xs12 sm6 md6>
-                                        <v-text-field label="Efternman*" required></v-text-field>
-                                    </v-flex>
-                                    <v-flex xs12>
-                                        <v-text-field label="Email*" required></v-text-field>
-                                    </v-flex>
-                                    <v-flex xs12>
-                                        <v-text-field label="Stad*" required></v-text-field>
-                                    </v-flex>
-                                
-                                    <small>*indicates required field</small>
-                                </v-layout>
-                            </v-container> -->
+                              
                             </form>
                         </div>
                     </v-card-text>
@@ -157,6 +139,20 @@
             validator: 'new'
         },
 
+        props: ['service'],
+        computed: {
+            handleCount: function () {
+              
+                if(this.service != null){
+                    this.count + 1;
+                    this.handleState();
+                   return this.count;
+                }
+             
+               return this.count;
+            }
+        },
+
         data() {
             return {
                 showModal: false,
@@ -168,11 +164,13 @@
                 city: "",
                 dialog: false,
                 knappText: "",
+                
                 // items: ['Vad behöver du hjälp med?']
             }
         },
         mounted() {
-            this.$validator.localize('sv', this.dictionary)
+        
+            this.$validator.localize('sv', this.dictionary);
         },
         methods: {
 
@@ -222,7 +220,8 @@
                 }
             }
         },
-         watch: {
+        watch: {
+            '$route': 'handleState',
             dialog(val) {
                 !val
             }
@@ -372,6 +371,7 @@
     }
 
     .knapp1 {
+<<<<<<< HEAD
         background-color:white;
         border:2px solid black;
         width:200px; 
@@ -381,5 +381,9 @@
         padding:20px;
         float:right !important;
         width:500px;
+=======
+        background-color: white;
+        border: 2px solid black;
+>>>>>>> da394eae106c1fe3516eb7ff1738727c13c4c140
     }
 </style>
