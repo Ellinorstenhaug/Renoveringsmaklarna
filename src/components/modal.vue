@@ -132,7 +132,22 @@
 
     Vue.use(VeeValidate)
 
+
     export default {
+        props: ['service'],
+        computed: {
+            handleService: function () {
+              
+                if(this.service != null){
+                   
+                  
+                   return this.service;
+                }
+             
+               return "Välj tjänst";
+            }
+        },
+
         components: {
             HeadingModal,
         },
@@ -141,26 +156,13 @@
             validator: 'new'
         },
 
-        props: ['service'],
-        computed: {
-            handleCount: function () {
-              
-                if(this.service != null){
-                    this.count + 1;
-                    this.handleState();
-                   return this.count;
-                }
-             
-               return this.count;
-            }
-        },
-
+      
         data() {
             return {
                 
                 img: img,
                 count: 0,
-                headingLabel: "Välj tjänst",
+                headingLabel: this.service,
                 name: '',
                 email: '',
                 city: "",
@@ -193,13 +195,13 @@
             },
 
             handleState: function () {
-                if (this.count === 0) {
-                    this.headingLabel = "Välj tjänst";
-                } else if (this.count === 1) {
-                    this.headingLabel = "Beskriv ditt ärende";
-                } else if (this.count === 2) {
-                    this.headingLabel = "Detaljer om dig";
-                }
+                // if (this.count === 0) {
+                //     this.headingLabel = "Välj tjänst";
+                // } else if (this.count === 1) {
+                //     this.headingLabel = "Beskriv ditt ärende";
+                // } else if (this.count === 2) {
+                //     this.headingLabel = "Detaljer om dig";
+                // }
             },
 
             submit() {
@@ -223,7 +225,7 @@
             }
         },
         watch: {
-            '$route': 'handleState',
+            //  '$route': 'initService',
             dialog(val) {
                 !val
             }
@@ -385,6 +387,7 @@
      width:50px !important;
         background-color: white;
         border: 2px solid black;
-        height:100px
+        height:100px;
+        width:500px;
     }
 </style>

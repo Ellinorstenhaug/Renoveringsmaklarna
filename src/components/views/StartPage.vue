@@ -14,11 +14,12 @@
                             <div class="subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor och
                                 xxxxkonsulter!</div>
 
-                             
-             
+
+
                             <Modal />
                         </div>
                     </div>
+                    <!-- Slut  -->
                 </v-layout>
             </v-parallax>
         </section>
@@ -110,7 +111,7 @@
             </div>
 
         </section>
-                    <Services />
+        <Services />
 
 
 
@@ -200,20 +201,26 @@
         data: function () {
             return {
                 count: 0,
-               
+
             }
         },
         methods: {
             getImgUrl(img) {
                 return require('../../assets/' + img)
             },
+            // img: img,
+            headingLabel: "Välj tjänst",
+            name: '',
+            email: '',
+            checkbox: false,
+            dialog: false,
+            knappText: "",
         }
     }
 </script>
 
 <style>
-
-.img-wrapper {
+    .img-wrapper {
         /* filter: brightness(0.4); */
         background-color: rgb(19, 19, 19);
         position: relative;
@@ -225,35 +232,37 @@
     }
 
     .headline2 {
-        color:white;
-        font-size:1.6em;
-        text-transform:capitalize;
+        color: white;
+        font-size: 1.6em;
+        text-transform: capitalize;
     }
-    .fontweight-600-text{
+
+    .fontweight-600-text {
         font-weight: 600;
     }
 
     .text-wrapper:hover {
-       color: rgb(148, 189, 189) !important;
+        color: rgb(148, 189, 189) !important;
     }
 
-    a{
+    a {
         text-decoration: none;
-        color:white;
+        color: white;
     }
-  @media (min-width: 1500px)
-  {
-      .service-img{
-          height:600px;
-      }
-      .v-parallax__content{
-          padding:80px 0 !important;
-      }
-  }
 
-.finance {
-    padding: 80px 0;
-}
+    @media (min-width: 1500px) {
+        .service-img {
+            height: 600px;
+        }
+
+        .v-parallax__content {
+            padding: 80px 0 !important;
+        }
+    }
+
+    .finance {
+        padding: 80px 0;
+    }
 
 
     .static-container {
@@ -262,15 +271,14 @@
 
     .jumbotron {
         background-color: #1b0f187d;
-        /* height: 70vh; */
-        /* padding: 7% 0 5% 0; */
+        height: 70vh;
+        padding: 7% 0 5% 0;
     }
 
-    .jumbo-container {
+   .jumbo-container {
         padding: 90px 0;
     }
-
-    .jumbo-heading {
+ .jumbo-heading {
         font-weight: 400 !important;
     }
 
@@ -286,7 +294,8 @@
         height: auto;
         background-color: #e6d3d8;
     }
-/* 
+
+    /* 
     .sectionimg {
         height: 1000px;
         background-color:#1d1a2d;
@@ -300,13 +309,148 @@
 
     }
 
-    .section2 {
-        background-color: rgb(36, 27, 35) !important;
-    }
-
     @media (min-width:690px) {
         .jumbotron {
             width: 650px;
+        }
+    }
+
+    /* modal */
+    @media (max-width: 960px) {
+        .modal-container {
+            width: 100%;
+        }
+
+        .textcolor {
+            padding: 0;
+
+        }
+    }
+
+
+    @media (min-width: 960px) {
+        .modal-container {
+            width: 600px;
+        }
+
+        .presentation:hover {
+            border-left: 2px solid rgb(39, 39, 39);
+            cursor: pointer;
+        }
+    }
+
+    .action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* height: 100vh; */
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .headline {
+        color: black;
+        font-size: 0.8em !important;
+    }
+
+    .modal-container {
+        position: fixed;
+        z-index: 99;
+        width: 670px;
+        height: 95%;
+        top: 20px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(153, 153, 153, 1);
+        /* overflow: hidden; */
+        animation: fadein 0.3s ease-in alternate;
+        outline: 1000px solid rgba(0, 0, 0, 0.5);
+
+    }
+
+    .modal-link {
+        color: black;
+        font-weight: 300 !important;
+        text-decoration: none;
+        display: block;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .presentation-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+
+
+    ul li {
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        list-style-type: none;
+    }
+
+    h1 {
+        color: black;
+        font-weight: 300 !important;
+    }
+
+    ol,
+    ul {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    textarea {
+        border: 1px solid rgb(141, 141, 141) !important;
+        height: 100px;
+        width: 100%;
+        color: black !important;
+        font-family: 'avenir' !important;
+        padding: 10px;
+    }
+
+    .step-container {
+        color: red !important;
+        /* animation: fadein2 0.2s ease-in alternate; */
+        /*TODO Klass funkar ej?*/
+    }
+
+    .textcolor {
+        color: black !important;
+        padding: 30px;
+
+    }
+
+    .knapp1 {
+        width: 100%;
+    }
+
+    .section2 {
+        background-color: rgb(34, 31, 31);
+        /* color:rgb(43, 40, 40) !important; */
+
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein2 {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
         }
     }
 </style>
