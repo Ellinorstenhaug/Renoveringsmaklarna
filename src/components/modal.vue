@@ -2,9 +2,11 @@
     <div class="action v-container xs10 offset-xs1">
         <!-- Modal Template -->
         <v-layout row justify-center>
-            <v-dialog v-model="dialog" block max-width="600px">
                 <v-btn slot="activator" block class="knapp1">Vad behöver du hjälp med?</v-btn>
-                <v-btn slot="activator" color="purple" class="knapp2" block dark>Kom igång!</v-btn>
+                <v-btn slot="activator" color="purple" v-on:click="dialog =!dialog" class="knapp2" block dark>Kom igång!</v-btn>
+            <v-dialog v-model="dialog" block max-width="600px">
+             
+             
                 <v-card>
                     <v-card-title>
                         <HeadingModal :title="headingLabel"></HeadingModal>
@@ -155,7 +157,7 @@
 
         data() {
             return {
-                showModal: false,
+                
                 img: img,
                 count: 0,
                 headingLabel: "Välj tjänst",
@@ -374,13 +376,15 @@
         background-color:white;
         border:2px solid black;
         width:200px; 
+        height:100px;
         float:left !important;
     }
     .knapp2 {
         padding:20px;
         float:right !important;
-        width:500px;
+     width:50px !important;
         background-color: white;
         border: 2px solid black;
+        height:100px
     }
 </style>

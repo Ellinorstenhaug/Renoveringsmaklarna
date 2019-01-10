@@ -7,11 +7,16 @@
                 <v-layout column align-center justify-center class="white--text">
                     <div class="jumbotron">
                         <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
-                       <div class="jumbo-container">
-                        <h1 class="white--text mb-2 display-1 text-xs-center jumbo-heading">Jämför de bästa xxxxxxxxxx
-                            - <br> Helt kostnadsfritt! </h1>
-                        <div class="subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor och xxxxkonsulter!</div>
-                        <Modal />
+                        <div class="jumbo-container">
+                            <h1 class="white--text mb-2 display-1 text-xs-center jumbo-heading">Jämför de bästa
+                                xxxxxxxxxx
+                                - <br> Helt kostnadsfritt! </h1>
+                            <div class="subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor och
+                                xxxxkonsulter!</div>
+
+                             
+             
+                            <Modal />
                         </div>
                     </div>
                 </v-layout>
@@ -22,10 +27,8 @@
             <v-layout column wrap class="my-5" align-center>
                 <v-flex xs12 sm4 class="my-3">
                     <div class="text-xs-center">
-                        <h2 class="headline">The best way to start developing</h2>
-                        
+                        <h2 class="headline">Varför du bör använda RenoveringsMäklarna</h2>
                         <span class="subheading">
-                            
                             Cras facilisis mi vitae nunc
                         </span>
                     </div>
@@ -39,9 +42,9 @@
                                         <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon>
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">Material Design</div>
+                                        <div class="headline text-xs-center">Den bästa lösningen för dig</div>
                                     </v-card-title>
-                                    <v-card-text>
+                                    <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
                                         ornare.
                                         Pellentesque habitant morbi tristique senectus et netus et malesuada fames
@@ -57,9 +60,9 @@
                                         <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon>
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline">Fast development</div>
+                                        <div class="headline">Jämför innan du väljer</div>
                                     </v-card-title>
-                                    <v-card-text>
+                                    <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
                                         ornare.
                                         Pellentesque habitant morbi tristique senectus et netus et malesuada fames
@@ -75,9 +78,9 @@
                                         <v-icon x-large class="purple--text text--lighten-2">build</v-icon>
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">Completely Open Sourced</div>
+                                        <div class="headline text-xs-center">Gratis och icke-bindande</div>
                                     </v-card-title>
-                                    <v-card-text>
+                                    <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
                                         ornare.
                                         Pellentesque habitant morbi tristique senectus et netus et malesuada fames
@@ -88,10 +91,28 @@
                                 </v-card>
                             </v-flex>
                         </v-layout>
+                        <v-layout column align-center justify-center="">
+                            <!-- <v-flex xs8 md3>
+                                <v-btn class="purple lighten-2 selling-button" dark large href="/pre-made-themes">
+                                    Get started
+                                </v-btn>
+                            </v-flex> -->
+                        </v-layout>
                     </v-container>
                 </v-flex>
             </v-layout>
         </section>
+
+        <section>
+            <div class="imgwrapp">
+                <!-- <v-parallax :src="getImgUrl('start-bgc2.png')" alt="construction" class="sectionimg" height="auto"> -->
+                <!-- </v-parallax> -->
+            </div>
+
+        </section>
+                    <Services />
+
+
 
         <section>
             <v-parallax src="assets/section.jpg" class="section2" height="380">
@@ -168,25 +189,73 @@
 
 <script>
     import Modal from '../modal.vue';
-
+    import Services from './childcomponents/Services.vue'
 
     export default {
         components: {
             Modal,
+            Services
         },
 
         data: function () {
             return {
                 count: 0,
+               
             }
         },
-       
-      
+        methods: {
+            getImgUrl(img) {
+                return require('../../assets/' + img)
+            },
+        }
     }
 </script>
 
 <style>
-    /*Kommer från modal!*/
+
+.img-wrapper {
+        /* filter: brightness(0.4); */
+        background-color: rgb(19, 19, 19);
+        position: relative;
+        z-index: 10;
+    }
+
+    .wrapper:hover {
+        filter: brightness(0.8);
+    }
+
+    .headline2 {
+        color:white;
+        font-size:1.6em;
+        text-transform:capitalize;
+    }
+    .fontweight-600-text{
+        font-weight: 600;
+    }
+
+    .text-wrapper:hover {
+       color: rgb(148, 189, 189) !important;
+    }
+
+    a{
+        text-decoration: none;
+        color:white;
+    }
+  @media (min-width: 1500px)
+  {
+      .service-img{
+          height:600px;
+      }
+      .v-parallax__content{
+          padding:80px 0 !important;
+      }
+  }
+
+.finance {
+    padding: 80px 0;
+}
+
+
     .static-container {
         padding: 0 !important;
     }
@@ -197,9 +266,9 @@
         /* padding: 7% 0 5% 0; */
     }
 
-.jumbo-container {
-    padding: 90px 0;
-}
+    .jumbo-container {
+        padding: 90px 0;
+    }
 
     .jumbo-heading {
         font-weight: 400 !important;
@@ -208,6 +277,21 @@
     .subheading {
         margin: 40px 0;
     }
+
+    .selling-button {
+        width: 400px;
+    }
+
+    .imgwrapp {
+        height: auto;
+        background-color: #e6d3d8;
+    }
+/* 
+    .sectionimg {
+        height: 1000px;
+        background-color:#1d1a2d;
+        background: no-repeat;
+    } */
 
     @media (max-width:690px) {
         .jumbotron {

@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import About from './components/views/About.vue';
 import StartPage from './components/views/StartPage.vue';
 import ServicePage from './components/views/ServicePage.vue';
+import ContactPage from './components/views/ContactPage.vue';
 
 Vue.use(Router);
 
@@ -18,8 +19,13 @@ export default new Router({
     },
     {
       path: '/om-oss',
-      name: 'About',
+      name: 'omoss',
       component: About
+    },
+    {
+      path: '/kontakt',
+      name: 'kontakt',
+      component: ContactPage
     },
     {
       path: '/tjänster/:id',     

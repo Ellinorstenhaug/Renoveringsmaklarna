@@ -4,7 +4,7 @@
             <v-parallax :src="this.service.imgUrl">
                 <v-layout column align-center justify-center class="white--text">
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
-                    <h1 class="white--text mb-2 display-2 text-xs-center">{{ this.service.heading.toUpperCase() }}</h1>
+                    <h1 class="white--text mb-2 display-2 text-xs-center big-text">{{ this.service.heading }}</h1>
                     <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
                    
                    <Modal :service="service.heading"/>   
@@ -113,7 +113,6 @@
                 this.service = this.findService(this.$route.params.id);
                 return this.service;
             },
-
             findService: function (serviceName) {
                 let isFound = false;
                 let serviceObject = {};
@@ -178,6 +177,9 @@
     a{
         text-decoration: none;
         color:white;
+    }
+    .big-text{
+        text-transform: uppercase;
     }
   @media (min-width: 1500px)
   {

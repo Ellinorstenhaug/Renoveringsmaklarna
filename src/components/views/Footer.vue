@@ -57,6 +57,7 @@
                         </v-list>
                     </v-card>
                 </v-flex>
+                
 
                 <v-flex xs12 md2>
                     <v-card dark flat>

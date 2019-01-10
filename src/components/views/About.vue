@@ -62,9 +62,46 @@
                 <v-layout column align-center justify-center>
                     <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
                     <em>Kick-start your application today</em>
+                    <v-flex xs12 md3>
+                        <v-btn class=" lighten-2 mt-5 selling-button" dark large href="/pre-made-themes">
+                            Get started
+                        </v-btn>
+                    </v-flex>
                 </v-layout>
             </v-parallax>
         </section>
+
+
+        <section class="faq-section">
+            <v-parallax src="assets/section.jpg" height="auto">
+                <v-layout wrap column align-center justify-center>
+                    <div class="my-5 align-center text-md-center text-xs-center justify-center">
+                        <div class="headline white--text mb-3 text-xs-center">Frequently Asked Questions</div>
+                        <em>Hittar du inte vad du söker? <a href="">Kontakta oss!</a></em>
+                    </div>
+
+                    <v-flex md6>
+                        <div>
+                            <v-expansion-panel class="mb-5">
+                                <v-expansion-panel-content v-for="(item,i) in 5" :key="i" md6>
+                                    <div slot="header">Item</div>
+                                    
+                                        <div class="lighten-3 md6">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing</div>
+                                   
+                                </v-expansion-panel-content>
+                            </v-expansion-panel>
+                        </div>
+                    </v-flex>
+
+                </v-layout>
+            </v-parallax>
+        </section>
+
+
+
+
+
 
     </v-content>
 
@@ -73,10 +110,10 @@
 
 <script>
     export default {
-        
+
         methods: {
             getImgUrl(img) {
-                console.log("HEJ")
+                // console.log("HEJ")
                 return require('../../assets/' + img)
             },
         }
@@ -85,8 +122,21 @@
 
 
 <style>
+    .color {
+        background-color: transparent !important;
+
+    }
+
+    .expansion-panel__container {
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+
     .about-section {
         background-color: #e9d2d8;
+    }
+
+    .faq-section {
+        background-color: #ad9ba0;
     }
 
     .bajs {
@@ -97,7 +147,6 @@
     }
 
     .about-pic {
-        position: relative;
         background-color: rgb(209, 209, 209);
         height: 400px;
 

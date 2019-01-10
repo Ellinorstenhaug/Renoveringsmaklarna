@@ -17,7 +17,6 @@
         components:{
             Navigation,
             Footer,
-        
         },
         data: () => ({
             services: serviceJson,
