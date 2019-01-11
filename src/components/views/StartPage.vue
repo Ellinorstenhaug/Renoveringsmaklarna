@@ -2,8 +2,10 @@
 
     <v-content>
         <section>
-            <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
-                height="600">
+            <v-parallax :src="getUrl('apa3.png')" class="apa">
+                <!-- <v-parallax class="bajs" :src="getUrl('omoss.jpg')"> -->
+                <!-- <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
+                height="600"> -->
                 <v-layout column align-center justify-center class="white--text">
                     <div class="jumbotron">
                         <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
@@ -11,22 +13,26 @@
                             <h1 class="white--text mb-2 display-1 text-xs-center jumbo-heading">Jämför de bästa
                                 xxxxxxxxxx
                                 - <br> Helt kostnadsfritt! </h1>
-                            <div class="subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor och
+                            <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och
                                 xxxxkonsulter!</div>
-
-
+                           <div class="button-wrapper">
 
                             <Modal />
+                           </div>
                         </div>
                     </div>
-                    <!-- Slut  -->
                 </v-layout>
             </v-parallax>
         </section>
 
         <section>
-            <v-layout column wrap class="my-5" align-center>
-                <v-flex xs12 sm4 class="my-3">
+            <Services />
+
+        </section>
+
+        <section class="section-why">
+            <v-layout column wrap class="mt-5" align-center>
+                <v-flex xs12 sm4 class="mt-3">
                     <div class="text-xs-center">
                         <h2 class="headline">Varför du bör använda RenoveringsMäklarna</h2>
                         <span class="subheading">
@@ -104,16 +110,6 @@
             </v-layout>
         </section>
 
-        <section>
-            <div class="imgwrapp">
-                <!-- <v-parallax :src="getImgUrl('start-bgc2.png')" alt="construction" class="sectionimg" height="auto"> -->
-                <!-- </v-parallax> -->
-            </div>
-
-        </section>
-        <Services />
-
-
 
         <section>
             <v-parallax src="assets/section.jpg" class="section2" height="380">
@@ -121,68 +117,159 @@
                     <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
                     <em>Kick-start your application today</em>
                     <v-btn class="purple lighten-2 mt-5" dark large href="/pre-made-themes">
-                        Get started
+                        KOM IGÅNG!
                     </v-btn>
                 </v-layout>
             </v-parallax>
         </section>
 
-        <section>
-            <v-container grid-list-xl>
-                <v-layout row wrap justify-center class="my-5">
-                    <v-flex xs12 sm4>
-                        <v-card class="elevation-0 transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                                <div class="headline">Company info</div>
-                            </v-card-title>
-                            <v-card-text>
-                                Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-                                turpis egestas.
-                                Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse
-                                potenti.
-                            </v-card-text>
-                        </v-card>
-                    </v-flex>
-                    <v-flex xs12 sm4 offset-sm1>
-                        <v-card class="elevation-0 transparent">
-                            <v-card-title primary-title class="layout justify-center">
-                                <div class="headline">Contact us</div>
-                            </v-card-title>
-                            <v-card-text>
-                                Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-                            </v-card-text>
-                            <v-list class="transparent">
-                                <v-list-tile>
-                                    <v-list-tile-action>
-                                        <v-icon class="purple--text text--lighten-2">phone</v-icon>
-                                    </v-list-tile-action>
-                                    <v-list-tile-content>
-                                        <v-list-tile-title>777-867-5309</v-list-tile-title>
-                                    </v-list-tile-content>
-                                </v-list-tile>
-                                <v-list-tile>
-                                    <v-list-tile-action>
-                                        <v-icon class="purple--text text--lighten-2">place</v-icon>
-                                    </v-list-tile-action>
-                                    <v-list-tile-content>
-                                        <v-list-tile-title>Chicago, US</v-list-tile-title>
-                                    </v-list-tile-content>
-                                </v-list-tile>
-                                <v-list-tile>
-                                    <v-list-tile-action>
-                                        <v-icon class="purple--text text--lighten-2">email</v-icon>
-                                    </v-list-tile-action>
-                                    <v-list-tile-content>
-                                        <v-list-tile-title>john@vuetifyjs.com</v-list-tile-title>
-                                    </v-list-tile-content>
-                                </v-list-tile>
-                            </v-list>
-                        </v-card>
-                    </v-flex>
-                </v-layout>
-            </v-container>
+
+       
+
+
+
+ <section>
+            <v-layout column wrap class="mt-5" align-center>
+                <v-flex xs12 sm4 class="mt-3">
+                    <div class="text-xs-center">
+                        <h2 class="headline">Så fungerar RenoveringsMäklarna</h2>
+                        <span class="subheading">
+                            Cras facilisis mi vitae nunc
+                        </span>
+                    </div>
+                </v-flex>
+                <v-flex xs12>
+                    <v-container grid-list-xl>
+                        <v-layout row wrap align-center>
+                            <v-flex xs12 md4>
+                                <v-card class="elevation-0 transparent">
+                                    <v-card-text class="text-xs-center">
+                                        <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon>
+                                    </v-card-text>
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline text-xs-center">Den bästa lösningen för dig</div>
+                                    </v-card-title>
+                                    <v-card-text class="text-md-center text-xs-center">
+                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
+                                        ornare.
+                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                        ac turpis egestas.
+                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
+                                        Suspendisse potenti.
+                                    </v-card-text>
+                                </v-card>
+                            </v-flex>
+                            <v-flex xs12 md4>
+                                <v-card class="elevation-0 transparent">
+                                    <v-card-text class="text-xs-center">
+                                        <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon>
+                                    </v-card-text>
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline">Jämför innan du väljer</div>
+                                    </v-card-title>
+                                    <v-card-text class="text-md-center text-xs-center">
+                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
+                                        ornare.
+                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                        ac turpis egestas.
+                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
+                                        Suspendisse potenti.
+                                    </v-card-text>
+                                </v-card>
+                            </v-flex>
+                            <v-flex xs12 md4>
+                                <v-card class="elevation-0 transparent">
+                                    <v-card-text class="text-xs-center">
+                                        <v-icon x-large class="purple--text text--lighten-2">build</v-icon>
+                                    </v-card-text>
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline text-xs-center">Gratis och icke-bindande</div>
+                                    </v-card-title>
+                                    <v-card-text class="text-md-center text-xs-center">
+                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
+                                        ornare.
+                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                        ac turpis egestas.
+                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
+                                        Suspendisse potenti.
+                                    </v-card-text>
+                                </v-card>
+                            </v-flex>
+                        </v-layout>
+                        <v-layout column align-center justify-center="">
+                            <!-- <v-flex xs8 md3>
+                                <v-btn class="purple lighten-2 selling-button" dark large href="/pre-made-themes">
+                                    Get started
+                                </v-btn>
+                            </v-flex> -->
+                        </v-layout>
+                    </v-container>
+                </v-flex>
+            </v-layout>
         </section>
+
+
+ <section class="recension">
+
+            <div class="r-content">
+                
+            <v-layout row wrap align-center justify-center>
+                 <v-flex xs12 md12 class="my-3">
+                    <div class="text-xs-center">
+                        <h2 class="headline">Tusentals kunder har lyckats med sina projekt!</h2>
+                        <span class="subheading">
+                            Vad våra användare säger: </span>
+                    </div>
+                </v-flex>
+                <v-flex xs12 md4 mr-1>
+                    <v-card>
+                        <v-card-title primary-title>
+                            <div>
+                                <!-- <h3 class="headline mb-0"></h3> -->
+                                <div>Located two hours south of Sydney in the <br>Southern Highlands of New South
+                                    Wales, ..
+                                    Located two hours south of Sydney in the <br>Southern Highlands of New South
+                                    Wales, ...</div>
+                                <br>
+                                <em>
+                                    Alexander Helsinghof, Stockholm
+                                </em>
+                            </div>
+                        </v-card-title>
+
+                        
+                    </v-card>
+                </v-flex>
+                <v-flex xs12 md4 ml-1>
+                    <v-card>
+
+                        <v-card-title primary-title>
+                            <div>
+                                <!-- <h3 class="headline mb-0">Kangaroo Valley Safari</h3> -->
+                                <div>Located two hours south of Sydney in the <br>Southern Highlands of New South
+                                    Wales, ...</div>
+                                <br>
+                                <em>Alexander Helsinghof, Tumba</em>
+                            </div>
+
+                        </v-card-title>
+
+                    </v-card>
+                </v-flex>
+               
+            </v-layout>
+            </div>
+             <v-layout column align-center justify-center>
+                    <v-btn class="purple lighten-2 my-5" dark large href="/pre-made-themes">
+                        KOM IGÅNG!
+                    </v-btn>
+                </v-layout>
+
+        </section>
+
+
+
+       
 
     </v-content>
 
@@ -205,16 +292,10 @@
             }
         },
         methods: {
-            getImgUrl(img) {
+            getUrl(img) {
                 return require('../../assets/' + img)
             },
-            // img: img,
-            headingLabel: "Välj tjänst",
-            name: '',
-            email: '',
-            checkbox: false,
-            dialog: false,
-            knappText: "",
+
         }
     }
 </script>
@@ -272,13 +353,11 @@
     .jumbotron {
         background-color: #1b0f187d;
         height: 70vh;
-        padding: 7% 0 5% 0;
+        padding: 7% 1% 5% 1%;
     }
 
-   .jumbo-container {
-        padding: 90px 0;
-    }
- .jumbo-heading {
+
+    .jumbo-heading {
         font-weight: 400 !important;
     }
 
@@ -305,6 +384,11 @@
     @media (max-width:690px) {
         .jumbotron {
             width: 95%;
+        }
+
+        .subheading {
+            margin: 60px 0 !important;
+            line-height: 2;
         }
 
     }
@@ -452,5 +536,28 @@
         to {
             opacity: 1;
         }
+    }
+
+    .apa {
+        height: 570px !important;
+        width: 100%;
+    }
+    .recension {
+         background-color: #e9d2d8;
+         height:auto;
+    }
+    .r-content {
+        padding-top:40px !important ;
+    }
+
+.button-wrapper {
+        padding: 20px 0;
+        background-color: rgba(0, 0, 0, 0.521);
+    }
+
+    .section-why {
+        background-color: #eee;
+        height:auto;
+        padding: 20px 0; 
     }
 </style>

@@ -29,6 +29,7 @@
                         </v-list>
                     </div>
                 </v-menu>
+                    <img src="@/assets/logo-rm2.png" alt="" class="logo">
 
                 <router-link :to="`/`" class="v_toolbar_title title black--text">{{title}}</router-link>
                 <v-spacer></v-spacer>
@@ -74,7 +75,6 @@
     import serviceJson from '../../services/services.json';
 
     export default {
-
         data() {
             return {
                 services: serviceJson,
@@ -137,10 +137,14 @@
 
     .toolbar-wrapper {
         box-shadow: 0px 1px 1px 0px rgba(44, 44, 44, 0.7) !important;
-        margin-bottom: 1px;
+        /* margin-bottom: 1px; */
     }
 
     .subheading {
         line-height: 4.5;
+    }
+    .logo {
+        height:24px;
+        margin-right:5px;
     }
 </style>

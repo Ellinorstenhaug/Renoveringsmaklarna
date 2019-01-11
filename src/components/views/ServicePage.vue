@@ -1,41 +1,50 @@
 <template>
     <v-content>
+
+
         <section>
-            <v-parallax :src="this.service.imgUrl">
+            <v-parallax :src="this.service.imgUrl" class="apa">
                 <v-layout column align-center justify-center class="white--text">
-                    <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
-                    <h1 class="white--text mb-2 display-2 text-xs-center big-text">{{ this.service.heading }}</h1>
-                    <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
-                   
-                   <Modal :service="findService(this.$route.params.id).heading"/>   
+                    <div class="jumbotron">
+                        <div class="jumbo-container ">
+                            <h1 class="white--text mb-2 display-2 text-xs-center big-text">{{ this.service.heading }}</h1>
+                            <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
+                            <div class="button-wrapper">
+                                <Modal :service="findService(this.$route.params.id).heading" />
+
+                            </div>
+
+                        </div>
+                    </div>
                 </v-layout>
             </v-parallax>
         </section>
-    <section>
+        <section>
             <v-layout column wrap align-center>
                 <v-flex xs12>
-                      <v-card-title primary-title class="layout justify-center">
-                                        <div class="display-1 my-5 text-xs-center">{{this.service.subheading}} {{this.service.heading}}</div>
-                                    </v-card-title>
+                    <v-card-title primary-title class="layout justify-center">
+                        <div class="display-1 my-5 text-xs-center">{{this.service.subheading}} {{this.service.heading}}</div>
+                    </v-card-title>
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
                             <v-flex xs12 md6>
                                 <v-card class="elevation-0 transparent">
-                                  
+
                                     <v-card-title primary-title class="layout justify-center">
                                         <div class="headline text-xs-center">asdsaasadsadas</div>
                                     </v-card-title>
                                     <v-card-text>
-                                  {{this.service.caption}}
+                                        {{this.service.caption}}
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
                             <v-flex xs12 md6>
                                 <v-card class="elevation-0 transparent">
-                                  <v-parallax :src=" (this.service.subImgUrl)" class="img-wrapper grey lighten-2 service-img"   aspect-ratio="1"></v-parallax>
+                                    <v-parallax :src=" (this.service.subImgUrl)" class="img-wrapper grey lighten-2 service-img"
+                                        aspect-ratio="1"></v-parallax>
                                 </v-card>
                             </v-flex>
-                          
+
                         </v-layout>
                     </v-container>
                 </v-flex>
@@ -46,11 +55,11 @@
             <!-- end -->
             <v-layout column wrap class="my-5" align-center>
                 <v-flex xs12 sm4 class="my-3">
-                      <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">Fler tjänster</h3>
-          </div>
-        </v-card-title>
+                    <v-card-title primary-title>
+                        <div>
+                            <h3 class="headline mb-0">Fler tjänster</h3>
+                        </div>
+                    </v-card-title>
                 </v-flex>
                 <v-flex xs12>
                     <v-container grid-list-xl>
@@ -58,18 +67,19 @@
                             <!-- <v-parallax :src="this.service.imgUrl" height="600"> -->
                             <v-flex xs12 sm6 md6 lg4 v-for="(item, index) in services" :key="index">
                                 <div class="wrapper">
-                                     <router-link :to="`${item.url}`">  
-                                    <v-parallax :src=" getImgUrl(item.imgUrl)" class="img-wrapper grey lighten-2 service-img"   aspect-ratio="1">
-                                        <v-card class="elevation-20 text-wrapper" color="rgba(0,0,0,0.5)" dark>
-                                            <v-card-title primary-title class="layout justify-center">
-                                                <div class="headline2 fontweight-600-text">{{item.heading}}</div>
-                                                <!-- TODO:fixa hover  -->
-                                            </v-card-title>
-                                            <v-card-text>
-                                                {{item.ingress}}
-                                            </v-card-text>
-                                        </v-card>
-                                    </v-parallax>
+                                    <router-link :to="`${item.url}`">
+                                        <v-parallax :src=" getImgUrl(item.imgUrl)" class="img-wrapper grey lighten-2 service-img"
+                                            aspect-ratio="1">
+                                            <v-card class="elevation-20 text-wrapper" color="rgba(0,0,0,0.5)" dark>
+                                                <v-card-title primary-title class="layout justify-center">
+                                                    <div class="headline2 fontweight-600-text">{{item.heading}}</div>
+                                                    <!-- TODO:fixa hover  -->
+                                                </v-card-title>
+                                                <v-card-text>
+                                                    {{item.ingress}}
+                                                </v-card-text>
+                                            </v-card>
+                                        </v-parallax>
                                     </router-link>
                                 </div>
                             </v-flex>
@@ -95,7 +105,7 @@
             '$route': 'initService'
         },
 
-        components:{
+        components: {
             Modal
         },
 
@@ -103,12 +113,12 @@
             return {
                 service: {},
                 services: serviceJson,
-                
+
             }
         },
         methods: {
 
-            returnServiceHeading(){
+            returnServiceHeading() {
 
                 var value = this.service.heading;
 
@@ -131,7 +141,7 @@
                 for (var i = 0; i < serviceJson.length; i++) {
 
                     if (serviceJson[i].heading == serviceName) {
-               
+
 
                         serviceObject = {
                             heading: serviceJson[i].heading,
@@ -141,7 +151,7 @@
                             subheading: serviceJson[i].subheading,
                             caption: serviceJson[i].caption
                         }
-                      
+
                         isFound = true;
                         break;
 
@@ -166,7 +176,7 @@
         background-color: rgb(19, 19, 19);
         position: relative;
         z-index: 10;
-        height:400px !important;
+        height: 400px !important;
     }
 
     .wrapper:hover {
@@ -174,36 +184,57 @@
     }
 
     .headline2 {
-        color:white;
-        font-size:1.6em;
-        text-transform:capitalize;
+        color: white;
+        font-size: 1.6em;
+        text-transform: capitalize;
     }
-    .fontweight-600-text{
+
+    .fontweight-600-text {
         font-weight: 600;
     }
 
     .text-wrapper:hover {
-       color: rgb(148, 189, 189) !important;
+        color: rgb(148, 189, 189) !important;
     }
 
-    a{
+    a {
         text-decoration: none;
-        color:white;
+        color: white;
     }
-    .big-text{
+
+    .big-text {
         text-transform: uppercase;
     }
-  @media (min-width: 1500px)
-  {
-      .service-img{
-          height:600px;
-      }
-      .v-parallax__content{
-          padding:80px 0 !important;
-      }
-  }
 
-.finance {
-    padding: 80px 0;
-}
+    @media (min-width: 1500px) {
+        .service-img {
+            height: 600px;
+        }
+
+        .v-parallax__content {
+            padding: 80px 0 !important;
+        }
+    }
+
+    .finance {
+        padding: 80px 0;
+    }
+
+    .jumbotron2 {
+        /* background-color: #1b0f187d; */
+        height: 70vh;
+        padding: 7% 1% 5% 1%;
+    }
+
+    .jumbo-container2 {
+        width: 600px;
+    }
+
+    @media (max-width: 600) {
+        .jumbo-container2 {
+            width: 100% !important;
+            padding: 40px !important;
+
+        }
+    }
 </style>

@@ -139,7 +139,7 @@
     }
 
     .bajs {
-        background: url("/Users/ellinorstenhaug/Desktop/vue2/Renoveringsmaklarna/src/assets/om.jpg") no-repeat cover;
+        /* background: url("/Users/ellinorstenhaug/Desktop/vue2/Renoveringsmaklarna/src/assets/om.jpg") no-repeat cover; */
         height: auto;
         width: auto;
         /* background-color: rgb(41, 31, 31); */
