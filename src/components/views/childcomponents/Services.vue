@@ -5,7 +5,7 @@
             <v-flex xs12 sm4 class="my-3">
                 <v-card-title primary-title>
                     <div>
-                        <h3 class="headline mb-0">Välj en tjänst för att få upp till tre offerter</h3>
+                        <h3 class="display-1 mb-0">Välj en tjänst för att få upp till tre offerter</h3>
                     </div>
                 </v-card-title>
             </v-flex>

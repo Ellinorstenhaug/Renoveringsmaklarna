@@ -27,7 +27,7 @@
                 </v-menu>
 
                 
-                <router-link :to="`/`" class="v_toolbar_title title nav-logo black--text"><img src="@/assets/logo-rm2.png" alt="" class="logo"> {{title}}</router-link>
+                <router-link :to="`/`" class="v_toolbar_title title nav-logo black--text"><img src="@/assets/RM-01.svg" alt="" class="logo"> {{title}}</router-link>
                 <v-spacer></v-spacer>
 
 

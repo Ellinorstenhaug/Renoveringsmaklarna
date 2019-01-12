@@ -12,7 +12,7 @@
                     </span>
                 </div>
             </v-btn>
-            <v-btn slot="activator" color="purple" class="knapp2" large dark>Kom igång!</v-btn>
+            <v-btn slot="activator" color="purple lighten-2" class="knapp2" large dark>Kom igång!</v-btn>
         </div>
         <v-layout action row justify-center>
 
