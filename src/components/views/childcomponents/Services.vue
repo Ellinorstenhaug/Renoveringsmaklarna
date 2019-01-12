@@ -1,17 +1,6 @@
 <template>
     <div>
 
-
-
-        <div class="img__wrap">
-            <img class="img__img" src="http://placehold.it/257x200.jpg" />
-            <div class="img__description_layer">
-                <p class="img__description">This image looks super neat.</p>
-            </div>
-        </div>
-
-
-
         <v-layout column wrap class="mt-5 pb-5" align-center>
             <v-flex xs12 sm4 class="my-3">
                 <v-card-title primary-title>
@@ -20,33 +9,37 @@
                     </div>
                 </v-card-title>
             </v-flex>
-            <v-flex xs12>
+            <v-flex xs12 md12>
                 <v-container grid-list-xl>
-
                     <v-layout row wrap align-center>
                         <v-flex xs12 md4 v-for="(item, index) in services" :key="index">
-                            <div class="wrapper">
-                                <router-link :to="`${item.url}`">
-                                    <v-parallax :src=" getImgUrl(item.imgUrl)" class="img-wrapper grey lighten-2 service-img"
-                                        aspect-ratio="1">
-                                        <v-card class="elevation-20 text-wrapper" color="rgba(0,0,0,0.5)" dark>
+                            <router-link :to="`${item.url}`">
+
+                                <div class="img__wrap">
+                                    <img class="img__img" :src="getImgUrl(item.images[0].medium)" :alt="item.images.alt" />
+                                    <div class="img__description_layer">
+                                        <div class="img__description">
                                             <v-card-title primary-title class="layout justify-center">
                                                 <div class="headline2 fontweight-600-text">{{item.heading}}</div>
                                             </v-card-title>
                                             <v-card-text>
                                                 {{item.ingress}}
+                                                <div class="read-more-wrap">
+                                                   
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24">
+                                                        <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z" /></svg>
+                                                </div>
                                             </v-card-text>
-                                        </v-card>
-                                    </v-parallax>
-                                </router-link>
-                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </router-link>
                         </v-flex>
                     </v-layout>
                 </v-container>
             </v-flex>
         </v-layout>
-
-        
     </div>
 
 </template>
@@ -64,9 +57,11 @@
         },
         methods: {
             getImgUrl(img) {
-                return require('@/assets/' + img)
+                return require('@/assets/' + img);
             },
-
+            // getImg (img) {
+            //     return requi
+            // }
         }
     }
 </script>
@@ -98,14 +93,11 @@
     }
 
 
-
-
-
-
+    /* relevant styles */
     .img__wrap {
         position: relative;
-        height: 200px;
-        width: 257px;
+        height: 300px;
+        width: auto;
     }
 
     .img__description_layer {
@@ -138,5 +130,18 @@
 
     .img__wrap:hover .img__description {
         transform: translateY(0);
+    }
+
+    .img__img {
+        width: 100%;
+        margin-bottom:20px !important;
+        height: auto !important;
+    }
+    .read-more-wrap {
+        text-align:right;
+        fill:white;
+        position: absolute;
+        right:0;
+        bottom:0;
     }
 </style>
