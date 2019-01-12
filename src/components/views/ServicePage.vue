@@ -10,7 +10,7 @@
                             <h1 class="white--text mb-2 display-2 text-xs-center big-text">{{ this.service.heading }}</h1>
                             <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
                             <div class="button-wrapper">
-                                <Modal :service="findService(this.$route.params.id).heading" />
+                                <Modal :service="this.service.heading" :allServices="this.services" />
 
                             </div>
 
@@ -112,18 +112,11 @@
         data() {
             return {
                 service: {},
-                services: serviceJson,
+                services: {},
 
             }
         },
         methods: {
-
-            returnServiceHeading() {
-
-                var value = this.service.heading;
-
-                return value;
-            },
 
             getImgUrl(img) {
                 return require('../../assets/' + img)
@@ -131,17 +124,19 @@
 
 
             initService: function () {
-                this.service = this.findService(this.$route.params.id);
+                this.services = serviceJson;
+                this.service = this.findService();
                 return this.service;
             },
-            findService: function (serviceName) {
+
+            findService: function () {
+                let serviceName = this.$route.params.id;              
                 let isFound = false;
                 let serviceObject = {};
 
                 for (var i = 0; i < serviceJson.length; i++) {
 
                     if (serviceJson[i].heading == serviceName) {
-
 
                         serviceObject = {
                             heading: serviceJson[i].heading,

@@ -3,15 +3,13 @@
         <!-- Modal Template -->
         <div v-on:click="dialog =! dialog">
 
-
-
-            <v-btn slot="activator" class="knapp1 "  large>
-                <div class="content-wrap text-md-left" >
+            <v-btn slot="activator" class="knapp1 " large>
+                <div class="content-wrap text-md-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" /></svg>
-                   <span class="knapp2-text"> 
-                       Vad behöver du hjälp med?
-                       </span> 
+                    <span class="knapp2-text">
+                        Vad behöver du hjälp med?
+                    </span>
                 </div>
             </v-btn>
             <v-btn slot="activator" color="purple" class="knapp2" large dark>Kom igång!</v-btn>
@@ -19,8 +17,6 @@
         <v-layout action row justify-center>
 
             <v-dialog v-model="dialog" block max-width="600px">
-
-
                 <v-card>
                     <v-card-title>
                         <HeadingModal :title="headingLabel"></HeadingModal>
@@ -32,7 +28,8 @@
 
                                     <v-card class="elevation-0 transparent">
                                         <v-card-text class="text-xs-center">
-                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 6c3.469 0 2 5 2 5s5-1.594 5 2v9h-12v-16h5zm.827-2h-7.827v20h16v-11.842c0-2.392-5.011-8.158-8.173-8.158zm.173-2l-3-2h-9v22h2v-20h10z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M13 6c3.469 0 2 5 2 5s5-1.594 5 2v9h-12v-16h5zm.827-2h-7.827v20h16v-11.842c0-2.392-5.011-8.158-8.173-8.158zm.173-2l-3-2h-9v22h2v-20h10z" /></svg>
                                         </v-card-text>
 
                                         <v-card-title primary-title class="layout justify-center">
@@ -73,14 +70,17 @@
 
                         <div class="step-container" v-if="count === 0">
                             <div class="wrapper">
-                                <ul>
-                                    <li @click.prevent="add" class="presentation">
+                                <ul v-for="(item, index) in allServicesMethod" :key="index">
+                                    <li @click.prevent="add(item.heading)" class="presentation">
+                                            
+                                        <a class="modal-link title2" href="#" v-html="item.icon"></a>
                                         <a class="modal-link title2" href="#">
-                                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
-                                                clip-rule="evenodd">
-                                                <path d="M15 7h4v5h5v6h-5v5h-19v-21h15v5zm-5 11h-9v4h9v-4zm8 0h-7v4h7v-4zm-11-5h-6v4h6v-4zm9 0h-8v4h8v-4zm7 0h-6v4h6v-4zm-12-5v4h7v-4h-7zm-1 0h-9v4h9v-4zm-3-5h-6v4h6v-4zm7 0h-6v4h6v-4z" /></svg>
-                                            Renovering</a></li>
-                                    <li @click.prevent="add" class="presentation">
+                                              {{capitalizeFirstLetter(item.heading)}}
+                                        </a>
+                                    </li>
+
+
+                                    <!-- <li @click.prevent="add" class="presentation">
                                         <a class="modal-link title2" href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                                 <path d="M12 3.571c3.658 5.437 6 9.223 6 12.503 0 3.268-2.691 5.926-6 5.926s-6-2.658-6-5.925c0-3.281 2.342-7.067 6-12.504zm0-3.571c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075zm2.656 12c.969 3.484-.406 6.859-2.656 7.781 3.318.475 5.994-3.466 2.656-7.781z" /></svg>
@@ -106,7 +106,7 @@
                                                 <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1.25 17c0 .69-.559 1.25-1.25 1.25-.689 0-1.25-.56-1.25-1.25s.561-1.25 1.25-1.25c.691 0 1.25.56 1.25 1.25zm1.393-9.998c-.608-.616-1.515-.955-2.551-.955-2.18 0-3.59 1.55-3.59 3.95h2.011c0-1.486.829-2.013 1.538-2.013.634 0 1.307.421 1.364 1.226.062.847-.39 1.277-.962 1.821-1.412 1.343-1.438 1.993-1.432 3.468h2.005c-.013-.664.03-1.203.935-2.178.677-.73 1.519-1.638 1.536-3.022.011-.924-.284-1.719-.854-2.297z" /></svg>
                                             Jag
                                             är osäker på
-                                            vem</a></li>
+                                            vem</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -175,17 +175,14 @@
 
 
     export default {
-        props: ['service'],
-        computed: {
-            handleService: function () {
+        props: ['service', 'allServices'],
 
-                if (this.service != null) {
-                    return this.service;
-                }
-                return "Välj tjänst";
+        computed: {
+            allServicesMethod: function () {
+                return this.allServices;
+
             }
         },
-
         components: {
             HeadingModal,
         },
@@ -199,15 +196,19 @@
             return {
                 img: img,
                 count: 0,
-                headingLabel: this.service,
+                headingLabel: 'Välj tjänst',
+                currentService: '',
                 name: '',
                 email: '',
                 city: "",
                 dialog: false,
-                knappText: "",
-                bygghjalp: `<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15 7h4v5h5v6h-5v5h-19v-21h15v5zm-5 11h-9v4h9v-4zm8 0h-7v4h7v-4zm-11-5h-6v4h6v-4zm9 0h-8v4h8v-4zm7 0h-6v4h6v-4zm-12-5v4h7v-4h-7zm-1 0h-9v4h9v-4zm-3-5h-6v4h6v-4zm7 0h-6v4h6v-4z"/></svg>`,
+                userData: {
+                    name: '',
+                    email: '',
+                    city: '',
+                    service: ''
+                },
 
-                // items: ['Vad behöver du hjälp med?']
             }
         },
         mounted() {
@@ -215,17 +216,18 @@
             this.$validator.localize('sv', this.dictionary);
         },
         methods: {
-
+            capitalizeFirstLetter: function (input) {
+                return input.charAt(0).toUpperCase() + input.slice(1);
+            },
             add: function () {
                 this.count++;
-                // this.handleState();
-                // return this.count++;
+                this.handleState();
             },
             minus: function () {
                 this.count--;
-                // this.handleState();
+                this.handleState();
                 this.knappText = "Tillbaka";
-                // return this.count--;
+
             },
 
             success: function () {
@@ -237,6 +239,9 @@
                     this.headingLabel = "Välj tjänst";
                 } else if (this.count === 1) {
                     this.headingLabel = "Beskriv ditt ärende";
+                    this.userData = {
+                        'tjänst': this.currentService
+                    };
                 } else if (this.count === 2) {
                     this.headingLabel = "Detaljer om dig";
                 }
@@ -262,15 +267,22 @@
                 }
             }
         },
+
         watch: {
-            //  '$route': 'initService',
+            service: function (newVal) {
+                this.currentService = newVal;
+                this.count = 1;
+                this.handleState();
+            },
+
+            // servies: function(newVal){
+            //     this.ser
+            // }
             dialog(val) {
                 !val
             }
         },
     }
-
-
 
     // Vue.use(VeeValidate);
 </script>
@@ -336,7 +348,7 @@
         color: black;
         font-weight: 300 !important;
         text-decoration: none;
-        display: block;
+        display: inline !important;
         padding: 0 !important;
         margin: 0 !important;
     }
@@ -420,11 +432,11 @@
         float: left !important;
         width: 79% !important;
         min-width: 0;
-        height:60px !important;
-        text-transform: none !important    ;
+        height: 60px !important;
+        text-transform: none !important;
 
 
-    /* line-height: 12 !important; */
+        /* line-height: 12 !important; */
 
         /* padding: 20px 0 20px 0 !important; */
     }
@@ -437,19 +449,20 @@
         width: 16% !important;
         background-color: white;
         border: 2px solid black;
-        height:60px !important;
+        height: 60px !important;
         /* height: 100px;
         width: 500px; */
     }
+
     .knapp2-text {
         line-height: 2.5;
     }
 
-svg {
-    position: relative;
-    top:5px;
-    left:-13px;
-}
+    svg {
+        position: relative;
+        top: 5px;
+        left: -13px;
+    }
 
     .button-wrapper {
         padding: 20px 0;
@@ -457,17 +470,17 @@ svg {
     }
 
     .content-wrap {
-    position: absolute;
-    left:0;
-    font-size:0.9em !important;
-    filter: opacity(0.4)
+        position: absolute;
+        left: 0;
+        font-size: 0.9em !important;
+        filter: opacity(0.4)
+    }
 
-    }
     .v-btn__content {
-        float:left;
-        text-align:left !important;
+        float: left;
+        text-align: left !important;
     }
-    
+
     @media (max-width:561px) {
         .knapp1 {
             width: 96% !important;
