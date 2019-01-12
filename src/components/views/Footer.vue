@@ -13,7 +13,14 @@
                         </v-list-tile>
                     </v-card>
                 </v-flex>
-
+ <v-flex xs12 md2>
+                    <v-card dark flat>
+                        <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">{{headings[0]}}</v-card-text>
+                        <v-list-tile v-for="(item, index) in links" :key="index">
+                            <router-link :to="`${item.url}`" class="v-list__tile__title list-item">{{item.heading}}</router-link>
+                        </v-list-tile>
+                    </v-card>
+                </v-flex>
 
                 <v-flex xs12 md3>
                     <v-card dark flat>
@@ -48,7 +55,7 @@
                         </v-list>
                     </v-card>
                 </v-flex>
-                
+               
 
                 <v-flex xs12 md2>
                     <v-card dark flat>
@@ -65,14 +72,7 @@
                         </v-list-tile>
                     </v-card>
                 </v-flex>
-                <v-flex xs12 md2>
-                    <v-card dark flat>
-                        <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">{{headings[0]}}</v-card-text>
-                        <v-list-tile v-for="(item, index) in links" :key="index">
-                            <router-link :to="`${item.url}`" class="v-list__tile__title list-item">{{item.heading}}</router-link>
-                        </v-list-tile>
-                    </v-card>
-                </v-flex>
+                
             </v-layout>
             <v-layout row>
                 <v-flex lighten-2 py-3 text-xs-center white--text class="color">
@@ -111,7 +111,7 @@
 
     .list-item {
         text-decoration: none;
-        color: white;
+        color: white !important;
         padding: 0 0 0 0 !important;
         text-transform: capitalize;
         font-size:0.95em !important;

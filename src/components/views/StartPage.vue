@@ -46,7 +46,8 @@
                             <v-flex xs12 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
-                                        <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon>
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/1317/1317349.svg" alt="icon">
+                                        <!-- <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
                                         <div class="headline text-xs-center">Den bästa lösningen för dig</div>
@@ -64,7 +65,8 @@
                             <v-flex xs12 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
-                                        <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon>
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/1170/1170619.svg" alt="">
+                                        <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
                                         <div class="headline">Jämför innan du väljer</div>
@@ -82,7 +84,8 @@
                             <v-flex xs12 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
-                                        <v-icon x-large class="purple--text text--lighten-2">build</v-icon>
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/806/806704.svg" alt="">
+                                        <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
                                         <div class="headline text-xs-center">Gratis och icke-bindande</div>
@@ -144,10 +147,12 @@
                             <v-flex xs12 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
-                                        <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon>
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/306/306443.svg" alt="">
+
+                                        <!-- <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">Den bästa lösningen för dig</div>
+                                        <div class="headline text-xs-center">Fyll i formuläret</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -162,10 +167,11 @@
                             <v-flex xs12 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
-                                        <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon>
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/292/292094.svg" alt="">
+                                        <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline">Jämför innan du väljer</div>
+                                        <div class="headline">Jämför offerter</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -180,10 +186,11 @@
                             <v-flex xs12 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
-                                        <v-icon x-large class="purple--text text--lighten-2">build</v-icon>
+                                        <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/169/169513.svg" alt="">
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">Gratis och icke-bindande</div>
+                                        <div class="headline text-xs-center">Välj din lösning</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -556,8 +563,12 @@
     }
 
     .section-why {
-        background-color: #eee;
+        /* background-color: #eee; */
         height:auto;
         padding: 20px 0; 
+    }
+
+    .icon {
+        width:100px;
     }
 </style>

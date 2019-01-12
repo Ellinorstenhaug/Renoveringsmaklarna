@@ -1,8 +1,4 @@
 <template>
-
-
-
-
     <div class="toolbar-wrapper">
         <v-card color="white lighten-4" flat>
             <v-toolbar color="white darken-1" light class="toolbar-wrapper">
@@ -29,9 +25,9 @@
                         </v-list>
                     </div>
                 </v-menu>
-                    <img src="@/assets/logo-rm2.png" alt="" class="logo">
 
-                <router-link :to="`/`" class="v_toolbar_title title black--text">{{title}}</router-link>
+                
+                <router-link :to="`/`" class="v_toolbar_title title nav-logo black--text"><img src="@/assets/logo-rm2.png" alt="" class="logo"> {{title}}</router-link>
                 <v-spacer></v-spacer>
 
 
@@ -41,7 +37,7 @@
 
                     <v-menu class="menu-headings mr-5" top open-on-hover>
                         <v-toolbar-items slot="activator">
-                            <v-btn flat class="subheading">Tjänster</v-btn>
+                            <v-btn flat class="subheading-nav">Tjänster</v-btn>
                             <v-icon light>arrow_drop_down</v-icon>
                         </v-toolbar-items>
 
@@ -53,7 +49,7 @@
                     </v-menu>
                     <v-menu class="menu-headings mr-5" top open-on-hover>
                         <v-toolbar-items slot="activator">
-                            <v-btn flat class="subheading ">Om Oss</v-btn>
+                            <v-btn flat class="subheading-nav ">Om Oss</v-btn>
                             <v-icon light>arrow_drop_down</v-icon>
                         </v-toolbar-items>
                         <v-list class="dropdown-list">
@@ -134,17 +130,23 @@
         padding: 0 15px;
     }
 
-
     .toolbar-wrapper {
         box-shadow: 0px 1px 1px 0px rgba(44, 44, 44, 0.7) !important;
         /* margin-bottom: 1px; */
     }
 
-    .subheading {
+    .subheading-nav {
         line-height: 4.5;
     }
+
     .logo {
-        height:24px;
-        margin-right:5px;
+        height: 24px;
+        margin-right: 5px;
+    }
+
+    .nav-logo:hover,
+    .logo:hover {
+        color: teal !important;
+        fill: teal !important;
     }
 </style>

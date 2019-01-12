@@ -1,7 +1,6 @@
 <template>
     <div>
 
-
         <v-layout column wrap class="mt-5 pb-5" align-center>
             <v-flex xs12 sm4 class="my-3">
                 <v-card-title primary-title>
@@ -17,7 +16,7 @@
                             <router-link :to="`${item.url}`">
 
                                 <div class="img__wrap">
-                                    <img class="img__img" :src="getImgUrl(item.imgUrl)" />
+                                    <img class="img__img" :src="getImgUrl(item.images[0].medium)" :alt="item.images.alt" />
                                     <div class="img__description_layer">
                                         <div class="img__description">
                                             <v-card-title primary-title class="layout justify-center">
@@ -41,8 +40,6 @@
                 </v-container>
             </v-flex>
         </v-layout>
-
-
     </div>
 
 </template>
@@ -137,7 +134,8 @@
 
     .img__img {
         width: 100%;
-        height: auto;
+        margin-bottom:20px !important;
+        height: auto !important;
     }
     .read-more-wrap {
         text-align:right;
