@@ -281,7 +281,7 @@
 
     export default {
         components: {
-            Modal,
+            Modal,  
             Services
         },
 
