@@ -3,17 +3,21 @@
         <section>
             <v-parallax :src="this.service.imgUrl" v-if=" $vuetify.breakpoint.mdAndUp">
                 <v-layout column align-center justify-center class="white--text">
-
-                    <div class="jumbo-container">
-                        <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
-                        <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
-                        <div class="button-wrapper">
-                            <Modal :service="this.service.heading" :allServices="this.services" />
+                    <div class="jumbotron">
+                        <div class="jumbo-container">
+                            <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading
+                                }}</h1>
+                            <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
+                            <div class="button-wrapper">
+                                <Modal :service="this.service.heading" :allServices="this.services" />
+                            </div>
                         </div>
+
                     </div>
+
                 </v-layout>
             </v-parallax>
-          <v-img :src="this.service.imgUrl" alt="skriv något här" v-if=" $vuetify.breakpoint.mdAndDown">
+            <v-img :src="this.service.imgUrl" alt="skriv något här" v-if=" $vuetify.breakpoint.mdAndDown">
                 <v-layout column align-center justify-center class="white--text" style="background: #1b0f187d;">
 
                     <div class="jumbo-container" style="margin-top:60px;margin-bottom:30px;">
@@ -32,6 +36,7 @@
                 <v-flex xs12>
                     <v-card-title primary-title class="layout justify-center">
                         <h2 class="display-1 my-5 text-xs-center">{{this.service.subheading}} {{this.service.heading}}</h2>
+                        <hr>
                     </v-card-title>
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
@@ -98,7 +103,7 @@
         },
         methods: {
 
-             getImgUrl(img) {
+            getImgUrl(img) {
                 return require('../../assets/' + img)
             },
 
@@ -145,7 +150,7 @@
     }
 </script>
 
-<style scoped>
+<style>
     .img-wrapper {
         /* filter: brightness(0.4); */
         background-color: rgb(19, 19, 19);
@@ -186,6 +191,23 @@
             height: 600px;
         }
 
+        @media(max-width:600px) {
+            .my-5 {
+                margin-top: 48px !important;
+                margin-bottom: unset !important;
+            }
+
+            .display-1 {
+                font-size: 26px !important;
+                line-height: unset !important;;
+            }
+        }
+
+        .display-1 {
+    font-size: 0!important;
+    line-height: 0!important;
+}
+
         .v-parallax__content {
             padding: 80px 0 !important;
         }
@@ -200,6 +222,7 @@
         height: 70vh;
         padding: 7% 1% 5% 1%;
     }
+
     .jumbo-container2 {
         width: 600px;
     }

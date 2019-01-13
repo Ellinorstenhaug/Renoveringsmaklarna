@@ -3,7 +3,7 @@
             <v-flex xs12 md12>
                 <v-container grid-list-xl>
                     <v-layout row wrap align-center>
-                        <v-flex xs12 md4 sm6 v-for="(item, index) in services" :key="index">
+                        <v-flex xs12 md3 sm6 v-for="(item, index) in services" :key="index">
                             <router-link :to="`${item.url}`">
 
                                 <div class="img__wrap">

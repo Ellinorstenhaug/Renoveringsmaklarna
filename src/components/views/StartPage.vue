@@ -7,20 +7,25 @@
                 <!-- <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
                 height="600"> -->
                 <v-layout column align-center justify-center class="white--text">
-                  
-                        <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
+                    <div class="jumbotron">
                         <div class="jumbo-container">
                             <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Jämför de bästa
                                 renoveringsbyråerna
                                 - <br> Helt kostnadsfritt! </h1>
-                            <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och konsulter!</div>
+                            <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och
+                                konsulter!</div>
                             <div class="button-wrapper">
-                           
-                                <Modal :allServices="this.services"  ref="modalClick" />
-                                 
+
+                                <Modal :allServices="this.services" ref="modalClick" />
+
                             </div>
                         </div>
-                   
+
+
+
+                    </div>
+                    <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
+
                 </v-layout>
             </v-parallax>
         </section>
@@ -129,10 +134,10 @@
         <section>
             <v-parallax src="assets/section.jpg" class="section2" height="380">
                 <v-layout column align-center justify-center>
-                    <div class="display-1 m-display-1white--text mb-3 text-xs-center">Web development has never been easier</div>
-                    <em>Kick-start your application today</em>
+                    <div class="display-1 m-display-1white--text mb-3 text-xs-center">Cras facilisis mi vitae nunc</div>
+                    <em>Kom igång redan idag</em>
                     <v-btn class="purple lighten-2 mt-5 btn-large" dark large href="/pre-made-themes">
-                        KOM IGÅNG!
+                        Få tre offerter
                     </v-btn>
                 </v-layout>
             </v-parallax>
@@ -222,64 +227,60 @@
         </section>
 
 
-       
-            <section class="recension">
 
-                <div class="r-content">
+        <section class="recension">
 
-                    <v-layout row wrap align-center justify-center>
-                        <v-flex xs12 md12 class="my-3">
-                            <div class="text-xs-center">
-                                <h2 class="display-1 m-display1">Tusentals kunder har lyckats med sina projekt!</h2>
-                                <span class="subheading">
-                                    Vad våra användare säger: </span>
-                            </div>
-                        </v-flex>
-                        <v-flex xs12 md4 mr-1 ml-1>
-                            <v-card>
-                                <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
-                                    <!-- <h3 class="headline mb-0"></h3> -->
-                                    <div class="quote-wrap">
+            <div class="r-content">
+
+                <v-layout row wrap align-center justify-center>
+                    <v-flex xs12 md12 class="my-3">
+                        <div class="text-xs-center">
+                            <h2 class="display-1 m-display1">Tusentals kunder har lyckats med sina projekt!</h2>
+                            <span class="subheading">
+                                Vad våra användare säger: </span>
+                        </div>
+                    </v-flex>
+                    <v-flex xs12 md4 mr-1 ml-1>
+                        <v-card>
+                            <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
+                                <!-- <h3 class="headline mb-0"></h3> -->
+                                <div class="quote-wrap">
+                                    <img class="recension-dqm" src="@/assets/open.jpg" alt="">
+                                     Motsvarade mina förväntningar! Allt gick smidigt och de som städare var fantastiska! Är supernöjd och rekommenderar dom gärna ...
+                                    <img class="recension-dqm" src="@/assets/close.jpg" alt=""></div>
+                                <br>
+                                <em>
+                                    Alexander Helsinghof, Stockholm
+                                </em>
+                            </v-card-title>
+                        </v-card>
+                    </v-flex>
+                    <v-flex xs12 md4 ml-1 mr-1>
+                        <v-card>
+
+                            <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
+                                <div>
+                                    <!-- <h3 class="headline mb-0">Kangaroo Valley Safari</h3> -->
+                                    <div>
                                         <img class="recension-dqm" src="@/assets/open.jpg" alt="">
-                                        Located two hours south of Sydney in the <br>Southern Highlands of New
-                                        South
-                                        Wales, ...
+                                         Bra service och mkt bra kvalite på fönsterputs, har redan rekommenderat Helgens Städ till vår umgänges omkrets, och vi kommer beställa fler uppdrag ...
                                         <img class="recension-dqm" src="@/assets/close.jpg" alt=""></div>
                                     <br>
-                                    <em>
-                                        Alexander Helsinghof, Stockholm
-                                    </em>
-                                </v-card-title>
-                            </v-card>
-                        </v-flex>
-                        <v-flex xs12 md4 ml-1 mr-1>
-                            <v-card>
+                                    <em>Alexander Helsinghof, Tumba</em>
+                                </div>
+                            </v-card-title>
+                        </v-card>
+                    </v-flex>
+                </v-layout>
+            </div>
 
-                                <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
-                                    <div>
-                                        <!-- <h3 class="headline mb-0">Kangaroo Valley Safari</h3> -->
-                                        <div>
-                                            <img class="recension-dqm" src="@/assets/open.jpg" alt="">
-                                            Located two hours south of Sydney in the <br>Southern Highlands of New
-                                            South
-                                            Wales, ...
-                                            <img class="recension-dqm" src="@/assets/close.jpg" alt=""></div>
-                                        <br>
-                                        <em>Alexander Helsinghof, Tumba</em>
-                                    </div>
-                                </v-card-title>
-                            </v-card>
-                        </v-flex>
-                    </v-layout>
-                </div>
-                
             <v-layout column align-center justify-center>
                 <v-btn class="purple lighten-2 my-5 btn-large" dark large @click="trigger">
                     KOM IGÅNG!
                 </v-btn>
             </v-layout>
 
-            </section>
+        </section>
     </v-content>
 
 </template>
@@ -383,7 +384,7 @@
         background: no-repeat;
     } */
 
-    
+
 
     .action {
         display: flex;
@@ -546,10 +547,11 @@
         margin-bottom: 30px !important;
         /* border:1px solid red; */
     }
+
     .main-heading {
-            font-size: 45px !important;
-            line-height: 50px !important;
-        }
+        font-size: 45px !important;
+        line-height: 50px !important;
+    }
 
     @media (max-width:690px) {
         .jumbotron {
@@ -560,21 +562,19 @@
             margin: 60px 0 !important;
             line-height: 2;
         }
-         .apa {
-        height: 500px !important;
-        width: 100%;
-    }
-.m-display1 {
-    font-size:0.5em !important;
-}
 
-    }
-
-    @media (min-width:690px) {
-        .jumbotron {
-            width: 650px;
+        .apa {
+            height: 500px !important;
+            width: 100%;
         }
+
+        .m-display1 {
+            font-size: 0.5em !important;
+        }
+
     }
+
+   
 
     /* modal */
     @media (max-width: 960px) {
@@ -586,6 +586,7 @@
             padding: 0;
 
         }
+
         .main-heading {
             font-size: 30px !important;
             line-height: 35px !important;
@@ -604,5 +605,4 @@
             cursor: pointer;
         }
     }
-    
 </style>
