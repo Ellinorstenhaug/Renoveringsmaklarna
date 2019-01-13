@@ -7,7 +7,7 @@
                 <v-layout column align-center justify-center class="white--text">
                     <div class="jumbotron">
                         <div class="jumbo-container ">
-                            <h1 class="white--text mb-2 display-2 text-xs-center big-text">{{ this.service.heading }}</h1>
+                            <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
                             <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
                             <div class="button-wrapper">
                                 <Modal :service="this.service.heading" :allServices="this.services" />
@@ -40,8 +40,8 @@
                             </v-flex>
                             <v-flex xs12 md6>
                                 <v-card class="elevation-0 transparent">
-                                    <v-parallax :src=" (this.service.subImgUrl)" class="img-wrapper grey lighten-2 service-img"
-                                        aspect-ratio="1"></v-parallax>
+                                    <v-img :src=" (this.service.subImgUrl)" class="img-wrapper grey lighten-2 service-img"
+                                        aspect-ratio="1"/>
                                 </v-card>
                             </v-flex>
 

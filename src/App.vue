@@ -1,8 +1,12 @@
 <template>
     <v-app light>
         <Navigation :serviceLinks="services" />
-       <router-view/>
-        <Footer :serviceLinks="services"/>
+        <main id="page-wrap">
+            <router-view />
+
+        </main>
+
+        <Footer :serviceLinks="services" />
     </v-app>
 </template>
 
@@ -12,9 +16,9 @@
     import serviceJson from './services/services.json';
 
 
-    export default{
+    export default {
         name: 'App',
-        components:{
+        components: {
             Navigation,
             Footer,
         },
@@ -24,3 +28,7 @@
         })
     }
 </script>
+
+<style>
+   
+</style>

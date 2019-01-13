@@ -1,76 +1,62 @@
+NAV
+
+
 <template>
     <div class="toolbar-wrapper">
         <v-card color="white lighten-4" flat>
             <v-toolbar color="white darken-1" light class="toolbar-wrapper">
-                <v-menu class="menu-headings">
-                    <v-toolbar-side-icon class="hidden-md-and-up" slot="activator"></v-toolbar-side-icon>
-                    <div>
-                        <v-list dense>
-                            <v-list-tile>
-                                <v-list-tile-title>Tjänster</v-list-tile-title>
-                            </v-list-tile>
-                            <v-menu offset-x open-on-hover>
-                                <v-list-tile slot="activator">
-                                    <v-list-tile-title>Om oss 2</v-list-tile-title>
-                                    <v-list-tile-action class="justify-end">
-                                        <v-icon>play_arrow</v-icon>
-                                    </v-list-tile-action>
-                                </v-list-tile>
-                                <v-list dense>
-                                    <v-list-tile v-for="(item, index) in omoss" :key="index">
-                                        <v-list-tile-title>{{ item.titles }}</v-list-tile-title>
-                                    </v-list-tile>
-                                </v-list>
-                            </v-menu>
-                        </v-list>
-                    </div>
-                </v-menu>
-
-                
-                <router-link :to="`/`" class="v_toolbar_title title nav-logo black--text"><img src="@/assets/RM-01.svg" alt="" class="logo"> {{title}}</router-link>
                 <v-spacer></v-spacer>
-
-
-                <div class="dropdown hidden-sm-and-down">
-
-                    <v-spacer></v-spacer>
-
-                    <v-menu class="menu-headings mr-5" top open-on-hover>
-                        <v-toolbar-items slot="activator">
-                            <v-btn flat class="subheading-nav">Tjänster</v-btn>
-                            <v-icon light>arrow_drop_down</v-icon>
-                        </v-toolbar-items>
-
-                        <v-list class="dropdown-list">
-                            <v-list-tile v-for="(item, index) in services" :key="index" class="dd-list-item">
-                                <router-link :to="`${item.url}`" class="v-list__tile__title">{{item.heading}}</router-link>
-                            </v-list-tile>
-                        </v-list>
-                    </v-menu>
-                    <v-menu class="menu-headings mr-5" top open-on-hover>
-                        <v-toolbar-items slot="activator">
-                            <v-btn flat class="subheading-nav ">Om Oss</v-btn>
-                            <v-icon light>arrow_drop_down</v-icon>
-                        </v-toolbar-items>
-                        <v-list class="dropdown-list">
-                            <v-list-tile v-for="(item, index) in omoss" :key="index" class="dd-list-item">
-                                <router-link :to="`${item.url}`" class="v-list__tile__title">{{item.titles}}</router-link>
-                            </v-list-tile>
-                        </v-list>
-                    </v-menu>
-                </div>
-
+                <router-link :to="`/`" class="v_toolbar_title title nav-logo black--text"><img src="@/assets/RM-01.svg"
+                        alt="" class="logo"> {{title}}</router-link>
+                <v-spacer></v-spacer>
             </v-toolbar>
+            <div>
+                <Slide right>
+                    <div class="menu-wrap">
+                        <h3 class="menu-heading">
+                            <span>Tjänster</span>
+                            <!-- <v-icon dark>arrow_drop_down</v-icon> -->
+                        </h3>
+                        <div class="submenu-wrap dd-list-item" v-for="(item, index) in services" :key="index">
+                            <router-link :to="`${item.url}`" class="v-list__tile__title white--text list-item ">{{item.heading}}</router-link>
+                        </div>
+                    </div>
+
+                    <div class="menu-wrap">
+                        <h3 class="menu-heading">
+                            <span>{{title}}</span>
+                            <!-- <v-icon dark>arrow_drop_down</v-icon> -->
+                        </h3>
+                        <div class="submenu-wrap dd-list-item" v-for="(item, index) in omoss" :key="index">
+                            <router-link :to="`${item.url}`" class="v-list__tile__title white--text list-item ">{{item.titles}}</router-link>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-wrap quick-contact">
+                        <a href="https://goo.gl/maps/GrzSNCTdF872" class="list-item" target="_blank">Stockholm <v-icon
+                                class="purple--text text--lighten-2 contact-icon">place</v-icon></a><br>
+                        <a href="tel:+7778675309" class="list-item">777-867-5309<v-icon class="purple--text text--lighten-2 contact-icon">phone</v-icon></a><br>
+                        <a href="mailto:info@renoveringsmaklarna.se" class="list-item">info@renoveringsmaklarna.se<v-icon
+                                class="purple--text text--lighten-2 contact-icon px-0">email</v-icon></a>
+                    </div>
+
+                </Slide>
+            </div>
         </v-card>
     </div>
-
-
 </template>
 
 <script>
     import serviceJson from '../../services/services.json';
+    import {
+        Slide
+    } from 'vue-burger-menu' // import the CSS transitions you wish to use, in this case we are using `Slide`
+
 
     export default {
+        components: {
+            Slide // Register your component
+        },
         data() {
             return {
                 services: serviceJson,
@@ -88,7 +74,7 @@
                     }
                 ],
                 omoss: [{
-                        titles: 'Om RenoveringsMäklarna',
+                        titles: 'Om Oss',
                         url: '/om-oss'
                     },
                     {
@@ -148,5 +134,57 @@
     .logo:hover {
         color: teal !important;
         fill: teal !important;
+    }
+
+    .bm-burger-button {
+        z-index: 200;
+        height: 20px;
+        width: 26px;
+        /* left: 20px; */
+        position: absolute;
+        top: 26px;
+        right: 20px;
+    }
+
+    .submenu-wrap {
+        padding: 0 30px 10px 20px !important;
+
+    }
+
+    .list-item:focus {
+        color: teal !important;
+    }
+
+    .menu-wrap {
+        display: block;
+        width: 300px;
+        position: relative;
+        margin-top: 20px;
+        right: 0;
+        text-align: right;
+
+    }
+
+    .menu-heading {
+        margin: 0 7% 0 0!important;
+        color: #c1bfdf;
+        font-weight: 500;
+        font-size: 1.1em;
+    }
+
+    .bm-menu {
+        padding: 0 !important;
+    }
+
+    .quick-contact {
+        font-size: 0.8em;
+        filter: opacity(0.7);
+        padding-right:20px;
+    }
+    .bm-item-list{
+        margin:0 10% 0 0px !important;
+    }
+    .contact-icon {
+        margin-left:10px;
     }
 </style>

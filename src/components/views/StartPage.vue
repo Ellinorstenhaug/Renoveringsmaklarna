@@ -10,11 +10,10 @@
                     <div class="jumbotron">
                         <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
                         <div class="jumbo-container">
-                            <h1 class="white--text mb-2 display-2 text-xs-center jumbo-heading">Jämför de bästa
-                                xxxxxxxxxx
+                            <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Jämför de bästa
+                                renoveringsbyråerna
                                 - <br> Helt kostnadsfritt! </h1>
-                            <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och
-                                xxxxkonsulter!</div>
+                            <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och konsulter!</div>
                             <div class="button-wrapper">
 
                                 <Modal />
@@ -31,7 +30,7 @@
             <v-layout column wrap class="mt-5" align-center>
                 <v-flex xs12 sm4 class="mt-3">
                     <div class="text-xs-center">
-                        <h2 class="display-1">Varför du bör använda RenoveringsMäklarna</h2>
+                        <h2 class="display-1 m-display1">Varför du bör använda RenoveringsMäklarna</h2>
                         <span class="subheading">
                             Cras facilisis mi vitae nunc
                         </span>
@@ -120,7 +119,7 @@
             <section>
                 <v-parallax src="assets/section.jpg" class="section2" height="380">
                     <v-layout column align-center justify-center>
-                        <div class="display-1 white--text mb-3 text-xs-center">Web development has never been easier</div>
+                        <div class="display-1 m-display1 white--text mb-3 text-xs-center">Web development has never been easier</div>
                         <em>Kick-start your application today</em>
                         <v-btn class="purple lighten-2 mt-5 btn-large" dark large href="/pre-made-themes">
                             KOM IGÅNG!
@@ -128,12 +127,6 @@
                     </v-layout>
                 </v-parallax>
             </section>
-
-
-
-
-
-
             <section>
                 <v-layout column wrap class="mt-5" align-center>
                     <v-flex xs12 sm4 class="mt-3">
@@ -229,7 +222,7 @@
                     <v-layout row wrap align-center justify-center>
                         <v-flex xs12 md12 class="my-3">
                             <div class="text-xs-center">
-                                <h2 class="display-1">Tusentals kunder har lyckats med sina projekt!</h2>
+                                <h2 class="display-1 m-display1">Tusentals kunder har lyckats med sina projekt!</h2>
                                 <span class="subheading">
                                     Vad våra användare säger: </span>
                             </div>
@@ -237,7 +230,6 @@
                         <v-flex xs12 md4 mr-1 ml-1>
                             <v-card>
                                 <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
-
                                     <!-- <h3 class="headline mb-0"></h3> -->
                                     <div class="quote-wrap">
                                         <img class="recension-dqm" src="@/assets/open.jpg" alt="">
@@ -252,10 +244,7 @@
                                     <em>
                                         Alexander Helsinghof, Stockholm
                                     </em>
-
                                 </v-card-title>
-
-
                             </v-card>
                         </v-flex>
                         <v-flex xs12 md4 ml-1 mr-1>
@@ -288,11 +277,6 @@
                 </v-layout>
 
             </section>
-
-
-
-
-
     </v-content>
 
 </template>
@@ -397,47 +381,7 @@
         background: no-repeat;
     } */
 
-    @media (max-width:690px) {
-        .jumbotron {
-            width: 95%;
-        }
-
-        .subheading {
-            margin: 60px 0 !important;
-            line-height: 2;
-        }
-
-    }
-
-    @media (min-width:690px) {
-        .jumbotron {
-            width: 650px;
-        }
-    }
-
-    /* modal */
-    @media (max-width: 960px) {
-        .modal-container {
-            width: 100%;
-        }
-
-        .textcolor {
-            padding: 0;
-
-        }
-    }
-
-
-    @media (min-width: 960px) {
-        .modal-container {
-            width: 600px;
-        }
-
-        .presentation:hover {
-            border-left: 2px solid rgb(39, 39, 39);
-            cursor: pointer;
-        }
-    }
+    
 
     .action {
         display: flex;
@@ -597,6 +541,64 @@
     .quote-wrap {
         margin-bottom:30px !important;
 /* border:1px solid red; */
+    }
+    .main-heading {
+            font-size: 45px !important;
+            line-height: 50px !important;
+        }
+
+    @media (max-width:690px) {
+        .jumbotron {
+            width: 95%;
+        }
+
+        .subheading {
+            margin: 60px 0 !important;
+            line-height: 2;
+        }
+         .apa {
+        height: 500px !important;
+        width: 100%;
+    }
+.m-display1 {
+    font-size:0.5em !important;
+}
+
+    }
+
+    @media (min-width:690px) {
+        .jumbotron {
+            width: 650px;
+        }
+    }
+
+    /* modal */
+    @media (max-width: 960px) {
+        .modal-container {
+            width: 100%;
+        }
+
+        .textcolor {
+            padding: 0;
+
+        }
+        .main-heading {
+            font-size: 30px !important;
+            line-height: 35px !important;
+
+        }
+    }
+
+
+    @media (min-width: 960px) {
+        .modal-container {
+            width: 600px;
+        }
+
+        .presentation:hover {
+            border-left: 2px solid rgb(39, 39, 39);
+            cursor: pointer;
+        }
     }
     
 </style>

@@ -2,12 +2,12 @@
 
     <v-content>
         <section>
-            <v-parallax class="bajs" :src="getImgUrl('omoss.jpg')">
+            <v-parallax class="bajs" :src="getImgUrl('about.jpg')">
                 <v-layout column align-center justify-center class="white--text">
                     <!-- <div class="jumbotron"> -->
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
-                    <h1 class="white--text mb-2 display-1 text-xs-center jumbo-heading">Någonting klyshiiiiigt</h1>
-                    <div class="subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor och xxxxkonsulter!</div>
+                    <h1 class="black--text mb-2 display-2 text-xs-center jumbo-heading">Någonting klyshiiiiigt</h1>
+                    <div class="black--text subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor och xxxxkonsulter!</div>
                     <!-- </div> -->
                 </v-layout>
             </v-parallax>
@@ -42,15 +42,11 @@
                                 </v-card>
                             </v-flex>
                             <v-flex xs12 md6>
-                                <v-parallax class="about-pic" src="https://secure.i.telegraph.co.uk/multimedia/archive/03597/POTD_chick_3597497k.jpg">
+                                <v-parallax class="about-pic" :src="getImgUrl('aboutmin.jpg')">
 
                                 </v-parallax>
                             </v-flex>
-
-
-
                             <div class="about-pic">
-
                             </div>
                         </v-layout>
                     </v-container>
@@ -63,7 +59,7 @@
                     <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
                     <em>Kick-start your application today</em>
                     <v-flex xs12 md3>
-                        <v-btn class=" lighten-2 mt-5 selling-button" dark large href="/pre-made-themes">
+                        <v-btn class=" lighten-3 mt-5 selling-button" dark large href="/pre-made-themes">
                             Get started
                         </v-btn>
                     </v-flex>
@@ -146,7 +142,7 @@
     }
 
     .about-pic {
-        background-color: rgb(209, 209, 209);
+        /* background-color: rgb(209, 209, 209); */
         height: 400px;
 
     }
