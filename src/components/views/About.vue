@@ -47,8 +47,6 @@
                                 </v-parallax>
                             </v-flex>
 
-
-
                             <div class="about-pic">
 
                             </div>
@@ -76,32 +74,30 @@
             <v-parallax src="assets/section.jpg" height="auto">
                 <v-layout wrap column align-center justify-center>
                     <div class="my-5 align-center text-md-center text-xs-center justify-center">
-                        <div class="headline white--text mb-3 text-xs-center">Frequently Asked Questions</div>
+                        <div class="headline white--text mb-3 text-xs-center">Vanliga frågorxx</div>
                         <em>Hittar du inte vad du söker? <a href="">Kontakta oss!</a></em>
                     </div>
 
-                    <v-flex md6>
-                        <div>
-                            <v-expansion-panel class="mb-5">
-                                <v-expansion-panel-content v-for="(item,i) in 5" :key="i" md6>
-                                    <div slot="header">Item</div>
-                                    
-                                        <div class="lighten-3 md6">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing</div>
-                                   
-                                </v-expansion-panel-content>
-                            </v-expansion-panel>
-                        </div>
+                    <v-flex md6 :class="{'set50procent__width': $vuetify.breakpoint.mdAndUp}">
+
+                        <v-expansion-panel expand>
+                            <v-expansion-panel-content v-for="(item, i) in faq" :key="i">
+                                <h3 slot="header">
+                                    {{item.heading}}
+                                </h3>
+                                <v-card>
+                                    <v-card-text class="lighten-3">
+                                       {{item.ingress}}
+                                    </v-card-text>
+                                </v-card>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+
                     </v-flex>
 
                 </v-layout>
             </v-parallax>
         </section>
-
-
-
-
-
 
     </v-content>
 
@@ -115,12 +111,41 @@
             getImgUrl(img) {
                 return require('../../assets/' + img)
             },
-        }
+        },
+        computed: {
+
+            faq: {
+                get: function () {
+
+                    return [{
+                            heading: 'Hur fungerar det?',
+                            ingress: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ',
+
+                        },
+                        {
+                            heading: 'Är det gratis?',
+                            ingress: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ',
+
+                        },
+                        {
+                            heading: 'Hur hanteras min data?',
+                            ingress: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ',
+
+                        },
+                        {
+                            heading: 'Efter att jag gjort en förfrågan, hur lång tid tar det?',
+                            ingress: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ',
+
+                        },
+                    ]
+                }
+            }
+        },
     }
 </script>
 
 
-<style>
+<style scoped>
     .color {
         background-color: transparent !important;
 
@@ -138,11 +163,8 @@
         background-color: #ad9ba0;
     }
 
-    .bajs {
-        /* background: url("/Users/ellinorstenhaug/Desktop/vue2/Renoveringsmaklarna/src/assets/om.jpg") no-repeat cover; */
-        height: auto;
-        width: auto;
-        /* background-color: rgb(41, 31, 31); */
+    .set50procent__width {
+        width: 50% !important;
     }
 
     .about-pic {

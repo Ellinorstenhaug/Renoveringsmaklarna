@@ -295,10 +295,9 @@
 
         watch: {
             service: function (newVal) {
-                this.currentService = newVal;
+                this.userData.service = newVal;
                 this.count = 1;
-                this.handleState(newVal);
-            },
+               },
 
             dialog(val) {
                 !val

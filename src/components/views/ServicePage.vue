@@ -23,7 +23,7 @@
             <v-layout column wrap align-center>
                 <v-flex xs12>
                     <v-card-title primary-title class="layout justify-center">
-                        <div class="display-1 my-5 text-xs-center">{{this.service.subheading}} {{this.service.heading}}</div>
+                        <h2 class="display-1 my-5 text-xs-center">{{this.service.subheading}} {{this.service.heading}}</h2>
                     </v-card-title>
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
@@ -31,7 +31,7 @@
                                 <v-card class="elevation-0 transparent">
 
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">asdsaasadsadas</div>
+                                        <div class="headline text-xs-center">Kom igång redan idag!</div>
                                     </v-card-title>
                                     <v-card-text>
                                         {{this.service.caption}}

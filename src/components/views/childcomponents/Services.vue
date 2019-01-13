@@ -17,20 +17,24 @@
 
                                 <div class="img__wrap">
                                     <img class="img__img" :src="getImgUrl(item.images[0].medium)" :alt="item.images.alt" />
+                                    <v-card-text class="service-container">
+                                        <v-card-title primary-title class="layout justify-center">
+                                             <div class="inner-service">
+                                            <span class="headline2 fontweight-600-text text__white" v-html="item.icon"></span>
+                                            <span class="headline2 text--white">{{textToUpperCase(item.heading)}}</span>
+
+                                            </div>
+                                        </v-card-title>
+                                    </v-card-text>
+
                                     <div class="img__description_layer">
                                         <div class="img__description">
-                                            <v-card-title primary-title class="layout justify-center">
-                                                <div class="headline2 fontweight-600-text">{{item.heading}}</div>
-                                            </v-card-title>
-                                            <v-card-text>
-                                                {{item.ingress}}
-                                                <div class="read-more-wrap">
-                                                   
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                        viewBox="0 0 24 24">
-                                                        <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z" /></svg>
-                                                </div>
-                                            </v-card-text>
+
+                                            <div class="read-more-wrap">
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z" /></svg>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -45,13 +49,12 @@
 </template>
 
 <script>
-    import serviceJson from '../../../services/services.json';
-
     export default {
+        props: ['allServices'],
         data: function () {
             return {
                 service: {},
-                services: serviceJson
+                services: this.allServices,
 
             }
         },
@@ -59,23 +62,19 @@
             getImgUrl(img) {
                 return require('@/assets/' + img);
             },
-            // getImg (img) {
-            //     return requi
-            // }
+            textToUpperCase(input) {
+                var res = input.toUpperCase()
+                return res;
+            }
         }
     }
 </script>
 
 <style>
-    .img-wrapper {
-        /* filter: brightness(0.4); */
-        background-color: rgb(19, 19, 19);
-        position: relative;
-        z-index: 10;
-    }
+   
 
     .wrapper:hover {
-        filter: brightness(0.8);
+        filter: brightness(100%);
     }
 
     .headline2 {
@@ -96,17 +95,17 @@
     /* relevant styles */
     .img__wrap {
         position: relative;
-        height: 300px;
+        height: auto;
         width: auto;
     }
 
     .img__description_layer {
         position: absolute;
-        top: 0;
+        top: 100px;
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(36, 62, 206, 0.6);
+        /* background: rgba(36, 62, 206, 0.6); */
         color: #fff;
         visibility: hidden;
         opacity: 0;
@@ -115,7 +114,24 @@
         justify-content: center;
 
         /* transition effect. not necessary */
+        
         transition: opacity .2s, visibility .2s;
+    }
+
+    .service-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-container svg {
+        fill: white;
     }
 
     .img__wrap:hover .img__description_layer {
@@ -123,25 +139,39 @@
         opacity: 1;
     }
 
+    .img__wrap:hover .img__img{
+        filter:brightness(90%);
+        
+    }
+
+    .img__img{
+        filter:brightness(70%);
+
+    }
+
+
     .img__description {
-        transition: .2s;
-        transform: translateY(1em);
+        transform: translateY(1em);        
+        transition: all .25s ease-in-out;
     }
 
     .img__wrap:hover .img__description {
-        transform: translateY(0);
+        transform: translateY(0); 
+         opacity: .8;
     }
 
     .img__img {
-        width: 100%;
-        margin-bottom:20px !important;
+        width: 100%;         
         height: auto !important;
     }
+  
     .read-more-wrap {
-        text-align:right;
-        fill:white;
+        text-align: right;
+        fill: white;
         position: absolute;
-        right:0;
-        bottom:0;
+        right: 0;
+        top:0;
+        bottom: 0;
     }
+
 </style>
