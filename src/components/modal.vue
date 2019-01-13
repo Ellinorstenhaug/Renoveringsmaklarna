@@ -267,7 +267,7 @@
                         };
 
                         // JSON.stringify(this.userData);
-                        console.log(userObject);
+                        // console.log(userObject);
                         axios.post('http://api.redovisningsmaklarna.local/api/Renoveringsmaklarna/', userObject, {
                             headers: {
                                 'Content-type': 'application/json; charset=utf=8',
@@ -280,8 +280,9 @@
                             response => {
                                 alert(response)
                                 this.loader = null;
-                            }).catch(error => {
-                            console.log(error.response)
+                            // }).catch(error => {
+                            //     let val = error;
+                            // console.log(error.response)
                         });
                     }
                 });

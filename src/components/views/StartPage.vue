@@ -267,12 +267,9 @@
                                         <br>
                                         <em>Alexander Helsinghof, Tumba</em>
                                     </div>
-
                                 </v-card-title>
-
                             </v-card>
                         </v-flex>
-
                     </v-layout>
                 </div>
                 

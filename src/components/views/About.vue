@@ -46,10 +46,6 @@
 
                                 </v-parallax>
                             </v-flex>
-<<<<<<< HEAD
-=======
-
->>>>>>> 94808ffea3187f07e20b358c2b0b8ec05f0f1018
                             <div class="about-pic">
                             </div>
                         </v-layout>
@@ -80,8 +76,7 @@
                         <em>Hittar du inte vad du söker? <a href="">Kontakta oss!</a></em>
                     </div>
 
-                    <v-flex md6 :class="{'set50procent__width': $vuetify.breakpoint.mdAndUp}">
-
+                    <v-flex md6 pb-5 :class="{'set50procent__width': $vuetify.breakpoint.mdAndUp}">
                         <v-expansion-panel expand>
                             <v-expansion-panel-content v-for="(item, i) in faq" :key="i">
                                 <h3 slot="header">
