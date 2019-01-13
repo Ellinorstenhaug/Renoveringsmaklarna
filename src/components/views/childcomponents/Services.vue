@@ -1,18 +1,9 @@
 <template>
-    <div>
-
-        <v-layout column wrap class="mt-5 pb-5" align-center>
-            <v-flex xs12 sm4 class="my-3">
-                <v-card-title primary-title>
-                    <div>
-                        <h3 class="display-1 mb-0">Välj en tjänst för att få upp till tre offerter</h3>
-                    </div>
-                </v-card-title>
-            </v-flex>
+        <v-layout column wrap class="pb-5">         
             <v-flex xs12 md12>
                 <v-container grid-list-xl>
                     <v-layout row wrap align-center>
-                        <v-flex xs12 md4 v-for="(item, index) in services" :key="index">
+                        <v-flex xs12 md4 sm6 v-for="(item, index) in services" :key="index">
                             <router-link :to="`${item.url}`">
 
                                 <div class="img__wrap">
@@ -44,8 +35,6 @@
                 </v-container>
             </v-flex>
         </v-layout>
-    </div>
-
 </template>
 
 <script>
@@ -171,7 +160,8 @@
         position: absolute;
         right: 0;
         top:0;
+        left:0;
         bottom: 0;
     }
-
+  
 </style>

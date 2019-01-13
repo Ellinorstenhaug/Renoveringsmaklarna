@@ -1,7 +1,5 @@
 <template>
     <v-content>
-
-
         <section>
             <v-parallax :src="this.service.imgUrl" class="apa">
                 <v-layout column align-center justify-center class="white--text">
@@ -11,9 +9,7 @@
                             <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
                             <div class="button-wrapper">
                                 <Modal :service="this.service.heading" :allServices="this.services" />
-
                             </div>
-
                         </div>
                     </div>
                 </v-layout>
@@ -51,42 +47,12 @@
             </v-layout>
         </section>
 
-        <section>
-            <!-- end -->
-            <v-layout column wrap class="my-5" align-center>
-                <v-flex xs12 sm4 class="my-3">
-                    <v-card-title primary-title>
-                        <div>
-                            <h3 class="headline mb-0">Fler tjänster</h3>
-                        </div>
-                    </v-card-title>
-                </v-flex>
-                <v-flex xs12>
-                    <v-container grid-list-xl>
-                        <v-layout row wrap align-center>
-                            <!-- <v-parallax :src="this.service.imgUrl" height="600"> -->
-                            <v-flex xs12 sm6 md6 lg4 v-for="(item, index) in services" :key="index">
-                                <div class="wrapper">
-                                    <router-link :to="`${item.url}`">
-                                        <v-parallax :src=" getImgUrl(item.imgUrl)" class="img-wrapper grey lighten-2 service-img"
-                                            aspect-ratio="1">
-                                            <v-card class="elevation-20 text-wrapper" color="rgba(0,0,0,0.5)" dark>
-                                                <v-card-title primary-title class="layout justify-center">
-                                                    <div class="headline2 fontweight-600-text">{{item.heading}}</div>
-                                                    <!-- TODO:fixa hover  -->
-                                                </v-card-title>
-                                                <v-card-text>
-                                                    {{item.ingress}}
-                                                </v-card-text>
-                                            </v-card>
-                                        </v-parallax>
-                                    </router-link>
-                                </div>
-                            </v-flex>
-                        </v-layout>
-                    </v-container>
-                </v-flex>
-            </v-layout>
+        <section class="section-service pb-5" align-center>
+             <v-flex xs12 sm4 class="my-3">
+             
+            </v-flex>
+           <Services  :allServices="this.services" />
+
         </section>
 
     </v-content>
@@ -94,6 +60,7 @@
 
 <script>
     import serviceJson from '../../services/services.json';
+    import Services from './childcomponents/Services.vue';
     import Modal from '../modal.vue';
     export default {
 
@@ -106,13 +73,14 @@
         },
 
         components: {
-            Modal
+            Modal,
+            Services
         },
 
         data() {
             return {
                 service: {},
-                services: {},
+                services: serviceJson,
 
             }
         },

@@ -16,8 +16,9 @@
                             <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och
                                 xxxxkonsulter!</div>
                             <div class="button-wrapper">
-
-                                <Modal :allServices="this.services" />
+                           
+                                <Modal :allServices="this.services"  ref="modalClick" />
+                                 
                             </div>
                         </div>
                     </div>
@@ -40,7 +41,7 @@
                 <v-flex xs12>
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
-                            <v-flex xs12 md4>
+                            <v-flex xs12 sm6 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/1317/1317349.svg"
@@ -60,7 +61,7 @@
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
-                            <v-flex xs12 md4>
+                            <v-flex xs12 sm6 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/1170/1170619.svg"
@@ -80,7 +81,7 @@
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
-                            <v-flex xs12 md4>
+                            <v-flex xs12 offset-sm3 offset-md0 sm6 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/806/806704.svg" alt="">
@@ -112,9 +113,18 @@
             </v-layout>
         </section>
 
-        <section class="section-service pb-5">
-            <Services  :allServices="this.services" />
+        <section class="section-service pb-5 text-center">¨
+            <v-layout column wrap class="mt-5" align-center>
+                <v-flex xs12 sm4 class="my-3">
+                    <v-card-title primary-title>
+                        <div class="text-xs-center">
+                            <h2 class="display-1">Välj en tjänst för att få upp till tre offerter</h2>
 
+                        </div>
+                    </v-card-title>
+                </v-flex>
+                <Services :allServices="this.services" />
+            </v-layout>
         </section>
 
         <section>
@@ -128,12 +138,6 @@
                 </v-layout>
             </v-parallax>
         </section>
-
-
-
-
-
-
         <section>
             <v-layout column wrap class="mt-5" align-center>
                 <v-flex xs12 sm4 class="mt-3">
@@ -147,7 +151,7 @@
                 <v-flex xs12>
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
-                            <v-flex xs12 md4>
+                            <v-flex xs12 md4 sm6>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/306/306443.svg" alt="">
@@ -167,7 +171,7 @@
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
-                            <v-flex xs12 md4>
+                            <v-flex xs12 md4 sm6>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/292/292094.svg" alt="">
@@ -186,7 +190,7 @@
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
-                            <v-flex xs12 md4>
+                            <v-flex xs12 md4 sm6 offset-sm3 offset-md0>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
@@ -224,14 +228,14 @@
             <div class="r-content">
 
                 <v-layout row wrap align-center justify-center>
-                    <v-flex xs12 md12 class="my-3">
+                    <v-flex xs12 md12 sm12 class="my-3">
                         <div class="text-xs-center">
                             <h2 class="display-1">Tusentals kunder har lyckats med sina projekt!</h2>
                             <span class="subheading">
                                 Vad våra användare säger: </span>
                         </div>
                     </v-flex>
-                    <v-flex xs12 md4 mr-1 ml-1>
+                    <v-flex xs12 md4 sm6 mr-1 ml-1>
                         <v-card>
                             <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
 
@@ -255,7 +259,7 @@
 
                         </v-card>
                     </v-flex>
-                    <v-flex xs12 md4 ml-1 mr-1>
+                    <v-flex xs12 md4 sm6 ml-1 mr-1>
                         <v-card>
 
                             <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
@@ -279,7 +283,7 @@
                 </v-layout>
             </div>
             <v-layout column align-center justify-center>
-                <v-btn class="purple lighten-2 my-5 btn-large" dark large href="/pre-made-themes">
+                <v-btn class="purple lighten-2 my-5 btn-large" dark large @click="trigger">
                     KOM IGÅNG!
                 </v-btn>
             </v-layout>
@@ -312,18 +316,15 @@
                 return require('../../assets/' + img)
             },
 
+            trigger() {
+                this.$refs.modalClick.click()
+            }
+
         }
     }
 </script>
 
 <style>
-    .img-wrapper {
-        /* filter: brightness(0.4); */
-        background-color: rgb(19, 19, 19);
-        position: relative;
-        z-index: 10;
-    }
-
     .wrapper:hover {
         filter: brightness(0.8);
     }
