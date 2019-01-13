@@ -1,43 +1,45 @@
-NAV
-
-
 <template>
     <div class="toolbar-wrapper">
         <v-card color="white lighten-4" flat>
             <v-toolbar color="white darken-1" light class="toolbar-wrapper">
-                <v-spacer></v-spacer>
+                <!-- <v-btn flat gray class="number">
+                    <v-icon class="purple--text text--lighten-2">phone</v-icon>
+                    08–121 47 429
+                </v-btn> -->
+
                 <router-link :to="`/`" class="v_toolbar_title title nav-logo black--text"><img src="@/assets/RM-01.svg"
                         alt="" class="logo"> {{title}}</router-link>
                 <v-spacer></v-spacer>
             </v-toolbar>
-            <div>
+            <div class="hamburg-logo-wrap">
                 <Slide right>
                     <div class="menu-wrap">
-                        <h3 class="menu-heading">
-                            <span>Tjänster</span>
-                            <!-- <v-icon dark>arrow_drop_down</v-icon> -->
-                        </h3>
+                        <h3 class="menu-heading">Tjänster</h3>
                         <div class="submenu-wrap dd-list-item" v-for="(item, index) in services" :key="index">
-                            <router-link :to="`${item.url}`" class="v-list__tile__title white--text list-item ">{{item.heading}}</router-link>
+                            <router-link :to="`${item.url}`" class="v-list__tile__title white--text list-item">{{item.heading}}</router-link>
                         </div>
                     </div>
 
                     <div class="menu-wrap">
                         <h3 class="menu-heading">
-                            <span>{{title}}</span>
+                            {{title}}
                             <!-- <v-icon dark>arrow_drop_down</v-icon> -->
                         </h3>
                         <div class="submenu-wrap dd-list-item" v-for="(item, index) in omoss" :key="index">
-                            <router-link :to="`${item.url}`" class="v-list__tile__title white--text list-item ">{{item.titles}}</router-link>
+                            <router-link :to="`${item.url}`" class="v-list__tile__title white--text list-item">{{item.titles}}</router-link>
                         </div>
                     </div>
-                    
+
                     <div class="menu-wrap quick-contact">
-                        <a href="https://goo.gl/maps/GrzSNCTdF872" class="list-item" target="_blank">Stockholm <v-icon
-                                class="purple--text text--lighten-2 contact-icon">place</v-icon></a><br>
-                        <a href="tel:+7778675309" class="list-item">777-867-5309<v-icon class="purple--text text--lighten-2 contact-icon">phone</v-icon></a><br>
-                        <a href="mailto:info@renoveringsmaklarna.se" class="list-item">info@renoveringsmaklarna.se<v-icon
-                                class="purple--text text--lighten-2 contact-icon px-0">email</v-icon></a>
+                        <a href="https://goo.gl/maps/GrzSNCTdF872" class="list-item burger-list" target="_blank">
+                            <v-icon class="purple--text text--lighten-2">place</v-icon><br>Stockholm
+                        </a><br>
+                        <a href="tel:+7778675309" class="list-item burger-list">
+                            <v-icon class="purple--text text--lighten-2">phone</v-icon><br>777-867-5309
+                        </a><br>
+                        <a href="mailto:info@renoveringsmaklarna.se" class="list-item burger-list">
+                            <v-icon class="purple--text text--lighten-2 px-0">email</v-icon><br>info@renoveringsmaklarna.se
+                        </a>
                     </div>
 
                 </Slide>
@@ -161,13 +163,13 @@ NAV
         position: relative;
         margin-top: 20px;
         right: 0;
-        text-align: right;
+        text-align: center;
 
     }
 
     .menu-heading {
-        margin: 0 7% 0 0!important;
-        color: #c1bfdf;
+        margin: 0 !important;
+        color: #cacada;
         font-weight: 500;
         font-size: 1.1em;
     }
@@ -179,12 +181,28 @@ NAV
     .quick-contact {
         font-size: 0.8em;
         filter: opacity(0.7);
-        padding-right:20px;
+        padding: 0 30px;
     }
-    .bm-item-list{
-        margin:0 10% 0 0px !important;
+
+    .bm-item-list {
+        margin: 0 auto !important;
     }
-    .contact-icon {
-        margin-left:10px;
+
+    .burger-list {
+        margin-bottom: 50px;
+    }
+
+    .hamburg-logo-wrap {
+
+        display: inline;
+    }
+
+    .number {
+        color: purple !important;
+        font-weight: 300 !important;
+        padding: 5px;
+        line-height: 2;
+        display: block;
+        height: 68px !important;
     }
 </style>
