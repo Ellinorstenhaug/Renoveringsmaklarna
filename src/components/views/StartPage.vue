@@ -2,12 +2,12 @@
 
     <v-content>
         <section>
-            <v-parallax :src="getUrl('apa3.png')" class="apa">
+            <v-parallax :src="getUrl('apa3.png')">
                 <!-- <v-parallax class="bajs" :src="getUrl('omoss.jpg')"> -->
                 <!-- <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
                 height="600"> -->
                 <v-layout column align-center justify-center class="white--text">
-                    <div class="jumbotron">
+                  
                         <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
                         <div class="jumbo-container">
                             <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Jämför de bästa
@@ -20,7 +20,7 @@
                                  
                             </div>
                         </div>
-                    </div>
+                   
                 </v-layout>
             </v-parallax>
         </section>

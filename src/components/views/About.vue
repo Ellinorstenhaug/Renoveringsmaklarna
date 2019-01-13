@@ -2,7 +2,7 @@
 
     <v-content>
         <section>
-            <v-parallax class="bajs" :src="getImgUrl('about.jpg')">
+            <v-parallax :src="getImgUrl('about.jpg')">
                 <v-layout column align-center justify-center class="white--text">
                     <!-- <div class="jumbotron"> -->
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
@@ -29,7 +29,7 @@
                             <v-flex xs12 md6>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-title primary-title class="layout justify-center ">
-                                        <div class="headline">Fast development</div>
+                                        <div class="headline">Passion för att hjälpa</div>
                                     </v-card-title>
                                     <v-card-text>
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -46,10 +46,6 @@
 
                                 </v-parallax>
                             </v-flex>
-<<<<<<< HEAD
-=======
-
->>>>>>> 94808ffea3187f07e20b358c2b0b8ec05f0f1018
                             <div class="about-pic">
                             </div>
                         </v-layout>
@@ -57,10 +53,10 @@
                 </v-flex>
             </v-layout>
         </section>
-        <section class="about-section">
+        <!-- <section class="about-section">
             <v-parallax src="assets/section.jpg" height="380">
                 <v-layout column align-center justify-center>
-                    <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
+                    <div class="headline white--text mb-3 text-xs-center"></div>
                     <em>Kick-start your application today</em>
                     <v-flex xs12 md3>
                         <v-btn class=" lighten-3 mt-5 selling-button" dark large href="/pre-made-themes">
@@ -69,14 +65,14 @@
                     </v-flex>
                 </v-layout>
             </v-parallax>
-        </section>
+        </section> -->
 
 
         <section class="faq-section">
             <v-parallax src="assets/section.jpg" height="auto">
                 <v-layout wrap column align-center justify-center>
                     <div class="my-5 align-center text-md-center text-xs-center justify-center">
-                        <div class="headline white--text mb-3 text-xs-center">Vanliga frågorxx</div>
+                        <div class="headline white--text mb-3 text-xs-center">Vanliga frågor</div>
                         <em>Hittar du inte vad du söker? <a href="">Kontakta oss!</a></em>
                     </div>
 

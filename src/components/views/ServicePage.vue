@@ -1,19 +1,31 @@
 <template>
     <v-content>
         <section>
-            <v-parallax :src="this.service.imgUrl" class="apa">
+            <v-parallax :src="this.service.imgUrl" v-if=" $vuetify.breakpoint.mdAndUp">
                 <v-layout column align-center justify-center class="white--text">
-                    <div class="jumbotron">
-                        <div class="jumbo-container ">
-                            <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
-                            <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
-                            <div class="button-wrapper">
-                                <Modal :service="this.service.heading" :allServices="this.services" />
-                            </div>
+
+                    <div class="jumbo-container">
+                        <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
+                        <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
+                        <div class="button-wrapper">
+                            <Modal :service="this.service.heading" :allServices="this.services" />
                         </div>
                     </div>
                 </v-layout>
             </v-parallax>
+          <v-img :src="this.service.imgUrl" alt="skriv något här" v-if=" $vuetify.breakpoint.mdAndDown">
+                <v-layout column align-center justify-center class="white--text" style="background: #1b0f187d;">
+
+                    <div class="jumbo-container" style="margin-top:60px;margin-bottom:30px;">
+                        <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
+                        <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
+                        <div class="button-wrapper">
+                            <Modal :service="this.service.heading" :allServices="this.services" />
+                        </div>
+                    </div>
+                </v-layout>
+            </v-img>
+
         </section>
         <section>
             <v-layout column wrap align-center>
@@ -37,7 +49,7 @@
                             <v-flex xs12 md6>
                                 <v-card class="elevation-0 transparent">
                                     <v-img :src=" (this.service.subImgUrl)" class="img-wrapper grey lighten-2 service-img"
-                                        aspect-ratio="1"/>
+                                        aspect-ratio="1" />
                                 </v-card>
                             </v-flex>
 
@@ -48,10 +60,10 @@
         </section>
 
         <section class="section-service pb-5" align-center>
-             <v-flex xs12 sm4 class="my-3">
-             
+            <v-flex xs12 sm4 class="my-3">
+
             </v-flex>
-           <Services  :allServices="this.services" />
+            <Services :allServices="this.services" />
 
         </section>
 
@@ -86,7 +98,7 @@
         },
         methods: {
 
-            getImgUrl(img) {
+             getImgUrl(img) {
                 return require('../../assets/' + img)
             },
 
@@ -98,7 +110,7 @@
             },
 
             findService: function () {
-                let serviceName = this.$route.params.id;              
+                let serviceName = this.$route.params.id;
                 let isFound = false;
                 let serviceObject = {};
 
@@ -184,11 +196,10 @@
     }
 
     .jumbotron2 {
-        /* background-color: #1b0f187d; */
+        background-color: #1b0f187d;
         height: 70vh;
         padding: 7% 1% 5% 1%;
     }
-
     .jumbo-container2 {
         width: 600px;
     }
