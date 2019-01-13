@@ -198,8 +198,8 @@
                     name: '',
                     email: '',
                     city: '',
-                    service: '',
-                    description: ''
+                    interest: '',
+                    description: '',
                 },
 
             }
@@ -212,7 +212,7 @@
 
             addService: function (serviceName) {
                 // this.currentService = serviceName;
-                this.userData.service = serviceName;
+                this.userData.interest = serviceName;
                 this.add();
             },
 
@@ -242,10 +242,6 @@
                     this.headingLabel = "Detaljer om dig";
                 }
 
-
-
-                console.log('userdata:', this.userData);
-
             },
 
             submit() {
@@ -258,20 +254,38 @@
                     if (result) {
                         this.loader = 'loading3'
 
-                        // this.postBtn = !this.postBtn;
-                        // axios.post('http://192.168.10.0', this.userData).then(response => {
+                        // axios.get('http://api.redovisningsmaklarna.local/api/values').then(response => {
                         //     alert('vi har postat')
 
                         // });
+                        let userObject = {
+                            from: this.userData.email,
+                            description: this.userData.description,
+                            name: this.userData.name,
+                            interest: this.userData.interest,
+                            city: this.userData.city
+                        };
 
+                        // JSON.stringify(this.userData);
+                        console.log(userObject);
+                        axios.post('http://api.redovisningsmaklarna.local/api/Renoveringsmaklarna/', userObject, {
+                            headers: {
+                                'Content-type': 'application/json; charset=utf=8',
+                                "Access-Control-Allow-Origin": "*"
+                            },
+                            dataType: 'json',
+                            crossDomain: true
+
+                        }).then(
+                            response => {
+                                alert(response)
+                                this.loader = null;
+                            }).catch(error => {
+                            console.log(error.response)
+                        });
                     }
-
-
                 });
-
             },
-
-
         },
         dictionary: {
             attributes: {
@@ -296,8 +310,8 @@
         watch: {
             service: function (newVal) {
                 this.currentService = newVal;
+                this.userData.interest = newVal;
                 this.count = 1;
-                this.handleState(newVal);
             },
 
             dialog(val) {

@@ -15,8 +15,9 @@
                                 - <br> Helt kostnadsfritt! </h1>
                             <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och konsulter!</div>
                             <div class="button-wrapper">
-
-                                <Modal />
+                           
+                                <Modal :allServices="this.services"  ref="modalClick" />
+                                 
                             </div>
                         </div>
                     </div>
@@ -39,7 +40,7 @@
                 <v-flex xs12>
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
-                            <v-flex xs12 md4>
+                            <v-flex xs12 sm6 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/1317/1317349.svg"
@@ -59,7 +60,7 @@
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
-                            <v-flex xs12 md4>
+                            <v-flex xs12 sm6 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/1170/1170619.svg"
@@ -79,7 +80,7 @@
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
-                            <v-flex xs12 md4>
+                            <v-flex xs12 offset-sm3 offset-md0 sm6 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/806/806704.svg" alt="">
@@ -111,110 +112,117 @@
             </v-layout>
         </section>
 
-        <section class="section-service pb-5">
-            <Services />
-
-            </section>
-
-            <section>
-                <v-parallax src="assets/section.jpg" class="section2" height="380">
-                    <v-layout column align-center justify-center>
-                        <div class="display-1 m-display1 white--text mb-3 text-xs-center">Web development has never been easier</div>
-                        <em>Kick-start your application today</em>
-                        <v-btn class="purple lighten-2 mt-5 btn-large" dark large href="/pre-made-themes">
-                            KOM IGÅNG!
-                        </v-btn>
-                    </v-layout>
-                </v-parallax>
-            </section>
-            <section>
-                <v-layout column wrap class="mt-5" align-center>
-                    <v-flex xs12 sm4 class="mt-3">
+        <section class="section-service pb-5 text-center">¨
+            <v-layout column wrap class="mt-5" align-center>
+                <v-flex xs12 sm4 class="my-3">
+                    <v-card-title primary-title>
                         <div class="text-xs-center">
-                            <h2 class="display-1">Så fungerar RenoveringsMäklarna</h2>
-                            <span class="subheading">
-                                Cras facilisis mi vitae nunc
-                            </span>
-                        </div>
-                    </v-flex>
-                    <v-flex xs12>
-                        <v-container grid-list-xl>
-                            <v-layout row wrap align-center>
-                                <v-flex xs12 md4>
-                                    <v-card class="elevation-0 transparent">
-                                        <v-card-text class="text-xs-center">
-                                            <img class="icon" src="https://image.flaticon.com/icons/svg/306/306443.svg"
-                                                alt="">
+                            <h2 class="display-1">Välj en tjänst för att få upp till tre offerter</h2>
 
-                                            <!-- <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon> -->
-                                        </v-card-text>
-                                        <v-card-title primary-title class="layout justify-center">
-                                            <div class="headline text-xs-center">Fyll i formuläret</div>
-                                        </v-card-title>
-                                        <v-card-text class="text-md-center text-xs-center">
-                                            Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                            ornare.
-                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                            ac turpis egestas.
-                                            Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                            Suspendisse potenti.
-                                        </v-card-text>
-                                    </v-card>
-                                </v-flex>
-                                <v-flex xs12 md4>
-                                    <v-card class="elevation-0 transparent">
-                                        <v-card-text class="text-xs-center">
-                                            <img class="icon" src="https://image.flaticon.com/icons/svg/292/292094.svg"
-                                                alt="">
-                                            <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
-                                        </v-card-text>
-                                        <v-card-title primary-title class="layout justify-center">
-                                            <div class="headline">Jämför offerter</div>
-                                        </v-card-title>
-                                        <v-card-text class="text-md-center text-xs-center">
-                                            Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                            ornare.
-                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                            ac turpis egestas.
-                                            Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                            Suspendisse potenti.
-                                        </v-card-text>
-                                    </v-card>
-                                </v-flex>
-                                <v-flex xs12 md4>
-                                    <v-card class="elevation-0 transparent">
-                                        <v-card-text class="text-xs-center">
-                                            <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
-                                            <img class="icon" src="https://image.flaticon.com/icons/svg/169/169513.svg"
-                                                alt="">
-                                        </v-card-text>
-                                        <v-card-title primary-title class="layout justify-center">
-                                            <div class="headline text-xs-center">Välj din lösning</div>
-                                        </v-card-title>
-                                        <v-card-text class="text-md-center text-xs-center">
-                                            Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                            ornare.
-                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                            ac turpis egestas.
-                                            Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                            Suspendisse potenti.
-                                        </v-card-text>
-                                    </v-card>
-                                </v-flex>
-                            </v-layout>
-                            <v-layout column align-center justify-center="">
-                                <!-- <v-flex xs8 md3>
+                        </div>
+                    </v-card-title>
+                </v-flex>
+                <Services :allServices="this.services" />
+            </v-layout>
+        </section>
+
+        <section>
+            <v-parallax src="assets/section.jpg" class="section2" height="380">
+                <v-layout column align-center justify-center>
+                    <div class="display-1 m-display-1white--text mb-3 text-xs-center">Web development has never been easier</div>
+                    <em>Kick-start your application today</em>
+                    <v-btn class="purple lighten-2 mt-5 btn-large" dark large href="/pre-made-themes">
+                        KOM IGÅNG!
+                    </v-btn>
+                </v-layout>
+            </v-parallax>
+        </section>
+        <section>
+            <v-layout column wrap class="mt-5" align-center>
+                <v-flex xs12 sm4 class="mt-3">
+                    <div class="text-xs-center">
+                        <h2 class="display-1">Så fungerar RenoveringsMäklarna</h2>
+                        <span class="subheading">
+                            Cras facilisis mi vitae nunc
+                        </span>
+                    </div>
+                </v-flex>
+                <v-flex xs12>
+                    <v-container grid-list-xl>
+                        <v-layout row wrap align-center>
+                            <v-flex xs12 md4 sm6>
+                                <v-card class="elevation-0 transparent">
+                                    <v-card-text class="text-xs-center">
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/306/306443.svg" alt="">
+
+                                        <!-- <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon> -->
+                                    </v-card-text>
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline text-xs-center">Fyll i formuläret</div>
+                                    </v-card-title>
+                                    <v-card-text class="text-md-center text-xs-center">
+                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
+                                        ornare.
+                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                        ac turpis egestas.
+                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
+                                        Suspendisse potenti.
+                                    </v-card-text>
+                                </v-card>
+                            </v-flex>
+                            <v-flex xs12 md4 sm6>
+                                <v-card class="elevation-0 transparent">
+                                    <v-card-text class="text-xs-center">
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/292/292094.svg" alt="">
+                                        <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
+                                    </v-card-text>
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline">Jämför offerter</div>
+                                    </v-card-title>
+                                    <v-card-text class="text-md-center text-xs-center">
+                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
+                                        ornare.
+                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                        ac turpis egestas.
+                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
+                                        Suspendisse potenti.
+                                    </v-card-text>
+                                </v-card>
+                            </v-flex>
+                            <v-flex xs12 md4 sm6 offset-sm3 offset-md0>
+                                <v-card class="elevation-0 transparent">
+                                    <v-card-text class="text-xs-center">
+                                        <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/169/169513.svg" alt="">
+                                    </v-card-text>
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="headline text-xs-center">Välj din lösning</div>
+                                    </v-card-title>
+                                    <v-card-text class="text-md-center text-xs-center">
+                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
+                                        ornare.
+                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                        ac turpis egestas.
+                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
+                                        Suspendisse potenti.
+                                    </v-card-text>
+                                </v-card>
+                            </v-flex>
+                        </v-layout>
+                        <v-layout column align-center justify-center="">
+                            <!-- <v-flex xs8 md3>
                                 <v-btn class="purple lighten-2 selling-button" dark large href="/pre-made-themes">
                                     Get started
                                 </v-btn>
                             </v-flex> -->
-                            </v-layout>
-                        </v-container>
-                    </v-flex>
-                </v-layout>
-            </section>
+                        </v-layout>
+                    </v-container>
+                </v-flex>
+            </v-layout>
+        </section>
 
 
+       
             <section class="recension">
 
                 <div class="r-content">
@@ -233,13 +241,10 @@
                                     <!-- <h3 class="headline mb-0"></h3> -->
                                     <div class="quote-wrap">
                                         <img class="recension-dqm" src="@/assets/open.jpg" alt="">
-                                        Located two hours south of Sydney in the <br>Southern Highlands of New South
-                                        Wales, ..
-                                        Located two hours south of Sydney in the <br>Southern Highlands of
-                                        Located two hours south of Sydney in the <br>Southern Highlands of
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, itaque!
-                                        <img class="recension-dqm" src="@/assets/close.jpg" alt="">
-                                    </div>
+                                        Located two hours south of Sydney in the <br>Southern Highlands of New
+                                        South
+                                        Wales, ...
+                                        <img class="recension-dqm" src="@/assets/close.jpg" alt=""></div>
                                     <br>
                                     <em>
                                         Alexander Helsinghof, Stockholm
@@ -270,11 +275,12 @@
 
                     </v-layout>
                 </div>
-                <v-layout column align-center justify-center>
-                    <v-btn class="purple lighten-2 my-5 btn-large" dark large href="/pre-made-themes">
-                        KOM IGÅNG!
-                    </v-btn>
-                </v-layout>
+                
+            <v-layout column align-center justify-center>
+                <v-btn class="purple lighten-2 my-5 btn-large" dark large @click="trigger">
+                    KOM IGÅNG!
+                </v-btn>
+            </v-layout>
 
             </section>
     </v-content>
@@ -283,37 +289,36 @@
 
 <script>
     import Modal from '../modal.vue';
-    import Services from './childcomponents/Services.vue'
+    import Services from './childcomponents/Services.vue';
+    import serviceJson from '../../services/services.json';
 
     export default {
+        data: function () {
+            return {
+                service: {},
+                services: serviceJson
+
+            }
+        },
         components: {
             Modal,
             Services
         },
 
-        data: function () {
-            return {
-                count: 0,
-
-            }
-        },
         methods: {
             getUrl(img) {
                 return require('../../assets/' + img)
             },
+
+            trigger() {
+                this.$refs.modalClick.click()
+            }
 
         }
     }
 </script>
 
 <style>
-    .img-wrapper {
-        /* filter: brightness(0.4); */
-        background-color: rgb(19, 19, 19);
-        position: relative;
-        z-index: 10;
-    }
-
     .wrapper:hover {
         filter: brightness(0.8);
     }
@@ -535,12 +540,14 @@
     .btn-large {
         width: 300px;
     }
+
     .section-service {
-        background-color: #F5F3FF; 
+        background-color: #F5F3FF;
     }
+
     .quote-wrap {
-        margin-bottom:30px !important;
-/* border:1px solid red; */
+        margin-bottom: 30px !important;
+        /* border:1px solid red; */
     }
     .main-heading {
             font-size: 45px !important;
