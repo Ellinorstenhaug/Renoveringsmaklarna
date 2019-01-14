@@ -2,7 +2,7 @@
 
     <v-content>
         <section>
-            <v-parallax :src="getUrl('apa3.png')" class="apa">
+            <v-parallax :src="getUrl('header.png')" class="apa">
                 <!-- <v-parallax class="bajs" :src="getUrl('omoss.jpg')"> -->
                 <!-- <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
                 height="600"> -->
@@ -498,7 +498,7 @@
     }
 
     .apa {
-        height: 570px !important;
+        height: 80vh !important;
         width: 100%;
     }
 

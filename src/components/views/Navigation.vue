@@ -149,7 +149,7 @@
     }
 
     .submenu-wrap {
-        padding: 0 30px 10px 20px !important;
+        padding: 0 00px 10px 0px !important;
 
     }
 
