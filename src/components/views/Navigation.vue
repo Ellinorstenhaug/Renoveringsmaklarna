@@ -142,10 +142,13 @@
         z-index: 200;
         height: 20px;
         width: 26px;
-        /* left: 20px; */
-        position: absolute;
-        top: 26px;
+        position: fixed;
         right: 20px;
+          width: 36px;
+      height: 30px;
+      left: 36px;
+      top: 16px;
+      cursor: pointer;
     }
 
     .submenu-wrap {

@@ -504,7 +504,7 @@
     }
 
     .recension {
-        background-color: #e9d2d8;
+        background-color: #e8edf2;
         height: auto;
     }
 
