@@ -29,7 +29,7 @@
             <v-dialog v-model="dialog" block max-width="600px">
                 <v-card>
                     <v-card-title>
-                        <HeadingModal :title="headingLabel"></HeadingModal>
+                        <HeadingModal :title="headingLabel" :procentValue="procentCount"></HeadingModal>
                     </v-card-title>
                     <v-card-text>
                         <v-container grid-list-xl class="static-container">
@@ -150,12 +150,21 @@
                         <div class="step-container" v-else-if="count===2">
                             <form>
                                 <v-text-field v-validate="'required|max:10'" v-model="userData.name" :error-messages="errors.collect('name')"
-                                    label="Namn" data-vv-name="name" required></v-text-field>
-                                <v-text-field v-validate="'required|email'" v-model="userData.email" :error-messages="errors.collect('email')"
-                                    label="E-mail" data-vv-name="email" required></v-text-field>
-                                <v-text-field v-validate="'required'" v-model="userData.city" :error-messages="errors.collect('city')"
-                                    label="Stad" data-vv-name="city" required></v-text-field>
+                                    label="Namn" @blur="handleBlur" data-vv-name="name" required></v-text-field>
+                                <v-text-field @blur="handleBlur" v-validate="'required|email'" v-model="userData.email"
+                                    :error-messages="errors.collect('email')" label="E-mail" data-vv-name="email"
+                                    required></v-text-field>
+                                <v-text-field @blur="handleBlur" v-validate="'required'" v-model="userData.city"
+                                    :error-messages="errors.collect('city')" label="Stad" data-vv-name="city" required></v-text-field>
                             </form>
+                        </div>
+                        <div class="step-container" v-else-if="count===3">
+                            <v-flex xs12>
+                                <p class="textcolor">Tack!
+                                    Vi bearbetar din förfrågan och återkommer så snart som möjligt.
+                                </p>
+                                <p>Har du några frågor når du oss enklast på telefon: <a href="tel:0763295932">0763295932</a></p>
+                            </v-flex>
                         </div>
                     </v-card-text>
                     <v-card-actions>
@@ -185,8 +194,13 @@
                     </v-card-actions>
                 </v-card>
             </v-dialog>
+
         </v-layout>
+        <!-- snackbar start -->
+
+        <!-- snackbar slut -->
     </div>
+
 </template>
 
 <script>
@@ -222,11 +236,13 @@
                 loader: null,
                 img: img,
                 count: 0,
+                procentCount: 0,
                 headingLabel: 'Välj tjänst',
                 currentService: this.service === undefined ? '' : this.service,
                 dialog: false,
                 postBtn: true,
                 loading3: false,
+
                 userData: {
                     name: '',
                     email: '',
@@ -235,6 +251,7 @@
                     description: '',
                 },
 
+               
             }
         },
         mounted() {
@@ -244,7 +261,15 @@
 
         },
         methods: {
+            handleBlur: function () {
 
+                this.$validator.validateAll().then((result) => {
+                    if (result) {
+                        console.log(result);
+                        this.procentCount = 100;
+                    }
+                });
+            },
 
             addService: function (serviceName) {
 
@@ -271,12 +296,18 @@
 
                 if (this.count === 0) {
                     this.headingLabel = "Välj tjänst";
+                    this.procentCount = 0;
 
                 } else if (this.count === 1) {
                     this.headingLabel = "Beskriv ditt ärende";
+                    this.procentCount = 33;
 
                 } else if (this.count === 2) {
                     this.headingLabel = "Detaljer om dig";
+                    this.procentCount = 66;
+
+                } else if (this.count === 3) {
+                    this.headingLabel = "Tack för din förfrågan!";
                 }
 
             },
@@ -285,6 +316,7 @@
 
                 this.$validator.validateAll().then((result) => {
                     if (result) {
+                        this.procentCount = 100;
                         this.loader = 'loading3'
 
                         let userObject = {
@@ -306,7 +338,10 @@
 
                         }).then(
                             response => {
-                                if (response.data) {}
+                                if (response.data) {
+                                    this.count = 4;
+                                    this.handleState();
+                                }
                                 this.loader = null;
                             });
 
