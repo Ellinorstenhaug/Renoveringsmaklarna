@@ -1,6 +1,6 @@
 <template>
     <v-app light>
-        <Navigation :serviceLinks="services" />
+        <Navigation :serviceLinks="services"/>
         <main id="page-wrap">
             <router-view />
 

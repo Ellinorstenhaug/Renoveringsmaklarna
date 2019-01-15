@@ -27,7 +27,7 @@
                             <v-flex xs12 md5 mr-5>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline align-left">Kontaktuppgifter</div>
+                                        <div class="headline align-left">Kontaktuppgifter <hr></div>
                                     </v-card-title>
                                     <v-card-text align-center text-md-center text-xs-center>
                                         <div class="table-wrapper">
@@ -71,6 +71,7 @@
                 <v-layout column wrap align-center justify-center >
                     <v-flex md12>
                     <div class="headline black--text mb-3 text-xs-center">Kontakta RevoveringsMäklarna</div>
+                    <hr>    
                         <form>
                             <v-text-field v-validate="'required|max:20'" v-model="name" :error-messages="errors.collect('name')"
                                 label="Namn" data-vv-name="name" required></v-text-field>
