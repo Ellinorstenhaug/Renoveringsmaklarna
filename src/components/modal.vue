@@ -167,7 +167,7 @@
 
 
     export default {
-        props: ['service', 'allServices'],
+        props: ['service', 'allServices','showDialog'],
 
         computed: {
             allServicesMethod: function () {
@@ -309,6 +309,9 @@
         },
 
         watch: {
+            showDialog:function(){
+                this.dialog = !this.dialog;
+            },
             service: function (newVal) {
                 this.currentService = newVal;
                 this.userData.interest = newVal;

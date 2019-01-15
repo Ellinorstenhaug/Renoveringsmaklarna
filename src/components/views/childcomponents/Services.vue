@@ -1,45 +1,55 @@
 <template>
-        <v-layout column wrap class="pb-5">         
-            <v-flex xs12 md12>
-                <v-container grid-list-xl>
-                    <v-layout row wrap align-center>
-                        <v-flex xs12 md3 sm6 v-for="(item, index) in services" :key="index">
-                            <router-link :to="`${item.url}`">
+    <v-layout column wrap class="pb-5">
+        <v-flex xs12 md12>
+            <v-container grid-list-xl>
+                <v-layout row wrap align-center>
+                    <v-flex xs12 md3 sm6 v-for="(item, index) in services" :key="index">
+                        <router-link :to="`${item.url}`" v-if="index < quantityToShow">
 
-                                <div class="img__wrap">
-                                    <img class="img__img" :src="getImgUrl(item.images[0].medium)" :alt="item.images.alt" />
-                                    <v-card-text class="service-container">
-                                        <v-card-title primary-title class="layout justify-center">
-                                             <div class="inner-service">
+                            <div class="img__wrap">
+                                <img class="img__img" :src="getImgUrl(item.images[0].medium)" :alt="item.images.alt" />
+                                <v-card-text class="service-container">
+                                    <v-card-title primary-title class="layout justify-center">
+                                        <div class="inner-service">
                                             <span class="headline2 fontweight-600-text text__white" v-html="item.icon"></span>
                                             <span class="headline2 text--white">{{textToUpperCase(item.heading)}}</span>
 
-                                            </div>
-                                        </v-card-title>
-                                    </v-card-text>
+                                        </div>
+                                    </v-card-title>
+                                </v-card-text>
 
-                                    <div class="img__description_layer">
-                                        <div class="img__description">
+                                <div class="img__description_layer">
+                                    <div class="img__description">
 
-                                            <div class="read-more-wrap">
+                                        <div class="read-more-wrap">
 
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                    <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z" /></svg>
-                                            </div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z" /></svg>
                                         </div>
                                     </div>
                                 </div>
-                            </router-link>
-                        </v-flex>
-                    </v-layout>
-                </v-container>
-            </v-flex>
-        </v-layout>
+                            </div>
+                        </router-link>
+                    </v-flex>
+                </v-layout>
+            </v-container>
+        </v-flex>
+    </v-layout>
 </template>
 
 <script>
     export default {
-        props: ['allServices'],
+        props: ['allServices', 'quantity'],
+
+        computed: {
+            quantityToShow: {
+                get: function () {
+                    return this.quantity == undefined ? this.allServices.length : this.quantity
+                }
+            },
+
+        },
+
         data: function () {
             return {
                 service: {},
@@ -60,8 +70,6 @@
 </script>
 
 <style>
-   
-
     .wrapper:hover {
         filter: brightness(100%);
     }
@@ -103,7 +111,7 @@
         justify-content: center;
 
         /* transition effect. not necessary */
-        
+
         transition: opacity .2s, visibility .2s;
     }
 
@@ -128,40 +136,39 @@
         opacity: 1;
     }
 
-    .img__wrap:hover .img__img{
-        filter:brightness(90%);
-        
+    .img__wrap:hover .img__img {
+        filter: brightness(90%);
+
     }
 
-    .img__img{
-        filter:brightness(70%);
+    .img__img {
+        filter: brightness(70%);
 
     }
 
 
     .img__description {
-        transform: translateY(1em);        
+        transform: translateY(1em);
         transition: all .25s ease-in-out;
     }
 
     .img__wrap:hover .img__description {
-        transform: translateY(0); 
-         opacity: .8;
+        transform: translateY(0);
+        opacity: .8;
     }
 
     .img__img {
-        width: 100%;         
+        width: 100%;
         height: auto !important;
     }
-  
+
     .read-more-wrap {
         text-align: right;
         fill: white;
         position: absolute;
         right: 0;
-        top:0;
-        left:0;
+        top: 0;
+        left: 0;
         bottom: 0;
     }
-  
 </style>

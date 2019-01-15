@@ -3,9 +3,6 @@
     <v-content>
         <section>
             <v-parallax :src="getUrl('apa3.png')">
-                <!-- <v-parallax class="bajs" :src="getUrl('omoss.jpg')"> -->
-                <!-- <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
-                height="600"> -->
                 <v-layout column align-center justify-center class="white--text">
                     <div class="jumbotron">
                         <div class="jumbo-container">
@@ -16,13 +13,10 @@
                                 konsulter!</div>
                             <div class="button-wrapper">
 
-                                <Modal :allServices="this.services" ref="modalClick" />
+                            <Modal :allServices="this.services" :showDialog="this.activateDialog" />
 
                             </div>
                         </div>
-
-
-
                     </div>
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
 
@@ -127,7 +121,7 @@
                         </div>
                     </v-card-title>
                 </v-flex>
-                <Services :allServices="this.services" />
+                <Services :allServices="this.services" :quantity="8" />
             </v-layout>
         </section>
 
@@ -275,7 +269,7 @@
             </div>
 
             <v-layout column align-center justify-center>
-                <v-btn class="purple lighten-2 my-5 btn-large" dark large @click="trigger">
+                <v-btn class="purple lighten-2 my-5 btn-large" dark large @click="activateDialog = !activateDialog">
                     KOM IGÅNG!
                 </v-btn>
             </v-layout>
@@ -294,7 +288,8 @@
         data: function () {
             return {
                 service: {},
-                services: serviceJson
+                services: serviceJson,
+                activateDialog:false,
 
             }
         },

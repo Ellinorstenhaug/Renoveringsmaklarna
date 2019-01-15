@@ -68,7 +68,7 @@
             <v-flex xs12 sm4 class="my-3">
 
             </v-flex>
-            <Services :allServices="this.services" />
+            <Services :allServices="this.services" :quantity="8" />
 
         </section>
 
