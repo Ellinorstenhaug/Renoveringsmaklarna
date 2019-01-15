@@ -2,14 +2,24 @@
     <div class=" v-container xs10 offset-xs1">
         <!-- Modal Template -->
         <div v-on:click="dialog =! dialog">
-
-            <v-btn slot="activator" class="knapp1 " large>
+            <v-btn slot="activator" class="knapp1 " large v-if="this.service">
                 <div class="content-wrap text-md-left">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" /></svg>
                     <span class="knapp2-text">
+                        <span v-html="this.service.icon"></span>
+                        Starta jämförelse med {{this.service.heading}}
+                    </span>
+                </div>
+            </v-btn>
+
+            <v-btn slot="activator" class="knapp1 " large v-if="!this.service">
+                <div class="content-wrap text-md-left">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" /></svg>
+                    <span class="knapp2-text" v-if="!this.service">
+
                         Vad behöver du hjälp med?
                     </span>
+
                 </div>
             </v-btn>
             <v-btn slot="activator" color="purple lighten-2" class="knapp2" large dark>Kom igång!</v-btn>
@@ -24,38 +34,76 @@
                     <v-card-text>
                         <v-container grid-list-xl class="static-container">
                             <v-layout row wrap align-center>
-                                <v-flex xs4 md4>
+                                <v-flex xs4 md4 class="step-wrap justify-center">
 
                                     <v-card class="elevation-0 transparent">
                                         <v-card-text class="text-xs-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                <path d="M13 6c3.469 0 2 5 2 5s5-1.594 5 2v9h-12v-16h5zm.827-2h-7.827v20h16v-11.842c0-2.392-5.011-8.158-8.173-8.158zm.173-2l-3-2h-9v22h2v-20h10z" /></svg>
+                                            <svg v-if="count>=1" version="1.1" id="Layer_1" class="step-icon" width="34" height="34" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.2 200"
+                                                style="enable-background:new 0 0 164.2 200; fill: green;" xml:space="preserve">
+                                                <g>
+                                                    <path d="M91.8,25.2h-0.6L56.4,44l-5.2-20.6L94.9,0h23.1v200H91.8V25.2z" />
+                                                </g>
+                                            </svg>
+                                            <svg v-else="" class="step-icon" version="1.1" id="Layer_1" width="34" height="34" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.2 200"
+                                                style="enable-background:new 0 0 164.2 200;" xml:space="preserve">
+                                                <g>
+                                                    <path d="M91.8,25.2h-0.6L56.4,44l-5.2-20.6L94.9,0h23.1v200H91.8V25.2z" />
+                                                </g>
+                                            </svg>
+                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M13 6c3.469 0 2 5 2 5s5-1.594 5 2v9h-12v-16h5zm.827-2h-7.827v20h16v-11.842c0-2.392-5.011-8.158-8.173-8.158zm.173-2l-3-2h-9v22h2v-20h10z" /></svg> -->
                                         </v-card-text>
 
                                         <v-card-title primary-title class="layout justify-center">
-                                            <div class="modal-link title3 text-xs-center hidden-xs-and-down">Välj
-                                                tjänst</div>
+                                            <div class="modal-link title3 text-xs-center">Välj
+                                                tjänst </div>
                                         </v-card-title>
 
                                     </v-card>
                                 </v-flex>
-                                <v-flex xs4 md4>
+                                <v-flex xs4 md4 class="step-wrap justify-center">
                                     <v-card class="elevation-0 transparent">
                                         <v-card-text class="text-xs-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                <path d="M22 3v13h-11.643l-4.357 3.105v-3.105h-4v-13h20zm2-2h-24v16.981h4v5.019l7-5.019h13v-16.981zm-5 6h-14v-1h14v1zm0 2h-14v1h14v-1zm-6 3h-8v1h8v-1z" /></svg>
+
+
+                                            <svg v-if="count >=2"class="step-icon" version="1.1" id="Layer_1" width="34" height="34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.2 200" style="enable-background:new 0 0 164.2 200; fill: green;" xml:space="preserve">
+                                                <g>
+                                                    <path d="M19.3,200v-16.3l20.9-20.3c50.2-47.8,72.9-73.2,73.2-102.9c0-20-9.7-38.4-39-38.4c-17.9,0-32.7,9.1-41.8,16.6L24.1,20 C37.8,8.5,57.1,0,79.8,0C122.2,0,140,29,140,57.2c0,36.3-26.3,65.7-67.8,105.6l-15.7,14.5v0.6h88.3V200H19.3z" />
+                                                </g>
+                                            </svg>
+                                            <svg v-else="" class="step-icon" version="1.1" id="Layer_1" width="34" height="34" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.2 200"
+                                                style="enable-background:new 0 0 164.2 200; " xml:space="preserve">
+                                                <g>
+                                                    <path d="M19.3,200v-16.3l20.9-20.3c50.2-47.8,72.9-73.2,73.2-102.9c0-20-9.7-38.4-39-38.4c-17.9,0-32.7,9.1-41.8,16.6L24.1,20 C37.8,8.5,57.1,0,79.8,0C122.2,0,140,29,140,57.2c0,36.3-26.3,65.7-67.8,105.6l-15.7,14.5v0.6h88.3V200H19.3z" />
+                                                </g>
+                                            </svg>
+                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M22 3v13h-11.643l-4.357 3.105v-3.105h-4v-13h20zm2-2h-24v16.981h4v5.019l7-5.019h13v-16.981zm-5 6h-14v-1h14v1zm0 2h-14v1h14v-1zm-6 3h-8v1h8v-1z" /></svg> -->
                                             <!-- <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon> -->
                                         </v-card-text>
                                         <v-card-title primary-title class="layout justify-center">
-                                            <div class="modal-link title3">Beskriv ditt ärende</div>
+                                            <div class="modal-link title3 text-xs-center">Beskriv ditt ärende</div>
                                         </v-card-title>
                                     </v-card>
                                 </v-flex>
-                                <v-flex xs4 md4>
+                                <v-flex xs4 md4 class="step-wrap justify-center">
                                     <v-card class="elevation-0 transparent">
                                         <v-card-text class="text-xs-center">
+                                            <svg class="step-icon" version="1.1" id="Layer_1" width="34" height="34" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.2 200"
+                                                style="enable-background:new 0 0 164.2 200;" xml:space="preserve">
+                                                <g>
+                                                    <path d="M25.2,166.7c7.4,4.8,24.7,12.2,42.9,12.2c33.6,0,44-21.4,43.8-37.5c-0.3-27.1-24.7-38.7-50-38.7H47.3V83h14.6 c19,0,43.2-9.8,43.2-32.7c0-15.5-9.8-29.2-33.9-29.2c-15.5,0-30.4,6.8-38.7,12.8l-6.8-19C35.7,7.4,55.3,0,76.1,0 c38.1,0,55.4,22.6,55.4,46.1c0,19.9-11.9,36.9-35.7,45.5v0.6c23.8,4.8,43.2,22.6,43.2,49.7c0,31-24.1,58-70.5,58 c-21.7,0-40.8-6.8-50.3-13.1L25.2,166.7z" />
+                                                </g>
+                                            </svg>
+
+                                            <!--                                             
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                                 <path d="M13 8h-8v-1h8v1zm0 2h-8v-1h8v1zm-3 2h-5v-1h5v1zm11.172 12l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" /></svg>
+                                             -->
                                             <!-- <v-icon x-large class="blue--text text--lighten-2">build</v-icon> -->
                                         </v-card-text>
                                         <v-card-title primary-title class="layout justify-center">
@@ -73,7 +121,8 @@
                                 <ul v-for="(item, index) in allServicesMethod" :key="index">
                                     <li @click.prevent="addService(item.heading)" value="mask" class="presentation">
 
-                                        <a class="modal-link title2" href="#" v-html="item.icon"></a>
+                                        <!-- <a class="modal-link title2" :style="fill:{{item.color}};" href="#" v-html="item.icon"></a> -->
+                                        <a class="modal-link title2"  href="#" v-html="item.icon"></a>
                                         <a class="modal-link title2" href="#">
                                             {{capitalizeFirstLetter(item.heading)}}
                                         </a>
@@ -209,9 +258,10 @@
             this.$validator.localize('sv', this.dictionary);
         },
         methods: {
+            
 
             addService: function (serviceName) {
-                // this.currentService = serviceName;
+
                 this.userData.interest = serviceName;
                 this.add();
             },
@@ -235,6 +285,7 @@
 
                 if (this.count === 0) {
                     this.headingLabel = "Välj tjänst";
+
                 } else if (this.count === 1) {
                     this.headingLabel = "Beskriv ditt ärende";
 
@@ -280,10 +331,10 @@
                             response => {
                                 alert(response)
                                 this.loader = null;
-                            // }).catch(error => {
-                            //     let val = error;
-                            // console.log(error.response)
-                        });
+                                // }).catch(error => {
+                                //     let val = error;
+                                // console.log(error.response)
+                            });
                     }
                 });
             },
@@ -313,8 +364,8 @@
                 this.dialog = !this.dialog;
             },
             service: function (newVal) {
-                this.currentService = newVal;
-                this.userData.interest = newVal;
+                this.currentService = newVal.heading;
+                this.userData.interest = newVal.heading;
                 this.count = 1;
             },
 
@@ -585,4 +636,14 @@
             margin-left: 8px !important;
         }
     }
+
+    .step-wrap {
+        padding:20px;
+        text-align: center;
+    }
+    .v-card__text {
+        padding: unset auto !important;
+    }
+
+    
 </style>

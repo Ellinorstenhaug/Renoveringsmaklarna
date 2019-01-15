@@ -2,10 +2,13 @@
 
     <v-content>
         <section>
-            <v-parallax :src="getUrl('apa3.png')">
-                <v-layout column align-center justify-center class="white--text">
+            <v-parallax :src="getUrl('header.png')" class="apa">
+                <!-- <v-parallax class="bajs" :src="getUrl('omoss.jpg')"> -->
+                <!-- <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
+                height="600"> -->
+                <v-layout column align-center justify-center class="white--text" style="margin-top:50px">
                     <div class="jumbotron">
-                        <div class="jumbo-container">
+                        <div class="jumbo-container" style="margin-top:60px;margin-bottom:30px;"   >
                             <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Jämför de bästa
                                 renoveringsbyråerna
                                 - <br> Helt kostnadsfritt! </h1>
@@ -34,6 +37,7 @@
                         <span class="subheading">
                             Cras facilisis mi vitae nunc
                         </span>
+                        <hr>
                     </div>
                 </v-flex>
                 <v-flex xs12>
@@ -117,7 +121,7 @@
                     <v-card-title primary-title>
                         <div class="text-xs-center">
                             <h2 class="display-1">Välj en tjänst för att få upp till tre offerter</h2>
-
+<hr>
                         </div>
                     </v-card-title>
                 </v-flex>
@@ -128,8 +132,9 @@
         <section>
             <v-parallax src="assets/section.jpg" class="section2" height="380">
                 <v-layout column align-center justify-center>
-                    <div class="display-1 m-display-1white--text mb-3 text-xs-center">Cras facilisis mi vitae nunc</div>
+                    <div class="display-1 m-display-1 white--text mb-3 text-xs-center">Cras facilisis mi vitae nunc</div>
                     <em>Kom igång redan idag</em>
+                    <hr class="white">
                     <v-btn class="purple lighten-2 mt-5 btn-large" dark large href="/pre-made-themes">
                         Få tre offerter
                     </v-btn>
@@ -144,6 +149,7 @@
                         <span class="subheading">
                             Cras facilisis mi vitae nunc
                         </span>
+                        <hr>
                     </div>
                 </v-flex>
                 <v-flex xs12>
@@ -223,16 +229,16 @@
 
 
         <section class="recension">
-
             <div class="r-content">
-
                 <v-layout row wrap align-center justify-center>
                     <v-flex xs12 md12 class="my-3">
                         <div class="text-xs-center">
                             <h2 class="display-1 m-display1">Tusentals kunder har lyckats med sina projekt!</h2>
                             <span class="subheading">
                                 Vad våra användare säger: </span>
+                                <hr>
                         </div>
+
                     </v-flex>
                     <v-flex xs12 md4 mr-1 ml-1>
                         <v-card>
@@ -251,7 +257,6 @@
                     </v-flex>
                     <v-flex xs12 md4 ml-1 mr-1>
                         <v-card>
-
                             <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
                                 <div>
                                     <!-- <h3 class="headline mb-0">Kangaroo Valley Safari</h3> -->
@@ -274,6 +279,10 @@
                 </v-btn>
             </v-layout>
 
+        </section>
+
+        <section class="customers">
+            
         </section>
     </v-content>
 
@@ -378,8 +387,6 @@
         background-color:#1d1a2d;
         background: no-repeat;
     } */
-
-
 
     .action {
         display: flex;
@@ -494,7 +501,7 @@
     }
 
     .apa {
-        height: 570px !important;
+        height: 750px !important;
         width: 100%;
     }
 
@@ -559,9 +566,9 @@
         }
 
         .apa {
-            height: 500px !important;
+            height: 700px !important;
             width: 100%;
-        }
+        } 
 
         .m-display1 {
             font-size: 0.5em !important;
@@ -599,5 +606,14 @@
             border-left: 2px solid rgb(39, 39, 39);
             cursor: pointer;
         }
+    }
+    .white {
+        border-color:white !important;
+        fill: white;
+    }
+    hr {
+        width:100px; 
+        margin: 5px auto 0 auto;
+        
     }
 </style>

@@ -2,7 +2,7 @@
 
     <v-content>
         <section>
-            <v-parallax :src="getImgUrl('about.jpg')">
+            <v-parallax :src="getImgUrl('about.jpg')" class="service-apa">
                 <v-layout column align-center justify-center class="white--text">
                     <!-- <div class="jumbotron"> -->
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
@@ -21,6 +21,7 @@
                         <span class="subheading">
                             Cras facilisis mi vitae nunc
                         </span>
+                        <hr>
                     </div>
                 </v-flex>
                 <v-flex xs12>
@@ -74,6 +75,7 @@
                     <div class="my-5 align-center text-md-center text-xs-center justify-center">
                         <div class="headline white--text mb-3 text-xs-center">Vanliga frågor</div>
                         <em>Hittar du inte vad du söker? <a href="">Kontakta oss!</a></em>
+                        <hr>
                     </div>
 
                     <v-flex md6 pb-5 :class="{'set50procent__width': $vuetify.breakpoint.mdAndUp}">
