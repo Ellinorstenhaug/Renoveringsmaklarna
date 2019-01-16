@@ -9,7 +9,7 @@
                 }}</h1>
               <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
               <div class="button-wrapper">
-                <Modal :service="this.service.heading" :allServices="this.services" />
+                    <Modal :service="this.service" :allServices="this.services" :showDialog="this.activateDialog"/>
               </div>
             </div>
           </div>
@@ -22,7 +22,7 @@
             <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
             <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
             <div class="button-wrapper">
-              <Modal :service="this.service" :allServices="this.services" />
+              <Modal :service="this.service" :allServices="this.services" :showDialog="this.activateDialog" />
             </div>
           </div>
         </v-layout>
@@ -43,7 +43,7 @@
                   </v-card-title>
                   <v-card-text>{{this.service.caption}}</v-card-text>
                   <v-flex xs12 md8 offset-md2 align-center justify-center>
-                    <v-btn class="purple lighten-2 mt-2 set-width-100" dark large href="/pre-made-themes">Intresserad?</v-btn>
+                    <v-btn class="purple lighten-2 mt-2 set-width-100" dark large @click="activateDialog = !activateDialog">Intresserad?</v-btn>
                   </v-flex>
                 </v-card>
               </v-flex>
@@ -67,7 +67,7 @@
             <hr>
           </div>
         </v-flex>
-        <Services :allServices="this.services" />
+        <Services :allServices="this.services" :quantity="8" />
       </v-layout>
     </section>
   </v-content>
@@ -94,7 +94,8 @@
     data() {
       return {
         service: {},
-        services: serviceJson
+        services: serviceJson,
+         activateDialog: false,
       };
     },
     methods: {
@@ -109,12 +110,11 @@
       },
 
       findService: function () {
-        let serviceName = this.$route.params.id;
         let isFound = false;
         let serviceObject = {};
 
         for (var i = 0; i < serviceJson.length; i++) {
-          if (serviceJson[i].heading == serviceName) {
+          if (serviceJson[i].url == this.$route.path) {
             serviceObject = {
               heading: serviceJson[i].heading,
               imgUrl: this.getImgUrl(serviceJson[i].imgUrl),

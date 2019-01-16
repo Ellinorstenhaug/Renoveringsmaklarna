@@ -8,7 +8,7 @@
                 height="600"> -->
                 <v-layout column align-center justify-center class="white--text" style="margin-top:50px">
                     <div class="jumbotron">
-                        <div class="jumbo-container" style="margin-top:60px;margin-bottom:30px;"   >
+                        <div class="jumbo-container" style="margin-top:60px;margin-bottom:30px;">
                             <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Jämför de bästa
                                 renoveringsbyråerna
                                 - <br> Helt kostnadsfritt! </h1>
@@ -16,13 +16,10 @@
                                 konsulter!</div>
                             <div class="button-wrapper">
 
-                                <Modal :allServices="this.services" ref="modalClick" />
+                                <Modal :allServices="this.services" :showDialog="this.activateDialog" />
 
                             </div>
                         </div>
-
-
-
                     </div>
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
 
@@ -124,11 +121,11 @@
                     <v-card-title primary-title>
                         <div class="text-xs-center">
                             <h2 class="display-1">Välj en tjänst för att få upp till tre offerter</h2>
-<hr>
+                            <hr>
                         </div>
                     </v-card-title>
                 </v-flex>
-                <Services :allServices="this.services" />
+                <Services :allServices="this.services" :quantity="8" />
             </v-layout>
         </section>
 
@@ -138,7 +135,7 @@
                     <div class="display-1 m-display-1 white--text mb-3 text-xs-center">Cras facilisis mi vitae nunc</div>
                     <em>Kom igång redan idag</em>
                     <hr class="white">
-                    <v-btn class="purple lighten-2 mt-5 btn-large" dark large href="/pre-made-themes">
+                    <v-btn class="purple lighten-2 mt-5 btn-large" dark large @click="activateDialog = !activateDialog">
                         Få tre offerter
                     </v-btn>
                 </v-layout>
@@ -239,7 +236,7 @@
                             <h2 class="display-1 m-display1">Tusentals kunder har lyckats med sina projekt!</h2>
                             <span class="subheading">
                                 Vad våra användare säger: </span>
-                                <hr>
+                            <hr>
                         </div>
 
                     </v-flex>
@@ -249,7 +246,8 @@
                                 <!-- <h3 class="headline mb-0"></h3> -->
                                 <div class="quote-wrap">
                                     <img class="recension-dqm" src="@/assets/open.jpg" alt="">
-                                     Motsvarade mina förväntningar! Allt gick smidigt och de som städare var fantastiska! Är supernöjd och rekommenderar dom gärna ...
+                                    Motsvarade mina förväntningar! Allt gick smidigt och de som städare var
+                                    fantastiska! Är supernöjd och rekommenderar dom gärna ...
                                     <img class="recension-dqm" src="@/assets/close.jpg" alt=""></div>
                                 <br>
                                 <em>
@@ -265,7 +263,8 @@
                                     <!-- <h3 class="headline mb-0">Kangaroo Valley Safari</h3> -->
                                     <div>
                                         <img class="recension-dqm" src="@/assets/open.jpg" alt="">
-                                         Bra service och mkt bra kvalite på fönsterputs, har redan rekommenderat Helgens Städ till vår umgänges omkrets, och vi kommer beställa fler uppdrag ...
+                                        Bra service och mkt bra kvalite på fönsterputs, har redan rekommenderat Helgens
+                                        Städ till vår umgänges omkrets, och vi kommer beställa fler uppdrag ...
                                         <img class="recension-dqm" src="@/assets/close.jpg" alt=""></div>
                                     <br>
                                     <em>Alexander Helsinghof, Tumba</em>
@@ -277,7 +276,7 @@
             </div>
 
             <v-layout column align-center justify-center>
-                <v-btn class="purple lighten-2 my-5 btn-large" dark large @click="trigger">
+                <v-btn class="purple lighten-2 my-5 btn-large" dark large @click="activateDialog = !activateDialog">
                     KOM IGÅNG!
                 </v-btn>
             </v-layout>
@@ -285,7 +284,7 @@
         </section>
 
         <section class="customers">
-            
+
         </section>
     </v-content>
 
@@ -300,7 +299,8 @@
         data: function () {
             return {
                 service: {},
-                services: serviceJson
+                services: serviceJson,
+                activateDialog: false,
 
             }
         },
@@ -313,11 +313,6 @@
             getUrl(img) {
                 return require('../../assets/' + img)
             },
-
-            trigger() {
-                this.$refs.modalClick.click()
-            }
-
         }
     }
 </script>
@@ -383,25 +378,11 @@
         background-color: #e6d3d8;
     }
 
-    /* 
-    .sectionimg {
-        height: 1000px;
-        background-color:#1d1a2d;
-        background: no-repeat;
-    } */
-
     .action {
         display: flex;
         align-items: center;
         justify-content: center;
-        /* height: 100vh; */
     }
-
-
-    /* .headline {
-        color: black;
-        font-size: 5em !important;
-    } */
 
     .modal-container {
         position: fixed;
@@ -570,7 +551,7 @@
         .apa {
             height: 700px !important;
             width: 100%;
-        } 
+        }
 
         .m-display1 {
             font-size: 0.5em !important;
@@ -578,7 +559,7 @@
 
     }
 
-   
+
 
     /* modal */
     @media (max-width: 960px) {
@@ -609,13 +590,15 @@
             cursor: pointer;
         }
     }
+
     .white {
-        border-color:white !important;
+        border-color: white !important;
         fill: white;
     }
+
     hr {
-        width:100px; 
+        width: 100px;
         margin: 5px auto 0 auto;
-        
+
     }
 </style>

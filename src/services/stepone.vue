@@ -9,7 +9,6 @@ export default {
     props: ['count'],
     methods : {
          updateValue: function (count) {
-          //     console.log("HEEEEJ");
                this.$emit('a', count);
          }
     }

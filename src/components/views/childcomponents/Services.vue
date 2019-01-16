@@ -4,7 +4,7 @@
       <v-container grid-list-xl>
         <v-layout row wrap align-center>
           <v-flex xs6 md3 sm6 class="set-padding_1_3" v-for="(item, index) in services" :key="index">
-            <router-link :to="`${item.url}`">
+              <router-link :to="`${item.url}`" v-if="index < quantityToShow">
               <div class="img__wrap">
                 <img
                   class="img__img"
@@ -47,7 +47,16 @@
 
 <script>
 export default {
-  props: ["allServices"],
+   props: ['allServices', 'quantity'],
+
+        computed: {
+            quantityToShow: {
+                get: function () {
+                    return this.quantity == undefined ? this.allServices.length : this.quantity
+                }
+            },
+
+        },
   data: function() {
     return {
       service: {},
