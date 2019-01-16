@@ -328,25 +328,23 @@
                         };
 
 
-                        axios.post('http://api.redovisningsmaklarna.local/api/Renoveringsmaklarna/', userObject, {
-                            headers: {
-                                'Content-type': 'application/json; charset=utf=8',
-                                "Access-Control-Allow-Origin": "*"
-                            },
-                            dataType: 'json',
-                            crossDomain: true
+                            axios.post('http://api.redovisningsmaklarna.local/api/Renoveringsmaklarna/', userObject, {
+                                headers: {
+                                    'Content-type': 'application/json; charset=utf=8',
+                                    "Access-Control-Allow-Origin": "*"
+                                },
+                                dataType: 'json',
+                                crossDomain: true
 
-                        }).then(
-                            response => {
-                                if (response.data) {
-                                    this.count = 4;
-                                    this.handleState();
-                                }
-                                this.loader = null;
-                            });
-
-
-
+                            }).then(
+                                response => {
+                            
+                                    if (response.data) {
+                                        this.count = this.add();
+                                        this.handleState();
+                                    }
+                                    this.loader = null;
+                                });
                     }
                 });
             },

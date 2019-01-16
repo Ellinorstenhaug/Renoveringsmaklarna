@@ -4,7 +4,7 @@ import About from './components/views/About.vue';
 import StartPage from './components/views/StartPage.vue';
 import ServicePage from './components/views/ServicePage.vue';
 import ContactPage from './components/views/ContactPage.vue';
-
+import Success from './components/views/success.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -26,6 +26,11 @@ export default new Router({
       path: '/kontakt',
       name: 'kontakt',
       component: ContactPage
+    },
+    {
+      path: '/success',
+      name: 'success',
+      component: Success
     },
     {
       path: '/tjänster/:id',     

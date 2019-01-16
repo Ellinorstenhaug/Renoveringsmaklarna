@@ -20,6 +20,10 @@
                 <img src="@/assets/RM-01.svg" alt class="logo">
                 {{title}}
               </router-link>
+              <router-link :to="`/success`" class="v_toolbar_title title nav-logo teal--text">
+                <img src="@/assets/RM-01.svg" alt class="logo">
+                Success
+              </router-link>
               <h3 class="menu-heading mt-3">Tjänster</h3>
               <div class="submenu-wrap dd-list-item" v-for="(item, index) in services" :key="index">
                 <router-link

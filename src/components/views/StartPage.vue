@@ -284,7 +284,7 @@
         </section>
 
         <section class="customers">
-
+            <Customers/>
         </section>
     </v-content>
 
@@ -294,6 +294,7 @@
     import Modal from '../modal.vue';
     import Services from './childcomponents/Services.vue';
     import serviceJson from '../../services/services.json';
+    import Customers from './childcomponents/customers.vue'
 
     export default {
         data: function () {
@@ -306,7 +307,8 @@
         },
         components: {
             Modal,
-            Services
+            Services,
+            Customers
         },
 
         methods: {
