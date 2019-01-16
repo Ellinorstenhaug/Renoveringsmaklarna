@@ -1,6 +1,6 @@
 <template>
-    <div>HEEEEJs
-
+    <div>
+        
         
     </div>
 </template>

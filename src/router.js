@@ -4,7 +4,8 @@ import About from './components/views/About.vue';
 import StartPage from './components/views/StartPage.vue';
 import ServicePage from './components/views/ServicePage.vue';
 import ContactPage from './components/views/ContactPage.vue';
-import Success from './components/views/success.vue'
+import Success from './components/views/Success.vue';
+import Services from  './components/views/AllServices.vue';
 Vue.use(Router);
 
 export default new Router({
@@ -19,7 +20,7 @@ export default new Router({
     },
     {
       path: '/om-oss',
-      name: 'omoss',
+      name: 'om oss',
       component: About
     },
     {
@@ -28,8 +29,8 @@ export default new Router({
       component: ContactPage
     },
     {
-      path: '/success',
-      name: 'success',
+      path: '/klart',
+      name: 'klart',
       component: Success
     },
     {
@@ -40,6 +41,13 @@ export default new Router({
         path: '',
         component: ServicePage
       }]
+    },
+    {
+      path: '/våra-tjänster',
+      name:"våra tjänster",     
+      component: Services,
+
+     
     }
   ]
 });

@@ -2,7 +2,7 @@
 
     <v-content>
         <section>
-            <v-parallax :src="getUrl('header.png')" class="apa">
+            <v-parallax :src="getUrl('header.png')" class="overlay-helper">
                 <!-- <v-parallax class="bajs" :src="getUrl('omoss.jpg')"> -->
                 <!-- <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
                 height="600"> -->
@@ -294,7 +294,7 @@
     import Modal from '../modal.vue';
     import Services from './childcomponents/Services.vue';
     import serviceJson from '../../services/services.json';
-    import Customers from './childcomponents/customers.vue'
+    import Customers from './childcomponents/clients.vue'
 
     export default {
         data: function () {
@@ -485,7 +485,11 @@
         }
     }
 
-    .apa {
+#page-wrap{
+    margin-top:64px;
+}
+    .overlay-helper {
+        
         height: 750px !important;
         width: 100%;
     }
@@ -540,31 +544,15 @@
         line-height: 50px !important;
     }
 
-    @media (max-width:690px) {
-        .jumbotron {
-            width: 95%;
-        }
-
-        .subheading {
-            margin: 60px 0 !important;
-            line-height: 2;
-        }
-
-        .apa {
-            height: 700px !important;
-            width: 100%;
-        }
-
-        .m-display1 {
-            font-size: 0.5em !important;
-        }
-
-    }
+  
 
 
 
     /* modal */
     @media (max-width: 960px) {
+        .jumbotron{
+            padding:10%;
+        }
         .modal-container {
             width: 100%;
         }
@@ -579,6 +567,31 @@
             line-height: 35px !important;
 
         }
+    }
+      @media (max-width:690px) {
+        .jumbotron {
+            width: 95%;
+            padding:2%;
+        }
+
+        .subheading {
+            margin: 60px 0 !important;
+            line-height: 2;
+        }
+
+        .overlay-helper {
+            height: 700px !important;
+            width: 100%;
+        }
+        #page-wrap{
+    margin-top:57px;
+}
+
+        .m-display1 {
+            font-size: 0.5em !important;
+        }
+
+
     }
 
 
