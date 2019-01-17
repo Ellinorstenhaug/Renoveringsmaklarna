@@ -5,8 +5,9 @@
                 <v-layout column align-center justify-center class="white--text">
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
                     <h1 class="white--text mb-2 display-2 text-xs-center">Kontakta oss</h1>
-                    <div class="subheading mb-3 text-xs-center">Om du behöver kontakta oss kan du göra det här. Du kan antingen använda formuläret nedan
-                            eller kontakta oss på de kontaktuppgifter du hittar nedan till vänster.</div>
+                    <div class="subheading mb-3 text-xs-center">Om du behöver kontakta oss kan du göra det här. Du kan
+                        antingen använda formuläret nedan
+                        eller kontakta oss på de kontaktuppgifter du hittar nedan till vänster.</div>
                 </v-layout>
             </v-parallax>
         </section>
@@ -27,7 +28,9 @@
                             <v-flex xs12 md5 mr-5>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline align-left">Kontaktuppgifter <hr></div>
+                                        <div class="headline align-left">Kontaktuppgifter
+                                            <hr>
+                                        </div>
                                     </v-card-title>
                                     <v-card-text align-center text-md-center text-xs-center>
                                         <div class="table-wrapper">
@@ -68,23 +71,24 @@
         </section>
         <section class="form-section py-5">
             <v-parallax src="assets/section.jpg" height="auto">
-                <v-layout column wrap align-center justify-center >
+                <v-layout column wrap align-center justify-center>
                     <v-flex md12>
-                    <div class="headline black--text mb-3 text-xs-center">Kontakta RevoveringsMäklarna</div>
-                    <hr>    
+                        <div class="headline black--text mb-3 text-xs-center">Kontakta RevoveringsMäklarna</div>
+                        <hr>
                         <form>
-                            <v-text-field v-validate="'required|max:20'" v-model="name" :error-messages="errors.collect('name')"
+                            <v-text-field v-validate="'required|max:20'" v-model="userData.name" :error-messages="errors.collect('name')"
                                 label="Namn" data-vv-name="name" required></v-text-field>
-                            <v-text-field v-validate="'required|email'" v-model="email" :error-messages="errors.collect('email')"
+                            <v-text-field v-validate="'required|email'" v-model="userData.email" :error-messages="errors.collect('email')"
                                 label="E-mail" data-vv-name="email" required></v-text-field>
-                            <textarea class="form-control" id="input-description" placeholder="Skriv ditt meddelande här"></textarea>
+                            <textarea class="form-control" v-model="userData.description" id="input-description"
+                                placeholder="Skriv ditt meddelande här"></textarea>
                         </form>
                     </v-flex>
 
 
                     <v-flex xs12 md3>
-                        <v-btn class=" lighten-2 mt-5 selling-button" dark large href="/pre-made-themes">
-                            Skicka meddelande 
+                        <v-btn @click.prevent="submit" class=" lighten-2 mt-5 selling-button" dark large href="/pre-made-themes">
+                            Skicka meddelande
                         </v-btn>
                     </v-flex>
                 </v-layout>
@@ -96,8 +100,76 @@
 </template>
 
 <script>
-    export default {
+    import Vue from 'vue'
+    import axios from 'axios';
+    import VeeValidate from 'vee-validate'
+    Vue.use(VeeValidate)
 
+    export default {
+        data() {
+            return {
+                userData: {
+                    name: '',
+                    email: '',
+                    description: ''
+                }
+            }
+        },
+
+        $_veeValidate: {
+            validator: 'new'
+        },
+        mounted() {
+            this.$validator.localize('sv', this.dictionary);
+        },
+
+        methods: {
+            submit() {
+
+                this.$validator.validateAll().then((result) => {
+                    if (result) {
+                        this.procentCount = 100;
+                        this.loader = 'loading3'
+
+                        let userObject = {
+                            from: this.userData.email,
+                            description: this.userData.description,
+                            name: this.userData.name,
+                            contactpage: true,
+                        };
+
+
+                        axios.post('http://api.redovisningsmaklarna.local/api/Renoveringsmaklarna/', userObject, {
+                            headers: {
+                                'Content-type': 'application/json; charset=utf=8',
+                                "Access-Control-Allow-Origin": "*"
+                            },
+                            dataType: 'json',
+                            crossDomain: true
+
+                        }).then(
+                            response => {
+
+                                if (response.data) {
+                                    setTimeout(() => {
+                                        alert('Tack, vi återkommer snarast.');
+
+                                    }, 1500);
+
+                                    setTimeout(() => {
+
+                                        this.$router.push({
+                                            name: "startsida"
+                                        });
+                                    }, 3000);
+
+                                }
+                                this.loader = null;
+                            });
+                    }
+                });
+            },
+        },
     }
 </script>
 
@@ -168,14 +240,14 @@
     }
 
     .form-section {
-        background-color:#e6d3d8;
+        background-color: #e6d3d8;
     }
 
     .selling-button {
         width: 400px;
     }
+
     .align-left {
         text-align: left !important;
     }
-   
 </style>

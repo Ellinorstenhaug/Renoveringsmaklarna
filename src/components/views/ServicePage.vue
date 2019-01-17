@@ -9,7 +9,7 @@
                 }}</h1>
               <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
               <div class="button-wrapper">
-                    <Modal :service="this.service" :allServices="this.services" :showDialog="this.activateDialog"/>
+                    <Modal :service="this.service" :allServices="this.services" :quantity="4" :showDialog="this.activateDialog"/>
               </div>
             </div>
           </div>

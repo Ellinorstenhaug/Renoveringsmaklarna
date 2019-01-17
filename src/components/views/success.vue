@@ -3,15 +3,15 @@
 
     <v-content>
         <section>
-            <v-parallax :src="getUrl('success.jpg')" >
+            <v-parallax :src="getUrl('success.jpg')">
 
                 <v-layout column align-center justify-center class="black--text">
                     <div class="white-jumbotron">
-                    <div class="jumbo-container" style="margin-top:60px;margin-bottom:30px;">
-                        <h1 class="black--text mb-2 main-heading text-xs-center jumbo-heading">Tack!
-                            <br> Vi har mottagit ditt uppdrag. </h1>
-                        <div class="subheading mb-3 text-xs-center "></div>
-                    </div>
+                        <div class="jumbo-container" style="margin-top:60px;margin-bottom:30px;">
+                            <h1 class="black--text mb-2 main-heading text-xs-center jumbo-heading">Tack!
+                                <br> Vi har mottagit ditt uppdrag. </h1>
+                            <div class="subheading mb-3 text-xs-center "></div>
+                        </div>
                     </div>
                 </v-layout>
             </v-parallax>
@@ -45,40 +45,41 @@
                                 </v-card>
                             </v-flex>
                             <v-flex xs12 md6>
-     <v-icon class="purple--text text--lighten-2">phone</v-icon><a href="tel:+7778675309" class="link">777-867-5309</a>
-            <div> Tveka inte med att kontakta oss under våra öppettider. Vi finns här för att på
-                bästa möjliga sätt besvara dina frågor.</div>
+                                <v-icon class="purple--text text--lighten-2">phone</v-icon><a href="tel:+7778675309"
+                                    class="link">777-867-5309</a>
+                                <div> Tveka inte med att kontakta oss under våra öppettider. Vi finns här för att på
+                                    bästa möjliga sätt besvara dina frågor.</div>
 
-            <table class="table">
-                <tr>
-                    <td>Måndag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Tisdag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Onsdag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Torsdag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Fredag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Lördag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Söndag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-            </table>
+                                <table class="table">
+                                    <tr>
+                                        <td>Måndag</td>
+                                        <td class="text-right">09:00 - 21:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tisdag</td>
+                                        <td class="text-right">09:00 - 21:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Onsdag</td>
+                                        <td class="text-right">09:00 - 21:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Torsdag</td>
+                                        <td class="text-right">09:00 - 21:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fredag</td>
+                                        <td class="text-right">09:00 - 21:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lördag</td>
+                                        <td class="text-right">09:00 - 21:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Söndag</td>
+                                        <td class="text-right">09:00 - 21:00</td>
+                                    </tr>
+                                </table>
 
 
 

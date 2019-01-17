@@ -6,7 +6,7 @@
 
         </main>
 
-        <Footer :serviceLinks="services" />
+        <Footer :serviceLinks="services.slice(1,8)" />
     </v-app>
 </template>
 
