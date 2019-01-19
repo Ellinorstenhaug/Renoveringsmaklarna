@@ -3,11 +3,13 @@ import Vuetify from 'vuetify'
 import App from './App.vue'
 import VeeValidate from 'vee-validate';
 import router from './router';
-import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
+import 'vuetify/dist/vuetify.min.css'; // Ensure you are using css-loader
+import './stylus/main.styl'
 
 Vue.use(Vuetify); 
 Vue.use(VeeValidate);
 Vue.config.productionTip = false;
+
 
 new Vue({
   router,

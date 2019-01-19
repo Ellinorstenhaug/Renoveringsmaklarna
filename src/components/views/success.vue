@@ -1,10 +1,7 @@
 <template>
-
-
     <v-content>
         <section>
             <v-parallax :src="getUrl('success.jpg')">
-
                 <v-layout column align-center justify-center class="black--text">
                     <div class="white-jumbotron">
                         <div class="jumbo-container" style="margin-top:60px;margin-bottom:30px;">
@@ -28,7 +25,7 @@
                 <v-flex xs12>
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
-                            <v-flex xs12 md6>
+                            <v-flex xs12 md6 mx-2>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text>
                                         Vårt mål är så snart som möjligt matcha ditt uppdrag med 3
@@ -44,13 +41,13 @@
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
-                            <v-flex xs12 md6>
+                            <v-flex xs12 md4 mx-5 >
                                 <v-icon class="purple--text text--lighten-2">phone</v-icon><a href="tel:+7778675309"
                                     class="link">777-867-5309</a>
                                 <div> Tveka inte med att kontakta oss under våra öppettider. Vi finns här för att på
                                     bästa möjliga sätt besvara dina frågor.</div>
 
-                                <table class="table">
+                                <table class="table ">
                                     <tr>
                                         <td>Måndag</td>
                                         <td class="text-right">09:00 - 21:00</td>
@@ -80,35 +77,37 @@
                                         <td class="text-right">09:00 - 21:00</td>
                                     </tr>
                                 </table>
-
-
-
-                            </v-flex>
-                            <v-flex xd12 md8 offset-md2>
-                                <v-card class="elevation-0 transparent">
-                                    <v-card-title primary-title class="layout justify-center ">
-                                        <div class="headline"><a href="/om-oss" target="_blank" class="link">Om
-                                                RenoveringsMäklarna</a></div>
-                                    </v-card-title>
-                                    <v-card-text>
-                                        Vår vision är att skapa en transparent marknad för tjänster inom
-                                        redovisning och
-                                        revision.
-                                        Vi strävar efter att göra det enkelt för dig att fatta rätt beslut, där
-                                        både
-                                        kvalitet och pris är
-                                        invägda faktorer.
-                                    </v-card-text>
-
-                                </v-card>
                             </v-flex>
 
-                            <div class="about-pic">
-                            </div>
+
                         </v-layout>
                     </v-container>
                 </v-flex>
             </v-layout>
+        </section>
+
+        <section class="vision">
+            <v-layout row wrap class="pb-5" align-center>
+            <v-flex xd12 md6 offset-md3>
+                <v-card class="elevation-0 transparent">
+                    <v-card-title primary-title class="layout justify-center ">
+                        <div class="headline "><a href="/om-oss" target="_blank" class="white-link ">Om
+                                RenoveringsMäklarna</a></div>
+                    </v-card-title>
+                    <v-card-text class="white--text">
+                        Vår vision är att skapa en transparent marknad för tjänster inom
+                        redovisning och
+                        revision.
+                        Vi strävar efter att göra det enkelt för dig att fatta rätt beslut, där
+                        både
+                        kvalitet och pris är
+                        invägda faktorer.
+                    </v-card-text>
+
+                </v-card>
+            </v-flex>
+            </v-layout>
+
         </section>
 
 
@@ -195,5 +194,26 @@
 
     .link:hover {
         color: teal;
+    }
+    .white-link {
+        color: white;
+    }
+
+    .white-link:hover {
+        color: teal;
+    }
+
+    .table {
+        background-color: rgb(245, 245, 245);
+    }
+
+    td {
+        padding: 0px 10px;
+        text-align: right;
+    }
+
+    .vision {
+        background-color: rgb(177, 175, 180);
+        width: 100%;
     }
 </style>

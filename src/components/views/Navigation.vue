@@ -6,7 +6,7 @@
                     <v-icon class="purple--text text--lighten-2">phone</v-icon>
                     08–121 47 429
         </v-btn>-->
-        <router-link :to="`/`" class="v_toolbar_title title nav-logo black--text">
+        <router-link :to="`/`" class="v_toolbar_title title nav-logo black--text fat-text">
           <img src="@/assets/RM-01.svg" alt class="logo">
           {{title}}
         </router-link>
@@ -16,7 +16,7 @@
         <div class="hamburg-logo-wrap">
           <Slide right>
             <div class="menu-wrap">
-              <router-link :to="`/`" class="v_toolbar_title title nav-logo teal--text">
+              <router-link :to="`/`" class="v_toolbar_title title nav-logo teal--text fat-text">
                 {{title}}
               </router-link>
 
@@ -223,4 +223,7 @@
     box-shadow: 0px 1px 1px 0px rgba(44, 44, 44, 0.7) !important;
 
 } */
+.fat-text {
+  font-weight: bold !important;
+}
 </style>

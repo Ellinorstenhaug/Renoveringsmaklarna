@@ -12,12 +12,12 @@
                   :alt="item.images.alt"
                 >
                 <v-card-text class="service-container">
-                  <v-card-title primary-title class="layout justify-center">
-                    <div class="inner-service">
-                      <span class="headline2 fontweight-600-text text__white" v-html="item.icon"></span>
-                      <span
+                  <v-card-title primary-title class="layout justify-center center-align">
+                    <div class="inner-service justify-center align-center">
+                      <div class="headline2 fontweight-600-text text__white align-center justify-center" v-html="item.icon"></div>
+                      <div
                         class="headline2 mobile-overlay-text text--white"
-                      >{{textToUpperCase(item.heading)}}</span>
+                      >{{textToUpperCase(item.heading)}}</div>
                     </div>
                   </v-card-title>
                 </v-card-text>
@@ -83,7 +83,6 @@ export default {
 .headline2 {
   color: white;
   font-size: 1.6em;
-  text-transform: capitalize;
 }
 
 .fontweight-600-text {
@@ -135,6 +134,9 @@ export default {
 
 .service-container svg {
   fill: white;
+      position: absolute;
+    top: 35%;
+    left: 44%;
 }
 
 .img__wrap:hover .img__description_layer {
@@ -181,5 +183,12 @@ export default {
 }
 .set-padding_1_3 {
     padding:1px 3px !important;
+}
+.center-align {
+  text-align: center !important;
+}
+
+.inner-service {
+  position:absolute;
 }
 </style>

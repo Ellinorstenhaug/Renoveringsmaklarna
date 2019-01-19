@@ -2,26 +2,26 @@
     <div class=" v-container xs10 offset-xs1">
         <!-- Modal Template -->
         <div v-on:click="dialog =! dialog">
-            <v-btn slot="activator" class="knapp1 " large v-if="this.service">
-                <div class="content-wrap text-md-left">
-                    <span class="knapp2-text">
-                        <span v-html="this.service.icon"></span>
-                        Starta jämförelse med {{this.service.heading}}
-                    </span>
-                </div>
-            </v-btn>
-
-            <v-btn slot="activator" class="knapp1 " large v-if="!this.service">
+             <v-btn slot="activator" class="knapp1 " large v-if="this.service">
                 <div class="content-wrap text-md-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" /></svg>
-                    <span class="knapp2-text" v-if="!this.service">
-
+                    <span class="knapp2-text">
                         Vad behöver du hjälp med?
                     </span>
 
                 </div>
             </v-btn>
+            <v-btn slot="activator" class="knapp1 " large v-if="!this.service">
+                <div class="content-wrap text-md-left">
+                    <span class="knapp2-text">
+                        <span v-html="this.service.icon"></span>
+                        
+                        Starta jämförelse med {{this.service.heading}}
+                    </span>
+                </div>
+            </v-btn>
+           
             <v-btn slot="activator" color="purple lighten-2" class="knapp2" large dark>Kom igång!</v-btn>
         </div>
         <v-layout action row justify-center>
@@ -29,10 +29,13 @@
             <v-dialog v-model="dialog" block max-width="600px">
                 <v-card>
                     <v-card-title>
-                        <HeadingModal :title="headingLabel" :procentValue="procentCount"></HeadingModal>
+                        <HeadingModal :title="headingLabel" :procentValue="count"></HeadingModal>
                     </v-card-title>
+                    <div @click="dialog =!dialog" class="close-btn">
+                        <v-icon>close</v-icon>
+                    </div>
                     <v-card-text>
-                        <v-container grid-list-xl class="static-container">
+                        <v-container grid-list-xl class="static-container hidden-sm-and-down">
                             <v-layout row wrap align-center>
                                 <v-flex xs4 md4 class="step-wrap justify-center">
 
@@ -115,10 +118,29 @@
                             </v-layout>
                         </v-container>
 
+
+
+
+                        <!-- 
+                        <div class="step-container" v-if="count === 0">
+                            <div class="wrapper">
+                                <ul v-for="(category, index) in this.categories" :key="index">
+                                    <li @click.prevent="addService(category.name)" value="mask" class="presentation">
+
+
+                                        <a class="modal-link title2" href="#" v-html="service.icon"></a>
+                                        <a class="modal-link title2" href="#">
+                                            {{capitalizeFirstLetter(category.name)}}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+
                         <div class="step-container" v-if="count === 0">
                             <div class="wrapper">
                                 <ul v-for="(item, index) in allServicesMethod" :key="index">
-                                    <li @click.prevent="addService(item.heading)" value="mask" class="presentation">
+                                    <li @click.prevent="addService(item.heading)" class="presentation">
 
 
                                         <a class="modal-link title2" href="#" v-html="item.icon"></a>
@@ -147,7 +169,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="step-container" v-else-if="count===2">
+                        <div class="step-container" v-else-if="count >= 2">
                             <form>
                                 <v-text-field v-validate="'required|max:10'" v-model="userData.name" :error-messages="errors.collect('name')"
                                     label="Namn" @blur="handleBlur" data-vv-name="name" required></v-text-field>
@@ -158,14 +180,7 @@
                                     :error-messages="errors.collect('city')" label="Stad" data-vv-name="city" required></v-text-field>
                             </form>
                         </div>
-                        <div class="step-container" v-else-if="count===3">
-                            <v-flex xs12>
-                                <p class="textcolor">Tack!
-                                    Vi bearbetar din förfrågan och återkommer så snart som möjligt.
-                                </p>
-                                <p>Har du några frågor når du oss enklast på telefon: <a href="tel:0763295932">0763295932</a></p>
-                            </v-flex>
-                        </div>
+                       
                     </v-card-text>
                     <v-card-actions>
                         <v-spacer></v-spacer>
@@ -173,19 +188,25 @@
                             <v-layout row wrap align-center>
                                 <v-container grid-list-xl>
                                     <v-layout row wrap align-center>
-                                        <v-flex xs12 md3>
+                                        <v-flex  xs4 md3>
                                             <v-btn block @click.prevent="minus" large v-if="count >= 1">Tillbaka</v-btn>
                                         </v-flex>
-                                        <v-flex xs12 md9>
+                                        <v-flex xs8 md9>
                                             <v-btn block class="purple lighten-2  white--text" large @click.prevent="add"
                                                 v-if="count==1">Gå vidare</v-btn>
 
-                                            <v-btn :loading="loading3" :disabled="loading3" color="purple" class="purple white--text lighten-2"
+
+                                                 <v-btn block class="purple lighten-2  white--text" large
+                                                v-if="count==2" @click.prevent="submit" > Få 3 gratis offerter
+                                                       <v-icon light></v-icon>
+                                                </v-btn>
+
+                                            <!-- <v-btn :loading="loading3" :disabled="loading3"  class="purple lighten-2 white--text"
                                                 @click.prevent="submit" block v-if="count==2">
 
                                                 Få 3 gratis offerter
                                                 <v-icon light></v-icon>
-                                            </v-btn>
+                                            </v-btn> -->
                                         </v-flex>
                                     </v-layout>
                                 </v-container>
@@ -196,11 +217,7 @@
             </v-dialog>
 
         </v-layout>
-        <!-- snackbar start -->
-
-        <!-- snackbar slut -->
     </div>
-
 </template>
 
 <script>
@@ -209,6 +226,8 @@
     import img from '@/assets/pen.png';
     import HeadingModal from '../components/HeadingModal.vue';
     import VeeValidate from 'vee-validate'
+    import categoriesJson from "@/services/categories.json"
+
 
     Vue.use(VeeValidate)
 
@@ -236,12 +255,13 @@
                 loader: null,
                 img: img,
                 count: 0,
-                procentCount: 0,
                 headingLabel: 'Välj tjänst',
                 currentService: this.service === undefined ? '' : this.service,
                 dialog: false,
                 postBtn: true,
                 loading3: false,
+                categories: this.categoriesJson,
+
 
                 userData: {
                     name: '',
@@ -255,18 +275,15 @@
             }
         },
         mounted() {
-
             this.$validator.localize('sv', this.dictionary);
-
-
+            this.categories = categoriesJson;
         },
         methods: {
             handleBlur: function () {
 
                 this.$validator.validateAll().then((result) => {
                     if (result) {
-                        console.log(result);
-                        this.procentCount = 100;
+                        this.count = 3;
                     }
                 });
             },
@@ -296,15 +313,12 @@
 
                 if (this.count === 0) {
                     this.headingLabel = "Välj tjänst";
-                    this.procentCount = 0;
 
                 } else if (this.count === 1) {
                     this.headingLabel = "Beskriv ditt ärende";
-                    this.procentCount = 33;
 
                 } else if (this.count === 2) {
                     this.headingLabel = "Detaljer om dig";
-                    this.procentCount = 66;
 
                 } else if (this.count === 3) {
                     this.headingLabel = "Tack för din förfrågan!";
@@ -316,7 +330,7 @@
 
                 this.$validator.validateAll().then((result) => {
                     if (result) {
-                        this.procentCount = 100;
+                        this.count = 3;
                         this.loader = 'loading3'
 
                         let userObject = {
@@ -342,10 +356,10 @@
                                 if (response.data) {
                                     setTimeout(() => {
                                         this.$router.push({
-                                        name: "klart"
-                                    });
+                                            name: "klart"
+                                        });
                                     }, 3000);
-                                    
+
                                 }
                                 this.loader = null;
                             });
@@ -392,7 +406,6 @@
                 this[l] = !this[l]
 
                 setTimeout(() => (this[l] = false), 3000)
-
                 this.loader = null
             }
         },
@@ -400,31 +413,6 @@
 </script>
 
 <style>
-    @media (max-width: 960px) {
-        .modal-container {
-            width: 100%;
-        }
-
-        .textcolor {
-            padding: 0;
-
-        }
-    }
-
-
-    @media (min-width: 960px) {
-        .modal-container {
-            width: 600px;
-        }
-
-        .presentation:hover {
-            border-left: 2px solid rgb(39, 39, 39);
-            cursor: pointer;
-        }
-    }
-
-
-
     .action {
         display: flex;
         align-items: center;
@@ -588,7 +576,7 @@
         background-color: white;
         border: 2px solid black;
         float: left !important;
-        width: 79% !important;
+        width: 69% !important;
         min-width: 0;
         height: 60px !important;
         text-transform: none !important;
@@ -604,7 +592,7 @@
         margin-left: 0 !important;
         margin-right: 0 !important;
         /* float: right !important; */
-        width: 16% !important;
+        width: 26% !important;
         background-color: white;
         border: 2px solid black;
         height: 60px !important;
@@ -637,6 +625,7 @@
     .v-btn__content {
         float: left;
         text-align: left !important;
+        font-weight: bold;
     }
 
     @media (max-width:561px) {
@@ -659,5 +648,45 @@
 
     .v-card__text {
         padding: unset auto !important;
+    }
+
+    @media (max-width: 960px) {
+        .modal-container {
+            width: 100%;
+        }
+
+        .textcolor {
+            padding: 0;
+
+        }
+    }
+
+
+    @media (min-width: 960px) {
+        .modal-container {
+            width: 600px;
+        }
+
+        .presentation:hover {
+            border-left: 2px solid rgb(39, 39, 39);
+            cursor: pointer;
+        }
+    }
+
+    @media (max-width:690px) {
+        .v-dialog {
+            margin: 24px 0 !important;
+        }
+    }
+
+    .close-btn {
+        position: absolute !important;
+        top: 10px;
+        right: 10px;
+        display: inline;
+    }
+    .close-btn:hover {
+        fill:teal !important;
+        cursor: pointer;
     }
 </style>

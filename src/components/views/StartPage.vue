@@ -2,21 +2,22 @@
 
     <v-content>
         <section>
-            <v-parallax :src="getUrl('header.png')" class="overlay-helper">
+            <v-parallax :src="getUrl('header.png')" class="overlay-helper"  v-if="$vuetify.breakpoint.mdAndUp">
                 <!-- <v-parallax class="bajs" :src="getUrl('omoss.jpg')"> -->
                 <!-- <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
                 height="600"> -->
-                <v-layout column align-center justify-center class="white--text" style="margin-top:50px">
+                <v-layout column align-center justify-center class="white--text" style="margin-top:30px">
                     <div class="jumbotron">
-                        <div class="jumbo-container" style="margin-top:60px;margin-bottom:30px;">
-                            <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Jämför de bästa
+                        <div class="jumbo-container">
+                            <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading heading">Jämför de
+                                bästa
                                 renoveringsbyråerna
                                 - <br> Helt kostnadsfritt! </h1>
                             <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och
                                 konsulter!</div>
                             <div class="button-wrapper">
 
-                                <Modal :allServices="this.services" :showDialog="this.activateDialog" />
+                                <Modal :allServices="this.services" :service="this.service" :showDialog="this.activateDialog" />
 
                             </div>
                         </div>
@@ -25,6 +26,26 @@
 
                 </v-layout>
             </v-parallax>
+            <v-img :src="this.getUrl('header-small.jpg')" alt="skriv något här" v-if=" $vuetify.breakpoint.smAndDown"
+                class="overlay-helper">
+                <v-layout column align-center justify-center class="white--text">
+                     <div class="jumbotron">
+                        <div class="jumbo-container">
+                            <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading heading">Jämför de
+                                bästa
+                                renoveringsbyråerna
+                                - <br> Helt kostnadsfritt! </h1>
+                            <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och
+                                konsulter!</div>
+                            <div class="button-wrapper">
+
+                                <Modal :allServices="this.services" :service="this.service" :showDialog="this.activateDialog" />
+
+                            </div>
+                        </div>
+                    </div>
+                </v-layout>
+            </v-img>
         </section>
 
 
@@ -33,8 +54,8 @@
             <v-layout column wrap class="mt-5" align-center>
                 <v-flex xs12 sm4 class="mt-3">
                     <div class="text-xs-center">
-                        <h2 class="display-1 m-display1">Varför du bör använda RenoveringsMäklarna</h2>
-                        <span class="subheading">
+                        <h2 class="display-1 m-display1 heading ">Varför du bör använda RenoveringsMäklarna</h2>
+                        <span class="subheading heading">
                             Cras facilisis mi vitae nunc
                         </span>
                         <hr>
@@ -51,7 +72,7 @@
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">Den bästa lösningen för dig</div>
+                                        <div class=" text-xs-center heading">Den bästa lösningen för dig</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -71,7 +92,7 @@
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">Jämför innan du väljer</div>
+                                        <div class="heading text-xs-center ">Jämför innan du väljer</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -90,7 +111,7 @@
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">Gratis och icke-bindande</div>
+                                        <div class="heading text-xs-center">Gratis och icke-bindande</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -120,7 +141,7 @@
                 <v-flex xs12 sm4 class="my-3">
                     <v-card-title primary-title>
                         <div class="text-xs-center">
-                            <h2 class="display-1">Välj en tjänst för att få upp till tre offerter</h2>
+                            <h2 class="display-1 heading">Välj en tjänst för att få upp till tre offerter</h2>
                             <hr>
                         </div>
                     </v-card-title>
@@ -132,7 +153,8 @@
         <section>
             <v-parallax src="assets/section.jpg" class="section2" height="380">
                 <v-layout column align-center justify-center>
-                    <div class="display-1 m-display-1 white--text mb-3 text-xs-center">Cras facilisis mi vitae nunc</div>
+                    <div class="display-1 m-display-1 white--text mb-3 text-xs-center heading">Cras facilisis mi vitae
+                        nunc</div>
                     <em>Kom igång redan idag</em>
                     <hr class="white">
                     <v-btn class="purple lighten-2 mt-5 btn-large" dark large @click="activateDialog = !activateDialog">
@@ -145,8 +167,8 @@
             <v-layout column wrap class="mt-5" align-center>
                 <v-flex xs12 sm4 class="mt-3">
                     <div class="text-xs-center">
-                        <h2 class="display-1">Så fungerar RenoveringsMäklarna</h2>
-                        <span class="subheading">
+                        <h2 class="display-1  heading">Så fungerar RenoveringsMäklarna</h2>
+                        <span class="subheading heading">
                             Cras facilisis mi vitae nunc
                         </span>
                         <hr>
@@ -163,7 +185,7 @@
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">Fyll i formuläret</div>
+                                        <div class="heading text-xs-center ">Fyll i formuläret</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -182,7 +204,7 @@
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline">Jämför offerter</div>
+                                        <div class="heading">Jämför offerter</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -201,7 +223,7 @@
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/169/169513.svg" alt="">
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="headline text-xs-center">Välj din lösning</div>
+                                        <div class="heading text-xs-center">Välj din lösning</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -234,7 +256,7 @@
                     <v-flex xs12 md12 class="my-3">
                         <div class="text-xs-center">
                             <h2 class="display-1 m-display1">Tusentals kunder har lyckats med sina projekt!</h2>
-                            <span class="subheading">
+                            <span class="subheading heading ">
                                 Vad våra användare säger: </span>
                             <hr>
                         </div>
@@ -283,8 +305,8 @@
 
         </section>
 
-        <section class="customers">
-            <Customers/>
+        <section class="clients">
+            <Clients />
         </section>
     </v-content>
 
@@ -294,7 +316,7 @@
     import Modal from '../modal.vue';
     import Services from './childcomponents/Services.vue';
     import serviceJson from '../../services/services.json';
-    import Customers from './childcomponents/clients.vue'
+    import Clients from './childcomponents/clients.vue'
 
     export default {
         data: function () {
@@ -308,7 +330,7 @@
         components: {
             Modal,
             Services,
-            Customers
+            Clients
         },
 
         methods: {
@@ -359,7 +381,7 @@
     .jumbotron {
         background-color: #1b0f187d;
         /* height: 70vh; */
-        padding: 7% 1% 5% 1%;
+        padding: 4% 2% 5% 2%;
     }
 
 
@@ -485,11 +507,12 @@
         }
     }
 
-#page-wrap{
-    margin-top:64px;
-}
+    #page-wrap {
+        margin-top: 64px;
+    }
+
     .overlay-helper {
-        
+
         height: 750px !important;
         width: 100%;
     }
@@ -544,15 +567,16 @@
         line-height: 50px !important;
     }
 
-  
+
 
 
 
     /* modal */
     @media (max-width: 960px) {
-        .jumbotron{
-            padding:10%;
+        .jumbotron {
+            padding: 10%;
         }
+
         .modal-container {
             width: 100%;
         }
@@ -567,32 +591,10 @@
             line-height: 35px !important;
 
         }
+        
     }
-      @media (max-width:690px) {
-        .jumbotron {
-            width: 95%;
-            padding:2%;
-        }
 
-        .subheading {
-            margin: 60px 0 !important;
-            line-height: 2;
-        }
-
-        .overlay-helper {
-            height: 700px !important;
-            width: 100%;
-        }
-        #page-wrap{
-    margin-top:57px;
-}
-
-        .m-display1 {
-            font-size: 0.5em !important;
-        }
-
-
-    }
+   
 
 
     @media (min-width: 960px) {
@@ -616,4 +618,49 @@
         margin: 5px auto 0 auto;
 
     }
+
+    .clients {
+        background-color: white;
+    }
+
+
+    .jumbo-container {
+        margin: 60px 0 30px 0 !important;
+    }
+
+
+     @media (max-width:690px) {
+        .jumbotron {
+            width: 95%;
+            padding: 2%;
+        }
+
+        .subheading {
+            margin: 60px 0 !important;
+            line-height: 2;
+        }
+
+        .overlay-helper {
+            height: 70vh !important;
+            width: 100%;
+        }
+
+        #page-wrap {
+            margin-top: 57px;
+        }
+
+        .m-display1 {
+            font-size: 0.5em !important;
+        }
+        .jumbo-container {
+            width: 100%;
+        }
+
+    }
+     .display-1 {
+            font-size:10px !important;
+        }
+
+       
+
 </style>
