@@ -119,22 +119,43 @@
                         </v-container>
 
                         <div class="step-container" v-if="count === 0">
-                            <div class="wrapper">
-
-                                
-                                   <ul v-for="(item, index) in serviceContextMethod" :key="index">
-                                     <li  class="presentation">
+                            <!-- <div class="wrapper"> -->
 
 
-                                        <a class="modal-link title2" href="#" v-html="item.icon"></a>
-                                        <a class="modal-link title2" href="#">
-                                            {{capitalizeFirstLetter(item.name)}}
-                                        </a>
-                                    </li>
-                                    
-                                </ul> 
+ <!-- <li @click.prevent="addService(item.heading)" class="presentation"> -->
 
-                                <!-- <ul v-for="(item, index) in allServicesMethod" :key="index">
+                            <v-flex pb-5>
+                                <v-expansion-panel expand>
+                                    <v-expansion-panel-content class="presentation"  v-for="(item, index) in serviceContextMethod" :key="index">
+                                        <h3 slot="header" >
+                                            <a class="modal-link title2" href="#" v-html="item.icon"></a>
+                                            <a class="modal-link title2" href="#">
+                                                {{capitalizeFirstLetter(item.name)}}
+                                            </a>
+                                            <!-- <v-icon class="expand_more">expand_more</v-icon> -->
+                                        </h3>
+                                        <v-card class="service-link" v-for="(service, i) in item.services" :key="i" @click.prevent="addService(service.heading)">
+                                            <v-card-text class="lighten-3">
+                                                
+                                                {{capitalizeFirstLetter(service.heading)}}
+                                            </v-card-text>
+                                        </v-card>
+                                    </v-expansion-panel-content>
+                                </v-expansion-panel>
+                            </v-flex>
+<!-- 
+                            <ul v-for="(item, index) in serviceContextMethod" :key="index">
+                                <li class="presentation">
+                                    <v-icon class="expand_more">expand_more</v-icon>
+                                    <a class="modal-link title2" href="#" v-html="item.icon"></a>
+                                    <a class="modal-link title2" href="#">
+                                        {{capitalizeFirstLetter(item.name)}}
+                                    </a>
+                                </li>
+
+                            </ul> -->
+
+                            <!-- <ul v-for="(item, index) in allServicesMethod" :key="index">
                                     <li @click.prevent="addService(item.heading)" class="presentation">
 
 
@@ -144,7 +165,7 @@
                                         </a>
                                     </li>
                                 </ul> -->
-                            </div>
+                            <!-- </div> -->
                         </div>
 
                         <div class=" step-container" v-else-if="count === 1">
@@ -214,7 +235,7 @@
     import img from '@/assets/pen.png';
     import HeadingModal from '../components/HeadingModal.vue';
     import VeeValidate from 'vee-validate'
-    import categoriesJson from "@/services/categories.json"
+  
 
 
     Vue.use(VeeValidate)
@@ -228,8 +249,7 @@
                 return this.allServices;
             },
             serviceContextMethod: function () {
-             
-             console.log(this.serviceContext)
+
                 return this.serviceContext;
             }
         },
@@ -253,8 +273,6 @@
                 currentService: this.service === undefined ? '' : this.service,
                 dialog: false,
                 postBtn: true,
-                categories: this.categoriesJson,
-
 
                 userData: {
                     name: '',
@@ -263,13 +281,11 @@
                     interest: '',
                     description: '',
                 },
-
-
             }
         },
         mounted() {
             this.$validator.localize('sv', this.dictionary);
-            this.categories = categoriesJson;
+            
         },
         methods: {
             handleBlur: function () {
@@ -299,7 +315,7 @@
             minus: function () {
                 this.count--;
                 this.handleState();
-             
+
 
             },
 
@@ -357,7 +373,7 @@
                                 this.loader = null;
                             }).catch(error => {
                             alert('Något gick fel, vänligen kontakta oss.')
-                            })
+                        })
                     }
                 });
             },
@@ -477,7 +493,7 @@
         height: 100px;
         width: 100%;
         color: black !important;
-        font-family: 'avenir' !important;
+        font-family: 'Nunito', sans-serif !important;
         padding: 10px;
     }
 
@@ -684,5 +700,15 @@
     .close-btn:hover {
         fill: teal !important;
         cursor: pointer;
+    }
+
+    .expand_more {
+        float: right;
+    }
+    .service-link {
+        font-size:18px;
+    }
+    .service-link:hover {
+        color:teal !important;
     }
 </style>

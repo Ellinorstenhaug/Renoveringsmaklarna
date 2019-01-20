@@ -155,7 +155,8 @@
                     </div>
                     <em>Kom igång redan idag</em>
                     <hr class="white">
-                    <v-btn class="purple lighten-2 mt-5 btn-large" dark large @click="activateDialog = !activateDialog">Få
+                 
+                    <v-btn large class="purple lighten-2 mt-5 btn-large" dark @click="activateDialog = !activateDialog">Få
                         tre offerter</v-btn>
                 </v-layout>
             </v-parallax>
@@ -310,13 +311,10 @@
         computed: {
             mapServicesIntoCategories: function () {
 
-                let categories = categoriesJson;
-                let services = servicesJson;
-
                 let mappedServicesArray = [];
                 var categoryObject = { }
                
-                categories.forEach(cat => {
+                categoriesJson.forEach(cat => {
                     categoryObject = {
                         id: cat.id,
                         name: cat.name,
@@ -353,8 +351,8 @@
                 return require("../../assets/" + img);
             },
             mapServices(catId) {
-                let services = servicesJson;
-                return services.filter(function (service) {
+               
+                return servicesJson.filter(function (service) {
                     return service.categoryId == catId
                 })
             }

@@ -42,8 +42,8 @@
                                 </v-card>
                             </v-flex>
                             <v-flex xs12 md4 mx-5 >
-                                <v-icon class="purple--text text--lighten-2">phone</v-icon><a href="tel:+7778675309"
-                                    class="link">777-867-5309</a>
+                                <v-icon class="purple--text text--lighten-2">phone</v-icon><a href="tel:+0812147429"
+                                    class="link">08–121 47 429</a>
                                 <div> Tveka inte med att kontakta oss under våra öppettider. Vi finns här för att på
                                     bästa möjliga sätt besvara dina frågor.</div>
 
@@ -57,7 +57,7 @@
                                         <td class="text-right">09:00 - 21:00</td>
                                     </tr>
                                     <tr>
-                                        <td>Onsdag</td>
+                                        <td>Onsdag</td> 
                                         <td class="text-right">09:00 - 21:00</td>
                                     </tr>
                                     <tr>

@@ -70,11 +70,10 @@
             </v-layout>
         </section>
         <section class="form-section py-5">
-            <v-parallax src="assets/section.jpg" height="auto">
-                <v-layout column wrap align-center justify-center>
-                    <v-flex md12>
+            <v-layout row wrap align-center justify-center>
+                <div class="form-background py-4">
+                    <v-flex xs10 offset-xs1>
                         <div class="headline black--text mb-3 text-xs-center">Kontakta RevoveringsMäklarna</div>
-                        <hr>
                         <form>
                             <v-text-field v-validate="'required|max:20'" v-model="userData.name" :error-messages="errors.collect('name')"
                                 label="Namn" data-vv-name="name" required></v-text-field>
@@ -83,16 +82,16 @@
                             <textarea class="form-control" v-model="userData.description" id="input-description"
                                 placeholder="Skriv ditt meddelande här"></textarea>
                         </form>
+                        <v-flex xs12>
+                            <v-btn @click.prevent="submit"  dark large class="lighten-2 mt-5 selling-button" href="/pre-made-themes">
+                                Skicka meddelande
+                            </v-btn>
+                        </v-flex>
                     </v-flex>
 
 
-                    <v-flex xs12 md3>
-                        <v-btn @click.prevent="submit" class=" lighten-2 mt-5 selling-button" dark large href="/pre-made-themes">
-                            Skicka meddelande
-                        </v-btn>
-                    </v-flex>
-                </v-layout>
-            </v-parallax>
+                </div>
+            </v-layout>
         </section>
 
     </v-content>
@@ -240,14 +239,19 @@
     }
 
     .form-section {
-        background-color: #e6d3d8;
+        background-color: #dbd3dd;
     }
 
     .selling-button {
-        width: 400px;
+        width: 100% !important;
     }
 
     .align-left {
         text-align: left !important;
+    }
+
+    .form-background {
+        background-color: rgba(255, 255, 255, 0.459);
+        /* padding:50px; */
     }
 </style>

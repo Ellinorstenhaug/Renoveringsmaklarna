@@ -52,9 +52,9 @@
                 <br>Stockholm
               </a>
               <br>
-              <a href="tel:+7778675309" class="list-item burger-list">
+              <a href="tel:+0812147429" class="list-item burger-list">
                 <v-icon class="purple--text text--lighten-2">phone</v-icon>
-                <br>777-867-5309
+                <br>08–121 47 429
               </a>
               <br>
               <a href="mailto:info@renoveringsmaklarna.se" class="list-item burger-list">
