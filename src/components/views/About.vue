@@ -2,15 +2,39 @@
 
     <v-content>
         <section>
-            <v-parallax :src="getImgUrl('about.jpg')" class="service-apa">
+
+            <v-parallax :src="getImgUrl('about.jpg')" v-if="$vuetify.breakpoint.mdAndUp" class="service-overlay">
                 <v-layout column align-center justify-center class="white--text">
-                    <!-- <div class="jumbotron"> -->
-                    <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
-                    <h1 class="black--text mb-2 display-2 text-xs-center jumbo-heading">Någonting klyshiiiiigt</h1>
-                    <div class="black--text subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor och xxxxkonsulter!</div>
-                    <!-- </div> -->
+                    <div class="jumbotron">
+                        <div class="jumbo-container">
+                            <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Passion för att
+                                hjälpa</h1>
+                            <div class="white--text subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor
+                                och
+                                xxxxkonsulter!</div>
+                            <div class="subheading mb-3 text-xs-center "></div>
+                        </div>
+                    </div>
                 </v-layout>
             </v-parallax>
+            <v-img :src="getImgUrl('about.jpg')" alt="skriv något här" v-if=" $vuetify.breakpoint.smAndDown" class="service-overlay-mobil">
+                <v-layout column align-center justify-center class="white--text" style="background: #1b0f187d; ">
+                    <div class="jumbo-container">
+  <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Passion för att
+                                hjälpa</h1>
+                            <div class="white--text subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor
+                                och
+                                xxxxkonsulter!</div>
+                            <div class="subheading mb-3 text-xs-center "></div>
+                    </div>
+                </v-layout>
+            </v-img>
+            <!-- <v-parallax :src="getImgUrl('about.jpg')" class="service-apa">
+                <v-layout column align-center justify-center class="white--text">
+                    <h1 class="black--text mb-2 display-2 text-xs-center jumbo-heading">Någonting klyshiiiiigt</h1>
+                    
+                </v-layout>
+            </v-parallax> -->
         </section>
 
         <section>
@@ -74,7 +98,7 @@
                 <v-layout wrap column align-center justify-center>
                     <div class="my-5 align-center text-md-center text-xs-center justify-center">
                         <div class="headline white--text mb-3 text-xs-center">Vanliga frågor</div>
-                        <em>Hittar du inte vad du söker? <a href="">Kontakta oss!</a></em>
+                        <em>Hittar du inte vad du söker? <a href="" class="white-link">Kontakta oss!</a></em>
                         <hr>
                     </div>
 
@@ -86,7 +110,7 @@
                                 </h3>
                                 <v-card>
                                     <v-card-text class="lighten-3">
-                                       {{item.ingress}}
+                                        {{item.ingress}}
                                     </v-card-text>
                                 </v-card>
                             </v-expansion-panel-content>
