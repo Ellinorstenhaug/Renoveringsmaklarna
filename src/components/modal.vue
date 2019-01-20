@@ -2,7 +2,7 @@
     <div class=" v-container xs10 offset-xs1">
         <!-- Modal Template -->
         <div v-on:click="dialog =! dialog">
-             <v-btn slot="activator" class="knapp1 " large v-if="this.service">
+            <v-btn slot="activator" class="knapp1 " large v-if="this.service">
                 <div class="content-wrap text-md-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" /></svg>
@@ -16,12 +16,12 @@
                 <div class="content-wrap text-md-left">
                     <span class="knapp2-text">
                         <span v-html="this.service.icon"></span>
-                        
+
                         Starta jämförelse med {{this.service.heading}}
                     </span>
                 </div>
             </v-btn>
-           
+
             <v-btn slot="activator" color="purple lighten-2" class="knapp2" large dark>Kom igång!</v-btn>
         </div>
         <v-layout action row justify-center>
@@ -118,28 +118,23 @@
                             </v-layout>
                         </v-container>
 
-
-
-
-                        <!-- 
                         <div class="step-container" v-if="count === 0">
                             <div class="wrapper">
-                                <ul v-for="(category, index) in this.categories" :key="index">
-                                    <li @click.prevent="addService(category.name)" value="mask" class="presentation">
+
+                                
+                                   <ul v-for="(item, index) in serviceContextMethod" :key="index">
+                                     <li  class="presentation">
 
 
-                                        <a class="modal-link title2" href="#" v-html="service.icon"></a>
+                                        <a class="modal-link title2" href="#" v-html="item.icon"></a>
                                         <a class="modal-link title2" href="#">
-                                            {{capitalizeFirstLetter(category.name)}}
+                                            {{capitalizeFirstLetter(item.name)}}
                                         </a>
                                     </li>
-                                </ul>
-                            </div>
-                        </div> -->
+                                    
+                                </ul> 
 
-                        <div class="step-container" v-if="count === 0">
-                            <div class="wrapper">
-                                <ul v-for="(item, index) in allServicesMethod" :key="index">
+                                <!-- <ul v-for="(item, index) in allServicesMethod" :key="index">
                                     <li @click.prevent="addService(item.heading)" class="presentation">
 
 
@@ -148,7 +143,7 @@
                                             {{capitalizeFirstLetter(item.heading)}}
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
 
@@ -180,7 +175,7 @@
                                     :error-messages="errors.collect('city')" label="Stad" data-vv-name="city" required></v-text-field>
                             </form>
                         </div>
-                       
+
                     </v-card-text>
                     <v-card-actions>
                         <v-spacer></v-spacer>
@@ -188,25 +183,18 @@
                             <v-layout row wrap align-center>
                                 <v-container grid-list-xl>
                                     <v-layout row wrap align-center>
-                                        <v-flex  xs4 md3>
+                                        <v-flex xs4 md3>
                                             <v-btn block @click.prevent="minus" large v-if="count >= 1">Tillbaka</v-btn>
                                         </v-flex>
                                         <v-flex xs8 md9>
                                             <v-btn block class="purple lighten-2  white--text" large @click.prevent="add"
                                                 v-if="count==1">Gå vidare</v-btn>
 
-
-                                                 <v-btn block class="purple lighten-2  white--text" large
-                                                v-if="count==2" @click.prevent="submit" > Få 3 gratis offerter
-                                                       <v-icon light></v-icon>
-                                                </v-btn>
-
-                                            <!-- <v-btn :loading="loading3" :disabled="loading3"  class="purple lighten-2 white--text"
-                                                @click.prevent="submit" block v-if="count==2">
-
-                                                Få 3 gratis offerter
+                                            <v-btn :loading="loading3" :disabled="loading3" block class="purple lighten-2  white--text"
+                                                large v-if="count>=2" @click.prevent="submit"> Få 3 gratis offerter
                                                 <v-icon light></v-icon>
-                                            </v-btn> -->
+                                            </v-btn>
+
                                         </v-flex>
                                     </v-layout>
                                 </v-container>
@@ -233,12 +221,16 @@
 
 
     export default {
-        props: ['service', 'allServices', 'showDialog'],
+        props: ['service', 'allServices', 'showDialog', 'serviceContext'],
 
         computed: {
             allServicesMethod: function () {
                 return this.allServices;
-
+            },
+            serviceContextMethod: function () {
+             
+             console.log(this.serviceContext)
+                return this.serviceContext;
             }
         },
         components: {
@@ -253,13 +245,14 @@
         data() {
             return {
                 loader: null,
+                loading3: false,
+
                 img: img,
                 count: 0,
                 headingLabel: 'Välj tjänst',
                 currentService: this.service === undefined ? '' : this.service,
                 dialog: false,
                 postBtn: true,
-                loading3: false,
                 categories: this.categoriesJson,
 
 
@@ -283,7 +276,8 @@
 
                 this.$validator.validateAll().then((result) => {
                     if (result) {
-                        this.count = 3;
+
+                        this.submit();
                     }
                 });
             },
@@ -305,7 +299,7 @@
             minus: function () {
                 this.count--;
                 this.handleState();
-                this.knappText = "Tillbaka";
+             
 
             },
 
@@ -330,7 +324,7 @@
 
                 this.$validator.validateAll().then((result) => {
                     if (result) {
-                        this.count = 3;
+                        this.count = 100; //just for procent cause
                         this.loader = 'loading3'
 
                         let userObject = {
@@ -354,15 +348,16 @@
                             response => {
 
                                 if (response.data) {
-                                    setTimeout(() => {
-                                        this.$router.push({
-                                            name: "klart"
-                                        });
-                                    }, 3000);
+
+                                    this.$router.push({
+                                        name: "klart"
+                                    });
 
                                 }
                                 this.loader = null;
-                            });
+                            }).catch(error => {
+                            alert('Något gick fel, vänligen kontakta oss.')
+                            })
                     }
                 });
             },
@@ -405,7 +400,7 @@
                 const l = this.loader
                 this[l] = !this[l]
 
-                setTimeout(() => (this[l] = false), 3000)
+
                 this.loader = null
             }
         },
@@ -685,8 +680,9 @@
         right: 10px;
         display: inline;
     }
+
     .close-btn:hover {
-        fill:teal !important;
+        fill: teal !important;
         cursor: pointer;
     }
 </style>

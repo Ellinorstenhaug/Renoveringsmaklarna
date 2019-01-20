@@ -5,7 +5,7 @@
 
         </div>
         <div class="progress-handler">
-            <v-progress-circular :rotate="-90" :size="80" :width="15" :value="value2" color="green">
+            <v-progress-circular :rotate="-90" :size="80" :width="15" :value="procent" color="green">
                 {{ value }}/3
             </v-progress-circular>
         </div>
@@ -26,14 +26,21 @@
 
         data() {
             return {
-                value2: 0,
+                procent: 0,
                 value: 0 * 33
             }
         },
         watch: {
             procentValue: function (newVal) {
-                this.value = newVal;
-                this.value2 =(newVal * 33)
+
+                if (newVal == 100) {
+                    this.procent = 100;
+                    this.value = 3;
+                } else {
+                    this.value = newVal;
+                    this.procent = (newVal * 33)
+
+                }
             }
         },
     }

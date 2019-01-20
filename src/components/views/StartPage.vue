@@ -1,46 +1,46 @@
 <template>
-
     <v-content>
         <section>
-            <v-parallax :src="getUrl('header.png')" class="overlay-helper"  v-if="$vuetify.breakpoint.mdAndUp">
-                <!-- <v-parallax class="bajs" :src="getUrl('omoss.jpg')"> -->
-                <!-- <v-parallax src="https://raw.githubusercontent.com/vuetifyjs/parallax-starter/master/template/assets/hero.jpeg"
-                height="600"> -->
+            <v-parallax :src="getUrl('header.png')" class="overlay-helper" v-if="$vuetify.breakpoint.mdAndUp">
                 <v-layout column align-center justify-center class="white--text" style="margin-top:30px">
                     <div class="jumbotron">
                         <div class="jumbo-container">
-                            <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading heading">Jämför de
+                            <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading heading">
+                                Jämför de
                                 bästa
                                 renoveringsbyråerna
-                                - <br> Helt kostnadsfritt! </h1>
-                            <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och
-                                konsulter!</div>
+                                -
+                                <br>Helt kostnadsfritt!
+                            </h1>
+                            <div class="subheading mb-3 text-xs-center">
+                                Vi hjälper dig anlita byggfirmor och
+                                konsulter!
+                            </div>
                             <div class="button-wrapper">
-
-                                <Modal :allServices="this.services" :service="this.service" :showDialog="this.activateDialog" />
-
+                                <Modal :serviceContext="mapServicesIntoCategories" :allServices="this.services" :service="this.service" :showDialog="this.activateDialog" />
                             </div>
                         </div>
                     </div>
-                    <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
-
                 </v-layout>
             </v-parallax>
             <v-img :src="this.getUrl('header-small.jpg')" alt="skriv något här" v-if=" $vuetify.breakpoint.smAndDown"
                 class="overlay-helper">
                 <v-layout column align-center justify-center class="white--text">
-                     <div class="jumbotron">
+                    <div class="jumbotron">
                         <div class="jumbo-container">
-                            <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading heading">Jämför de
+                            <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading heading">
+                                Jämför de
                                 bästa
                                 renoveringsbyråerna
-                                - <br> Helt kostnadsfritt! </h1>
-                            <div class="subheading mb-3 text-xs-center ">Vi hjälper dig anlita byggfirmor och
-                                konsulter!</div>
+                                -
+                                <br>Helt kostnadsfritt!
+                            </h1>
+                            <div class="subheading mb-3 text-xs-center">
+                                Vi hjälper dig anlita byggfirmor och
+                                konsulter!
+                            </div>
                             <div class="button-wrapper">
-
-                                <Modal :allServices="this.services" :service="this.service" :showDialog="this.activateDialog" />
-
+                                <Modal :serviceContext="mapServicesIntoCategories" :allServices="this.services" :service="this.service" :showDialog="this.activateDialog" />
                             </div>
                         </div>
                     </div>
@@ -48,16 +48,12 @@
             </v-img>
         </section>
 
-
-
         <section class="section-why">
             <v-layout column wrap class="mt-5" align-center>
                 <v-flex xs12 sm4 class="mt-3">
                     <div class="text-xs-center">
-                        <h2 class="display-1 m-display1 heading ">Varför du bör använda RenoveringsMäklarna</h2>
-                        <span class="subheading heading">
-                            Cras facilisis mi vitae nunc
-                        </span>
+                        <h2 class="display-1 m-display1 heading">Varför du bör använda RenoveringsMäklarna</h2>
+                        <span class="subheading heading">Cras facilisis mi vitae nunc</span>
                         <hr>
                     </div>
                 </v-flex>
@@ -72,7 +68,7 @@
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class=" text-xs-center heading">Den bästa lösningen för dig</div>
+                                        <div class="text-xs-center heading">Den bästa lösningen för dig</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -88,11 +84,11 @@
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/1170/1170619.svg"
-                                            alt="">
+                                            alt>
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="heading text-xs-center ">Jämför innan du väljer</div>
+                                        <div class="heading text-xs-center">Jämför innan du väljer</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -107,7 +103,7 @@
                             <v-flex xs12 offset-sm3 offset-md0 sm6 md4>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
-                                        <img class="icon" src="https://image.flaticon.com/icons/svg/806/806704.svg" alt="">
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/806/806704.svg" alt>
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
@@ -124,12 +120,12 @@
                                 </v-card>
                             </v-flex>
                         </v-layout>
-                        <v-layout column align-center justify-center="">
+                        <v-layout column align-center justify-center>
                             <!-- <v-flex xs8 md3>
                                 <v-btn class="purple lighten-2 selling-button" dark large href="/pre-made-themes">
                                     Get started
                                 </v-btn>
-                            </v-flex> -->
+              </v-flex>-->
                         </v-layout>
                     </v-container>
                 </v-flex>
@@ -153,13 +149,14 @@
         <section>
             <v-parallax src="assets/section.jpg" class="section2" height="380">
                 <v-layout column align-center justify-center>
-                    <div class="display-1 m-display-1 white--text mb-3 text-xs-center heading">Cras facilisis mi vitae
-                        nunc</div>
+                    <div class="display-1 m-display-1 white--text mb-3 text-xs-center heading">
+                        Cras facilisis mi vitae
+                        nunc
+                    </div>
                     <em>Kom igång redan idag</em>
                     <hr class="white">
-                    <v-btn class="purple lighten-2 mt-5 btn-large" dark large @click="activateDialog = !activateDialog">
-                        Få tre offerter
-                    </v-btn>
+                    <v-btn class="purple lighten-2 mt-5 btn-large" dark large @click="activateDialog = !activateDialog">Få
+                        tre offerter</v-btn>
                 </v-layout>
             </v-parallax>
         </section>
@@ -167,10 +164,8 @@
             <v-layout column wrap class="mt-5" align-center>
                 <v-flex xs12 sm4 class="mt-3">
                     <div class="text-xs-center">
-                        <h2 class="display-1  heading">Så fungerar RenoveringsMäklarna</h2>
-                        <span class="subheading heading">
-                            Cras facilisis mi vitae nunc
-                        </span>
+                        <h2 class="display-1 heading">Så fungerar RenoveringsMäklarna</h2>
+                        <span class="subheading heading">Cras facilisis mi vitae nunc</span>
                         <hr>
                     </div>
                 </v-flex>
@@ -180,12 +175,12 @@
                             <v-flex xs12 md4 sm6>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
-                                        <img class="icon" src="https://image.flaticon.com/icons/svg/306/306443.svg" alt="">
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/306/306443.svg" alt>
 
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
-                                        <div class="heading text-xs-center ">Fyll i formuläret</div>
+                                        <div class="heading text-xs-center">Fyll i formuläret</div>
                                     </v-card-title>
                                     <v-card-text class="text-md-center text-xs-center">
                                         Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
@@ -200,7 +195,7 @@
                             <v-flex xs12 md4 sm6>
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
-                                        <img class="icon" src="https://image.flaticon.com/icons/svg/292/292094.svg" alt="">
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/292/292094.svg" alt>
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
@@ -220,7 +215,7 @@
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
-                                        <img class="icon" src="https://image.flaticon.com/icons/svg/169/169513.svg" alt="">
+                                        <img class="icon" src="https://image.flaticon.com/icons/svg/169/169513.svg" alt>
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
                                         <div class="heading text-xs-center">Välj din lösning</div>
@@ -236,19 +231,17 @@
                                 </v-card>
                             </v-flex>
                         </v-layout>
-                        <v-layout column align-center justify-center="">
+                        <v-layout column align-center justify-center>
                             <!-- <v-flex xs8 md3>
                                 <v-btn class="purple lighten-2 selling-button" dark large href="/pre-made-themes">
                                     Get started
                                 </v-btn>
-                            </v-flex> -->
+              </v-flex>-->
                         </v-layout>
                     </v-container>
                 </v-flex>
             </v-layout>
         </section>
-
-
 
         <section class="recension">
             <div class="r-content">
@@ -256,25 +249,22 @@
                     <v-flex xs12 md12 class="my-3">
                         <div class="text-xs-center">
                             <h2 class="display-1 m-display1">Tusentals kunder har lyckats med sina projekt!</h2>
-                            <span class="subheading heading ">
-                                Vad våra användare säger: </span>
+                            <span class="subheading heading">Vad våra användare säger:</span>
                             <hr>
                         </div>
-
                     </v-flex>
                     <v-flex xs12 md4 mr-1 ml-1>
                         <v-card>
                             <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
                                 <!-- <h3 class="headline mb-0"></h3> -->
                                 <div class="quote-wrap">
-                                    <img class="recension-dqm" src="@/assets/open.jpg" alt="">
+                                    <img class="recension-dqm" src="@/assets/open.jpg" alt>
                                     Motsvarade mina förväntningar! Allt gick smidigt och de som städare var
                                     fantastiska! Är supernöjd och rekommenderar dom gärna ...
-                                    <img class="recension-dqm" src="@/assets/close.jpg" alt=""></div>
+                                    <img class="recension-dqm" src="@/assets/close.jpg" alt>
+                                </div>
                                 <br>
-                                <em>
-                                    Alexander Helsinghof, Stockholm
-                                </em>
+                                <em>Alexander Helsinghof, Stockholm</em>
                             </v-card-title>
                         </v-card>
                     </v-flex>
@@ -284,10 +274,11 @@
                                 <div>
                                     <!-- <h3 class="headline mb-0">Kangaroo Valley Safari</h3> -->
                                     <div>
-                                        <img class="recension-dqm" src="@/assets/open.jpg" alt="">
+                                        <img class="recension-dqm" src="@/assets/open.jpg" alt>
                                         Bra service och mkt bra kvalite på fönsterputs, har redan rekommenderat Helgens
                                         Städ till vår umgänges omkrets, och vi kommer beställa fler uppdrag ...
-                                        <img class="recension-dqm" src="@/assets/close.jpg" alt=""></div>
+                                        <img class="recension-dqm" src="@/assets/close.jpg" alt>
+                                    </div>
                                     <br>
                                     <em>Alexander Helsinghof, Tumba</em>
                                 </div>
@@ -296,37 +287,61 @@
                     </v-flex>
                 </v-layout>
             </div>
-
             <v-layout column align-center justify-center>
-                <v-btn class="purple lighten-2 my-5 btn-large" dark large @click="activateDialog = !activateDialog">
-                    KOM IGÅNG!
-                </v-btn>
+                <v-btn class="purple lighten-2 my-5 btn-large" dark large @click="activateDialog = !activateDialog">KOM
+                    IGÅNG!</v-btn>
             </v-layout>
-
         </section>
 
         <section class="clients">
             <Clients />
         </section>
     </v-content>
-
 </template>
 
 <script>
-    import Modal from '../modal.vue';
-    import Services from './childcomponents/Services.vue';
-    import serviceJson from '../../services/services.json';
-    import Clients from './childcomponents/clients.vue'
+    import Modal from "../modal.vue";
+    import Services from "./childcomponents/Services.vue";
+    import servicesJson from "../../services/services.json";
+    import categoriesJson from "../../services/categories.json";
+    import Clients from "./childcomponents/clients.vue";
 
     export default {
+        computed: {
+            mapServicesIntoCategories: function () {
+
+                let categories = categoriesJson;
+                let services = servicesJson;
+
+                let mappedServicesArray = [];
+                var categoryObject = { }
+               
+                categories.forEach(cat => {
+                    categoryObject = {
+                        id: cat.id,
+                        name: cat.name,
+                        icon: cat.icon,
+                        color: cat.color,
+                        overlay: cat.overlay,
+                        subImage: cat.subImage,
+                        smallImage: cat.smallImage,
+                        services: this.mapServices(cat.id),
+                    }
+                    mappedServicesArray.push(categoryObject)
+                });
+           
+                return mappedServicesArray;
+            },
+
+        },
         data: function () {
             return {
                 service: {},
-                services: serviceJson,
-                activateDialog: false,
-
-            }
+                services: servicesJson,
+                activateDialog: false
+            };
         },
+
         components: {
             Modal,
             Services,
@@ -335,10 +350,16 @@
 
         methods: {
             getUrl(img) {
-                return require('../../assets/' + img)
+                return require("../../assets/" + img);
             },
+            mapServices(catId) {
+                let services = servicesJson;
+                return services.filter(function (service) {
+                    return service.categoryId == catId
+                })
+            }
         }
-    }
+    };
 </script>
 
 <style>
@@ -373,7 +394,6 @@
         padding: 80px 0;
     }
 
-
     .static-container {
         padding: 0 !important;
     }
@@ -383,7 +403,6 @@
         /* height: 70vh; */
         padding: 4% 2% 5% 2%;
     }
-
 
     .jumbo-heading {
         font-weight: 400 !important;
@@ -420,7 +439,6 @@
         /* overflow: hidden; */
         animation: fadein 0.3s ease-in alternate;
         outline: 1000px solid rgba(0, 0, 0, 0.5);
-
     }
 
     .modal-link {
@@ -436,8 +454,6 @@
         width: 25px;
         height: 25px;
     }
-
-
 
     ul li {
         padding: 20px;
@@ -461,7 +477,7 @@
         height: 100px;
         width: 100%;
         color: black !important;
-        font-family: 'avenir' !important;
+        font-family: "avenir" !important;
         padding: 10px;
     }
 
@@ -474,7 +490,6 @@
     .textcolor {
         color: black !important;
         padding: 30px;
-
     }
 
     .knapp1 {
@@ -484,7 +499,6 @@
     .section2 {
         background-color: rgb(34, 31, 31);
         /* color:rgb(43, 40, 40) !important; */
-
     }
 
     @keyframes fadein {
@@ -512,7 +526,6 @@
     }
 
     .overlay-helper {
-
         height: 750px !important;
         width: 100%;
     }
@@ -554,7 +567,7 @@
     }
 
     .section-service {
-        background-color: #F5F3FF;
+        background-color: #f5f3ff;
     }
 
     .quote-wrap {
@@ -567,9 +580,11 @@
         line-height: 50px !important;
     }
 
-
-
-
+    .bm-item-list>* {
+        display: block !important;
+        padding: 0.7em;
+        text-decoration: none;
+    }
 
     /* modal */
     @media (max-width: 960px) {
@@ -583,19 +598,13 @@
 
         .textcolor {
             padding: 0;
-
         }
 
         .main-heading {
             font-size: 30px !important;
             line-height: 35px !important;
-
         }
-        
     }
-
-   
-
 
     @media (min-width: 960px) {
         .modal-container {
@@ -616,20 +625,17 @@
     hr {
         width: 100px;
         margin: 5px auto 0 auto;
-
     }
 
     .clients {
         background-color: white;
     }
 
-
     .jumbo-container {
         margin: 60px 0 30px 0 !important;
     }
 
-
-     @media (max-width:690px) {
+    @media (max-width: 690px) {
         .jumbotron {
             width: 95%;
             padding: 2%;
@@ -652,15 +658,13 @@
         .m-display1 {
             font-size: 0.5em !important;
         }
+
         .jumbo-container {
             width: 100%;
         }
-
     }
-     .display-1 {
-            font-size:10px !important;
-        }
 
-       
-
+    .display-1 {
+        font-size: 10px !important;
+    }
 </style>

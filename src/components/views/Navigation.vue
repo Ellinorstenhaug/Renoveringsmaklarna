@@ -149,12 +149,12 @@
     z-index: 200;
     height: 20px;
     width: 26px;
-    position: fixed;
-    right: 20px;
+    position: fixed !important;
+    right: 20px !important;
     width: 36px;
     height: 30px;
     left: 36px;
-    top: 16px;
+    top: 15px !important;
     cursor: pointer;
   }
 
