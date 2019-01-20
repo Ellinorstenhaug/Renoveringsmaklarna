@@ -20,21 +20,16 @@
             <v-img :src="getImgUrl('about.jpg')" alt="skriv något här" v-if=" $vuetify.breakpoint.smAndDown" class="service-overlay-mobil">
                 <v-layout column align-center justify-center class="white--text" style="background: #1b0f187d; ">
                     <div class="jumbo-container">
-  <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Passion för att
-                                hjälpa</h1>
-                            <div class="white--text subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor
-                                och
-                                xxxxkonsulter!</div>
-                            <div class="subheading mb-3 text-xs-center "></div>
+                        <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Passion för att
+                            hjälpa</h1>
+                        <div class="white--text subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor
+                            och
+                            xxxxkonsulter!</div>
+                        <div class="subheading mb-3 text-xs-center "></div>
                     </div>
                 </v-layout>
             </v-img>
-            <!-- <v-parallax :src="getImgUrl('about.jpg')" class="service-apa">
-                <v-layout column align-center justify-center class="white--text">
-                    <h1 class="black--text mb-2 display-2 text-xs-center jumbo-heading">Någonting klyshiiiiigt</h1>
-                    
-                </v-layout>
-            </v-parallax> -->
+
         </section>
 
         <section>
@@ -57,12 +52,15 @@
                                         <div class="headline">Passion för att hjälpa</div>
                                     </v-card-title>
                                     <v-card-text>
-                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                        ornare.
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                        ac turpis egestas.
-                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                        Suspendisse potenti.
+                                        <span class="paragraph__text">
+                                            Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
+                                            ornare.
+                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                            ac turpis egestas.
+                                            Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
+                                            Suspendisse potenti.
+                                        </span>
+
                                     </v-card-text>
                                 </v-card>
                             </v-flex>

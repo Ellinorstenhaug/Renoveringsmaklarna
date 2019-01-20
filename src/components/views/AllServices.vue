@@ -111,11 +111,6 @@
         filter: brightness(100%);
     }
 
-    .headline2 {
-        color: white;
-        font-size: 1.6em;
-    }
-
     .fontweight-600-text {
         font-weight: 600;
     }

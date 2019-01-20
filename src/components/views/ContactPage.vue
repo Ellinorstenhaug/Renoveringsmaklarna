@@ -5,9 +5,13 @@
                 <v-layout column align-center justify-center class="white--text">
                     <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
                     <h1 class="white--text mb-2 display-2 text-xs-center">Kontakta oss</h1>
-                    <div class="subheading mb-3 text-xs-center">Om du behöver kontakta oss kan du göra det här. Du kan
+                    <div class="subheading mb-3 text-xs-center">
+                        <span class="paragraph__text">
+   Om du behöver kontakta oss kan du göra det här. Du kan
                         antingen använda formuläret nedan
-                        eller kontakta oss på de kontaktuppgifter du hittar nedan till vänster.</div>
+                        eller kontakta oss på de kontaktuppgifter du hittar nedan till vänster.
+                        </span>
+                     </div>
                 </v-layout>
             </v-parallax>
         </section>
@@ -17,9 +21,12 @@
                 <v-flex xs12 sm4 class="my-3">
                     <div class="text-xs-center">
                         <h2 class="headline">Om RenoveringsMäklarna</h2>
-                        <span class="subheading">
+                        <div>
+ <p class="paragraph__text mt3">
                             Om du behöver kontakta oss kan du göra det här. Du kan antingen använda formuläret nedan
-                            eller kontakta oss på de kontaktuppgifter du hittar nedan till vänster. </span>
+                            eller kontakta oss på de kontaktuppgifter du hittar nedan till vänster. </p>
+                        </div>
+                       
                     </div>
                 </v-flex>
                 <v-flex xs12>

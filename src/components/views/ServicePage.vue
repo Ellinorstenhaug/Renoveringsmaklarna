@@ -11,7 +11,8 @@
                 <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading}}</h1>
                 <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
                 <div class="button-wrapper">
-                  <Modal :service="this.service" :allServices="this.services" :quantity="4" :showDialog="this.activateDialog" />
+                  <Modal :serviceContext="mapServicesIntoCategories" :allServices="this.services" :service="this.service"
+                    :showDialog="this.activateDialog" />
                 </div>
               </div>
             </div>
@@ -43,7 +44,9 @@
                     <v-card-title primary-title class="layout justify-center">
                       <div class="headline text-xs-center">Kom igång redan idag!</div>
                     </v-card-title>
-                    <v-card-text>{{this.service.caption}}</v-card-text>
+                    <v-card-text><span class="paragraph__text">
+                        {{this.service.caption}}
+                      </span></v-card-text>
                     <v-flex xs12 md8 offset-md2 align-center justify-center>
                       <v-btn class="purple lighten-2 mt-2 set-width-100" dark large @click="activateDialog = !activateDialog">Intresserad?</v-btn>
                     </v-flex>
@@ -69,7 +72,9 @@
               <hr>
             </div>
           </v-flex>
-          <Services :allServices="this.services" :quantity="8" />
+          <Services :allServices="this.services" :quantity="8" :serviceContext="mapServicesIntoCategories" />
+
+          <!-- <Services :allServices="this.services" :quantity="8" /> -->
         </v-layout>
       </section>
     </v-content>
@@ -77,7 +82,7 @@
 </template>
 
 <script>
-  import serviceJson from "../../services/services.json";
+  import servicesJson from "../../services/services.json";
   import categoriesJson from "../../services/categories.json";
 
   import Services from "./childcomponents/Services.vue";
@@ -85,6 +90,30 @@
 
 
   export default {
+    computed: {
+      mapServicesIntoCategories: function () {
+
+        let mappedServicesArray = [];
+        var categoryObject = {}
+
+        categoriesJson.forEach(cat => {
+          categoryObject = {
+            id: cat.id,
+            name: cat.name,
+            icon: cat.icon,
+            color: cat.color,
+            overlay: cat.overlay,
+            subImage: cat.subImage,
+            smallImage: cat.smallImage,
+            services: this.mapServices(cat.id),
+          }
+          mappedServicesArray.push(categoryObject)
+        });
+
+        return mappedServicesArray;
+      },
+
+    },
     mounted() {
       this.categories = categoriesJson;
 
@@ -105,7 +134,7 @@
     data() {
       return {
         service: {},
-        services: serviceJson,
+        services: servicesJson,
         categories: categoriesJson,
         category: [],
         overlay: '',
@@ -113,6 +142,12 @@
       };
     },
     methods: {
+      mapServices(catId) {
+
+        return servicesJson.filter(function (service) {
+          return service.categoryId == catId
+        })
+      },
       getCategoryByServiceId(catId) {
 
         return this.categories.filter(function (category) {
@@ -158,18 +193,16 @@
         let serviceObject = {};
 
 
-        for (var i = 0; i < serviceJson.length; i++) {
-          if (serviceJson[i].url == this.$route.path) {
+        for (var i = 0; i < servicesJson.length; i++) {
+          if (servicesJson[i].url == this.$route.path) {
             serviceObject = {
-              id: serviceJson[i].id,
-              categoryId: serviceJson[i].categoryId,
-              heading: serviceJson[i].heading,
-              imgUrl: this.getImgUrl(serviceJson[i].imgUrl),
-              ingress: serviceJson[i].ingress,
-              subImgUrl: this.getImgUrl(serviceJson[i].subImgUrl),
-              subheading: serviceJson[i].subheading,
-              caption: serviceJson[i].caption,
-              icon: serviceJson[i].icon,
+              id: servicesJson[i].id,
+              categoryId: servicesJson[i].categoryId,
+              heading: servicesJson[i].heading,
+              ingress: servicesJson[i].ingress,
+              subheading: servicesJson[i].subheading,
+              caption: servicesJson[i].caption,
+              icon: servicesJson[i].icon,
             };
 
             isFound = true;
@@ -190,6 +223,10 @@
 </script>
 
 <style>
+  .paragraph__text {
+    font-size: 18px !important;
+  }
+
   .img-wrapper {
     /* filter: brightness(0.4); */
     background-color: rgb(19, 19, 19);
@@ -200,11 +237,6 @@
 
   .wrapper:hover {
     filter: brightness(0.8);
-  }
-
-  .headline2 {
-    color: white;
-    font-size: 1.6em;
   }
 
   .fontweight-600-text {
