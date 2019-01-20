@@ -3,7 +3,48 @@
     <v-flex xs12 md12>
       <v-container grid-list-xl>
         <v-layout row wrap align-center>
-          <v-flex xs6 md3 sm6 class="set-padding_1_3" v-for="(item, index) in services" :key="index">
+
+     
+          <v-flex xs6 md3 sm6 class="set-padding_1_3" v-for="(item, index) in serviceContextMethod" :key="index">
+
+
+        
+            <router-link :to="`${item.services[0].url}`" v-if="index < quantityToShow">
+              <div class="img__wrap">
+                <img class=" small-img-box" :src="getImgUrl(item.smallImage)">
+                <v-card-text class="service-container">
+                  <v-card-title primary-title class="layout justify-center center-align">
+                    <div class="fontweight-600-text text__white align-center justify-center" v-html="item.icon"></div>
+                    <div class="inner-service justify-center align-center service-headline mobile-overlay-text text--white paragraph__text">
+                      {{textToUpperCase(item.name)}}</div>
+                  </v-card-title>
+                </v-card-text>
+
+                <div class="img__description_layer">
+                  <div class="img__description">
+                    <div class="read-more-wrap">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </router-link>
+
+          </v-flex>
+
+          <v-flex xs12 md6 offset-md3 pt-4 pb-0>
+            <v-btn large dark block color="purple lighten-2">
+              <router-link class="white--text" :to="'/våra-tjänster'">
+              Se alla tjänster
+              </router-link>
+            </v-btn>
+          </v-flex>
+
+
+
+          <!-- <v-flex xs6 md3 sm6 class="set-padding_1_3" v-for="(item, index) in services" :key="index">
             <router-link :to="`${item.url}`" v-if="index < quantityToShow">
               <div class="img__wrap">
                 <img class="img__img" :src="getImgUrl(item.images[0].medium)" :alt="item.images.alt">
@@ -26,7 +67,7 @@
                 </div>
               </div>
             </router-link>
-          </v-flex>
+          </v-flex> -->
         </v-layout>
       </v-container>
     </v-flex>
@@ -35,14 +76,19 @@
 
 <script>
   export default {
-    props: ['allServices', 'quantity'],
+    props: ['allServices', 'quantity', 'serviceContext'],
 
     computed: {
+      serviceContextMethod: function () {
+        
+        return this.serviceContext;
+      },
       quantityToShow: {
         get: function () {
           return this.quantity == undefined ? this.allServices.length : this.quantity
-        }
-      },
+        },
+
+      }
 
     },
     data: function () {
@@ -132,12 +178,13 @@
     opacity: 1;
   }
 
-  .img__wrap:hover .img__img {
+  .img__wrap:hover .small-img-box {
     filter: brightness(90%);
   }
 
-  .img__img {
+  .small-img-box {
     filter: brightness(70%);
+
   }
 
   .img__description {
@@ -176,11 +223,7 @@
   }
 
 
-  @media (max-width: 690px) {
-    .mobile-overlay-text {
-      font-size: 15px !important
-    }
-  }
+ 
 
   .set-padding_1_3 {
     padding: 1px 3px !important;
@@ -193,5 +236,18 @@
   .inner-service {
     position: absolute;
     margin-top: 10px;
+  }
+  .small-img-box {
+    height:220px !important;
+    width:100%;
+  }
+
+   @media (max-width: 690px) {
+    .mobile-overlay-text {
+      font-size: 15px !important
+    }
+     .small-img-box{
+       height:150px !important;
+     }
   }
 </style>

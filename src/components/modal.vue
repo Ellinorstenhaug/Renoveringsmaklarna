@@ -2,17 +2,17 @@
     <div class=" v-container xs10 offset-xs1">
         <!-- Modal Template -->
         <div v-on:click="dialog =! dialog">
-            <v-btn slot="activator" class="knapp1 " large v-if="this.service">
+            <v-btn slot="activator" class="knapp1 " large v-if="isEmpty(this.service)">
                 <div class="content-wrap text-md-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" /></svg>
-                    <span class="knapp2-text">
+                    <span class="knapp2-text paragraph__text">
                         Vad behöver du hjälp med?
                     </span>
 
                 </div>
             </v-btn>
-            <v-btn slot="activator" class="knapp1 " large v-if="!this.service">
+            <v-btn slot="activator" class="knapp1 " large v-else-if="!isEmpty(this.service)">
                 <div class="content-wrap text-md-left">
                     <span class="knapp2-text">
                         <span v-html="this.service.icon"></span>
@@ -22,7 +22,7 @@
                 </div>
             </v-btn>
 
-            <v-btn slot="activator" color="purple lighten-2" class="knapp2" large dark>Kom igång!</v-btn>
+            <v-btn slot="activator" color="teal lighten-2" class="knapp2" large dark>Kom igång!</v-btn>
         </div>
         <v-layout action row justify-center>
 
@@ -119,53 +119,29 @@
                         </v-container>
 
                         <div class="step-container" v-if="count === 0">
-                            <!-- <div class="wrapper"> -->
 
-
- <!-- <li @click.prevent="addService(item.heading)" class="presentation"> -->
 
                             <v-flex pb-5>
                                 <v-expansion-panel expand>
-                                    <v-expansion-panel-content class="presentation"  v-for="(item, index) in serviceContextMethod" :key="index">
-                                        <h3 slot="header" >
+                                    <v-expansion-panel-content class="presentation" v-for="(item, index) in serviceContextMethod"
+                                        :key="index">
+                                        <h3 slot="header">
                                             <a class="modal-link title2" href="#" v-html="item.icon"></a>
                                             <a class="modal-link title2" href="#">
                                                 {{capitalizeFirstLetter(item.name)}}
                                             </a>
-                                            <!-- <v-icon class="expand_more">expand_more</v-icon> -->
+
                                         </h3>
-                                        <v-card class="service-link" v-for="(service, i) in item.services" :key="i" @click.prevent="addService(service.heading)">
+                                        <v-card class="service-link" v-for="(service, i) in item.services" :key="i"
+                                            @click.prevent="addService(service.heading)">
                                             <v-card-text class="lighten-3">
-                                                
+
                                                 {{capitalizeFirstLetter(service.heading)}}
                                             </v-card-text>
                                         </v-card>
                                     </v-expansion-panel-content>
                                 </v-expansion-panel>
                             </v-flex>
-<!-- 
-                            <ul v-for="(item, index) in serviceContextMethod" :key="index">
-                                <li class="presentation">
-                                    <v-icon class="expand_more">expand_more</v-icon>
-                                    <a class="modal-link title2" href="#" v-html="item.icon"></a>
-                                    <a class="modal-link title2" href="#">
-                                        {{capitalizeFirstLetter(item.name)}}
-                                    </a>
-                                </li>
-
-                            </ul> -->
-
-                            <!-- <ul v-for="(item, index) in allServicesMethod" :key="index">
-                                    <li @click.prevent="addService(item.heading)" class="presentation">
-
-
-                                        <a class="modal-link title2" href="#" v-html="item.icon"></a>
-                                        <a class="modal-link title2" href="#">
-                                            {{capitalizeFirstLetter(item.heading)}}
-                                        </a>
-                                    </li>
-                                </ul> -->
-                            <!-- </div> -->
                         </div>
 
                         <div class=" step-container" v-else-if="count === 1">
@@ -208,10 +184,10 @@
                                             <v-btn block @click.prevent="minus" large v-if="count >= 1">Tillbaka</v-btn>
                                         </v-flex>
                                         <v-flex xs8 md9>
-                                            <v-btn block class="purple lighten-2  white--text" large @click.prevent="add"
+                                            <v-btn block class="teal lighten-2  white--text" large @click.prevent="add"
                                                 v-if="count==1">Gå vidare</v-btn>
 
-                                            <v-btn :loading="loading3" :disabled="loading3" block class="purple lighten-2  white--text"
+                                            <v-btn :loading="loading3" :disabled="loading3" block class="teal lighten-2  white--text"
                                                 large v-if="count>=2" @click.prevent="submit"> Få 3 gratis offerter
                                                 <v-icon light></v-icon>
                                             </v-btn>
@@ -235,7 +211,7 @@
     import img from '@/assets/pen.png';
     import HeadingModal from '../components/HeadingModal.vue';
     import VeeValidate from 'vee-validate'
-  
+
 
 
     Vue.use(VeeValidate)
@@ -285,9 +261,18 @@
         },
         mounted() {
             this.$validator.localize('sv', this.dictionary);
-            
+
         },
         methods: {
+            
+            isEmpty(obj) {
+                for (var key in obj) {
+                    if (obj.hasOwnProperty(key))
+                        return false;
+                }
+                return true;
+            },
+
             handleBlur: function () {
 
                 this.$validator.validateAll().then((result) => {
@@ -658,6 +643,7 @@
     }
 
     .v-card__text {
+
         padding: unset auto !important;
     }
 
@@ -705,10 +691,12 @@
     .expand_more {
         float: right;
     }
+
     .service-link {
-        font-size:18px;
+        font-size: 18px;
     }
+
     .service-link:hover {
-        color:teal !important;
+        color: teal !important;
     }
 </style>

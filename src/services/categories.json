@@ -28,7 +28,7 @@
 
         "overlay": "målning-overlay.jpg",
         "subImage": "Målning2.jpg",
-        "smallImage": "målning-mini.jpg"
+        "smallImage": "målning-overlay-small.jpg"
 
     },
     {
@@ -75,7 +75,7 @@
 
         "overlay": "bygg-overlay.jpg",
         "subImage": "bygg-subimg.jpg",
-        "smallImage": "bygg-mini.jpg"
+        "smallImage": "bygg-overlay-small.jpg"
 
     },
 
@@ -88,7 +88,7 @@
 
         "overlay": "bygg-overlay.jpg",
         "subImage": "bygg-subimg.jpg",
-        "smallImage": "bygg-mini.jpg"
+        "smallImage": "bygg-overlay-small.jpg"
 
     }
 ]
