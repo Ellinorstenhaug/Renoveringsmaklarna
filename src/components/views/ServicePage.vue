@@ -35,7 +35,7 @@
         <v-layout column wrap align-center>
           <v-flex xs12>
             <v-card-title primary-title class="layout justify-center hidden-sm-and-down">
-              <h2 class="headline my-5 text-xs-center">{{this.service.subheading}} {{this.service.heading}}</h2>
+              <h2 class="headline my-5 text-xs-center">{{this.category.subheading}} {{textToLowerCase(this.category.name)}}</h2>
             </v-card-title>
             <v-container grid-list-xl>
               <v-layout row wrap align-center justify-center>
@@ -105,6 +105,7 @@
             overlay: cat.overlay,
             subImage: cat.subImage,
             smallImage: cat.smallImage,
+            subheading:cat.subheading,
             services: this.mapServices(cat.id),
           }
           mappedServicesArray.push(categoryObject)
@@ -142,6 +143,11 @@
       };
     },
     methods: {
+
+      textToLowerCase:function(input) {
+        return input.toLowerCase();
+      },
+ 
       mapServices(catId) {
 
         return servicesJson.filter(function (service) {
@@ -165,7 +171,8 @@
           smallImage: this.getImgUrl(currentCategory[0].smallImage),
           subImage: this.getImgUrl(currentCategory[0].subImage),
           icon: currentCategory[0].icon,
-          color: currentCategory[0].color
+          color: currentCategory[0].color,
+          subheading: currentCategory[0].subheading
         }
         return mappedObj
       },

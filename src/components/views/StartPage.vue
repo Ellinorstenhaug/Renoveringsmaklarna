@@ -630,7 +630,7 @@
         }
 
         .overlay-helper {
-            height: 70vh !important;
+            height: 80vh !important;
             width: 100%;
         }
 

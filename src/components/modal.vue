@@ -126,7 +126,7 @@
                                     <v-expansion-panel-content class="presentation" v-for="(item, index) in serviceContextMethod"
                                         :key="index">
                                         <h3 slot="header">
-                                            <a class="modal-link title2" href="#" v-html="item.icon"></a>
+                                            <a class="modal-link title2" href="#" :style="`fill:item.color`" v-html="item.icon"></a>
                                             <a class="modal-link title2" href="#">
                                                 {{capitalizeFirstLetter(item.name)}}
                                             </a>
@@ -674,6 +674,7 @@
         .v-dialog {
             margin: 24px 0 !important;
         }
+       
     }
 
     .close-btn {
@@ -699,4 +700,9 @@
     .service-link:hover {
         color: teal !important;
     }
-</style>
+    textarea {
+    font-size:20px !important;
+    }
+
+
+    </style>
