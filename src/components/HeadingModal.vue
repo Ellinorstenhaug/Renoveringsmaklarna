@@ -5,7 +5,7 @@
 
         </div>
         <div class="progress-handler">
-            <v-progress-circular :rotate="-90" :size="80" :width="15" :value="procent" color="green">
+            <v-progress-circular :rotate="-90" :size="80" :width="15" :value="procent" color="teal">
                 {{ value }}/3
             </v-progress-circular>
         </div>
