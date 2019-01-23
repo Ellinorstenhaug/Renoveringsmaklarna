@@ -51,80 +51,8 @@
         </section>
 
         <section class="section-why">
-            <v-layout column wrap class="mt-5" align-center>
-                <v-flex xs12 sm4 class="mt-3">
-                    <div class="text-xs-center">
-                        <h2 class="display-1 m-display1 heading">Varför?</h2>
-                        <span class="subheading heading">Snabbt, enkelt, svar inom 24 timmar</span>
-                        <hr>
-                    </div>
-                </v-flex>
-                <v-flex xs12>
-                    <v-container grid-list-xl>
-                        <v-layout row wrap align-center>
-                            <v-flex xs12 sm6 md4>
-                                <v-card class="elevation-0 transparent">
-                                    <v-card-text class="text-xs-center">
-                                        <img class="icon" src="https://image.flaticon.com/icons/svg/1317/1317349.svg"
-                                            alt="icon">
-                                    </v-card-text>
-                                    <v-card-title primary-title class="layout justify-center">
-                                        <div class="text-xs-center heading">Den bästa lösningen för dig</div>
-                                    </v-card-title>
-                                    <v-card-text class="text-md-center text-xs-center paragraph__text">
-                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                        ornare.
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                        ac turpis egestas.
-                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                        Suspendisse potenti.
-                                    </v-card-text>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 sm6 md4 class="small-scale">
-                                <v-card class="elevation-0 transparent">
-                                    <v-card-text class="text-xs-center">
-                                        <img class="icon" src="https://image.flaticon.com/icons/svg/1170/1170619.svg"
-                                            alt>
-                                        <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
-                                    </v-card-text>
-                                    <v-card-title primary-title class="layout justify-center">
-                                        <div class="heading text-xs-center">Jämför innan du väljer</div>
-                                    </v-card-title>
-                                    <v-card-text class="text-md-center text-xs-center paragraph__text">
-                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                        ornare.
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                        ac turpis egestas.
-                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                        Suspendisse potenti.
-                                    </v-card-text>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 offset-sm3 offset-md0 sm6 md4 class="small-scale">
-                                <v-card class="elevation-0 transparent">
-                                    <v-card-text class="text-xs-center">
-                                        <img class="icon" src="https://image.flaticon.com/icons/svg/806/806704.svg" alt>
-                                        <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
-                                    </v-card-text>
-                                    <v-card-title primary-title class="layout justify-center">
-                                        <div class="heading text-xs-center">Gratis och icke-bindande</div>
-                                    </v-card-title>
-                                    <v-card-text class="text-md-center text-xs-center paragraph__text">
-                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                        ornare.
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                        ac turpis egestas.
-                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                        Suspendisse potenti.
-                                    </v-card-text>
-                                </v-card>
-                            </v-flex>
-                        </v-layout>
-
-                    </v-container>
-                </v-flex>
-            </v-layout>
+            <Why/>
+            
         </section>
         <section class="section-service pb-5 text-center">¨
             <v-layout column wrap class="mt-5" align-center>
@@ -143,8 +71,7 @@
             <v-parallax src="assets/section.jpg" class="section2" height="380">
                 <v-layout column align-center justify-center>
                     <div class="display-1 m-display-1 white--text mb-3 text-xs-center heading">
-                        Cras facilisis mi vitae
-                        nunc
+                        Snabbt, enkelt, svar inom 24 timmar
                     </div>
                     <em>Kom igång redan idag</em>
                     <hr class="white">
@@ -155,126 +82,11 @@
             </v-parallax>
         </section>
         <section>
-            <v-layout column wrap class="mt-5" align-center>
-                <v-flex xs12 sm4 class="mt-3">
-                    <div class="text-xs-center">
-                        <h2 class="display-1 heading">Så fungerar RenoveringsMäklarna</h2>
-                        <span class="subheading heading">Cras facilisis mi vitae nunc</span>
-                        <hr>
-                    </div>
-                </v-flex>
-                <v-flex xs12>
-                    <v-container grid-list-xl>
-                        <v-layout row wrap align-center>
-                            <v-flex xs12 md4 sm6 class="small-scale">
-                                <v-card class="elevation-0 transparent">
-                                    <v-card-text class="text-xs-center">
-                                        <img class="icon" src="https://image.flaticon.com/icons/svg/306/306443.svg" alt>
-
-                                        <!-- <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon> -->
-                                    </v-card-text>
-                                    <v-card-title primary-title class="layout justify-center">
-                                        <div class="heading text-xs-center">Fyll i formuläret</div>
-                                    </v-card-title>
-                                    <v-card-text class="text-md-center text-xs-center paragraph__text">
-                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                        ornare.
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                        ac turpis egestas.
-                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                        Suspendisse potenti.
-                                    </v-card-text>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 md4 sm6 class="small-scale">
-                                <v-card class="elevation-0 transparent">
-                                    <v-card-text class="text-xs-center">
-                                        <img class="icon" src="https://image.flaticon.com/icons/svg/292/292094.svg" alt>
-                                        <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
-                                    </v-card-text>
-                                    <v-card-title primary-title class="layout justify-center">
-                                        <div class="heading">Jämför offerter</div>
-                                    </v-card-title>
-                                    <v-card-text class="text-md-center text-xs-center paragraph__text">
-                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                        ornare.
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                        ac turpis egestas.
-                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                        Suspendisse potenti.
-                                    </v-card-text>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 md4 sm6 offset-sm3 offset-md0 class="small-scale">
-                                <v-card class="elevation-0 transparent">
-                                    <v-card-text class="text-xs-center">
-                                        <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
-                                        <img class="icon" src="https://image.flaticon.com/icons/svg/169/169513.svg" alt>
-                                    </v-card-text>
-                                    <v-card-title primary-title class="layout justify-center">
-                                        <div class="heading text-xs-center">Välj din lösning</div>
-                                    </v-card-title>
-                                    <v-card-text class="text-md-center text-xs-center paragraph__text">
-                                        Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                        ornare.
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                        ac turpis egestas.
-                                        Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                        Suspendisse potenti.
-                                    </v-card-text>
-                                </v-card>
-                            </v-flex>
-                        </v-layout>
-
-                    </v-container>
-                </v-flex>
-            </v-layout>
+          <How/>
         </section>
 
         <section class="recension">
-            <div class="r-content">
-                <v-layout row wrap align-center justify-center pb-5>
-                    <v-flex xs12 md12 class="my-3">
-                        <div class="text-xs-center">
-                            <h2 class="display-1 m-display1">Tusentals kunder har lyckats med sina projekt!</h2>
-                            <span class="subheading heading">Vad våra användare säger:</span>
-                            <hr>
-                        </div>
-                    </v-flex>
-                    <v-flex xs12 md4 mr-1 ml-1>
-                        <v-card>
-                            <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
-                                <!-- <h3 class="headline mb-0"></h3> -->
-                                <div class="quote-wrap paragraph__text">
-                                    <img class="recension-dqm" src="@/assets/open.jpg" alt>
-                                    Motsvarade mina förväntningar! Allt gick smidigt och de som städare var
-                                    fantastiska! Är supernöjd och rekommenderar dom gärna ...
-                                    <img class="recension-dqm" src="@/assets/close.jpg" alt>
-                                </div>
-                                <br>
-                                <em>Alexander Helsinghof, Stockholm</em>
-                            </v-card-title>
-                        </v-card>
-                    </v-flex>
-                    <v-flex xs12 md4 ml-1 mr-1>
-                        <v-card>
-                            <v-card-title primary-title class="v-card-wrapper my-4 pa-4">
-
-
-                                <div class="quote-wrap paragraph__text">
-                                    <img class="recension-dqm" src="@/assets/open.jpg" alt>
-                                    Bra service och mkt bra kvalite på fönsterputs, har redan rekommenderat Helgens
-                                    Städ till vår umgänges omkrets, och vi kommer beställa fler uppdrag ...
-                                    <img class="recension-dqm" src="@/assets/close.jpg" alt>
-                                </div>
-                                <br>
-                                <em>Alexander Helsinghof, Tumba</em>
-
-                            </v-card-title>
-                        </v-card>
-                    </v-flex>
-                </v-layout>
-            </div>
+            <Recension/>
         </section>
 
         <section class="clients">
@@ -286,6 +98,9 @@
 <script>
     import Modal from "../modal.vue";
     import Services from "./childcomponents/Services.vue";
+    import Why from "./childcomponents/startWhy.vue";
+    import How from "./childcomponents/startHow.vue";
+    import Recension from "./childcomponents/startRecension.vue";
     import servicesJson from "../../services/services.json";
     import categoriesJson from "../../services/categories.json";
     import Clients from "./childcomponents/clients.vue";
@@ -326,7 +141,11 @@
         components: {
             Modal,
             Services,
-            Clients
+            Clients,
+            Why,
+            How, 
+            Recension
+
         },
 
         methods: {      
@@ -350,9 +169,7 @@
         filter: brightness(0.8);
     }
 
-    .fontweight-600-text {
-        font-weight: 600;
-    }
+
 
     .text-wrapper:hover {
         color: rgb(148, 189, 189) !important;
@@ -550,7 +367,7 @@
     }
 
     .section-service {
-        background-color: #f5f3ff;
+        background-color: rgb(231, 238, 237);
     }
 
     .quote-wrap {

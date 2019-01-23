@@ -25,7 +25,9 @@
               <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
               <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
               <div class="button-wrapper">
-                <Modal :service="this.service" :allServices="this.services" :showDialog="this.activateDialog" />
+                 <Modal :serviceContext="mapServicesIntoCategories" :allServices="this.services" :service="this.service"
+                    :showDialog="this.activateDialog" />
+                <!-- <Modal :service="this.service" :allServices="this.services" :showDialog="this.activateDialog" /> -->
               </div>
             </div>
           </v-layout>

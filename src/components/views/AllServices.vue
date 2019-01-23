@@ -5,8 +5,7 @@
             <div class="flex py-5 pb-2 xs12 services-heading">
                 <div class="text-xs-center">
                     <h2 class="display-1 m-display1">Tjänster vi erbjuder</h2><span class="subheading">
-                        Cras facilisis mi vitae nunc
-                    </span>
+Om du inte hittar kategorin du söker kan du välja en liknande och beskriva ditt behov där.</span>
                     <hr>
                 </div>
             </div>

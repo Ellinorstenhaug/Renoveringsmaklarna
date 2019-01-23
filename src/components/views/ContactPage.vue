@@ -235,7 +235,7 @@
     }
 
     .form-section {
-        background-color: #dbd3dd;
+        background-color: #c5d8d6;
     }
 
     .selling-button {

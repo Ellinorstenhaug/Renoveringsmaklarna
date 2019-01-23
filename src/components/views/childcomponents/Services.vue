@@ -3,12 +3,7 @@
     <v-flex xs12 md12>
       <v-container grid-list-xl>
         <v-layout row wrap align-center>
-
-     
           <v-flex xs6 md3 sm6 class="set-padding_1_3" v-for="(item, index) in serviceContextMethod" :key="index">
-
-
-        
             <router-link :to="`${item.services[0].url}`" v-if="index < quantityToShow">
               <div class="img__wrap">
                 <img class=" small-img-box" :src="getImgUrl(item.smallImage)">
