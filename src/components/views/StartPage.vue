@@ -460,6 +460,7 @@
         color: black !important;
         font-family: "avenir" !important;
         padding: 10px;
+        font-size:16px !important;
     }
 
     .step-container {
