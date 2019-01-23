@@ -76,7 +76,7 @@
                     <em>Kom igång redan idag</em>
                     <hr class="white">
 
-                    <v-btn large class="purple lighten-2 mt-5 btn-large" dark @click="activateDialog = !activateDialog">Få
+                    <v-btn large class="teal lighten-2 mt-5 btn-large" dark @click="activateDialog = !activateDialog">Få
                         tre offerter</v-btn>
                 </v-layout>
             </v-parallax>

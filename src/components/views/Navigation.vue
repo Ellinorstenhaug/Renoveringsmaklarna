@@ -3,7 +3,7 @@
     <v-card color="white lighten-4" flat>
       <v-toolbar color="white darken-1" light class="toolbar-wrapper" fixed>
         <!-- <v-btn flat gray class="number">
-                    <v-icon class="purple--text text--lighten-2">phone</v-icon>
+                    <v-icon class="teal--text text--lighten-2">phone</v-icon>
                     08–121 47 429
         </v-btn>-->
         <router-link :to="`/`" class="v_toolbar_title title nav-logo black--text fat-text">
@@ -56,17 +56,17 @@
 
             <div class="menu-wrap quick-contact">
               <a href="https://goo.gl/maps/GrzSNCTdF872" class="list-item burger-list" target="_blank">
-                <v-icon class="purple--text text--lighten-2">place</v-icon>
+                <v-icon class="teal--text text--lighten-2">place</v-icon>
                 <br>Stockholm
               </a>
               <br>
               <a href="tel:+0812147429" class="list-item burger-list">
-                <v-icon class="purple--text text--lighten-2">phone</v-icon>
+                <v-icon class="teal--text text--lighten-2">phone</v-icon>
                 <br>08–121 47 429
               </a>
               <br>
               <a href="mailto:info@renoveringsmaklarna.se" class="list-item burger-list">
-                <v-icon class="purple--text text--lighten-2 px-0">email</v-icon>
+                <v-icon class="teal--text text--lighten-2 px-0">email</v-icon>
                 <br>info@renoveringsmaklarna.se
               </a>
             </div>
@@ -219,7 +219,7 @@
   }
 
   .number {
-    color: purple !important;
+    color: teal !important;
     font-weight: 300 !important;
     padding: 5px;
     line-height: 2;
