@@ -42,7 +42,7 @@
                                 </v-card>
                             </v-flex>
                             <v-flex xs12 md4 mx-5 >
-                                <v-icon class="purple--text text--lighten-2">phone</v-icon><a href="tel:+0812147429"
+                                <v-icon class="teal--text text--lighten-2">phone</v-icon><a href="tel:+0812147429"
                                     class="link">08–121 47 429</a>
                                 <div> Tveka inte med att kontakta oss under våra öppettider. Vi finns här för att på
                                     bästa möjliga sätt besvara dina frågor.</div>

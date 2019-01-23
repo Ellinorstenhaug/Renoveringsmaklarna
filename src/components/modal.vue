@@ -57,9 +57,7 @@
                                                     <path d="M91.8,25.2h-0.6L56.4,44l-5.2-20.6L94.9,0h23.1v200H91.8V25.2z" />
                                                 </g>
                                             </svg>
-
                                         </v-card-text>
-
                                         <v-card-title primary-title class="layout justify-center">
                                             <div class="modal-link title3 text-xs-center">Välj
                                                 tjänst </div>
@@ -126,11 +124,11 @@
                                     <v-expansion-panel-content class="presentation" v-for="(item, index) in serviceContextMethod"
                                         :key="index">
                                         <h3 slot="header">
-                                            <a class="modal-link title2" href="#" v-html="item.icon"></a>
+                                            <a class="modal-link title2" href="#" v-bind:style="{ fill: item.color }"
+                                                v-html="item.icon"></a>
                                             <a class="modal-link title2" href="#">
                                                 {{capitalizeFirstLetter(item.name)}}
                                             </a>
-
                                         </h3>
                                         <v-card class="service-link" v-for="(service, i) in item.services" :key="i"
                                             @click.prevent="addService(service.heading)">
@@ -264,7 +262,7 @@
 
         },
         methods: {
-            
+
             isEmpty(obj) {
                 for (var key in obj) {
                     if (obj.hasOwnProperty(key))

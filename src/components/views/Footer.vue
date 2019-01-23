@@ -30,7 +30,7 @@
                         <v-list>
                             <v-list-tile>
                                 <v-list-tile-action>
-                                    <v-icon class="purple--text text--lighten-2  margin-right-5">phone</v-icon>
+                                    <v-icon class="teal--text text--lighten-2  margin-right-5">phone</v-icon>
                                 </v-list-tile-action>
                                 <v-list-tile-content>
                                     <v-list-tile-title> <a href="tel:+0812147429" class="list-item">08–121 47 429</a>
@@ -39,7 +39,7 @@
                             </v-list-tile>
                             <v-list-tile>
                                 <v-list-tile-action>
-                                    <v-icon class="purple--text text--lighten-2 px-0  margin-right-5">email</v-icon>
+                                    <v-icon class="teal--text text--lighten-2 px-0  margin-right-5">email</v-icon>
                                 </v-list-tile-action>
                                 <v-list-tile-content>
                                     <v-list-tile-title> <a href="mailto:info@renoveringsmaklarna.se" class="list-item ">info@renoveringsmaklarna.se</a></v-list-tile-title>
@@ -47,7 +47,7 @@
                             </v-list-tile>
                             <v-list-tile>
                                 <v-list-tile-action>
-                                    <v-icon class="purple--text text--lighten-2  margin-right-5">place</v-icon>
+                                    <v-icon class="teal--text text--lighten-2  margin-right-5">place</v-icon>
                                 </v-list-tile-action>
                                 <v-list-tile-content>
                                     <v-list-tile-title> <a href="https://goo.gl/maps/GrzSNCTdF872" class="list-item margin-right-5"

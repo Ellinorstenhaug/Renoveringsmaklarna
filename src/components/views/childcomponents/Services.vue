@@ -35,7 +35,7 @@
           </v-flex>
 
           <v-flex xs12 md6 offset-md3 pt-4 pb-0>
-            <v-btn large dark block color="purple lighten-2">
+            <v-btn large dark block color="teal lighten-2">
               <router-link class="white--text" :to="'/våra-tjänster'">
               Se alla tjänster
               </router-link>

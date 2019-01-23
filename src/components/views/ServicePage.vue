@@ -48,7 +48,7 @@
                         {{this.service.caption}}
                       </span></v-card-text>
                     <v-flex xs12 md8 offset-md2 align-center justify-center>
-                      <v-btn class="purple lighten-2 mt-2 set-width-100" dark large @click="activateDialog = !activateDialog">Intresserad?</v-btn>
+                      <v-btn class="teal lighten-2 mt-2 set-width-100" dark large @click="activateDialog = !activateDialog">Intresserad?</v-btn>
                     </v-flex>
                   </v-card>
                 </v-flex>

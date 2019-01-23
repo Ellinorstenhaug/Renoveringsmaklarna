@@ -86,7 +86,6 @@
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/1170/1170619.svg"
                                             alt>
-                                        <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
                                         <div class="heading text-xs-center">Jämför innan du väljer</div>
@@ -105,7 +104,6 @@
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/806/806704.svg" alt>
-                                        <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
                                         <div class="heading text-xs-center">Gratis och icke-bindande</div>
@@ -149,7 +147,7 @@
                     <em>Kom igång redan idag</em>
                     <hr class="white">
 
-                    <v-btn large class="purple lighten-2 mt-5 btn-large" dark @click="activateDialog = !activateDialog">Få
+                    <v-btn large class="teal lighten-2 mt-5 btn-large" dark @click="activateDialog = !activateDialog">Få
                         tre offerter</v-btn>
                 </v-layout>
             </v-parallax>
@@ -171,7 +169,7 @@
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/306/306443.svg" alt>
 
-                                        <!-- <v-icon x-large class="purple--text text--lighten-2">color_lens</v-icon> -->
+                                        <!-- <v-icon x-large class="teal--text text--lighten-2">color_lens</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
                                         <div class="heading text-xs-center">Fyll i formuläret</div>
@@ -190,7 +188,7 @@
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/292/292094.svg" alt>
-                                        <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
+                                        <!-- <v-icon x-large class="teal--text text--lighten-2">flash_on</v-icon> -->
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
                                         <div class="heading">Jämför offerter</div>
@@ -208,7 +206,7 @@
                             <v-flex xs12 md4 sm6 offset-sm3 offset-md0 class="small-scale">
                                 <v-card class="elevation-0 transparent">
                                     <v-card-text class="text-xs-center">
-                                        <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
+                                        <!-- <v-icon x-large class="teal--text text--lighten-2">build</v-icon> -->
                                         <img class="icon" src="https://image.flaticon.com/icons/svg/169/169513.svg" alt>
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
