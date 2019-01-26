@@ -119,9 +119,7 @@
     },
     mounted() {
       this.categories = categoriesJson;
-
       this.initService();
-
     },
 
     watch: {
@@ -147,7 +145,7 @@
     methods: {
 
       textToLowerCase:function(input) {
-        return input.toLowerCase();
+        return (input || '').toLowerCase();
       },
  
       mapServices(catId) {

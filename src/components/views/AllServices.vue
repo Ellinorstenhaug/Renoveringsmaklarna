@@ -14,8 +14,10 @@ Om du inte hittar kategorin du söker kan du välja en liknande och beskriva dit
                 <v-layout row wrap>
                     <v-flex d-inline xs12 sm6 md3 v-for="(category, index) in categories" :key="index" child-flex>
                         <h2 class="heading set-margin-service">
-                            <div v-html="category.icon" class="service-icon"></div>{{category.name}}
+                            <div v-html="category.icon" class="service-icon" v-bind:style="{ fill:category.color }"></div>{{category.name}}
                         </h2>
+
+
                         <v-flex d-inline child-flex class="set-padding_1_3 set-margin" v-for="(service, index) in filterServicesPerCategory(category.id)"
                             :key="index">
                             <div>

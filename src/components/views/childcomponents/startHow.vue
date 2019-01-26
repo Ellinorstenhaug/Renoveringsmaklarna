@@ -2,7 +2,7 @@
       <v-layout column wrap class="mt-5" align-center>
                 <v-flex xs12 sm4 class="mt-3">
                     <div class="text-xs-center">
-                        <h2 class="display-1 heading">Så fungerar RenoveringsMäklarna</h2>
+                        <h2 class="display-1 heading">Hur fungerar det</h2>
                         <span class="subheading heading">Cras facilisis mi vitae nunc</span>
                         <hr>
                     </div>

@@ -3,8 +3,8 @@
                 <v-layout row wrap align-center justify-center pb-5>
                     <v-flex xs12 md12 class="my-3">
                         <div class="text-xs-center">
-                            <h2 class="display-1 m-display1">Tusentals kunder har lyckats med sina projekt!</h2>
-                            <span class="subheading heading">Vad våra användare säger:</span>
+                            <h2 class="display-1 m-display1 mb-2">Tusentals kunder har lyckats med sina projekt!</h2>
+                            <span class="subheading heading mt-5">Vad våra användare säger:</span>
                             <hr>
                         </div>
                     </v-flex>

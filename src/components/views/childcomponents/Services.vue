@@ -30,11 +30,11 @@
           </v-flex>
 
           <v-flex xs12 md6 offset-md3 pt-4 pb-0>
-            <v-btn large dark block color="teal lighten-2">
-              <router-link class="white--text" :to="'/våra-tjänster'">
-              Se alla tjänster
-              </router-link>
-            </v-btn>
+            <router-link class="white--text" :to="'/våra-tjänster'">
+              <v-btn large dark block color="teal lighten-2">
+                Se alla tjänster
+              </v-btn>
+            </router-link>
           </v-flex>
 
 
@@ -75,7 +75,7 @@
 
     computed: {
       serviceContextMethod: function () {
-        
+
         return this.serviceContext;
       },
       quantityToShow: {
@@ -105,10 +105,6 @@
 </script>
 
 <style>
-  .wrapper:hover {
-    filter: brightness(100%);
-  }
-
   .service-headline {
     color: white;
     font-size: 1.6em;
@@ -118,9 +114,6 @@
     font-weight: 600;
   }
 
-  .text-wrapper:hover {
-    color: rgb(148, 189, 189) !important;
-  }
 
   /* relevant styles */
   .img__wrap {
@@ -168,14 +161,8 @@
     left: 44%;
   }
 
-  .img__wrap:hover .img__description_layer {
-    visibility: visible;
-    opacity: 1;
-  }
 
-  .img__wrap:hover .small-img-box {
-    filter: brightness(90%);
-  }
+
 
   .small-img-box {
     filter: brightness(70%);
@@ -185,11 +172,6 @@
   .img__description {
     transform: translateY(1em);
     transition: all 0.25s ease-in-out;
-  }
-
-  .img__wrap:hover .img__description {
-    transform: translateY(0);
-    opacity: 0.8;
   }
 
   .img__img {
@@ -217,9 +199,6 @@
     }
   }
 
-
- 
-
   .set-padding_1_3 {
     padding: 1px 3px !important;
   }
@@ -232,17 +211,44 @@
     position: absolute;
     margin-top: 10px;
   }
+
   .small-img-box {
-    height:220px !important;
-    width:100%;
+    height: 220px !important;
+    width: 100%;
   }
 
-   @media (max-width: 690px) {
+  @media (min-width:690px) {
+    .wrapper:hover {
+      filter: brightness(100%);
+    }
+
+    .text-wrapper:hover {
+      color: rgb(148, 189, 189) !important;
+    }
+
+    .img__wrap:hover .img__description_layer {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .img__wrap:hover .small-img-box {
+      filter: brightness(90%);
+    }
+
+    .img__wrap:hover .img__description {
+      transform: translateY(0);
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: 690px) {
     .mobile-overlay-text {
       font-size: 15px !important
     }
-     .small-img-box{
-       height:150px !important;
-     }
+
+    .small-img-box {
+      height: 150px !important;
+    }
+
   }
 </style>

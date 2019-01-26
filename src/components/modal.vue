@@ -16,7 +16,6 @@
                 <div class="content-wrap text-md-left">
                     <span class="knapp2-text">
                         <span v-html="this.service.icon"></span>
-
                         Starta jämförelse med {{this.service.heading}}
                     </span>
                 </div>
