@@ -127,7 +127,10 @@
 
 <script>
     export default {
-
+        metaInfo:{
+        
+        title: 'Om Renoveringsmäklarna – Renoveringsmaklarna.se',
+        },
         methods: {
             getImgUrl(img) {
                 return require('../../assets/' + img)

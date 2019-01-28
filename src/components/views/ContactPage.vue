@@ -101,6 +101,16 @@
     Vue.use(VeeValidate)
 
     export default {
+         metaInfo() {
+      return {
+        title: 'Renoveringsmaklarna | ' + 'Kontakta oss',
+        meta:[
+          {
+           
+          }
+        ]
+      }
+    },
         data() {
             return {
                 userData: {

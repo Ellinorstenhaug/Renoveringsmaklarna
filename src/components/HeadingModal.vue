@@ -31,17 +31,21 @@
             }
         },
         watch: {
-            procentValue: function (newVal) {
 
-                if (newVal == 100) {
-                    this.procent = 100;
-                    this.value = 3;
-                } else {
-                    this.value = newVal;
-                    this.procent = (newVal * 33)
+            procentValue: {
+                immediate: true,
+                handler(newVal) {
 
+                    if (newVal == 100) {
+                        this.procent = 100;
+                        this.value = 3;
+                    } else {
+                        this.value = newVal;
+                        this.procent = (newVal * 33)
+
+                    }
                 }
-            }
+            },
         },
     }
 </script>

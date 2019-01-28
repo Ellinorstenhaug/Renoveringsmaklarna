@@ -4,7 +4,7 @@
       <v-container grid-list-xl>
         <v-layout row wrap align-center>
           <v-flex xs6 md3 sm6 class="set-padding_1_3" v-for="(item, index) in serviceContextMethod" :key="index">
-            <router-link :to="`${item.services[0].url}`" v-if="index < quantityToShow">
+            <router-link :to="`${item.services[0].url}`">
               <div class="img__wrap">
                 <img class=" small-img-box" :src="getImgUrl(item.smallImage)">
                 <v-card-text class="service-container">
@@ -36,33 +36,6 @@
               </v-btn>
             </router-link>
           </v-flex>
-
-
-
-          <!-- <v-flex xs6 md3 sm6 class="set-padding_1_3" v-for="(item, index) in services" :key="index">
-            <router-link :to="`${item.url}`" v-if="index < quantityToShow">
-              <div class="img__wrap">
-                <img class="img__img" :src="getImgUrl(item.images[0].medium)" :alt="item.images.alt">
-                <v-card-text class="service-container">
-                  <v-card-title primary-title class="layout justify-center center-align">
-                    <div class="fontweight-600-text text__white align-center justify-center" v-html="item.icon"></div>
-                    <div class="inner-service justify-center align-center service-headline mobile-overlay-text text--white">
-                      {{textToUpperCase(item.heading)}}</div>
-                  </v-card-title>
-                </v-card-text>
-
-                <div class="img__description_layer">
-                  <div class="img__description">
-                    <div class="read-more-wrap">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"></path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </router-link>
-          </v-flex> -->
         </v-layout>
       </v-container>
     </v-flex>
@@ -71,25 +44,19 @@
 
 <script>
   export default {
-    props: ['allServices', 'quantity', 'serviceContext'],
+    props: ['serviceContext'],
 
     computed: {
       serviceContextMethod: function () {
 
         return this.serviceContext;
       },
-      quantityToShow: {
-        get: function () {
-          return this.quantity == undefined ? this.allServices.length : this.quantity
-        },
-
-      }
-
+    
     },
     data: function () {
       return {
         service: {},
-        services: this.allServices
+      
       };
     },
     methods: {
