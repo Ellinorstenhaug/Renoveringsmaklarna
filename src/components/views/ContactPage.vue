@@ -101,6 +101,16 @@
     Vue.use(VeeValidate)
 
     export default {
+         metaInfo() {
+      return {
+        title: 'Renoveringsmaklarna | ' + 'Kontakta oss',
+        meta:[
+          {
+           
+          }
+        ]
+      }
+    },
         data() {
             return {
                 userData: {
@@ -226,6 +236,8 @@
 
     .headColor {
         background: rgb(43, 23, 36);
+          position: relative;
+        top:-20px;
     }
 
     .about-pic {

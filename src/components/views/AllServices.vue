@@ -240,6 +240,8 @@ Om du inte hittar kategorin du söker kan du välja en liknande och beskriva dit
     .services-heading {
         background-color: #9e57a4;
         color: white;
+          position: relative;
+        top:-20px;
     }
 
     .service-icon {

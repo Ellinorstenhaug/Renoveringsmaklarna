@@ -51,8 +51,8 @@
         </section>
 
         <section class="section-why">
-            <Why/>
-            
+            <Why />
+
         </section>
         <section class="section-service pb-5 text-center">¨
             <v-layout column wrap class="mt-5" align-center>
@@ -64,7 +64,7 @@
                         </div>
                     </v-card-title>
                 </v-flex>
-                <Services :allServices="this.services" :quantity="8"  :serviceContext="mapServicesIntoCategories" />
+                <Services :serviceContext="mapServicesIntoCategories" />
             </v-layout>
         </section>
         <section>
@@ -82,11 +82,11 @@
             </v-parallax>
         </section>
         <section>
-          <How/>
+            <How />
         </section>
 
         <section class="recension">
-            <Recension/>
+            <Recension />
         </section>
 
         <section class="clients">
@@ -106,6 +106,19 @@
     import Clients from "./childcomponents/clients.vue";
 
     export default {
+        metaInfo() {
+            return {
+                meta: [{
+                        charset: 'utf-8'
+                    },
+                    {
+                        vmid: 'description',
+                        name: 'description',
+                        content: 'asd'
+                    }
+                ]
+            }
+        },
         computed: {
             mapServicesIntoCategories: function () {
 
@@ -143,12 +156,12 @@
             Services,
             Clients,
             Why,
-            How, 
+            How,
             Recension
 
         },
 
-        methods: {      
+        methods: {
             getUrl(img) {
                 return require("../../assets/" + img);
             },
@@ -163,8 +176,6 @@
 </script>
 
 <style>
-
-
     .wrapper:hover {
         filter: brightness(0.8);
     }
@@ -202,6 +213,7 @@
         background-color: #1b0f187d;
         /* height: 70vh; */
         padding: 4% 2% 5% 2%;
+        max-width: 900px;
     }
 
     .jumbo-heading {
@@ -279,7 +291,7 @@
         color: black !important;
         font-family: "avenir" !important;
         padding: 10px;
-        font-size:16px !important;
+        font-size: 16px !important;
     }
 
     .step-container {
@@ -329,6 +341,8 @@
     .overlay-helper {
         height: 750px !important;
         width: 100%;
+        position: relative;
+        top:-20px;
     }
 
     .recension {
@@ -440,6 +454,7 @@
         .jumbotron {
             width: 95%;
             padding: 2%;
+            
         }
 
         .subheading {

@@ -11,7 +11,7 @@
                 <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading}}</h1>
                 <div class="subheading mb-3 text-xs-center">{{this.category.ingress}}</div>
                 <div class="button-wrapper">
-                  <Modal :serviceContext="mapServicesIntoCategories" :allServices="this.services" :service="this.service"
+                  <Modal :service="this.service" :serviceContext="mapServicesIntoCategories" :allServices="this.services"
                     :showDialog="this.activateDialog" />
                 </div>
               </div>
@@ -19,15 +19,16 @@
 
           </v-layout>
         </v-parallax>
-        <v-img :src="this.category.smallImage" alt="skriv något här" v-if=" $vuetify.breakpoint.smAndDown" class="service-overlay-mobil">
+
+        <v-img :src="this.category.smallImage" alt="skriv något här" v-if="$vuetify.breakpoint.smAndDown" class="service-overlay-mobil">
           <v-layout column align-center justify-center class="white--text" style="background: #1b0f187d; ">
             <div class="jumbo-container">
               <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
-              <div class="subheading mb-3 text-xs-center">{{this.category.name}}</div>
+              <div class="subheading mb-3 text-xs-center">{{this.category.ingress}}</div>
               <div class="button-wrapper">
-                 <Modal :serviceContext="mapServicesIntoCategories" :allServices="this.services" :service="this.service"
-                    :showDialog="this.activateDialog" />
-                <!-- <Modal :service="this.service" :allServices="this.services" :showDialog="this.activateDialog" /> -->
+                <Modal :service="this.service" :serviceContext="mapServicesIntoCategories" :allServices="this.services"
+                  :showDialog="this.activateDialog" />
+              
               </div>
             </div>
           </v-layout>
@@ -37,7 +38,8 @@
         <v-layout column wrap align-center>
           <v-flex xs12>
             <v-card-title primary-title class="layout justify-center hidden-sm-and-down">
-              <h2 class="headline my-5 text-xs-center">{{this.category.subheading}} {{textToLowerCase(this.category.name)}}</h2>
+              <h2 class="headline my-5 text-xs-center">{{this.category.subheading}}
+                {{textToLowerCase(this.category.name)}}</h2>
             </v-card-title>
             <v-container grid-list-xl>
               <v-layout row wrap align-center justify-center>
@@ -74,9 +76,9 @@
               <hr>
             </div>
           </v-flex>
-          <Services :allServices="this.services" :quantity="8" :serviceContext="mapServicesIntoCategories" />
 
-          <!-- <Services :allServices="this.services" :quantity="8" /> -->
+          <Services :serviceContext="mapServicesIntoCategories" />
+
         </v-layout>
       </section>
     </v-content>
@@ -90,8 +92,13 @@
   import Services from "./childcomponents/Services.vue";
   import Modal from "../modal.vue";
 
-
   export default {
+
+    mounted() {
+
+      this.initService();
+    },
+
     computed: {
       mapServicesIntoCategories: function () {
 
@@ -107,7 +114,7 @@
             overlay: cat.overlay,
             subImage: cat.subImage,
             smallImage: cat.smallImage,
-            subheading:cat.subheading,
+            subheading: cat.subheading,
             services: this.mapServices(cat.id),
           }
           mappedServicesArray.push(categoryObject)
@@ -117,9 +124,21 @@
       },
 
     },
-    mounted() {
-      this.categories = categoriesJson;
-      this.initService();
+
+    metaInfo() {
+      return {
+        title: 'Renoveringsmaklarna | ' + this.service.heading,
+       
+        meta: [{
+            charset: 'utf-8'
+          },
+          {
+            vmid: 'description',
+            name: 'description',
+            content: this.service.ingress
+          }
+        ]
+      }
     },
 
     watch: {
@@ -144,21 +163,21 @@
     },
     methods: {
 
-      textToLowerCase:function(input) {
+      textToLowerCase: function (input) {
         return (input || '').toLowerCase();
       },
- 
+
       mapServices(catId) {
 
         return servicesJson.filter(function (service) {
           return service.categoryId == catId
         })
       },
-      getCategoryByServiceId(catId) {
+      getCategoryById(id) {
 
         return this.categories.filter(function (category) {
 
-          return catId == category.id;
+          return id == category.id;
         });
       },
 
@@ -178,22 +197,20 @@
         return mappedObj
       },
 
-
       getImgUrl(img) {
 
         return require("@/assets/" + img);
       },
 
       initService: function () {
-
+        this.categories = categoriesJson;
         this.service = this.findService();
 
         if (this.service) {
-          let arrayCategory = this.getCategoryByServiceId(this.service.categoryId);
+          let arrayCategory = this.getCategoryById(this.service.categoryId);
           this.category = this.mapCategorToObject(arrayCategory);
           this.overlay = this.category.overlay;
         }
-
       },
 
       findService: function () {
@@ -270,23 +287,6 @@
     margin: 0 !important;
   }
 
-  @media (min-width: 1500px) {
-    .service-img {
-      height: 600px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .my-5 {
-      margin-top: 48px !important;
-      margin-bottom: unset !important;
-    }
-
-    .display-1 {
-      font-size: 26px !important;
-      line-height: unset !important;
-    }
-  }
 
   .display-1 {
     font-size: 0 !important;
@@ -318,12 +318,39 @@
   .service-overlay {
     height: 700px !important;
     width: 100%;
+      position: relative;
+        top:-20px;
   }
 
 
   @media (max-width: 600px) {
     .my-5 {
       margin-bottom: 0 !important;
+    }
+    .service-overlay {
+       top:-20px !important;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    .service-img {
+      height: 600px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .my-5 {
+      margin-top: 48px !important;
+      margin-bottom: unset !important;
+    }
+
+    .display-1 {
+      font-size: 26px !important;
+      line-height: unset !important;
+    }
+    #page-wrap {
+      position: relative;
+        top:-20px;
     }
   }
 </style>

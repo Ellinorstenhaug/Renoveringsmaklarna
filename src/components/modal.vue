@@ -165,8 +165,9 @@
                                 <v-text-field @blur="handleBlur" v-validate="'required|email'" v-model="userData.email"
                                     :error-messages="errors.collect('email')" label="E-mail" data-vv-name="email"
                                     required></v-text-field>
-                                <v-text-field @blur="handleBlur" v-validate="'required'" v-model="userData.city"
-                                    :error-messages="errors.collect('city')" label="Stad" data-vv-name="city" required></v-text-field>
+                                <v-text-field @blur="handleBlur" type="number" v-validate="{ required: true, min:10, max:10 }"
+                                    v-model="userData.phone" :error-messages="errors.collect('phone')" label="Telefonnummer"
+                                    data-vv-name="phone" required></v-text-field>
                             </form>
                         </div>
 
@@ -243,25 +244,20 @@
                 img: img,
                 count: 0,
                 headingLabel: 'Välj tjänst',
-                currentService: this.service === undefined ? '' : this.service,
+
                 dialog: false,
                 postBtn: true,
-
                 userData: {
                     name: '',
                     email: '',
-                    city: '',
+                    phone: '',
                     interest: '',
                     description: '',
                 },
             }
         },
-        mounted() {
-            this.$validator.localize('sv', this.dictionary);
 
-        },
         methods: {
-
             isEmpty(obj) {
                 for (var key in obj) {
                     if (obj.hasOwnProperty(key))
@@ -271,7 +267,6 @@
             },
 
             handleBlur: function () {
-
                 this.$validator.validateAll().then((result) => {
                     if (result) {
 
@@ -330,7 +325,7 @@
                             description: this.userData.description,
                             name: this.userData.name,
                             interest: this.userData.interest,
-                            city: this.userData.city
+                            phone: this.userData.phone
                         };
 
 
@@ -354,7 +349,7 @@
                                 }
                                 this.loader = null;
                             }).catch(error => {
-                            alert('Något gick fel, vänligen kontakta oss.')
+                            alert('något gick fel, vänligen kontakta oss')
                         })
                     }
                 });
@@ -374,19 +369,28 @@
                 email: {
                     required: 'Email måste vara ifylld'
                 },
-                location: {
-                    required: 'fyll i stad'
+                phone: {
+                    required: 'fyll i telefonnummer'
                 }
             }
         },
 
         watch: {
 
-            service: function (newVal) {
-                this.currentService = newVal.heading;
-                this.userData.interest = newVal.heading;
-                this.count = 1;
-                this.handleState();
+            service: {
+                immediate: true,
+                handler(newVal) {
+
+                    if (!this.isEmpty(newVal)) {
+
+                        this.service = newVal;
+                        this.userData.interest = newVal.heading;
+                        this.count = 1;
+                        this.handleState();
+                    }
+                }
+
+
             },
             showDialog: function () {
                 this.dialog = !this.dialog;
@@ -422,7 +426,7 @@
         font-size: 0.8em !important;
     }
 
-    .modal-container {
+    .dal-container {
         position: fixed;
         z-index: 99;
         width: 670px;
@@ -493,21 +497,21 @@
 
     @keyframes fadein {
         from {
-            opacity: 0;
+            opaphone: 0;
         }
 
         to {
-            opacity: 1;
+            opaphone: 1;
         }
     }
 
     @keyframes fadein2 {
         from {
-            opacity: 0;
+            opaphone: 0;
         }
 
         to {
-            opacity: 1;
+            opaphone: 1;
         }
     }
 
@@ -612,7 +616,7 @@
         position: absolute;
         left: 0;
         font-size: 0.9em !important;
-        filter: opacity(0.4)
+        filter: opaphone(0.4)
     }
 
     .v-btn__content {
@@ -671,7 +675,7 @@
         .v-dialog {
             margin: 24px 0 !important;
         }
-       
+
     }
 
     .close-btn {
@@ -697,7 +701,4 @@
     .service-link:hover {
         color: teal !important;
     }
-    
-
-
-    </style>
+</style>
