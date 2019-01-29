@@ -160,12 +160,12 @@
                         </div>
                         <div class="step-container" v-else-if="count >= 2">
                             <form>
-                                <v-text-field v-validate="'required|max:10'" v-model="userData.name" :error-messages="errors.collect('name')"
+                                <v-text-field v-validate="'required|max:50'" v-model="userData.name" :error-messages="errors.collect('name')"
                                     label="Namn" @blur="handleBlur" data-vv-name="name" required></v-text-field>
-                                <v-text-field @blur="handleBlur" v-validate="'required|email'" v-model="userData.email"
+                                <v-text-field @blur="handleBlur" v-validate="{ required: true,email:true, min:3, max:100 }" v-model="userData.email"
                                     :error-messages="errors.collect('email')" label="E-mail" data-vv-name="email"
                                     required></v-text-field>
-                                <v-text-field @blur="handleBlur" type="number" v-validate="{ required: true, min:10, max:10 }"
+                                <v-text-field @blur="handleBlur" type="number" v-validate="{ required: true, min:3, max:10 }"
                                     v-model="userData.phone" :error-messages="errors.collect('phone')" label="Telefonnummer"
                                     data-vv-name="phone" required></v-text-field>
                             </form>
@@ -321,15 +321,15 @@
                         this.loader = 'loading3'
 
                         let userObject = {
-                            from: this.userData.email,
-                            description: this.userData.description,
-                            name: this.userData.name,
-                            interest: this.userData.interest,
-                            phone: this.userData.phone
+                            From: this.userData.email,
+                            Description: this.userData.description,
+                            Name: this.userData.name,
+                            Interest: this.userData.interest,
+                            Phone: this.userData.phone
                         };
 
 
-                        axios.post('http://api.redovisningsmaklarna.local/api/Renoveringsmaklarna/', userObject, {
+                        axios.post('http://api.redovisningsmaklarna.local/api/Renovering/', userObject, {
                             headers: {
                                 'Content-type': 'application/json; charset=utf=8',
                                 "Access-Control-Allow-Origin": "*"
@@ -341,7 +341,6 @@
                             response => {
 
                                 if (response.data) {
-
                                     this.$router.push({
                                         name: "klart"
                                     });
