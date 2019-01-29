@@ -96,8 +96,7 @@
                     </v-card-title>
                     <v-card-text class="white--text">
                         Vår vision är att skapa en transparent marknad för tjänster inom
-                        redovisning och
-                        revision.
+                        bygg och renovering.
                         Vi strävar efter att göra det enkelt för dig att fatta rätt beslut, där
                         både
                         kvalitet och pris är
@@ -108,66 +107,7 @@
             </v-flex>
             </v-layout>
 
-        </section>
-
-
-        <!-- <h3 class="text-center">Tack! Vi har mottagit ditt uppdrag. Det här kommer att hända
-            nu…</h3>
-        <p class="regular">Vårt mål är så snart som möjligt matcha ditt uppdrag med 3
-            specialister som passar in på ditt uppdrag. För varje matchning får du ett mejl med
-            information om den specialist som visat intresse för ditt ärende. Det kan hända att
-            vi behöver kompletterande uppgifter om ditt uppdrag. Då tar vi kontakt med dig via
-            telefon för att se till att vi förmedlar så bra förslag som möjligt. Så håll dig
-            nära telefonen - Vi ser fram emot att hjälpa dig.</p>
-
-
-        <h4 class="promoted">Våra resurser</h4>
-        <p class="regular"><a href="/om-oss" target="_blank">Om RedovisningsMäklarna:</a>
-            <p class="regular">
-                Vår vision är att skapa en transparent marknad för tjänster inom redovisning och
-                revision.
-                Vi strävar efter att göra det enkelt för dig att fatta rätt beslut, där både
-                kvalitet och pris är
-                invägda faktorer.
-            </p>
-
-
-
-            <i class="mdi mdi-phone"></i> 08–121 47 429
-
-            <p>Tveka inte med att kontakta oss under våra öppettider. Vi finns här för att på
-                bästa möjliga sätt besvara dina frågor.</p>
-
-            <table class="table">
-                <tr>
-                    <td>Måndag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Tisdag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Onsdag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Torsdag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Fredag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Lördag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-                <tr>
-                    <td>Söndag</td>
-                    <td class="text-right">09:00 - 21:00</td>
-                </tr>
-            </table>-->
+        </section>       
     </v-content>
 </template>
 

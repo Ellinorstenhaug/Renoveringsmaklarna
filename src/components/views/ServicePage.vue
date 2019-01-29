@@ -9,7 +9,7 @@
             <div class="jumbotron">
               <div class="jumbo-container">
                 <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading}}</h1>
-                <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
+                <div class="subheading mb-3 text-xs-center">{{this.category.ingress}}</div>
                 <div class="button-wrapper">
                   <Modal :serviceContext="mapServicesIntoCategories" :allServices="this.services" :service="this.service"
                     :showDialog="this.activateDialog" />
@@ -23,7 +23,7 @@
           <v-layout column align-center justify-center class="white--text" style="background: #1b0f187d; ">
             <div class="jumbo-container">
               <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
-              <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
+              <div class="subheading mb-3 text-xs-center">{{this.category.name}}</div>
               <div class="button-wrapper">
                  <Modal :serviceContext="mapServicesIntoCategories" :allServices="this.services" :service="this.service"
                     :showDialog="this.activateDialog" />
@@ -172,7 +172,8 @@
           subImage: this.getImgUrl(currentCategory[0].subImage),
           icon: currentCategory[0].icon,
           color: currentCategory[0].color,
-          subheading: currentCategory[0].subheading
+          subheading: currentCategory[0].subheading,
+          ingress: currentCategory[0].ingress
         }
         return mappedObj
       },
