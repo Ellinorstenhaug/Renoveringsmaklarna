@@ -213,6 +213,7 @@
         background-color: #1b0f187d;
         /* height: 70vh; */
         padding: 4% 2% 5% 2%;
+        max-width: 900px;
     }
 
     .jumbo-heading {
@@ -340,6 +341,8 @@
     .overlay-helper {
         height: 750px !important;
         width: 100%;
+        position: relative;
+        top:-20px;
     }
 
     .recension {
@@ -451,6 +454,7 @@
         .jumbotron {
             width: 95%;
             padding: 2%;
+            
         }
 
         .subheading {

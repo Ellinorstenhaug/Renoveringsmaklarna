@@ -9,7 +9,7 @@
         <router-link :to="`/`" class="v_toolbar_title title nav-logo black--text fat-text">
 
 
-          <svg class="logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          <!-- <svg class="logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" viewBox="0 0 182.4 168" style="enable-background:new 0 0 182.4 168;" xml:space="preserve">
             <g class="logo-g">
 
@@ -30,7 +30,7 @@
 
             </g>
 
-          </svg>
+          </svg> -->
 
 
 

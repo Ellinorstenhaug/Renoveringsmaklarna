@@ -9,9 +9,8 @@
                         <div class="jumbo-container">
                             <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Passion för att
                                 hjälpa</h1>
-                            <div class="white--text subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor
-                                och
-                                xxxxkonsulter!</div>
+                            <div class="white--text subheading mb-3 text-xs-center">  Vi hjälper dig anlita byggfirmor och
+                                konsulter!</div>
                             <div class="subheading mb-3 text-xs-center "></div>
                         </div>
                     </div>
@@ -24,7 +23,7 @@
                             hjälpa</h1>
                         <div class="white--text subheading mb-3 text-xs-center">Vi hjälper dig anlita byggfirmor
                             och
-                            xxxxkonsulter!</div>
+                            konsulter!</div>
                         <div class="subheading mb-3 text-xs-center "></div>
                     </div>
                 </v-layout>
@@ -38,7 +37,7 @@
                     <div class="text-xs-center">
                         <h2 class="headline">Om RenoveringsMäklarna</h2>
                         <span class="subheading">
-                            Cras facilisis mi vitae nunc
+                            Mer om oss
                         </span>
                         <hr>
                     </div>
@@ -53,12 +52,7 @@
                                     </v-card-title>
                                     <v-card-text>
                                         <span class="paragraph__text">
-                                            Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt
-                                            ornare.
-                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                                            ac turpis egestas.
-                                            Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt.
-                                            Suspendisse potenti.
+                                            RenoveringsMäklarna hjälper dig att hitta bra tjänsteföretag när du behöver hjälp med företagets ekonomi. Tjänsten är helt gratis för dig att använda och du sparar dyrbar tid genom att låta oss ta in offerter åt dig. Vår vision är att skapa en transparent marknad för tjänster inom redovisning och revision. Vi strävar efter att göra det enkelt för dig att fatta rätt beslut, där både kvalitet och pris är invägda faktorer.
                                         </span>
 
                                     </v-card-text>
@@ -143,22 +137,22 @@
 
                     return [{
                             heading: 'Hur fungerar det?',
-                            ingress: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ',
+                            ingress: 'Du beskriver vad du behöver hjälp med t.ex. renovering, flytthjälp eller städning och skickar in din förfrågan som matchas med företag verksamma i den bransch och kommun du söker. Du blir sedan kontaktad av upp till sex företag som är intresserade av att utföra ditt uppdrag och du väljer själv vem du vill anlita för att utföra uppdraget.',
 
                         },
                         {
                             heading: 'Är det gratis?',
-                            ingress: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ',
+                            ingress: 'Ja, det är alltid helt gratis för dig att skicka in en förfrågan och använda RenoveringsMäklarna',
 
                         },
                         {
                             heading: 'Hur hanteras min data?',
-                            ingress: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ',
+                            ingress: 'Dina uppgifter syns bara när ett företag besvarat ditt uppdrag och publiceras aldrig offentligt. Max tre företag kan besvara din förfrågan och först då får de tillgång till dina kontaktuppgifter. Du blir kontaktad via telefon eller e-post',
 
                         },
                         {
                             heading: 'Efter att jag gjort en förfrågan, hur lång tid tar det?',
-                            ingress: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ',
+                            ingress: 'Vi läser alltid genom alla förfrågningar och arbetar effektivt för att du snabbt ska få hjälp. När vi publicerat din förfrågan matchas den med företag verksamma i det område du söker. Vanligtvis blir du kontaktad av intresserade företag inom några dagar från det att du gjort din förfrågan.',
 
                         },
                     ]

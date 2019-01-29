@@ -9,7 +9,7 @@
             <div class="jumbotron">
               <div class="jumbo-container">
                 <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading}}</h1>
-                <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
+                <div class="subheading mb-3 text-xs-center">{{this.category.ingress}}</div>
                 <div class="button-wrapper">
                   <Modal :service="this.service" :serviceContext="mapServicesIntoCategories" :allServices="this.services"
                     :showDialog="this.activateDialog" />
@@ -24,7 +24,7 @@
           <v-layout column align-center justify-center class="white--text" style="background: #1b0f187d; ">
             <div class="jumbo-container">
               <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
-              <div class="subheading mb-3 text-xs-center">{{this.service.ingress}}</div>
+              <div class="subheading mb-3 text-xs-center">{{this.category.ingress}}</div>
               <div class="button-wrapper">
                 <Modal :service="this.service" :serviceContext="mapServicesIntoCategories" :allServices="this.services"
                   :showDialog="this.activateDialog" />
@@ -191,7 +191,8 @@
           subImage: this.getImgUrl(currentCategory[0].subImage),
           icon: currentCategory[0].icon,
           color: currentCategory[0].color,
-          subheading: currentCategory[0].subheading
+          subheading: currentCategory[0].subheading,
+          ingress: currentCategory[0].ingress
         }
         return mappedObj
       },
@@ -286,23 +287,6 @@
     margin: 0 !important;
   }
 
-  @media (min-width: 1500px) {
-    .service-img {
-      height: 600px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .my-5 {
-      margin-top: 48px !important;
-      margin-bottom: unset !important;
-    }
-
-    .display-1 {
-      font-size: 26px !important;
-      line-height: unset !important;
-    }
-  }
 
   .display-1 {
     font-size: 0 !important;
@@ -334,12 +318,39 @@
   .service-overlay {
     height: 700px !important;
     width: 100%;
+      position: relative;
+        top:-20px;
   }
 
 
   @media (max-width: 600px) {
     .my-5 {
       margin-bottom: 0 !important;
+    }
+    .service-overlay {
+       top:-20px !important;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    .service-img {
+      height: 600px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .my-5 {
+      margin-top: 48px !important;
+      margin-bottom: unset !important;
+    }
+
+    .display-1 {
+      font-size: 26px !important;
+      line-height: unset !important;
+    }
+    #page-wrap {
+      position: relative;
+        top:-20px;
     }
   }
 </style>

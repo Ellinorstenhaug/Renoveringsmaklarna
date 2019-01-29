@@ -234,6 +234,8 @@
 
     .headColor {
         background: rgb(43, 23, 36);
+          position: relative;
+        top:-20px;
     }
 
     .about-pic {
