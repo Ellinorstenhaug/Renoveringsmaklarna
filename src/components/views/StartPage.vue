@@ -106,19 +106,21 @@
     import Clients from "./childcomponents/clients.vue";
 
     export default {
-        metaInfo() {
-            return {
-                meta: [{
-                        charset: 'utf-8'
-                    },
-                    {
-                        vmid: 'description',
-                        name: 'description',
-                        content: 'asd'
-                    }
-                ]
-            }
-        },
+     metaInfo() {
+      return {
+        title: 'Få offerter gratis från renoverings- & byggföretag - Renoveringsmäklarna' ,
+       
+        meta: [{
+            charset: 'utf-8'
+          },
+          {
+            vmid: 'description',
+            name: 'description',
+            content: 'Vi erbjuder offerter från olika tjänster som bygg, renovering, målning,uthyrning & mijö. Erbjudanden från experter. Svar inom 24h. Kostnadsfritt. Ansök snabbt och enkelt.'
+          }
+        ]
+      }
+    },
         computed: {
             mapServicesIntoCategories: function () {
 

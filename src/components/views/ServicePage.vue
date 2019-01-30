@@ -28,7 +28,7 @@
               <div class="button-wrapper">
                 <Modal :service="this.service" :serviceContext="mapServicesIntoCategories" :allServices="this.services"
                   :showDialog="this.activateDialog" />
-              
+
               </div>
             </div>
           </v-layout>
@@ -125,21 +125,33 @@
 
     },
 
-    metaInfo() {
-      return {
-        title: 'Renoveringsmaklarna | ' + this.service.heading,
-       
-        meta: [{
-            charset: 'utf-8'
-          },
-          {
-            vmid: 'description',
-            name: 'description',
-            content: this.service.ingress
-          }
-        ]
-      }
-    },
+     metaInfo() {
+            return {
+                title: 'Kontakta oss - Renoveringsmäklarna',
+
+                meta: [{
+                        charset: 'utf-8'
+                    },
+                    {
+                        vmid: 'description',
+                        name: 'description',
+                        content: this.service.subheading + ' ' +this.service.heading
+                    },
+                    {
+                        vmid: 'content',
+                        name: 'GOOGLEBOT',
+                        content: 'INDEX,FOLLOW'
+                    },
+                    {
+                        vmid: 'content',
+                        name: 'ROBOTS',
+                        content: 'INDEX,FOLLOW'
+                    },
+                  
+
+                ]
+            }
+        },
 
     watch: {
       $route: "initService"
@@ -318,8 +330,8 @@
   .service-overlay {
     height: 700px !important;
     width: 100%;
-      position: relative;
-        top:-20px;
+    position: relative;
+    top: -20px;
   }
 
 
@@ -327,8 +339,9 @@
     .my-5 {
       margin-bottom: 0 !important;
     }
+
     .service-overlay {
-       top:-20px !important;
+      top: -20px !important;
     }
   }
 
@@ -348,9 +361,10 @@
       font-size: 26px !important;
       line-height: unset !important;
     }
+
     #page-wrap {
       position: relative;
-        top:-20px;
+      top: -20px;
     }
   }
 </style>

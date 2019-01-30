@@ -70,7 +70,21 @@ Om du inte hittar kategorin du söker kan du välja en liknande och beskriva dit
     import categoriesJson from "../../services/categories.json";
 
     export default {
-
+     metaInfo() {
+      return {
+        title: 'Tjänster som vi erbjuder - Renoveringsmäklarna' ,
+       
+        meta: [{
+            charset: 'utf-8'
+          },
+          {
+            vmid: 'description',
+            name: 'description',
+            content: 'Behöver du hjälp inom renovering? Kom igång redan idag & att få tre offerter helt gratis, nedan listar vi ut alla våra tjänster'
+          }
+        ]
+      }
+    },
         mounted: function () {
             this.services = serviceJson;
             this.categories = categoriesJson;

@@ -162,9 +162,9 @@
                             <form>
                                 <v-text-field v-validate="'required|max:50'" v-model="userData.name" :error-messages="errors.collect('name')"
                                     label="Namn" @blur="handleBlur" data-vv-name="name" required></v-text-field>
-                                <v-text-field @blur="handleBlur" v-validate="{ required: true,email:true, min:3, max:100 }" v-model="userData.email"
-                                    :error-messages="errors.collect('email')" label="E-mail" data-vv-name="email"
-                                    required></v-text-field>
+                                <v-text-field @blur="handleBlur" v-validate="{ required: true,email:true, min:3, max:100 }"
+                                    v-model="userData.email" :error-messages="errors.collect('email')" label="E-mail"
+                                    data-vv-name="email" required></v-text-field>
                                 <v-text-field @blur="handleBlur" type="number" v-validate="{ required: true, min:3, max:10 }"
                                     v-model="userData.phone" :error-messages="errors.collect('phone')" label="Telefonnummer"
                                     data-vv-name="phone" required></v-text-field>
@@ -329,7 +329,7 @@
                         };
 
 
-                        axios.post('http://api.redovisningsmaklarna.local/api/Renovering/', userObject, {
+                        axios.post('http://redovisningsmaklarna.com/api/renovering/', userObject, {
                             headers: {
                                 'Content-type': 'application/json; charset=utf=8',
                                 "Access-Control-Allow-Origin": "*"
@@ -349,6 +349,7 @@
                                 this.loader = null;
                             }).catch(error => {
                             alert('något gick fel, vänligen kontakta oss')
+
                         })
                     }
                 });

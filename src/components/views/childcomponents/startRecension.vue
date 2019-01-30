@@ -18,7 +18,7 @@
                                     <img class="recension-dqm" src="@/assets/close.jpg" alt>
                                 </div>
                                 <br>
-                                <em>Alexander Helsinghof, Stockholm</em>
+                                <em>Tobias Blomberg, Stockholm</em>
                             </v-card-title>
                         </v-card>
                     </v-flex>
@@ -34,7 +34,7 @@
                                     <img class="recension-dqm" src="@/assets/close.jpg" alt>
                                 </div>
                                 <br>
-                                <em>Alexander Helsinghof, Tumba</em>
+                                <em>Sophie Almendal, Tumba</em>
 
                             </v-card-title>
                         </v-card>

@@ -103,10 +103,29 @@
     export default {
         metaInfo() {
             return {
-                title: 'Renoveringsmaklarna | ' + 'Kontakta oss',
-                meta: [{
+                title: 'Kontakta oss - Renoveringsmäklarna',
 
-                }]
+                meta: [{
+                        charset: 'utf-8'
+                    },
+                    {
+                        vmid: 'description',
+                        name: 'description',
+                        content: 'Renoveringsmäklarna hjälper dig hitta bra renoverings- & byggföretag. Beskriv vad du behöver hjälp med, ta emot och jämför upp till tre offerter. välj offert och få jobbet gjort.'
+                    },
+                    {
+                        vmid: 'content',
+                        name: 'GOOGLEBOT',
+                        content: 'INDEX,FOLLOW'
+                    },
+                    {
+                        vmid: 'content',
+                        name: 'ROBOTS',
+                        content: 'INDEX,FOLLOW'
+                    },
+                  
+
+                ]
             }
         },
         data() {
@@ -234,8 +253,8 @@
 
     .headColor {
         background: rgb(43, 23, 36);
-          position: relative;
-        top:-20px;
+        position: relative;
+        top: -20px;
     }
 
     .about-pic {
