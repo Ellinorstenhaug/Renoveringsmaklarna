@@ -42,7 +42,7 @@
                                         <v-card-text class="text-xs-center">
                                             <svg v-if="count>=1" version="1.1" id="Layer_1" class="step-icon" width="34"
                                                 height="34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                x="0px" y="0px" viewBox="0 0 164.2 200" style="enable-background:new 0 0 164.2 200; fill: green;"
+                                                x="0px" y="0px" viewBox="0 0 164.2 200" style="enable-background:new 0 0 164.2 200; fill: #009988;"
                                                 xml:space="preserve">
                                                 <g>
                                                     <path d="M91.8,25.2h-0.6L56.4,44l-5.2-20.6L94.9,0h23.1v200H91.8V25.2z" />
@@ -71,10 +71,10 @@
 
                                             <svg v-if="count >=2" class="step-icon" version="1.1" id="Layer_1" width="34"
                                                 height="34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                x="0px" y="0px" viewBox="0 0 164.2 200" style="enable-background:new 0 0 164.2 200; fill: green;"
+                                                x="0px" y="0px" viewBox="0 0 164.2 200" style="enable-background:new 0 0 164.2 200; fill: #009988;"
                                                 xml:space="preserve">
                                                 <g>
-                                                    <path d="M19.3,200v-16.3l20.9-20.3c50.2-47.8,72.9-73.2,73.2-102.9c0-20-9.7-38.4-39-38.4c-17.9,0-32.7,9.1-41.8,16.6L24.1,20 C37.8,8.5,57.1,0,79.8,0C122.2,0,140,29,140,57.2c0,36.3-26.3,65.7-67.8,105.6l-15.7,14.5v0.6h88.3V200H19.3z" />
+                                                    <path style="fill:#009988;" d="M19.3,200v-16.3l20.9-20.3c50.2-47.8,72.9-73.2,73.2-102.9c0-20-9.7-38.4-39-38.4c-17.9,0-32.7,9.1-41.8,16.6L24.1,20 C37.8,8.5,57.1,0,79.8,0C122.2,0,140,29,140,57.2c0,36.3-26.3,65.7-67.8,105.6l-15.7,14.5v0.6h88.3V200H19.3z" />
                                                 </g>
                                             </svg>
                                             <svg v-else="" class="step-icon" version="1.1" id="Layer_1" width="34"

@@ -5,7 +5,7 @@
 
             <v-parallax :src="getImgUrl('about.jpg')" v-if="$vuetify.breakpoint.mdAndUp" class="service-overlay">
                 <v-layout column align-center justify-center class="white--text">
-                    <div class="jumbotron">
+                    <div class="about-jumbotron">
                         <div class="jumbo-container">
                             <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Passion för att
                                 hjälpa</h1>
@@ -59,7 +59,7 @@
                                 </v-card>
                             </v-flex>
                             <v-flex xs12 md6>
-                                <v-parallax class="about-pic" :src="getImgUrl('aboutmin.jpg')">
+                                <v-parallax class="about-pic" :src="getImgUrl('about-small.jpg')">
 
                                 </v-parallax>
                             </v-flex>
@@ -164,6 +164,14 @@
 
 
 <style scoped>
+.about-jumbotron {
+        background-color:#1b0f187d;
+        /* background-color:#e64ec07d; */
+        min-width:900px;
+        max-width:900px;
+        padding: 4% 2% 5% 2%;
+    }
+
     .color {
         background-color: transparent !important;
 
