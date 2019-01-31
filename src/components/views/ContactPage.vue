@@ -161,7 +161,7 @@
                         };
 
 
-                        axios.post('http://api.redovisningsmaklarna.local/api/Renovering/', userObject, {
+                        axios.post('https://api.redovisningsmaklarna.local/api/Renovering/', userObject, {
                             headers: {
                                 'Content-type': 'application/json; charset=utf=8',
                                 "Access-Control-Allow-Origin": "*"

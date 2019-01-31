@@ -135,7 +135,7 @@
                     {
                         vmid: 'description',
                         name: 'description',
-                        content: this.service.subheading + ' ' +this.service.heading
+                        content: this.service.subheading + ' ' + this.service.heading
                     },
                     {
                         vmid: 'content',
@@ -364,7 +364,7 @@
 
     #page-wrap {
       position: relative;
-      top: -20px;
+     
     }
   }
 </style>

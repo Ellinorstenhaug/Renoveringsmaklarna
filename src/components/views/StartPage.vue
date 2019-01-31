@@ -454,7 +454,7 @@
 
     @media (max-width: 690px) {
         .jumbotron {
-            width: 95%;
+            width: 100%;
             padding: 2%;
             
         }

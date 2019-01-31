@@ -240,11 +240,9 @@
             return {
                 loader: null,
                 loading3: false,
-
                 img: img,
                 count: 0,
                 headingLabel: 'Välj tjänst',
-
                 dialog: false,
                 postBtn: true,
                 userData: {
@@ -329,7 +327,7 @@
                         };
 
 
-                        axios.post('http://redovisningsmaklarna.com/api/renovering/', userObject, {
+                        axios.post('https://redovisningsmaklarna.com/api/renovering/', userObject, {
                             headers: {
                                 'Content-type': 'application/json; charset=utf=8',
                                 "Access-Control-Allow-Origin": "*"
