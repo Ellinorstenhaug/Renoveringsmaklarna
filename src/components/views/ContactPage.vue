@@ -3,7 +3,6 @@
         <section>
             <v-parallax class="headColor">
                 <v-layout column align-center justify-center class="white--text">
-                    <!-- <img src="@/assets/logo.png" alt="go" height="200"> -->
                     <h1 class="white--text mb-2 display-2 text-xs-center">Kontakta oss</h1>
                     <div class="subheading mb-3 text-xs-center">
                         <span class="paragraph__text">
@@ -225,15 +224,6 @@
 
         }
     }
-
-    /* @media (min-width:960, max-width: 1263px){
-        iframe {
-            width: 500px !important;
-
-        }
-    } */
-
-
     .headColor {
         background: rgb(43, 23, 36);
           position: relative;
@@ -260,6 +250,5 @@
 
     .form-background {
         background-color: rgba(255, 255, 255, 0.459);
-        /* padding:50px; */
     }
 </style>

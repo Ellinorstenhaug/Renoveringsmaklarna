@@ -3,54 +3,35 @@
         "categoryId": "6",
         "heading": "renovering",
         "url": "/tjänster/renovering",
-        "subheading": "Snabbt och enkelt, vi hjälper dig med",
         "caption": "Att utföra en renovering kan ofta ge ett helt nytt liv åt ett hem. Det är ofta ett spännande och roligt projekt, men kan också vara omfattande vad gäller både tid och pengar. Därför är det extra viktigt att man känner sig trygg med de hantverkare och det byggföretag man valt för sin renovering. På RenoveringsMäklarna kan du enkelt jämföra olika byggfirmors kostnadsförslag, omdömen, referenser och behörigheter för att få en uppfattning om företaget är rätt för din renovering. Du tar emot offerter från max sex olika företag, men förbinder dig aldrig till att anlita någon.",
-        "imgUrl": "remodel.jpg",
-        "subImgUrl": "renovation2.jpg",
         "icon": "<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'><path d='M15 5h5v5h4v8h-4v5h-20v-22h15v4zm-5 12h-8v4h8v-4zm8 0h-7v4h7v-4zm-11-5h-5v4h5v-4zm9 0h-8v4h8v-4zm6 0h-5v4h5v-4zm-11-5v4h7v-4h-7zm-1 0h-8v4h8v-4zm-3-4h-5v3h5v-3zm6 0h-5v3h5v-3z'/></svg>",
         "color": "#62b57e",
-        "images": [{
-            "medium": "renovering-mini.jpg",
-            "large": "renovering.jpg",
-            "alt": "Bild om renovering"
-
-        }]
+        "alt": "Bild om renovering",
+        "alt2": "Bild på hus som renoveras"
     },
     {
         "id": "2",
         "categoryId": "6",
         "heading": "badrumsrenovering",
         "url": "/tjänster/badrumsrenovering",
-        "subheading": "Vi är redo! Är du? Vi fixar ditt",
         "caption": "Är du på jakt efter ett byggföretag med rätt kompetens för att renovera badrum? Genom RenoveringsMäklarna får du enkelt och kostnadsfritt kontakt med flera byggfirmor i ditt närområde som är specialister på badrumsrenovering. Alla badrum har en begränsad livslängd och måste förr eller senare renoveras, oavsett om ytskiktet är kakel och klinker eller våtrumsmatta. Badrumsrenoveringar är med få undantag stora projekt med höga kvalitetskrav och en jämförelsevis hög kostnad. Därför är det viktigt att välja hantverkare noggrant. RenoveringsMäklarna hjälper dig att spara både tid och pengar; allt du behöver göra är att utförligt beskriva hur du vill renovera badrummet för att få prisuppgifter från upp till sex olika våtrumsspecialister.",
-        "imgUrl": "badrum.jpg",
         "color": "#41bded",
-        "subImgUrl": "bathroom.jpg",
         "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M12 3.571c3.658 5.437 6 9.223 6 12.503 0 3.268-2.691 5.926-6 5.926s-6-2.658-6-5.925c0-3.281 2.342-7.067 6-12.504zm0-3.571c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075zm2.656 12c.969 3.484-.406 6.859-2.656 7.781 3.318.475 5.994-3.466 2.656-7.781z' /></svg>",
-        "images": [{
-            "medium": "badrum-mini.jpg",
-            "large": "badrum.jpg",
-            "alt": "Bild på badrum"
+        "alt": "Bild på om renovering",
+        "alt2": "Bild på hus som renoveras"
 
-        }]
     },
     {
         "id": "3",
         "categoryId": "3",
         "heading": "målning utvändigt",
         "url": "/tjänster/målning-utvändigt",
-        "subheading": "Sätt färg i livet, vi hjälper dig med ",
         "caption": "Är du på jakt efter en bra målare eller målarmästare för hjälp med att måla om huset? Då har du kommit rätt. Utan kostnad kommer du genom RenoveringsMäklarna i kontakt med upp till sex olika målare och målerifirmor som alla har möjlighet att hjälpa dig. Du kan på så sätt jämföra offerter från flera målare för att få olika förslag på upplägg och prisbilder. Beskriv ditt behov för oss så utförligt som möjligt; vad det är som ska målas om, befintligt underlag och vilket underarbete som du tror är nödvändigt och skicka in din förfrågan till oss. Ditt behov matchas då med målare i din närhet som är experter inom ditt område. Enkelt tryggt och gratis!",
         "color": "#d2647f",
-        "imgUrl": "målning.jpg",
-        "subImgUrl": "Målning2.jpg",
         "icon": "  <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M18.58 0c-1.234 0-2.377.616-3.056 1.649-.897 1.37-.854 3.261-1.368 4.444-.741 1.708-3.873.343-5.532-.524-2.909 5.647-5.025 8.211-6.845 10.448 6.579 4.318 1.823 1.193 12.19 7.983 2.075-3.991 4.334-7.367 6.825-10.46-1.539-1.241-4.019-3.546-2.614-4.945 1-1 2.545-1.578 3.442-2.95 1.589-2.426-.174-5.645-3.042-5.645zm-5.348 21.138l-1.201-.763c0-.656.157-1.298.422-1.874-.609.202-1.074.482-1.618 1.043l-3.355-2.231c.531-.703.934-1.55.859-2.688-.482.824-1.521 1.621-2.331 1.745l-1.302-.815c1.136-1.467 2.241-3.086 3.257-4.728l8.299 5.462c-1.099 1.614-2.197 3.363-3.03 4.849zm6.724-16.584c-.457.7-2.445 1.894-3.184 2.632-.681.68-1.014 1.561-.961 2.548.071 1.354.852 2.781 2.218 4.085-.201.265-.408.543-.618.833l-8.428-5.548.504-.883c1.065.445 2.1.678 3.032.678 1.646 0 2.908-.733 3.464-2.012.459-1.058.751-3.448 1.206-4.145 1.206-1.833 3.964-.017 2.767 1.812zm-.644-.424c-.265.41-.813.523-1.22.257-.409-.267-.522-.814-.255-1.223.267-.409.813-.524 1.222-.257.408.266.521.817.253 1.223z' /></svg>",
-        "images": [{
-            "medium": "målning-mini.jpg",
-            "large": "målning.jpg",
-            "alt": "Bild om målning"
+        "alt": "Bild om målning",
+        "alt2": "Bild på målarpenslar"
 
-        }]
     },
     {
         "id": "4",
@@ -58,17 +39,10 @@
         "icon": "<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M24 13.001h-3v10h-18v-10h-3l12-12.001 12 12.001zm-19-2.172v10.172h14v-10.172l-7-7-7 7zm10.332 8.043s-3.953-4.159-4.148-4.354c-.463-.464-1.003-.333-1.285-.051-.398.398-.037 1.019-.037 1.019l-.874.875-2.474-2.474.875-.874s.607.433 1.114-.074c.552-.552.301-1.288 1.525-2.21.726-.547 1.576-.728 2.384-.728 1.591 0 3.019.703 3.019.703-2.581.258-3.607 1.453-2.54 2.52l3.995 4.318c.808.808-.476 2.408-1.554 1.33zm4.668-16.871v5.576l-3-3v-2.576h3z' /></svg>",
         "heading": "bygg- och renovering - övrigt",
         "url": "/tjänster/bygg-och-renovering-övrigt",
-        "imgUrl": "bygg2.jpg",
-        "subheading": "Snick snack, vi finns där när du behöver",
-        "subImgUrl": "bygg4.jpg",
         "caption": "Om du inte hittar kategorin du söker inom bygg och renovering kan du beskriva ditt behov här. Försök att beskriva ditt behov så utförligt som möjligt så hjälper vår kundservice dig att hitta rätt!",
         "color": "#e26d38",
-        "images": [{
-            "medium": "bygg-mini.jpg",
-            "large": "bygg.jpg",
-            "alt": "Bild om bygghjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
 
     {
@@ -76,18 +50,11 @@
         "categoryId": "5",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "värme- och kylsystem",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/värme-och-kylsystem",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Om du behöver hjälp med värmesystem i ditt hem eller i andra lokaler kan du alltid vända dig till RenoveringsMäklarna för att hitta professionella företag. Ett nytt och energisnålt värmesystem kan bespara dig många kronor i onödiga elkostnader – om det installeras på rätt sätt. Hitta kunniga företag som hjälper dig med värmesystemet på RenoveringsMäklarna. Vi har samlat kontrollerade företag som gärna hjälper dig med ditt projekt. Du får prisuppgifter, kan läsa omdömen och boka in personliga möten innan du tillslut bestämmer dig för vem du vill anlita. Att hitta ditt företag genom RenoveringsMäklarna är alltid helt kostnadsfritt och du förbinder dig inte till någonting.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild på elstation",
+        "alt2": "Bild på verktyg och skrivbord"
     },
 
     {
@@ -95,665 +62,413 @@
         "categoryId": "8",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "altan & uterum",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/altan-och-uterum",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "När du ska bygga altan, veranda eller uterum är det viktigt att välja byggfirma med omsorg. Oavsett om det gäller ett mindre projekt som ett litet trädäck, ett staket till altan eller något betydligt mer omfattande en inglasad vinterträdgård måste det bli rätt från början, utan att det kostar för mycket.  Använd RenoveringsMäklarna så blir det enklare att hitta rätt; du behöver bara beskriva ditt projekt med alla relevanta omständigheter en gång, istället för att kontakta flera byggföretag individuellt. Du blir sedan kontaktad av upp till sex olika byggfirmor som är intresserade av att hjälpa dig – enkelt, tryggt och helt kostnadsfritt! Eftersom du bara behöver beskriva ditt altanbygge eller uterumsprojekt en gång, var gärna så utförlig som möjligt. Då blir betydligt enklare för våra anslutna företag att ta fram korrekta prisuppgifter, samtidigt som det blir enklare för dig att jämföra.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "7",
         "categoryId": "7",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "balkong",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/balkong",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Att låta bygga en balkong är en dröm för många. Det kan både ge mer ljusinsläpp och bidra till att hemmet faktiskt känns lite större. Designen kan variera stort och göras mycket efter dina egna önskemål. Alla balkonger behöver dock konstrueras så att de står emot stor påfrestning vad gäller regn, snö och vind eftersom balkongen oftast är en av de mest väderutsatta delarna på ett hus. Oavsett hur du önskar att din balkong ska se ut eller vilka förutsättningar som finns, så kan du enkelt hitta rätt byggfirma på RenoveringsMäklarna.se. Du fyller i alla uppgifter i formuläret och skickar in din offertförfrågan. Därefter kontaktas du av de byggfirmor som är intresserade av ditt projekt. Så att du lättare kan hitta rätt hjälp.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "8",
         "categoryId": "8",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "brygga",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/brygga",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "På RenoveringsMäklarna kan du förverkliga dina drömmar om en egen brygga. Här hittar du byggföretag och hantverkare som hjälper dig att planera och bygga en brygga. Det kan kännas svårt att veta vilka byggföretag du ska kontakta som kan hjälpa dig med din brygga. Vi löser problemet och låter dig endast komma i kontakt med byggfirmor som är intresserade av din egen beskrivning av uppdraget. Jämför prisförslag och offerter från upp till sex olika företag innan du bestämmer dig. Att använda RenoveringsMäklarna är helt gratis och du förbinder dig inte till någonting.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "9",
         "categoryId": "7",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "dörrar",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/dörrar",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Valet av innerdörrar eller ytterdörrar kan förändra intrycket av ett hem och det finns nästintill oändliga valmöjligheter både vad gäller design och material. För valet av byggfirma finns säkerligen lika många alternativ. Med hjälp av RenoveringsMäklarna blir dock processen lite lättare. Vare sig du är ute efter att byta, montera eller rusta upp dina dörrar så kan du hitta rätt byggfirma på RenoveringsMäklarna. Genom att du beskriver hur ditt behov ser ut, kontaktas du av de byggfirmor som är intresserad av jobbet. Utöver de förslag som företagen skickar dig, kan du även se deras referenser, omdömen och behörigheter på RenoveringsMäklarna.se. Därefter väljer du själv den firma som passar dig bäst.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "10",
         "categoryId": "5",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "elinstallation",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/elinstallation",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Att anlita en elektriker för allt annat än mycket grundläggande elarbeten är både en säkerhetsfråga och en självklarhet för de flesta. När det gäller fasta elinstallationer som till exempel golvvärmeinstallation, vissa byten av vägguttag, byte av strömbrytare till dimmer är det dessutom ett krav. Eftersom de enligt lag ska utföras av en behörig elektriker. En bra tumregel är att alltid vända sig till ett proffs om man är det minsta osäker på om man har tillräcklig kunskap för att utföra elarbetet själv eller om det ens är tillåtet. RenoveringsMäklarna förenklar för dig som behöver hjälp av en behörig elinstallatör. Beskriv bara dina tjänstebehov i formuläret så får du offerter från elektriker nära dig som är intresserade av att genomföra ditt projekt. Enkelt, tryggt och helt kostnadsfritt!",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
+        "alt": "Bild om VVS, rör & gas",
+        "alt2": "Bild på verktyg och skrivbord"
 
-        }]
     },
     {
         "id": "11",
         "categoryId": "8",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "fasadarbeten",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/fasadarbeten",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Olika fasader har olika förutsättningar och behov. Kanske behöver du utföra fasadmurning, putsning, tilläggsisolering eller endast uppfräschning av färgen. På RenoveringsMäklarna kan du komma i kontakt med byggfirmor som kan hjälpa till med flera olika moment inom fasadarbete. Många företag kan givetvis hjälpa dig att göra en åtgärdsanalys för att se över det totala behovet för just din fasad. Du beskriver ditt behov så noga du kan vad gäller exempelvis typ av åtgärd, omfattning och tidsplan. Därefter tar du emot kostnadsförslag från entreprenörer som är intresserade av ditt arbete. På så vis slipper du leta efter rätt hjälp, och kan lättare jämföra olika företag.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "12",
         "categoryId": "7",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "fin- och möbelsnickeri",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/fin-ochmöbelsnickeri",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Här får du hjälp att hitta möbelsnickare för fin- och möbelsnickeri. Oavsett om du behöver hjälp med att bygga nya möbler eller justera något på dina befintliga kan du vända dig till RenoveringsMäklarna för att hitta företag som kan hjälpa dig. Vi låter dig komma i kontakt med upp till sex möbelsnickare som finns i din närhet och är intresserade av ditt uppdrag. Det är helt gratis att använda RenoveringsMäklarna och du förbinder dig inte till någonting. Beskriv ditt behov så utförligt som möjligt så hjälper vi dig att hitta rätt möbelsnickare inom några dagar!",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "13",
         "categoryId": "7",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "Fönster",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/fönster",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Oavsett om du vill byta ut dina fönster eller bara renovera dem har vi företag som kan det mesta om fönster som gärna hjälper dig. Vi har hjälpt många både villaägare och bostadsrättsföreningar att få hjälp att byta fönster på sin fastighet på ett smart och smidigt sätt. Att byta fönster är ett ganska omfattande projekt som många vill ha avklarat så fort som möjligt efter att arbetet påbörjats. Samtidigt är det av största vikt att du får rätt fönster och att arbetet blir bra utfört. Med bra fönster kan du få ett bättre inomhusklimat och spara mängder av pengar på onödig uppvärmning av ditt boende. På RenoveringsMäklarna kan du hitta och jämföra tjänsteföretag som hjälper dig med ditt fönsterbyte. Enkelt tryggt och gratis.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "14",
         "categoryId": "8",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "garage & carport",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/garage-och-carport",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Att låta bygga ett garage eller carport kan vara fördelaktigt av många olika anledningar. Bilen är mer skyddad från väder och vind, mindre stöldbegärlig och dessutom får man oftast lite mer plats för förvaring. Det kan vara svårt att veta var man ska börja någonstans eller vem man ska kontakta. När du gör en offertförfrågan på RenoveringsMäklarna blir du kontaktad av upp till sex stycken företag som är intresserade av just den typen av jobb som du beskrivit vad gäller omfattning, tidsplan och typ av arbete. På så vis slipper du själv kontakta flera olika entreprenörer för att hitta någon som kan hjälpa dig. När du mottagit olika kostnadsförslag kan du enkelt jämföra och välja den byggfirma som passar dig bäst.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "15",
         "categoryId": "8",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "glasmästare",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/glasmästare",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Ska du glasa in din balkong eller behöver du hjälp med ett trasigt fönster? Här hittar du glasmästare för alla typer av uppdrag. På RenoveringsMäklarna hittar du professionella glasmästare som är redo att hjälpa dig med att glasa in din balkong eller sätta in en glasvägg i duschen, men även mer akuta ärenden som trasiga fönster. Du jämför enkelt offerter, omdömen och priser och väljer sedan det företag du helst vill arbeta med. Ett smart sätt att hitta glasmästare i din närhet helt enkelt. All detta är helt kostnadsfritt och du förbinder dig inte till någonting.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "16",
         "categoryId": "2",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "golvläggning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/golvläggning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Att lägga ett nytt golv kan verkligen fräscha upp ett rum, men det kan också vara förenat med en hel del jobb och tid. I synnerhet om golvläggningen rör sig om stora ytor eller om det finns ett gammalt golv som först ska brytas upp och forslas bort. Oavsett om du vill lägga nytt golv i ett enskilt rum eller på större ytor kan det vara praktiskt och underlättande att få hjälp av en professionell golvläggare. När du beskriver ditt projekt på RenoveringsMäklarna så matchas det ihop med golvläggare som letar efter precis den typen av jobb som du beskrivit. Jämför olika offerter och välj själv vilken firma du vill anlita för din golvläggning.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild på golv och matta",
+        "alt2": "Bild inomhus på parkettgolv"
     },
     {
         "id": "17",
         "categoryId": "2",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "golvslipning, olja & lack",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/golvslipning-olja-och-lack",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Vill du behålla ditt gamla golv men vill fräscha upp det med en golvslipning eller behandling med olja eller lack? Då hittar du hjälpen på RenoveringsMäklarna. Beskriv ditt behov så utförligt du kan; vad det är för golvtyp, vilket skick golvet är i, hur stor golvyta det gäller och om du behöver hjälp med att slipa golvet, olja eller lacka det. På RenoveringsMäklarna kommer du snabbt och enkelt i kontakt med lokala golvslipare och golvfirmor. Inom kort får du förslag på pris och upplägg från ett antal företag som vill hjälpa dig. Du förbinder dig inte till någonting och bestämmer själv vem du tillslut vill anlita.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
+        "alt": "Bild på golv och matta",
+        "alt2": "Bild inomhus på parkettgolv"
 
-        }]
     },
     {
         "id": "18",
         "categoryId": "5",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "golvvärme",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/golvvärme",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Att installera golvvärme hemma är inte bara skönt för fötterna det kan utgöra en bra värmekälla i ditt hem. Hur mycket energi som går åt beror på olika faktorer såsom befintligt värmesystem, typ av isolering och vilken sorts golv det rör sig om. Genom att ta hjälp av en duktig entreprenör kan man få en bra uppfattning om hur installationen av din typ av golvvärme och energiförbrukning skulle kunna se ut. På RenoveringsMäklarna kan du komma i kontakt med flera byggfirmor som kan hjälpa dig med installation av golvvärme. När du gjort en offertförfrågan, blir du kontaktad av upp till sex olika företag. Sedan väljer du enkelt själv den firma du tycker verkar bäst.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
+        "alt": "Bild om VVS, rör & gas",
+        "alt2": "Bild på verktyg och skrivbord"
 
-        }]
     },
     {
         "id": "19",
         "categoryId": "5",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "isolering",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/isolering",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Behöver du hjälp med isolering? På RenoveringsMäklarna hittar du isoleringsföretag om du behöver hjälp med isolering till ditt eget hem eller kanske till större projekt såsom nyproduktion eller renovering av flerfamiljshus. Beskriv hur ditt projekt ser ut vad gäller tidsram, typ av fastighet, omfattning och andra viktiga detaljer så får du offerter från upp till sex olika entreprenörer. Alla företag på RenoveringsMäklarna är kontrollerade för F-skatt, moms samt att de är skuldfria. På så vis kan du istället fokusera på att jämföra företagens omdömen, referenser, behörigheter och kostnadsförslag. Därefter väljer du själv vilket byggföretag du vill anlita för din isolering.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
+        "alt": "Bild om VVS, rör & gas",
+        "alt2": "Bild på verktyg och skrivbord"
 
-        }]
     },
     {
         "id": "20",
         "categoryId": "6",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "kakel & klinkersättning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/kakel-och-klinkersättning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Att sätta klinker i hall och kök eller kanske kakel i badrummet kan göra stor skillnad för ett hem. Utbudet av kakel och klinker brukar vara enormt och bara att välja färg på själva fogen kan vara svårt nog. Då kan det vara skönt att göra valet av plattsättare eller kakelsättare så enkelt och tryggt som möjligt. På RenoveringsMäklarna.se beskriver du ditt projekt och därefter matchas det ihop med hantverkare som passar för uppdraget. Att sätta kakel och klinker behöver göras av yrkeskunniga kakelsättare och plattsättare med rätt behörigheter för just ditt projekt. Oavsett om ditt projekt är stort eller litet så kan RenoveringsMäklarna hjälpa dig att hitta rätt kakelsättare.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
-    },
+        "alt": "Bild om renovering",
+        "alt2": "Bild på hus som renoveras"
+        },
     {
         "id": "21",
         "categoryId": "7",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "kamin & skorsten",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/kamin-och-skorsten",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Det blir allt mer populärt att komplettera sin bostad med en kamin. Dels ger det en behaglig värme som kan hjälpa till när vädret slår om och det blir kallare ute. Det fyller också en viktig funktion för hemtrevnaden och det lugn många känner av att ha en eld att titta på. Vi hjälper dig att komma i kontakt med byggfirmor som är specialiserade på installation av kaminer och skorstenar. Du kan få hjälp med upptagning av hål för rökkanal, ventilation, montering av takstege, glidskydd och installationen av kaminen. När du fyllt i din förfrågan kommer företagen att kontakta dig och förmodligen vill de komma förbi dig och titta hur det ser ut innan de tar fram en offert. Lycka till!",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "22",
         "categoryId": "6",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "köksrenovering",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/köksrenovering",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Köket sägs ofta vara hemmets hjärta. Det innebär också att det används mycket och efter en tid slits ned. Förr eller senare kommer alla kök att behöva renoveras eller helt bytas ut. Att renovera ett kök innebär ofta en relativt stor kostnad och innefattar en mängd olika typer av hantverksarbeten som snickerier och målning, men även vatten- och elarbeten. Det är självklart viktigt att allt blir rätt från början och då är det viktigt att du anlitar rätt företag för din köksrenovering. Fyll i formuläret och beskriv ditt uppdrag så utförligt du kan. Därefter kommer du inom kort att komma i kontakt med upp till sex kontrollerade företag som lämnar prisförslag och offerter på din köksrenovering. Jämför offerter, läs omdömen och välj själv det företag som passar dig bäst.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om renovering",
+        "alt2": "Bild på hus som renoveras"
     },
     {
         "id": "23",
         "categoryId": "4",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "maskinuthyrning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/maskinuthyrning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "På RenoveringsMäklarna kan du hitta företag som hyr ut olika typer av maskiner. Allt ifrån olika typer av anläggningsmaskiner såsom gräv-, last- och schaktmaskiner till byggmaskiner och utrustning för svetsning och bilning. Genom att du beskriver hur ditt behov ser ut och vilken typ av utrustning du behöver får du kontakt med de uthyrningsföretag som kan matcha ditt behov. På RenoveringsMäklarna.se kan du även jämföra företagens referenser, omdömen och behörigheter. Du väljer själv vilket företag du vill anlita men förbinder dig givetvis inte till att anlita någon.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild på traktor om maskinuthyrning",
+        "alt2": "Bild på grävmaskin"
     },
     {
         "id": "24",
         "categoryId": "2",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "mattläggning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/mattläggning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "En heltäckningsmatta kan verkligen komma till sin rätt både på ett kontor och i ett hem. Att lägga heltäckningsmatta ger inte bara ett snyggt intryck utan det är också skönt att gå på och fungerar dessutom ljuddämpande. För att det ska bli riktigt bra behöver du anlita en mattläggare som bland annat kan säkerställa att underlaget är korrekt förberett och att rätt temperatur råder för att lägga heltäckningsmatta. På RenoveringsMäklarna matchas du ihop med företag som passar för just ditt projekt inom mattläggning – stort som litet. När du gjort en förfrågan på RenoveringsMäklarna.se tar du emot offerter från olika företag som du sedan enkelt kan jämföra. Du väljer själv vilket företag du vill anlita och du förbinder dig inte till någonting när du använder RenoveringsMäklarna.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild på golv och matta",
+        "alt2": "Bild inomhus på parkettgolv"
     },
     {
         "id": "25",
         "categoryId": "8",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "murning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/murning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Behöver du hjälp att hitta en bra murare? En mur kan utgöra en snygg tomtgräns eller rama in en infart, men även bevara värme eller hålla borta oljud. Det är oftast inte bara själva murningen som innebär en del jobb. Ibland krävs även grävning, grundläggning och kanske även målning av muren. Oavsett i vilket syfte du vill ha hjälp med murning eller hur omfattande arbetet är, så kan du hitta rätt murare på RenoveringsMäklarna. Du tar emot upp till sex offerter och väljer sedan den du tycker passar bäst för din murning. Du kan lätt jämföra företagens omdömen, referenser och behörigheter på RenoveringsMäklarna.se och du förbinder dig aldrig att anlita någon.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "26",
         "categoryId": "3",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "Målning invändigt & tapeter",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/Målning-invändigt-och-tapeter",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Genom RenoveringsMäklarna får du tryggt, enkelt och gratis kontakt med duktiga målare och tapetserare som hjälper dig att tapetsera och måla om rum eller kanske ge köket ett lyft genom att måla om dina köksluckor. Att tapetsera eller måla om ett helt rum på egen hand är självklart möjligt men om du vill säkerställa ett snabbt och effektivt arbete där mönsterpassning och färg blir helt rätt är det ofta säkrast att anlita en bra tapetserare eller målare för jobbet. Kom i kontakt med professionella målare och tapetserare på RenoveringsMäklarna. Beskriv ditt behov och få offerter från kontrollerade företag inom några dagar.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om målning",
+        "alt2": "Bild på målarpenslar"
     },
     {
         "id": "27",
         "categoryId": "6",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "möbelmontering",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/möbelmontering",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Det blir allt vanligare att tillverkare säljer möbler som kommer omonterade och det måste finnas både kunskap och tid för att göra det själv. Om du behöver hjälp med att montera möbler behöver du bara fylla i vårt formulär så matchar vi dina behov med vårt nätverk av anslutna snickare. Ange gärna vilket fabrikat det är på möblerna och vilka möbler det gäller. Glöm inte att beskriva hur det ska monteras. Att platsbygga tar normalt sett längre tid än att bara montera och ställa på plats och kan påverka priset. Om möblerna ska hängas på vägg kan det också vara bra att kolla upp vilken sorts vägg som finns. Om det är en gipsvägg kan det behövas förstärkas innan möblerna kommer på plats.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om renovering",
+        "alt2": "Bild på hus som renoveras"
     },
     {
         "id": "28",
         "categoryId": "8",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "nybyggnation",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/nybyggnation",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Vid en nybyggnation är det ofta många olika moment och trådar att hålla ordning på. På RenoveringsMäklarna kan du hitta företag som kan hjälpa dig med allt från totalentreprenad till enskilda delar av nybyggnationen. När du gör en offertförfrågan på RenoveringsMäklarna uppger du vad du vill ha hjälp med; tidsplan och andra viktiga detaljer. Det kan vara bra att träffa olika entreprenörer innan man slutligen bestämmer vem man vill jobba med. Då är RenoveringsMäklarna ett bra verktyg för att komma i kontakt med rätt entreprenörer, så att du direkt får kontakt med de byggfirmor som är intresserade av ditt projekt.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "29",
         "categoryId": "8",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "om- och tillbyggnation",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/om-och-illbyggnation",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "En om- eller tillbyggnad är ofta ett omfattande projekt och kan se ut på många olika sätt. Vare sig det rör sig om en mindre utbyggnad eller en ombyggnation av större delar av ditt hem så kan du hitta rätt hantverkare på RenoveringsMäklarna. Du beskriver bara ditt projekt så noga du kan. Till exempel om du vill ha hjälp med projektledning och totalansvar av hela bygget eller endast hjälp med vissa delar, när du önskar att projektet ska påbörjas, och annan viktig information. Du tar sedan emot kostnadsförslag på din om- eller tillbyggnation från upp till sex olika företag. Jämför sedan enkelt de olika företagens omdömen, referenser och behörigheter på RenoveringsMäklarna.se.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "30",
         "categoryId": "6",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "persienn, markis & solfilm",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/persienn-markis-och-solfilm",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Att installera ett solskydd kan skapa ett betydligt skönare klimat i ditt hem eller i din bil. Kanske har du ett fönster som är exponerat för mycket solljus eller insyn som du skulle vilja minimera med hjälp av nya persienner? För att hitta rätt lösning för just ditt behov och för att resultatet ska bli så bra som möjligt kan det vara en god idé att ta hjälp av en yrkesperson. RenoveringsMäklarna förmedlar tjänster för både persienner, markis och solfilm. Att använda RenoveringsMäklarna för att komma i kontakt med olika entreprenörer är helt kostnadsfritt.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om renovering",
+        "alt2": "Bild på hus som renoveras"
     },
     {
         "id": "31",
         "categoryId": "8",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "plåtarbeten",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/plåtarbeten",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Behöver du komma i kontakt med en plåtfirma? På RenoveringsMäklarna hittar du företag som utför olika typer av plåtarbeten. Genom att du beskriver vad du behöver hjälp med kommer du i kontakt med de plåtslagare som är intresserade av och har möjlighet att utföra just ditt projekt. Du får som mest sex olika kostnadsförslag och du väljer själv vem du vill anlita. Utöver kostnadsförslagen kan du även jämföra plåtfirmornas referenser, omdömen och behörigheter. På så sätt blir det enklare för dig att fatta ett beslut om vilken plåtslagare du vill anlita.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "32",
         "categoryId": "8",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "rivning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/rivning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "På RenoveringsMäklarna kan du komma i kontakt med byggföretag som är kan hjälpa till med olika typer av rivningar. Oavsett om du rör sig om större rivningar såsom fastigheter, oljecisterner eller mindre projekt såsom rivning av badrum eller kök så kan du hitta kan du hitta rätt företag på RenoveringsMäklarna. Genom att du beskriver detaljerna kring din rivning, får du förslag från de företag som är intresserade av att utföra den typen av jobb som du redogör för. Du tar emot som mest sex olika offerter och du kan enkelt även jämföra företagens omdömen, referenser och behörigheter på RenoveringsMäklarna.se. Därefter väljer du själv vilket företag du vill anlita för din rivning.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "33",
         "categoryId": "5",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "slamsugning & stamspolning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/slamsugning-och-stamspolning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "För att hålla stammar och avlopp rena och ge dem en bättre hållbarhet kan man behöva göra en stamspolning eller slamsugning. Oavsett om det är en akutåtgärd eller regelbundet underhåll så har vi företagen som hjälper dig. Du får inom någon dag kontakt med företag som är experter inom stamspolning och slamsugning och väljer själv om du vill anlita den som kan vara på plats snabbast eller om du vill jämföra priser och omdömen från flera innan du bestämmer dig. Att hitta företag genom RenoveringsMäklarna är alltid helt gratis och du förbinder din inte till någonting. Skicka in din beskrivning av ditt uppdrag till oss, om det är stamspolning eller slamsugning du behöver, vilken typ av byggnad det gäller, ålder på stammarna och så vidare så hjälper vi dig att hitta rätt företag inom kort.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
+        "alt": "Bild om VVS, rör & gas",
+        "alt2": "Bild på verktyg och skrivbord"
 
-        }]
     },
     {
         "id": "34",
         "categoryId": "4",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "ställningsmontering & uthyrning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/ställningsmontering-och-uthyrning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Behöver du utföra ett arbete på hög höjd där en vanlig stege inte räcker till? Hos RenoveringsMäklarna hittar du företag inom ställningsmontering och ställningsuthyrning för att göra jobbet både lättare och säkrare. Att arbeta på tak eller andra höga höjder innebär också risker. Därför är det viktigt att anlita professionella ställningsmontörer med rätt utbildning och kvalifikationer för att undvika onödiga olyckor. Det är inte lätta att veta var man ska vända sig för att hitta kunniga ställningsmontörer just när det behövs. Därför har vi på RenoveringsMäklarna samlat dem på ett och samma ställe. Genom att skicka in din förfrågan till oss hjälper vi dig att inom några dagar komma i kontakt med företag i din närhet som kan hjälpa dig.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
+        "alt": "Bild på traktor om maskinuthyrning",
+        "alt2": "Bild på grävmaskin"
 
-        }]
     },
     {
         "id": "35",
         "categoryId": "1",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "tak- & fasadrengörning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/tak-och-fasadrengörning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Om du ska utföra en taktvätt eller fasadrengöring på din villa eller fastighet kan du snabbt och enkelt hitta hjälpen på RenoveringsMäklarna. Vi har samlat företag som är specialister som taktvätt och fasadrengöring på ett och samma ställe så att du kan välja att anlita det företag som passar dig bäst. Du beskriver för vilken typ av byggnad det är du behöver hjälp med fasad- eller takrengöring, hur skicket är i dag och när du vill ha jobbet utfört. Därefter kommer du att bli kontaktad av några företag som vill offerera på din fasad- eller takrengöring enligt de förutsättningar du beskrivit.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild på tak och fasad",
+        "alt2": "Bild på uppfräschad fasad"
     },
     {
         "id": "36",
         "categoryId": "1",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "takläggning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/takläggning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "RenoveringsMäklarna hjälper dig att hitta takläggare och plåtslagare när du ska lägga om taket på huset. Att byta ett helt tak kan variera mycket i både tid och kostnad och det är viktigt att välja rätt hantverkare så att jobbet blir bra och säkert utfört. Oavsett om du ska byta ut eller lägga om taket kan du skicka din beskrivning av uppdraget till oss så matchar vi den med upp till sex intresserade företag i ditt närområde. Du får offerter, prisförslag och kontakter som gör att du lätt kan jämföra olika alternativ. Allt detta är helt gratis, du förbinder dig inte till någonting och du väljer själv vilken takläggare som passar för ditt uppdrag.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild på tak och fasad",
+        "alt2": "Bild på uppfräschad fasad"
     },
     {
         "id": "37",
         "categoryId": "3",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "takmålning",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/takmålning",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "För att undvika och förebygga rost och andra skador på ditt tak kan du behöva se över och måla om taket med jämna mellanrum. När du bestämt dig för att det är dags att måla om taket är det viktigt att resultatet blir hållbart och att jobbet blir säkert utfört. Hos RenoveringsMäklarna kan du jämföra både priser erfarenheter, behörigheter och omdömen från tidigare kunder innan du bestämmer dig för vilken målarfirma du väljer att anlita för att måla om ditt tak. Du kommer snabbt i kontakt med ett antal målare som vill hjälpa dig och sedan kan du i lugn och ro välja vem du vill anlita för att måla ditt tak.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om målning",
+        "alt2": "Bild på målarpenslar"
     },
     {
         "id": "38",
         "categoryId": "7",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "trappor",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/trappor",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "En fin trappa kan verkligen lyfta känslan i ett helt rum. Att renovera en trappa kan både innebära en mindre ommålning eller att helt byta ut eller klä in trappstegen. Oavsett vilket projekt du planerar för din trappa så kan du alltid hitta duktiga hantverkare som hjälper dig på RenoveringsMäklarna. Hos oss får du prisförslag från flera olika företag som arbetar med just trappor i ditt närområde. Alla företag som finns hos RenoveringsMäklarna är dessutom kontrollerade för att uppfylla våra grundkrav om F-skatt, moms och att de är skuldfria. Du kan själv jämföra offerter och jämföra omdömen från tidigare kunder innan du gör ditt val.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om bygghjälp",
+        "alt2": "Bild på verktyg"
     },
     {
         "id": "39",
         "categoryId": "1",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "undertak & akustik",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/undertak-och-akustik",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Behöver du hjälp med att fixa till ditt innertak eller undertak? Taket är en ofta underskattad del i rummet, men ett snyggt innertak kan faktiskt ge ett helt rum ett välbehövligt lyft. Men ett tak är också mycket mer än så. Ett bra undertak kan gömma el och ventilationsinstallationer på ett smart sätt samtidigt som undertak ofta är ljudabsorberande och gör att hela rummet får en bättre akustik och ljudmiljö. Oavsett om du vill ha ett innertak med plattor eller kanske ett snygga till innertaket i badrummet är det av största vikt att det blir rätt utfört. Hos RenoveringsMäklarna hittar du professionella företag som hjälper dig att montera undertak och innertak.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild på tak och fasad",
+        "alt2": "Bild på uppfräschad fasad"
     },
     {
         "id": "40",
         "categoryId": "5",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "ventilation",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/ventilation",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Här hittar du företagen som hjälper dig med ventilation och värme i ditt hem eller fastighet. Om du behöver installera ny ventilation eller reparera en äldre installation kan du hitta hjälpen på RenoveringsMäklarna. Det kan finnas flera olika anledningar till att ventilationen inte fungerar som du önskar. Låt en expert inom området hjälpa dig så att ventilationen blir så bra som möjligt. Beskriv ditt behov så utförligt som möjligt så matchar vi ditt uppdrag med företag i din närhet. Företagen lämnar sina förslag och du kan jämföra priser och möjliga lösningar.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
+        "alt": "Bild om VVS, rör & gas",
+        "alt2": "Bild på verktyg och skrivbord"
 
-        }]
     },
     {
         "id": "41",
         "categoryId": "6",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "vindsrenovering",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/vindsrenovering",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "Om du snabbt och smidigt vill komma i kontakt med byggfirmor som hjälper dig med en vindsrenovering har du hittat rätt. Oavsett om det rör vinden i en villa, radhus eller i en bostadsrättsförening så kan du hitta hjälpen här. Eftersom varje vindsrenovering är unik kan det vara bra att prata med flera olika byggfirmor om upplägg och kostnadsförslag innan du bestämmer dig. På RenoveringsMäklarna får du enkelt, tryggt och gratis upp till sex offerter på din vindsrenovering. Självklart är det helt upp till dig vilket företag du väljer.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om renovering",
+        "alt2": "Bild på hus som renoveras"
     },
     {
         "id": "42",
         "categoryId": "5",
         "icon": "  <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'clip-rule='evenodd'><path d='M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z' /></svg>",
         "heading": "VVS, rör & gas",
-        "imgUrl": "bygg2.jpg",
         "url": "/tjänster/vvs-rör-och-gas",
-        "subheading": "Dags att flytta? alla behöver hjälp med",
-        "subImgUrl": "flytthjalp2.jpg",
         "caption": "För VVS- och rörarbeten krävs att arbetet utförs av auktoriserade rörmokare för VVS och bad som är specialister på vad de gör. Här kommer du i kontakt med rörmokare med rätt kunskap så att kan du vara trygg med att allt blir rätt utfört och att dina försäkringar fortsätter att gälla. Hos RenoveringsMäklarna hittar du enkelt både auktoriserade VVS-företag för vatten och avlopp och företag med behörighet för gasinstallationer. Allt du behöver göra är att beskriva ditt behov för att komma i kontakt med upp till sex företag i din närhet som är intresserade av att hjälpa dig.",
         "color": "#8683b9",
-        "images": [{
-            "medium": "flytthjälp-mini.jpg",
-            "large": "bygg2.jpg",
-            "alt": "Bild om flytthjälp"
-
-        }]
+        "alt": "Bild om VVS, rör & gas",
+        "alt2": "Bild på verktyg och skrivbord"
     }
 ]

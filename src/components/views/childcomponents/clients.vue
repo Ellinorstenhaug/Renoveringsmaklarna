@@ -4,11 +4,11 @@
             <v-layout row wrap align-center justify-center>
                 <v-flex xs12>
                     <div class="client-wrapper">
-                        <img src="@/assets/dunkin-donuts.svg" alt="" class="client-logo">
-                        <img src="@/assets/mariefredsekonomi.jpg" alt="" class="client-logo">
-                        <img src="@/assets/bjork.png" alt="" class="client-logo">
-                        <img src="@/assets/folkteatern.png" alt="" class="client-logo">
-                        <img src="@/assets/ndr.png" alt="" class="client-logo">
+                        <img src="@/assets/dunkin-donuts.svg" alt="dunkin donuts" class="client-logo">
+                        <img src="@/assets/mariefredsekonomi.jpg" alt="mariefredsekonomi" class="client-logo">
+                        <img src="@/assets/bjork.png" alt="bjork" class="client-logo">
+                        <img src="@/assets/folkteatern.png" alt="folkteatern" class="client-logo">
+                        <img src="@/assets/ndr.png" alt="ndr" class="client-logo">
                     </div>
                 </v-flex>
             </v-layout>

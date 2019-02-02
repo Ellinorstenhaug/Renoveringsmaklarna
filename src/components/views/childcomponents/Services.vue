@@ -82,7 +82,6 @@
   }
 
 
-  /* relevant styles */
   .img__wrap {
     position: relative;
     height: auto;
@@ -95,16 +94,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    /* background: rgba(36, 62, 206, 0.6); */
     color: #fff;
     visibility: hidden;
     opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* transition effect. not necessary */
-
     transition: opacity 0.2s, visibility 0.2s;
   }
 

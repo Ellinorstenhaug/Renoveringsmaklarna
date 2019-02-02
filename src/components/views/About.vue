@@ -3,7 +3,7 @@
     <v-content>
         <section>
 
-            <v-parallax :src="getImgUrl('about.jpg')" v-if="$vuetify.breakpoint.mdAndUp" class="service-overlay">
+            <v-parallax :src="getImgUrl('about.jpg')" alt="kontor, kaffe, renovering"  v-if="$vuetify.breakpoint.mdAndUp" class="service-overlay">
                 <v-layout column align-center justify-center class="white--text">
                     <div class="about-jumbotron">
                         <div class="jumbo-container">
@@ -16,7 +16,7 @@
                     </div>
                 </v-layout>
             </v-parallax>
-            <v-img :src="getImgUrl('about.jpg')" alt="skriv något här" v-if=" $vuetify.breakpoint.smAndDown" class="service-overlay-mobil">
+            <v-img :src="getImgUrl('about.jpg')" alt="kontor, kaffe, renovering" v-if=" $vuetify.breakpoint.smAndDown" class="service-overlay-mobil">
                 <v-layout column align-center justify-center class="white--text" style="background: #1b0f187d; ">
                     <div class="jumbo-container">
                         <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading">Passion för att
@@ -52,14 +52,14 @@
                                     </v-card-title>
                                     <v-card-text>
                                         <span class="paragraph__text">
-                                            RenoveringsMäklarna hjälper dig att hitta bra tjänsteföretag när du behöver hjälp med företagets ekonomi. Tjänsten är helt gratis för dig att använda och du sparar dyrbar tid genom att låta oss ta in offerter åt dig. Vår vision är att skapa en transparent marknad för tjänster inom redovisning och revision. Vi strävar efter att göra det enkelt för dig att fatta rätt beslut, där både kvalitet och pris är invägda faktorer.
+                                            RenoveringsMäklarna hjälper dig att hitta bra tjänsteföretag när du behöver hjälp med allt inom renovering och bygg. Tjänsten är helt gratis för dig att använda och du sparar dyrbar tid genom att låta oss ta in offerter åt dig. Vår vision är att skapa en transparent marknad för tjänster inom renovering och bygg. Vi strävar efter att göra det enkelt för dig att fatta rätt beslut, där både kvalitet och pris är invägda faktorer.
                                         </span>
 
                                     </v-card-text>
                                 </v-card>
                             </v-flex>
                             <v-flex xs12 md6>
-                                <v-parallax class="about-pic" :src="getImgUrl('about-small.jpg')">
+                                <v-parallax class="about-pic" :src="getImgUrl('about-small.jpg')" alt="Skrivbord, bild om renovering">
 
                                 </v-parallax>
                             </v-flex>
@@ -70,23 +70,11 @@
                 </v-flex>
             </v-layout>
         </section>
-        <!-- <section class="about-section">
-            <v-parallax src="assets/section.jpg" height="380">
-                <v-layout column align-center justify-center>
-                    <div class="headline white--text mb-3 text-xs-center"></div>
-                    <em>Kick-start your application today</em>
-                    <v-flex xs12 md3>
-                        <v-btn class=" lighten-3 mt-5 selling-button" dark large href="/pre-made-themes">
-                            Get started
-                        </v-btn>
-                    </v-flex>
-                </v-layout>
-            </v-parallax>
-        </section> -->
+   
 
 
         <section class="faq-section">
-            <v-parallax src="assets/section.jpg" height="auto">
+            <v-parallax src="assets/section.jpg" height="auto" alt="bakgrundsbild">
                 <v-layout wrap column align-center justify-center>
                     <div class="my-5 align-center text-md-center text-xs-center justify-center">
                         <div class="headline white--text mb-3 text-xs-center">Vanliga frågor</div>
@@ -166,7 +154,6 @@
 <style scoped>
 .about-jumbotron {
         background-color:#1b0f187d;
-        /* background-color:#e64ec07d; */
         min-width:900px;
         max-width:900px;
         padding: 4% 2% 5% 2%;
@@ -194,7 +181,6 @@
     }
 
     .about-pic {
-        /* background-color: rgb(209, 209, 209); */
         height: 400px;
 
     }

@@ -1,7 +1,7 @@
 <template>
     <v-content>
         <section>
-            <v-parallax :src="getUrl('success.jpg')">
+            <v-parallax :src="getUrl('success.jpg')" alt="Lyckats">
                 <v-layout column align-center justify-center class="black--text">
                     <div class="white-jumbotron">
                         <div class="jumbo-container" style="margin-top:60px;margin-bottom:30px;">
@@ -124,7 +124,6 @@
 <style>
     .white-jumbotron {
         background-color: rgba(255, 255, 255, 0.63);
-        /* height: 70vh; */
         padding: 2% 1% 5% 1%;
     }
 

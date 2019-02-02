@@ -1,7 +1,7 @@
 <template>
     <v-content>
         <section>
-            <v-parallax :src="getUrl('header.png')" class="overlay-helper" v-if="$vuetify.breakpoint.mdAndUp">
+            <v-parallax :src="getUrl('header.png')" alt="headerbild" class="overlay-helper" v-if="$vuetify.breakpoint.mdAndUp">
                 <v-layout column align-center justify-center class="white--text" style="margin-top:30px">
                     <div class="jumbotron">
                         <div class="jumbo-container">
@@ -24,7 +24,7 @@
                     </div>
                 </v-layout>
             </v-parallax>
-            <v-img :src="this.getUrl('header-small.jpg')" alt="skriv något här" v-if=" $vuetify.breakpoint.smAndDown"
+            <v-img :src="this.getUrl('header-small.jpg')" alt="startbild man ritar" v-if=" $vuetify.breakpoint.smAndDown"
                 class="overlay-helper">
                 <v-layout column align-center justify-center class="white--text">
                     <div class="jumbotron">
@@ -211,7 +211,6 @@
 
     .jumbotron {
         background-color: #1b0f187d;
-        /* height: 70vh; */
         padding: 4% 2% 5% 2%;
         max-width: 900px;
     }
@@ -248,7 +247,6 @@
         padding: 20px;
         background-color: #fff;
         box-shadow: 0px 0px 10px 0px rgba(153, 153, 153, 1);
-        /* overflow: hidden; */
         animation: fadein 0.3s ease-in alternate;
         outline: 1000px solid rgba(0, 0, 0, 0.5);
     }
@@ -294,12 +292,6 @@
         font-size: 16px !important;
     }
 
-    .step-container {
-        color: red !important;
-        /* animation: fadein2 0.2s ease-in alternate; */
-        /*TODO Klass funkar ej?*/
-    }
-
     .textcolor {
         color: black !important;
         padding: 30px;
@@ -311,7 +303,6 @@
 
     .section2 {
         background-color: rgb(34, 31, 31);
-        /* color:rgb(43, 40, 40) !important; */
     }
 
     @keyframes fadein {
@@ -360,7 +351,6 @@
     }
 
     .section-why {
-        /* background-color: #eee; */
         height: auto;
         padding: 20px 0;
     }
@@ -387,7 +377,6 @@
 
     .quote-wrap {
         margin-bottom: 30px !important;
-        /* border:1px solid red; */
     }
 
     .main-heading {
@@ -401,7 +390,6 @@
         text-decoration: none;
     }
 
-    /* modal */
     @media (max-width: 960px) {
         .jumbotron {
             padding: 10%;

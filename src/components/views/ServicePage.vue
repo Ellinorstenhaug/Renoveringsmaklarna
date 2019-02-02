@@ -4,11 +4,12 @@
     <v-content>
       <section>
 
-        <v-parallax :src="this.category.overlay" v-if="$vuetify.breakpoint.mdAndUp" class="service-overlay">
+        <v-parallax :src="this.category.overlay" :alt="`En bild om ${this.service.heading}`" v-if="$vuetify.breakpoint.mdAndUp" class="service-overlay">
           <v-layout column align-center justify-center class="white--text">
             <div class="jumbotron">
               <div class="jumbo-container">
-                <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading}}</h1>
+                <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading}}
+                  {{this.service.a}}</h1>
                 <div class="subheading mb-3 text-xs-center">{{this.category.ingress}}</div>
                 <div class="button-wrapper">
                   <Modal :service="this.service" :serviceContext="mapServicesIntoCategories" :allServices="this.services"
@@ -20,7 +21,7 @@
           </v-layout>
         </v-parallax>
 
-        <v-img :src="this.category.smallImage" alt="skriv något här" v-if="$vuetify.breakpoint.smAndDown" class="service-overlay-mobil">
+        <v-img :src="this.category.smallImage" :alt="`En bild om ${this.service.heading}`" v-if="$vuetify.breakpoint.smAndDown" class="service-overlay-mobil">
           <v-layout column align-center justify-center class="white--text" style="background: #1b0f187d; ">
             <div class="jumbo-container">
               <h1 class="white--text mb-2 main-heading text-xs-center big-text">{{ this.service.heading }}</h1>
@@ -28,7 +29,7 @@
               <div class="button-wrapper">
                 <Modal :service="this.service" :serviceContext="mapServicesIntoCategories" :allServices="this.services"
                   :showDialog="this.activateDialog" />
-              
+
               </div>
             </div>
           </v-layout>
@@ -59,7 +60,8 @@
 
                 <v-flex xs12 md6>
                   <v-card class="elevation-0 transparent hidden-sm-and-down">
-                    <v-img :src="this.category.subImage" class="img-wrapper grey lighten-2 service-img" aspect-ratio="1" />
+                    <img :src="this.category.subImage" class="img-wrapper grey lighten-2 service-img" :alt="`En bild om ${this.service.heading}`"
+                      aspect-ratio="1" />
                   </v-card>
                 </v-flex>
               </v-layout>
@@ -128,7 +130,7 @@
     metaInfo() {
       return {
         title: 'Renoveringsmaklarna | ' + this.service.heading,
-       
+
         meta: [{
             charset: 'utf-8'
           },
@@ -228,6 +230,8 @@
               subheading: servicesJson[i].subheading,
               caption: servicesJson[i].caption,
               icon: servicesJson[i].icon,
+              alt: servicesJson[i].alt,
+              alt2: servicesJson[i].alt2
             };
 
             isFound = true;
@@ -253,7 +257,6 @@
   }
 
   .img-wrapper {
-    /* filter: brightness(0.4); */
     background-color: rgb(19, 19, 19);
     position: relative;
     z-index: 10;
@@ -301,34 +304,27 @@
     padding: 80px 0;
   }
 
-  /* .jumbotron2 {
-  background-color: #1b0f187d;
-  height: 70vh;
-  padding: 7% 1% 5% 1%;
-} */
   .jumbotron-service {
     margin-top: 200px;
   }
 
-  /* 
-  .jumbo-container2 {
-    width: 600px;
-  } */
 
   .service-overlay {
     height: 700px !important;
     width: 100%;
-      position: relative;
-        top:-20px;
+    position: relative;
+    top: -20px;
   }
+  
 
 
   @media (max-width: 600px) {
     .my-5 {
       margin-bottom: 0 !important;
     }
+
     .service-overlay {
-       top:-20px !important;
+      top: -20px !important;
     }
   }
 
@@ -348,9 +344,10 @@
       font-size: 26px !important;
       line-height: unset !important;
     }
+
     #page-wrap {
       position: relative;
-        top:-20px;
+      top: -20px;
     }
   }
 </style>

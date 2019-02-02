@@ -31,37 +31,8 @@ Om du inte hittar kategorin du söker kan du välja en liknande och beskriva dit
                     </v-flex>
                 </v-layout>
             </v-container>
-
-
-
-            <!-- SLUT  -->
         </v-flex>
     </v-layout>
-
-    <!-- gammal -->
-
-    <!-- <v-container grid-list-xl>
-        <v-layout row wrap align-center justify-center>
-
-            <v-flex xs6 md3 px-5 sm6 my-3 class="set-padding_1_3" v-for="(category, index) in categories" :key="index">
-                <h2 class="heading set-margin-service">
-                    <div v-html="category.icon" class="service-icon"></div>{{category.name}}
-                </h2>
-
-                <v-flex class="set-padding_1_3 set-margin" v-for="(service, index) in filterServicesPerCategory(category.id)"
-                    :key="index">
-                    <div>
-                        <span>
-                            <router-link :to="`${service.url}`" class="grey-link">
-                                {{service.heading}}
-                            </router-link>
-                </span>
-                </div>
-                </v-flex>
-            </v-flex>
-
-        </v-layout>
-    </v-container> -->
 </div>
 </template>
 
@@ -120,7 +91,6 @@ Om du inte hittar kategorin du söker kan du välja en liknande och beskriva dit
         color: rgb(148, 189, 189) !important;
     }
 
-    /* relevant styles */
     .img__wrap {
         position: relative;
         height: auto;
@@ -133,16 +103,12 @@ Om du inte hittar kategorin du söker kan du välja en liknande och beskriva dit
         bottom: 0;
         left: 0;
         right: 0;
-        /* background: rgba(36, 62, 206, 0.6); */
         color: #fff;
         visibility: hidden;
         opacity: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        /* transition effect. not necessary */
-
         transition: opacity 0.2s, visibility 0.2s;
     }
 
@@ -213,10 +179,6 @@ Om du inte hittar kategorin du söker kan du välja en liknande och beskriva dit
             max-width: 1185px !important;
         }
     }
-
-    /* .set-padding_1_3 {
-        padding: 1px 3px !important;
-    } */
 
     .heading {
         font-size: 1.7em;

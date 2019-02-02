@@ -28,7 +28,6 @@
                         <v-card class="elevation-0 height-fixer transparent">
                             <v-card-text class="text-xs-center">
                                 <img class="icon" src="https://image.flaticon.com/icons/svg/1170/1170619.svg" alt>
-                                <!-- <v-icon x-large class="purple--text text--lighten-2">flash_on</v-icon> -->
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
                                 <div class="heading text-xs-center">Jämför innan du väljer</div>
@@ -44,7 +43,6 @@
                         <v-card class="elevation-0 height-fixer transparent">
                             <v-card-text class="text-xs-center">
                                 <img class="icon" src="https://image.flaticon.com/icons/svg/806/806704.svg" alt>
-                                <!-- <v-icon x-large class="purple--text text--lighten-2">build</v-icon> -->
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
                                 <div class="heading text-xs-center">Gratis och icke-bindande</div>
