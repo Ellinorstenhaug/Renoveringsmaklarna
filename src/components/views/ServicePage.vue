@@ -127,7 +127,7 @@
 
      metaInfo() {
             return {
-                title: 'Kontakta oss - Renoveringsmäklarna',
+                title: this.service.heading + ' - Renoveringsmäklarna',
 
                 meta: [{
                         charset: 'utf-8'

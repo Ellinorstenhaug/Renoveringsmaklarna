@@ -31,37 +31,8 @@ Om du inte hittar kategorin du söker kan du välja en liknande och beskriva dit
                     </v-flex>
                 </v-layout>
             </v-container>
-
-
-
-            <!-- SLUT  -->
         </v-flex>
     </v-layout>
-
-    <!-- gammal -->
-
-    <!-- <v-container grid-list-xl>
-        <v-layout row wrap align-center justify-center>
-
-            <v-flex xs6 md3 px-5 sm6 my-3 class="set-padding_1_3" v-for="(category, index) in categories" :key="index">
-                <h2 class="heading set-margin-service">
-                    <div v-html="category.icon" class="service-icon"></div>{{category.name}}
-                </h2>
-
-                <v-flex class="set-padding_1_3 set-margin" v-for="(service, index) in filterServicesPerCategory(category.id)"
-                    :key="index">
-                    <div>
-                        <span>
-                            <router-link :to="`${service.url}`" class="grey-link">
-                                {{service.heading}}
-                            </router-link>
-                </span>
-                </div>
-                </v-flex>
-            </v-flex>
-
-        </v-layout>
-    </v-container> -->
 </div>
 </template>
 
