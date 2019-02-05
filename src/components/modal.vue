@@ -158,11 +158,11 @@
                         <div class="step-container" v-else-if="count >= 2">
                             <form>
                                 <v-text-field v-validate="'required|max:50'" v-model="userData.name" :error-messages="errors.collect('name')"
-                                    label="Namn" @blur="handleBlur" data-vv-name="name" required></v-text-field>
-                                <v-text-field @blur="handleBlur" v-validate="{ required: true,email:true, min:3, max:100 }"
+                                    label="Namn"  data-vv-name="name" required></v-text-field>
+                                <v-text-field  v-validate="{ required: true,email:true, min:3, max:100 }"
                                     v-model="userData.email" :error-messages="errors.collect('email')" label="E-mail"
                                     data-vv-name="email" required></v-text-field>
-                                <v-text-field @blur="handleBlur" type="number" v-validate="{ required: true, min:3, max:10 }"
+                                <v-text-field  type="number" v-validate="{ required: true, min:3, max:10 }"
                                     v-model="userData.phone" :error-messages="errors.collect('phone')" label="Telefonnummer"
                                     data-vv-name="phone" required></v-text-field>
                             </form>
@@ -261,14 +261,7 @@
                 return true;
             },
 
-            handleBlur: function () {
-                this.$validator.validateAll().then((result) => {
-                    if (result) {
-
-                        this.submit();
-                    }
-                });
-            },
+        
 
             addService: function (serviceName) {
 
