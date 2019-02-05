@@ -237,7 +237,6 @@
             return {
                 loader: null,
                 loading3: false,
-                // img: img,
                 count: 0,
                 headingLabel: 'Välj tjänst',
                 dialog: false,

@@ -4,7 +4,7 @@
             <v-layout justify-center row wrap>
                 <v-flex xs12 md2>
                     <v-card dark flat>
-                        <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">{{headings[1]}}</v-card-text>
+                        <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">Mer om oss</v-card-text>
                         <v-list-tile>
                             <router-link :to="`/om-oss`" class="v-list__tile__title list-item px-0">Om oss</router-link>
                         </v-list-tile>
@@ -16,7 +16,7 @@
                 <v-flex xs12 md2>
                     <v-card dark flat>
                         <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">
-                              <router-link :to="`/våra-tjänster`" class="v-list__tile__title list-item">{{headings[0]}}</router-link>
+                              <router-link :to="`/våra-tjänster`" class="v-list__tile__title list-item">kontakt</router-link>
                             </v-card-text>
                         <v-list-tile v-for="(item, index) in links" :key="index">
                             <router-link :to="`${item.url}`" class="v-list__tile__title list-item">{{item.heading}}</router-link>
@@ -26,7 +26,7 @@
 
                 <v-flex xs12 md3>
                     <v-card dark flat>
-                        <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">{{headings[3]}}</v-card-text>
+                        <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">Kontakt</v-card-text>
                         <v-list>
                             <v-list-tile>
                                 <v-list-tile-action>
@@ -62,17 +62,12 @@
 
                 <v-flex xs12 md2>
                     <v-card dark flat>
-                        <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">{{headings[2]}}</v-card-text>
+                        <v-card-text class="px-0 title white--text text-lg-left text-md-left text-xs-left">Externa länkar</v-card-text>
                         <v-list-tile>
-                            <router-link :to="`/om-oss`" class=" px-0 v-list__tile__title list-item">Redovisningsmäklarna</router-link>
+                            <a href="https://redovisningsmaklarna.se" class=" px-0 v-list__tile__title list-item">Redovisningsmäklarna</a>
                         </v-list-tile>
-                        <v-list-tile>
-                            <router-link :to="`/kontakt`" class="v-list__tile__title list-item">Sveriges
-                                KonferensLokaler</router-link>
-                        </v-list-tile>
-                        <v-list-tile>
-                            <router-link :to="`/kontakt`" class="v-list__tile__title list-item">FestMäklarna</router-link>
-                        </v-list-tile>
+                      
+                      
                     </v-card>
                 </v-flex>
 
@@ -99,12 +94,7 @@
         data: function () {
             return {
                 links: this.serviceLinks,
-                headings: [
-                    'Tjänster',
-                    'Mer om oss',
-                    'Externa länkar',
-                    'Kontakt'
-                ],
+              
             }
         },
     }

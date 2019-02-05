@@ -6,11 +6,11 @@
                     <div class="jumbotron">
                         <div class="jumbo-container">
                             <h1 class="white--text mb-2 main-heading text-xs-center jumbo-heading heading">
-                                Jämför de
+                                     Jämför de
                                 bästa
-                                renoveringsbyråerna
+                                byggföretagen<br>
                                 -
-                                <br>Helt kostnadsfritt!
+                                Helt kostnadsfritt!
                             </h1>
                             <div class="subheading mb-3 text-xs-center">
                                 Vi hjälper dig anlita byggfirmor och
@@ -106,19 +106,21 @@
     import Clients from "./childcomponents/clients.vue";
 
     export default {
-        metaInfo() {
-            return {
-                meta: [{
-                        charset: 'utf-8'
-                    },
-                    {
-                        vmid: 'description',
-                        name: 'description',
-                        content: 'asd'
-                    }
-                ]
-            }
-        },
+     metaInfo() {
+      return {
+        title: 'Få offerter gratis från renoverings- & byggföretag - Renoveringsmäklarna' ,
+       
+        meta: [{
+            charset: 'utf-8'
+          },
+          {
+            vmid: 'description',
+            name: 'description',
+            content: 'Vi erbjuder offerter från olika tjänster som bygg, renovering, målning,uthyrning & mijö. Erbjudanden från experter. Svar inom 24h. Kostnadsfritt. Ansök snabbt och enkelt.'
+          }
+        ]
+      }
+    },
         computed: {
             mapServicesIntoCategories: function () {
 
@@ -440,7 +442,7 @@
 
     @media (max-width: 690px) {
         .jumbotron {
-            width: 95%;
+            width: 100%;
             padding: 2%;
             
         }

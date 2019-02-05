@@ -6,11 +6,11 @@
                     <h1 class="white--text mb-2 display-2 text-xs-center">Kontakta oss</h1>
                     <div class="subheading mb-3 text-xs-center">
                         <span class="paragraph__text">
-   Om du behöver kontakta oss kan du göra det här. Du kan
-                        antingen använda formuläret nedan
-                        eller kontakta oss på de kontaktuppgifter du hittar nedan till vänster.
+                            Om du behöver kontakta oss kan du göra det här. Du kan
+                            antingen använda formuläret nedan
+                            eller kontakta oss på de kontaktuppgifter du hittar nedan till vänster.
                         </span>
-                     </div>
+                    </div>
                 </v-layout>
             </v-parallax>
         </section>
@@ -78,7 +78,7 @@
                                 placeholder="Skriv ditt meddelande här"></textarea>
                         </form>
                         <v-flex xs12>
-                            <v-btn @click.prevent="submit"  dark large class="lighten-2 mt-5 selling-button" href="/pre-made-themes">
+                            <v-btn @click.prevent="submit" dark large class="lighten-2 mt-5 selling-button" href="/pre-made-themes">
                                 Skicka meddelande
                             </v-btn>
                         </v-flex>
@@ -100,16 +100,33 @@
     Vue.use(VeeValidate)
 
     export default {
-         metaInfo() {
-      return {
-        title: 'Renoveringsmaklarna | ' + 'Kontakta oss',
-        meta:[
-          {
-           
-          }
-        ]
-      }
-    },
+        metaInfo() {
+            return {
+                title: 'Kontakta oss - Renoveringsmäklarna',
+
+                meta: [{
+                        charset: 'utf-8'
+                    },
+                    {
+                        vmid: 'description',
+                        name: 'description',
+                        content: 'Renoveringsmäklarna hjälper dig hitta bra renoverings- & byggföretag. Beskriv vad du behöver hjälp med, ta emot och jämför upp till tre offerter. välj offert och få jobbet gjort.'
+                    },
+                    {
+                        vmid: 'content',
+                        name: 'GOOGLEBOT',
+                        content: 'INDEX,FOLLOW'
+                    },
+                    {
+                        vmid: 'content',
+                        name: 'ROBOTS',
+                        content: 'INDEX,FOLLOW'
+                    },
+                  
+
+                ]
+            }
+        },
         data() {
             return {
                 userData: {
@@ -143,7 +160,7 @@
                         };
 
 
-                        axios.post('http://api.redovisningsmaklarna.local/api/Renoveringsmaklarna/', userObject, {
+                        axios.post('https://api.redovisningsmaklarna.local/api/Renovering/', userObject, {
                             headers: {
                                 'Content-type': 'application/json; charset=utf=8',
                                 "Access-Control-Allow-Origin": "*"
@@ -158,7 +175,7 @@
                                     setTimeout(() => {
                                         alert('Tack, vi återkommer snarast.');
 
-                                    }, 1500);
+                                    }, 1000);
 
                                     setTimeout(() => {
 
@@ -226,8 +243,8 @@
     }
     .headColor {
         background: rgb(43, 23, 36);
-          position: relative;
-        top:-20px;
+        position: relative;
+        top: -20px;
     }
 
     .about-pic {

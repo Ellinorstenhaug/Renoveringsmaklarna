@@ -11,6 +11,7 @@
     "axios": "^0.18.0",
     "vee-validate": "^2.1.5",
     "vue": "^2.5.17",
+    "vue-analytics": "^5.16.2",
     "vue-burger-menu": "^2.0.0",
     "vue-meta": "^1.5.8",
     "vue-router": "^3.0.2",
