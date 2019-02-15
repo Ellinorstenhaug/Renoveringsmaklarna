@@ -62,7 +62,8 @@ const router = new Router({
 
 
 Vue.use(VueAnalytics, {
-  id: 'AW-765636562',
+  // id: 'AW-765636562', GAMLA
+  id: 'UA-133944413-1',
   router,
   autoTracking: {
     exception: true

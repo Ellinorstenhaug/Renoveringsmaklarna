@@ -50,9 +50,8 @@
             </v-img>
         </section>
 
-        <section class="section-why">
+        <section class="section-why pt-0">
             <Why />
-
         </section>
         <section class="section-service pb-5 text-center">¨
             <v-layout column wrap class="mt-5" align-center>

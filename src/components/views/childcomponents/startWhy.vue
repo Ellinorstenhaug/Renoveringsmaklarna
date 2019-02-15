@@ -10,12 +10,12 @@
         <v-flex xs12>
             <v-container grid-list-xl>
                 <v-layout row wrap align-center>
-                    <v-flex xs12 sm6 md4>
+                    <v-flex xs12 sm6 md4 class="small-scale pa-0">
                         <v-card class="elevation-0 height-fixer transparent">
                             <v-card-text class="text-xs-center">
                                 <img class="icon" src="https://image.flaticon.com/icons/svg/1317/1317349.svg" alt="icon">
                             </v-card-text>
-                            <v-card-title primary-title class="layout justify-center">
+                            <v-card-title primary-title class="justify-center">
                                 <div class="text-xs-center heading">Den bästa lösningen för dig</div>
                             </v-card-title>
                             <v-card-text class="text-md-center text-xs-center paragraph__text">
@@ -24,12 +24,12 @@
                             </v-card-text>
                         </v-card>
                     </v-flex>
-                    <v-flex xs12 sm6 md4 class="small-scale">
+                    <v-flex xs12 sm6 md4 class="small-scale pa-0">
                         <v-card class="elevation-0 height-fixer transparent">
                             <v-card-text class="text-xs-center">
                                 <img class="icon" src="https://image.flaticon.com/icons/svg/1170/1170619.svg" alt>
                             </v-card-text>
-                            <v-card-title primary-title class="layout justify-center">
+                            <v-card-title primary-title class=" justify-center">
                                 <div class="heading text-xs-center">Jämför innan du väljer</div>
                             </v-card-title>
                             <v-card-text class="text-md-center text-xs-center paragraph__text">
@@ -39,12 +39,12 @@
                             </v-card-text>
                         </v-card>
                     </v-flex>
-                    <v-flex xs12 offset-sm3 offset-md0 sm6 md4 class="small-scale">
+                    <v-flex xs12 offset-sm3 offset-md0 sm6 md4 class="small-scale pa-0">
                         <v-card class="elevation-0 height-fixer transparent">
                             <v-card-text class="text-xs-center">
                                 <img class="icon" src="https://image.flaticon.com/icons/svg/806/806704.svg" alt>
                             </v-card-text>
-                            <v-card-title primary-title class="layout justify-center">
+                            <v-card-title primary-title class=" justify-center">
                                 <div class="heading text-xs-center">Gratis och icke-bindande</div>
                             </v-card-title>
                             <v-card-text class="text-md-center text-xs-center paragraph__text">
@@ -68,7 +68,15 @@
 </script>
 
 <style>
+@media (max-width:600px){
+    .height-fixer{
+        height:360px;
+    }
+}
+@media (min-width: 600px) {
     .height-fixer {
         height: 445px;
-    }
+    }}
+
+
 </style>

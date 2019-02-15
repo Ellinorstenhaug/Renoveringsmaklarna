@@ -127,21 +127,33 @@
 
     },
 
-    metaInfo() {
-      return {
-        title: 'Renoveringsmaklarna | ' + this.service.heading,
+     metaInfo() {
+            return {
+                title: this.service.heading + ' - Renoveringsmäklarna',
 
-        meta: [{
-            charset: 'utf-8'
-          },
-          {
-            vmid: 'description',
-            name: 'description',
-            content: this.service.ingress
-          }
-        ]
-      }
-    },
+                meta: [{
+                        charset: 'utf-8'
+                    },
+                    {
+                        vmid: 'description',
+                        name: 'description',
+                        content: this.service.subheading + ' ' + this.service.heading
+                    },
+                    {
+                        vmid: 'content',
+                        name: 'GOOGLEBOT',
+                        content: 'INDEX,FOLLOW'
+                    },
+                    {
+                        vmid: 'content',
+                        name: 'ROBOTS',
+                        content: 'INDEX,FOLLOW'
+                    },
+                  
+
+                ]
+            }
+        },
 
     watch: {
       $route: "initService"
